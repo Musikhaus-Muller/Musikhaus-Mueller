@@ -2,16 +2,21 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 
-test('Music Store seed contains 10 verified offers with safe multi-component handling', async () => {
+test('Music Store 40/40 audit contains 19 verified offers with safe multi-component handling', async () => {
   const seed = JSON.parse(await fs.readFile('web/seed.json', 'utf8'));
   const expected = new Map([
     ['r1', 1858], ['r2', 2096], ['r3', 1433], ['r4', 2866],
-    ['r5', 2578], ['r6', 2698], ['r7', 3098], ['r8', 4358], ['r10', 3363.8], ['r13', 839], ['r14', 1079], ['r23', 1687.8], ['r24', 2601.8], ['r25', 2681.8], ['r26', 4337.6], ['r28', 6627.8],
+    ['r5', 2578], ['r6', 2698], ['r7', 3098], ['r8', 4358], ['r10', 3363.8], ['r13', 839], ['r14', 1069], ['r23', 1687.8], ['r24', 2601.8], ['r25', 2681.8], ['r26', 4337.6], ['r28', 6627.8],
     ['r15', 1123], ['r16', 1324], ['r17', 1664]
   ]);
 
   const actual = seed.filter(r => r.offers?.musicstore);
+  assert.equal(seed.length, 40);
   assert.equal(actual.length, 19);
+  for (const row of actual) {
+    assert.equal(row.offers.musicstore.verifiedToday, true);
+    assert.equal(row.offers.musicstore.priceDate, '2026-11-04');
+  }
 
   for (const [id, price] of expected) {
     const row = seed.find(r => r.id === id);
