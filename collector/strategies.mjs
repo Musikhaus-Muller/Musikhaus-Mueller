@@ -5,8 +5,8 @@ export const SHOP_STRATEGIES = {
     publicSource: null
   },
   prolighting: {
-    mode: 'http',
-    browserFallback: false,
+    mode: 'http-browser',
+    browserFallback: true,
     publicSource: null
   },
   thomann: {

@@ -4,11 +4,16 @@ import { strategyFor } from '../collector/strategies.mjs';
 
 test('collector strategies avoid browser retries for known blocked shops', () => {
   assert.equal(strategyFor('mueller').browserFallback, false);
-  assert.equal(strategyFor('prolighting').browserFallback, false);
   assert.equal(strategyFor('thomann').browserFallback, false);
   assert.equal(strategyFor('kirstein').browserFallback, false);
   assert.equal(strategyFor('hotsound').browserFallback, false);
   assert.equal(strategyFor('musicstore').browserFallback, false);
+});
+
+test('PRO LIGHTING retries with a real browser when HTTP markup has no price', () => {
+  const prolighting = strategyFor('prolighting');
+  assert.equal(prolighting.mode, 'http-browser');
+  assert.equal(prolighting.browserFallback, true);
 });
 
 test('Thomann keeps an explicit public discovery source', () => {

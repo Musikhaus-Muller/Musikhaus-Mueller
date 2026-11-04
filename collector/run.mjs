@@ -266,12 +266,30 @@ try {
       const componentResults = [];
       for (const component of offer.components) {
         const expected = component.expected_product_name || component.label || expectedNameFromUrl(component.product_url);
-        const result = await httpAttemptTarget({
+        const target = {
           product_url: component.product_url,
           shop_product_name: expected,
           calculation: null
-        });
-        await recordComponentObservation({ component, runId: run.id, result });
+        };
+        const http = await httpAttemptTarget(target);
+        await recordComponentObservation({ component, runId: run.id, result: http });
+
+        let result = http;
+        const host = new URL(component.product_url).hostname;
+        if (http.status !== 'success' && !httpOnly && strategy.browserFallback) {
+          if (browserBlockedHosts.has(host)) {
+            result = {
+              method: 'browser',
+              status: 'blocked',
+              error: 'Browser retry skipped after CAPTCHA / access block on this host'
+            };
+            await recordComponentObservation({ component, runId: run.id, result });
+          } else {
+            result = await browserAttempt(target);
+            await recordComponentObservation({ component, runId: run.id, result });
+            if (result.status === 'captcha' || result.status === 'blocked') browserBlockedHosts.add(host);
+          }
+        }
         componentResults.push({ component, result });
       }
       final = aggregateComponentResults(componentResults);

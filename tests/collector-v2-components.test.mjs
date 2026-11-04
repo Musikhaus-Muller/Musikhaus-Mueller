@@ -34,3 +34,11 @@ test('component calculator refuses partial bundles and preserves previous aggreg
   assert.equal(result.price,undefined);
   assert.match(result.error,/Component failed: Sub/);
 });
+
+
+test('collector v2 gives component targets the same browser fallback path', async () => {
+  const src = await fs.readFile('collector/run.mjs','utf8');
+  assert.match(src, /const target = \{/);
+  assert.match(src, /result = await browserAttempt\(target\)/);
+  assert.match(src, /recordComponentObservation\(\{ component, runId: run\.id, result \}\)/);
+});
