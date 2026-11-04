@@ -2,9 +2,9 @@ import { chromium } from 'playwright';
 import { parsePrice } from '../worker/handler.mjs';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
-const SERVICE_ROLE = process.env.SUPABASE_SERVICE_ROLE_KEY;
-if (!SUPABASE_URL || !SERVICE_ROLE) {
-  throw new Error('SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are required');
+const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
+if (!SUPABASE_URL || !SUPABASE_KEY) {
+  throw new Error('SUPABASE_URL and SUPABASE_SECRET_KEY are required');
 }
 
 const args = Object.fromEntries(process.argv.slice(2).map(v => {
@@ -16,9 +16,9 @@ const limit = args.limit && args.limit !== true ? Number(args.limit) : Infinity;
 const httpOnly = args['http-only'] === true;
 
 const headers = {
-  apikey: SERVICE_ROLE,
-  Authorization: `Bearer ${SERVICE_ROLE}`,
-  'Content-Type': 'application/json'
+  apikey: SUPABASE_KEY,
+  'Content-Type': 'application/json',
+  ...(SUPABASE_KEY.startsWith('eyJ') ? { Authorization: `Bearer ${SUPABASE_KEY}` } : {})
 };
 
 async function rest(path, { method = 'GET', body, prefer } = {}) {
