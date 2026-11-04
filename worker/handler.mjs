@@ -12,6 +12,14 @@ export function parsePrice(html,expected,host){
  for(const m of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)){try{walk(JSON.parse(m[1]))}catch{}}
  let offers=[];
  for(const p of candidates)for(const o of [].concat(p.offers||[])){if(o.priceCurrency==='EUR'&&o.price!==undefined)offers.push({price:priceNumber(o.price),available:/^(?:https?:\/\/schema.org\/)?(?:InStock|PreOrder|BackOrder)\/?$/.test(o.availability)?true:/^(?:https?:\/\/schema.org\/)?(?:OutOfStock|SoldOut|Discontinued)\/?$/.test(o.availability)?false:undefined});}
+ if(!offers.length&&host==='www.prolighting.de'){
+  for(const m of html.matchAll(/item_name\s*:\s*['"]([^'"]+)['"][\s\S]{0,1800}?\bprice\s*:\s*([0-9]+(?:\.[0-9]+)?)/gi)){
+   if(!matches(m[1]))continue;
+   const net=priceNumber(m[2]);
+   const gross=Math.round(net*1.19*100)/100;
+   if(Number.isFinite(gross)&&gross>0){offers.push({price:gross});break}
+  }
+ }
  if(!offers.length&&host==='www.prolighting.de'&&matches(h1)){
   const after=html.slice(html.search(/<h1\b/i));
   let price;

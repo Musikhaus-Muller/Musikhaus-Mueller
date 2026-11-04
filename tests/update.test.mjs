@@ -25,6 +25,24 @@ test('normaliza alemán weiß y weiss como el mismo color',()=>{
  assert.equal(parsed.price,1089);
 });
 
+
+test('PRO LIGHTING usa ecommerce item_name + precio neto cuando falta precio visible',()=>{
+ const htmlFixture='<h1>DAP Frigga - Aktive Einzelsäule PA-System - Weiß</h1><script>items:[{item_name: \'DAP Frigga - Aktive Einzelsäule PA-System - Weiß\', coupon: \'\', discount: 525.31, affiliation: \'www.prolighting.de\', item_brand: \'DAP Audio\', price: 907.56}]</script>';
+ const parsed=parsePrice(htmlFixture,'2 × DAP Frigga - Aktive Einzelsäule PA-System - Weiß','www.prolighting.de');
+ assert.equal(parsed.price,1080);
+});
+
+test('PRO LIGHTING ecommerce neto resuelve MAUI 28 G3 W',()=>{
+ const htmlFixture='<h1>LD Systems MAUI 28 G3 W, Kompaktes Cardioid Säulen PA System, Weiß</h1><script>items:[{item_name: \'LD Systems MAUI 28 G3 W, Kompaktes Cardioid Säulen PA System, Weiß\', price: 1116.81}]</script>';
+ const parsed=parsePrice(htmlFixture,'2 × LD Systems MAUI 28 G3 W, Kompaktes Cardioid Säulen PA System, Weiß','www.prolighting.de');
+ assert.equal(parsed.price,1329);
+});
+
+test('PRO LIGHTING ecommerce no acepta otro producto o color',()=>{
+ const htmlFixture='<h1>DAP Frigga - Aktive Einzelsäule PA-System - Weiß</h1><script>items:[{item_name: \'DAP Frigga - Aktive Einzelsäule PA-System - Schwarz\', price: 881.51}]</script>';
+ assert.throws(()=>parsePrice(htmlFixture,'DAP Frigga - Aktive Einzelsäule PA-System - Weiß','www.prolighting.de'));
+});
+
 test('PRO LIGHTING acepta itemprop price aunque content aparezca después',()=>{
  const htmlFixture='<h1>DAP Frigga - Aktive Einzelsäule PA-System - Weiß</h1><meta itemprop="price" content="1089.00">';
  const parsed=parsePrice(htmlFixture,'DAP Frigga Aktive Einzelsäule PA-System Weiss','www.prolighting.de');
