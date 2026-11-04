@@ -1781,6 +1781,27 @@
         "fetchStatus": "Direktabruf erfolgreich",
         "sourceName": "LD Systems ICOA 1215 Bluetooth Bundle Set",
         "match": "exact"
+      },
+      "musicstore": {
+        "name": "Music Store Warenkorb · ICOA 1215 Bluetooth",
+        "price": 1687.8,
+        "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000",
+        "contents": "2 × ICOA 12 A BT; 1 × ICOA SUB 15 A; 1 × MUSIC STORE Lautsprecherstative Bundle (2 Stative + Tasche); 2 × XLR 6 m.",
+        "match": "similar",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Music Store Produktseiten/Katalog öffentlich verifiziert · 04.11.2026",
+        "calculation": "2 × 429 € + 729 € + 89 € + 2 × 5,90 € = 1.687,80 €",
+        "note": "Gleiche Lautsprecherkonfiguration und Zubehörfunktion wie das Referenzbundle; Stativ-/Kabelmarke weicht ab.",
+        "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000",
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-15-A/art-PAH0022032-000",
+          "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Lautsprecherstative-Bundle/art-PAH431",
+          "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-6-m/art-ACC0001265-000"
+        ]
       }
     }
   },
@@ -1825,6 +1846,27 @@
         "fetchStatus": "Direktabruf erfolgreich",
         "sourceName": "LD Systems ICOA Club Bluetooth Bundle Set",
         "match": "exact"
+      },
+      "musicstore": {
+        "name": "Music Store Warenkorb · ICOA Club Bluetooth",
+        "price": 2601.8,
+        "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000",
+        "contents": "2 × ICOA 12 A BT; 2 × ICOA SUB 18 A; 2 × Gravity SP 2332 B; 2 × XLR 3 m.",
+        "match": "similar",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Music Store Produktseiten/Katalog öffentlich verifiziert · 04.11.2026",
+        "calculation": "2 × 429 € + 2 × 845 € + 2 × 22 € + 2 × 4,90 € = 2.601,80 €",
+        "note": "Gleiche Lautsprecher und Distanzstangenmodell; Kabelmarke/-modell weicht ab.",
+        "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000",
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
+          "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
+          "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002"
+        ]
       }
     }
   },
@@ -1869,6 +1911,27 @@
         "fetchStatus": "Direktabruf erfolgreich",
         "sourceName": "LD Systems ICOA Club XL Bluetooth Bundle Set",
         "match": "exact"
+      },
+      "musicstore": {
+        "name": "Music Store Warenkorb · ICOA Club XL Bluetooth",
+        "price": 2681.8,
+        "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-15-A-BT/art-PAH0021619-000",
+        "contents": "2 × ICOA 15 A BT; 2 × ICOA SUB 18 A; 2 × Gravity SP 2332 B; 2 × XLR 3 m.",
+        "match": "similar",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Music Store Produktseiten/Katalog öffentlich verifiziert · 04.11.2026",
+        "calculation": "2 × 469 € + 2 × 845 € + 2 × 22 € + 2 × 4,90 € = 2.681,80 €",
+        "note": "Gleiche Lautsprecher und Distanzstangenmodell; Kabelmarke/-modell weicht ab.",
+        "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-15-A-BT/art-PAH0021619-000",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-15-A-BT/art-PAH0021619-000",
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
+          "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
+          "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002"
+        ]
       }
     }
   },
@@ -1913,6 +1976,26 @@
         "fetchStatus": "Direktabruf erfolgreich",
         "sourceName": "LD Systems ICOA Power Bluetooth Bundle Set",
         "match": "exact"
+      },
+      "musicstore": {
+        "name": "Music Store Warenkorb · ICOA Power Bluetooth",
+        "price": 4337.6,
+        "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-15-A-BT/art-PAH0021619-000",
+        "contents": "2 × ICOA 15 A BT; 4 × ICOA SUB 18 A; 4 × XLR 3 m.",
+        "match": "similar",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Music Store Produktseiten/Katalog öffentlich verifiziert · 04.11.2026",
+        "calculation": "2 × 469 € + 4 × 845 € + 4 × 4,90 € = 4.337,60 €",
+        "note": "Gleiche Lautsprecheranzahl und Kabellänge wie das Referenzbundle; Kabelmarke/-modell weicht ab.",
+        "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-15-A-BT/art-PAH0021619-000",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-15-A-BT/art-PAH0021619-000",
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
+          "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002"
+        ]
       }
     }
   },
