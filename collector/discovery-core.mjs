@@ -75,11 +75,15 @@ export function discoverySourcesFor(config) {
 }
 
 function parsePrice(text) {
-  const matches = [...stripTags(text).matchAll(/\b\d{1,3}(?:\.\d{3})*,\d{2}\s*(?:€|EUR)(?![A-Za-z0-9_])/gi)];
-  for (const m of matches.reverse()) {
-    const before = stripTags(text).slice(Math.max(0, m.index - 24), m.index);
-    if (/uvp|finanzierung|monat/i.test(before)) continue;
-    const price = Number(m[0].replace(/\s*(?:€|EUR)\s*$/i, '').replace(/\./g, '').replace(',', '.'));
+  const clean = stripTags(text);
+  const matches = [...clean.matchAll(/\d{1,3}(?:\.\d{3})*,\d{2}\s*(?:€|EUR)(?![A-Za-z0-9_])/gi)];
+  for (let i = matches.length - 1; i >= 0; i--) {
+    const m = matches[i];
+    const before = clean.slice(Math.max(0, m.index - 40), m.index);
+    if (/uvp|finanzierung|monat(?:lich)?/i.test(before)) continue;
+    const price = Number(
+      m[0].replace(/\s*(?:€|EUR)\s*$/i, '').replace(/\./g, '').replace(',', '.')
+    );
     if (Number.isFinite(price) && price > 0) return price;
   }
   return null;
