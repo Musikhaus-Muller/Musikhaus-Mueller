@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       shop:
-        description: Optional shop slug (mueller, thomann, kirstein, prolighting, hotsound)
+        description: Optional shop slug (mueller, thomann, kirstein, prolighting, hotsound, musicstore)
         required: false
         type: string
       limit:

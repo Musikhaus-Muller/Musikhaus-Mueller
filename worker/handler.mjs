@@ -80,6 +80,67 @@ async function requireSupabaseCatalog(env){
  if(!rows)throw Error('Supabase-Katalog nicht konfiguriert');
  return rows;
 }
+function supabaseHeaders(env){
+ const key=env.SUPABASE_SECRET_KEY||env.SUPABASE_SERVICE_ROLE_KEY;
+ if(!env.SUPABASE_URL||!key)throw Error('Supabase nicht konfiguriert');
+ return {
+  base:env.SUPABASE_URL.replace(/\/$/,''),
+  headers:{
+   apikey:key,
+   'content-type':'application/json',
+   ...(key.startsWith('eyJ')?{Authorization:'Bearer '+key}:{})
+  }
+ };
+}
+function mapSupabaseRun(run,results=[]){
+ const trigger={schedule:'scheduled',manual:'manual',api:'unknown',import:'unknown'}[run.trigger_type]||'unknown';
+ const status={running:'running',success:'complete',partial:'partial',failed:'partial'}[run.status]||run.status;
+ const mappedResults=results.map(x=>({
+  shop:x.offer?.shop?.slug||'unknown',
+  url:x.offer?.product_url||'',
+  product:x.offer?.shop_product_name||'',
+  checkedAt:x.created_at||run.finished_at||run.started_at,
+  status:x.status==='success'?'confirmed':'error',
+  message:x.message||x.status,
+  changes:[]
+ }));
+ const issues=mappedResults.filter(x=>x.status==='error').map(x=>({shop:x.shop,url:x.url,message:x.message}));
+ return {
+  id:run.id,
+  trigger,
+  status,
+  startedAt:run.started_at,
+  finishedAt:run.finished_at,
+  processed:run.offers_checked||0,
+  total:run.offers_total||0,
+  confirmed:run.offers_updated||0,
+  failed:run.offers_failed||0,
+  changed:0,
+  issues,
+  results:mappedResults
+ };
+}
+async function loadSupabaseRuns(env,fetcher=fetch,limit=30){
+ const {base,headers}=supabaseHeaders(env);
+ const runsRes=await fetcher(base+`/rest/v1/collection_runs?select=id,trigger_type,status,started_at,finished_at,offers_total,offers_checked,offers_updated,offers_failed&order=started_at.desc&limit=${limit}`,{headers,signal:AbortSignal.timeout(15000)});
+ if(!runsRes.ok)throw Error('Supabase-Runs HTTP '+runsRes.status);
+ const runs=await runsRes.json();
+ if(!runs.length)return [];
+ const ids=runs.map(r=>r.id).join(',');
+ const resultsRes=await fetcher(base+`/rest/v1/collection_results?select=run_id,status,price,source_method,http_status,message,created_at,offer:offers(shop_product_name,product_url,shop:shops(slug))&run_id=in.(${ids})&order=created_at.asc`,{headers,signal:AbortSignal.timeout(15000)});
+ if(!resultsRes.ok)throw Error('Supabase-Results HTTP '+resultsRes.status);
+ const results=await resultsRes.json();
+ const byRun=new Map();
+ for(const item of results){
+  if(!byRun.has(item.run_id))byRun.set(item.run_id,[]);
+  byRun.get(item.run_id).push(item);
+ }
+ return runs.map(run=>mapSupabaseRun(run,byRun.get(run.id)||[]));
+}
+async function loadSupabaseStatus(env,fetcher=fetch){
+ const runs=await loadSupabaseRuns(env,fetcher,1);
+ return {updatedAt:runs[0]?.finishedAt||null,run:runs[0]||null};
+}
 function summary(s){return {updatedAt:s.updatedAt,run:s.run?{id:s.run.id,status:s.run.status,startedAt:s.run.startedAt,finishedAt:s.run.finishedAt,processed:s.run.cursor,total:s.run.total,confirmed:s.run.confirmed,failed:s.run.failed,changed:s.run.changed,issues:s.run.issues}:null};}
 function logRun(run){if(!run)return null;const {groups,blocked,...entry}=run;return {...entry,trigger:run.trigger||'unknown',processed:run.cursor??0};}
 function history(state){return [logRun(state.run),...(state.history||[])].filter(Boolean).sort((a,b)=>Date.parse(b.startedAt)-Date.parse(a.startedAt)).slice(0,30);}
@@ -141,8 +202,8 @@ export default{async fetch(request,env){
    const rows=await requireSupabaseCatalog(env);
    return json({source:'supabase',rows});
   }
-  if(path==='/api/runs')return json({timezone:'Europe/Madrid',retention:30,runs:history((await load(env)).state)});
-  if(path==='/api/status')return json(summary((await load(env)).state));
+  if(path==='/api/runs')return json({timezone:'Europe/Madrid',retention:30,runs:await loadSupabaseRuns(env)});
+  if(path==='/api/status')return json(await loadSupabaseStatus(env));
   if(path==='/data.json')return json(await requireSupabaseCatalog(env));
   if(path==='/data.js'){
    const rows=await requireSupabaseCatalog(env);
