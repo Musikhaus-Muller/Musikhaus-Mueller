@@ -34,3 +34,10 @@ test('catalog parser finds Frigga price when name and price share a compact prod
   const out=parseCatalogProductPrice(html,'dap frigga aktive einzelsaeule pa system weiss');
   assert.equal(out.price,1080);
 });
+
+
+test('catalog parser never takes the previous color variant price',()=>{
+  const html='<div>DAP Frigga - Aktive Einzelsäule PA-System - Schwarz</div><div>1.049,00 €</div><div>DAP Frigga - Aktive Einzelsäule PA-System - Weiß</div><div>1.080,00 €</div>';
+  const out=parseCatalogProductPrice(html,'DAP Frigga Aktive Einzelsäule PA-System Weiß');
+  assert.equal(out.price,1080);
+});
