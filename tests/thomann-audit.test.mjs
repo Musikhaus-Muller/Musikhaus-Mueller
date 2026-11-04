@@ -2,13 +2,13 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 
-test('Thomann audit contains 24 verified offers after final audit', async () => {
+test('Thomann audit contains 29 verified offers after 40/40 reconciliation', async () => {
   const seed=JSON.parse(await fs.readFile('web/seed.json','utf8'));
   const actual=seed.filter(r=>r.offers?.thomann);
-  assert.equal(actual.length,24);
+  assert.equal(actual.length,29);
 
   const expected=new Map([
-    ['r5',2578],['r6',2839],['r8',4358],['r9',4936]
+    ['r5',2578],['r6',2669],['r8',4358],['r9',4936]
   ]);
   for(const [id,price] of expected){
     const offer=seed.find(r=>r.id===id)?.offers?.thomann;
