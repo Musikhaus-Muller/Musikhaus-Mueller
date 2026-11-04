@@ -1034,6 +1034,26 @@
         "fetchStatus": "Erneute MAUI-11-Prüfung erfolgreich",
         "sourceName": "LD Systems Maui 11 G2 Bundle",
         "match": "exact"
+      },
+      "musicstore": {
+        "name": "Music Store Warenkorb · MAUI 11 G2 Bundle",
+        "price": 839,
+        "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2/art-PAH0018045-000",
+        "contents": "1 × MAUI 11 G2 schwarz; 1 × MAUI 11 G2 Sat Bag; 1 × MAUI 11 G2 Sub PC.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Music Store Produktseiten öffentlich verifiziert · 04.11.2026",
+        "calculation": "729 € + 65 € + 45 € = 839 €",
+        "note": "Gleiche System- und Taschenkonfiguration wie das Referenzbundle.",
+        "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2/art-PAH0018045-000",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2/art-PAH0018045-000",
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2-Sat-Bag/art-PAH0018753-000",
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2-Sub-PC/art-PAH0018754-000"
+        ]
       }
     }
   },
@@ -1076,6 +1096,26 @@
         "priceDate": "2026-10-17",
         "fetchStatus": "Heute nicht bestätigt (Abrufbegrenzung HTTP 429)",
         "match": "exact"
+      },
+      "musicstore": {
+        "name": "Music Store Warenkorb · MAUI 28 G2 Bundle",
+        "price": 1079,
+        "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2/art-PAH0018043-000",
+        "contents": "1 × MAUI 28 G2 schwarz; 1 × MAUI 28 G2 Sat Bag; 1 × MAUI 28 G2 Sub PC.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Music Store Produktseiten öffentlich verifiziert · 04.11.2026",
+        "calculation": "949 € + 85 € + 45 € = 1.079 €",
+        "note": "Gleiche System- und Taschenkonfiguration wie das Referenzbundle.",
+        "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2/art-PAH0018043-000",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2/art-PAH0018043-000",
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2-Sat-Bag/art-PAH0018692-000",
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2-Sub-PC/art-PAH0018755-000"
+        ]
       }
     }
   },
