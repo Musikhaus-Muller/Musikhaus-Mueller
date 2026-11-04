@@ -4,9 +4,18 @@ on:
   workflow_dispatch:
     inputs:
       shop:
-        description: Optional shop slug (mueller, thomann, kirstein, prolighting, hotsound, musicstore)
-        required: false
-        type: string
+        description: Shop to collect (choose all for every active offer)
+        required: true
+        default: all
+        type: choice
+        options:
+          - all
+          - mueller
+          - thomann
+          - kirstein
+          - prolighting
+          - hotsound
+          - musicstore
       limit:
         description: Optional maximum number of offers
         required: false
@@ -28,6 +37,7 @@ jobs:
     env:
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+      COLLECT_TRIGGER: ${{ github.event_name == 'schedule' && 'schedule' || 'manual' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -40,6 +50,7 @@ jobs:
           SHOP="${{ inputs.shop }}"
           LIMIT="${{ inputs.limit }}"
           ARGS=()
-          if [ -n "$SHOP" ]; then ARGS+=("--shop=$SHOP"); fi
+          echo "trigger=$COLLECT_TRIGGER shop=${SHOP:-all} limit=${LIMIT:-all}"
+          if [ -n "$SHOP" ] && [ "$SHOP" != "all" ]; then ARGS+=("--shop=$SHOP"); fi
           if [ -n "$LIMIT" ]; then ARGS+=("--limit=$LIMIT"); fi
           node run.mjs "${ARGS[@]}"

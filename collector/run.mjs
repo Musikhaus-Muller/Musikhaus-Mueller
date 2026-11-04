@@ -212,7 +212,7 @@ const [run] = await rest('collection_runs', {
   method: 'POST',
   prefer: 'return=representation',
   body: [{
-    trigger_type: process.env.GITHUB_ACTIONS ? 'schedule' : 'manual',
+    trigger_type: process.env.COLLECT_TRIGGER || (process.env.GITHUB_ACTIONS ? 'manual' : 'manual'),
     status: 'running',
     offers_total: selected.length,
     metadata: { shop: shopFilter, httpOnly, strategyVersion: 1 }
