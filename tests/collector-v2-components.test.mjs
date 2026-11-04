@@ -1,5 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
 import { aggregateComponentResults, expectedNameFromUrl } from '../collector/components.mjs';
 
 test('component URL produces a useful expected product name', () => {
