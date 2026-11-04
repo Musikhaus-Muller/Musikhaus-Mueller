@@ -23,7 +23,7 @@ export function parsePrice(html,expected,host){
   if(!Number.isFinite(price)){
    const vatIndex=after.search(/inkl\.?\s*MwSt\.?/i);
    const visible=plain(vatIndex>=0?after.slice(0,vatIndex):after.slice(0,12000));
-   const money=[...visible.matchAll(/\b\d{1,3}(?:\.\d{3})*,\d{2}\s*(?:€|EUR)\b/gi)];
+   const money=[...visible.matchAll(/\b\d{1,3}(?:\.\d{3})*,\d{2}\s*(?:€|EUR)(?![A-Za-z0-9_])/gi)];
    if(money.length)price=priceNumber(money.at(-1)[0].replace(/\s*(?:€|EUR)\s*$/i,''));
   }
   if(Number.isFinite(price))offers.push({price,available:/nicht verf[uü]gbar|nicht lieferbar/i.test(after.slice(0,18000))?false:undefined});
