@@ -20,6 +20,11 @@ test('rechaza generación y color distintos',()=>{
  assert.throws(()=>parsePrice(html('MAUI 11 G3 schwarz'),'MAUI 11 G3 weiss','www.kirstein.de'));
 });
 
+test('normaliza alemán weiß y weiss como el mismo color',()=>{
+ const parsed=parsePrice(html('DAP Frigga Aktive Einzelsäule PA-System Weiß',1089),'dap frigga aktive einzelsaeule pa system weiss','www.prolighting.de');
+ assert.equal(parsed.price,1089);
+});
+
 test('stock acepta formato corto y no interpreta valores desconocidos como agotado',()=>{
  const fixture=availability=>JSON.stringify({'@type':'Product',name:'MAUI 11 G3',offers:{price:929,priceCurrency:'EUR',availability}});
  const parse=a=>parsePrice('<script type="application/ld+json">'+fixture(a)+'</script>','MAUI 11 G3','www.musikhaus-mueller.de');

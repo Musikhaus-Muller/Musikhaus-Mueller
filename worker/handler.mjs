@@ -1,5 +1,5 @@
 const json=(x,status=200)=>new Response(JSON.stringify(x),{status,headers:{'content-type':'application/json','cache-control':'no-store'}});
-const normalize=s=>String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/&[^;]+;/g,' ').replace(/[^a-z0-9]+/g,' ').trim();
+const normalize=s=>String(s).toLowerCase().replace(/ß/g,'ss').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/&[^;]+;/g,' ').replace(/[^a-z0-9]+/g,' ').trim();
 const plain=s=>s.replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
 const priceNumber=x=>{if(typeof x==='number')return x;if(typeof x!=='string')return NaN;return Number(x.includes(',')?x.replace(/\./g,'').replace(',','.'):x)};
 export function parsePrice(html,expected,host){
