@@ -6,12 +6,12 @@ test('Music Store seed contains 10 verified offers with safe multi-component han
   const seed = JSON.parse(await fs.readFile('web/seed.json', 'utf8'));
   const expected = new Map([
     ['r1', 1858], ['r2', 2096], ['r3', 1433], ['r4', 2866],
-    ['r5', 2578], ['r6', 2698], ['r7', 3098], ['r8', 4358], ['r23', 1687.8], ['r24', 2601.8], ['r25', 2681.8], ['r26', 4337.6],
+    ['r5', 2578], ['r6', 2698], ['r7', 3098], ['r8', 4358], ['r10', 3363.8], ['r23', 1687.8], ['r24', 2601.8], ['r25', 2681.8], ['r26', 4337.6],
     ['r15', 1123], ['r16', 1324], ['r17', 1664]
   ]);
 
   const actual = seed.filter(r => r.offers?.musicstore);
-  assert.equal(actual.length, 15);
+  assert.equal(actual.length, 16);
 
   for (const [id, price] of expected) {
     const row = seed.find(r => r.id === id);
@@ -28,7 +28,7 @@ test('Music Store seed contains 10 verified offers with safe multi-component han
     assert(Array.isArray(offer.components) && offer.components.length >= 2);
   }
 
-  for (const id of ['r15','r16','r17','r23','r24','r25','r26']) {
+  for (const id of ['r15','r16','r17','r23','r24','r25','r26','r10']) {
     assert.equal(seed.find(r => r.id === id).offers.musicstore.match, 'similar');
   }
 });

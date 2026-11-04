@@ -871,6 +871,27 @@
         "fetchStatus": "Erneute MAUI-11-Prüfung erfolgreich",
         "sourceName": "LD Systems Maui 11 G3 Power Bundle",
         "match": "exact"
+      },
+      "musicstore": {
+        "name": "Music Store Warenkorb · MAUI 11 G3 Power Bundle",
+        "price": 3363.8,
+        "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
+        "contents": "2 × MAUI 11 G3 schwarz; 2 × MAUI 11 G3 SUB schwarz; 2 × XLR 1,5 m.",
+        "match": "similar",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Music Store Produktseiten/Katalog öffentlich verifiziert · 04.11.2026",
+        "calculation": "2 × 929 € + 2 × 749 € + 2 × 3,90 € = 3.363,80 €",
+        "note": "Gleiche Lautsprecheranzahl und Kabellänge wie das Referenzbundle; Kabelmarke/-modell weicht ab. Mehrkomponenten-Warenkorb.",
+        "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
+        "sourceName": "LD-Systems MAUI 11 G3 Schwarz + MAUI 11 G3 SUB + XLR 1,5 m",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3/art-PAH0023387-000",
+          "MUSIC STORE Mikrokabel Standard 1,5 m · Art.-Nr. ACC0001159-001"
+        ]
       }
     }
   },
