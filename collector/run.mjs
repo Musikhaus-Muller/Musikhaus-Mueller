@@ -147,10 +147,10 @@ async function browserAttempt(offer) {
       userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/156 Safari/537.36'
     });
     const page = await context.newPage();
-    const response = await page.goto(offer.product_url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+    let response = await page.goto(offer.product_url, { waitUntil: 'domcontentloaded', timeout: 30000 });
     await page.waitForTimeout(1500);
-    const html = await page.content();
-    const title = await page.title().catch(() => '');
+    let html = await page.content();
+    let title = await page.title().catch(() => '');
     if (/captcha|just a moment|challenge|access denied/i.test(title + '\n' + html.slice(0, 50000))) {
       await context.close();
       return { method: 'browser', status: 'captcha', httpStatus: response?.status(), error: 'CAPTCHA / access challenge detected' };
