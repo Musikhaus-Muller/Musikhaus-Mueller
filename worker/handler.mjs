@@ -13,8 +13,14 @@ export function parsePrice(html,expected,host){
  let offers=[];
  for(const p of candidates)for(const o of [].concat(p.offers||[])){if(o.priceCurrency==='EUR'&&o.price!==undefined)offers.push({price:priceNumber(o.price),available:/^(?:https?:\/\/schema.org\/)?(?:InStock|PreOrder|BackOrder)\/?$/.test(o.availability)?true:/^(?:https?:\/\/schema.org\/)?(?:OutOfStock|SoldOut|Discontinued)\/?$/.test(o.availability)?false:undefined});}
  if(!offers.length&&host==='www.prolighting.de'&&matches(h1)){
-  const after=html.slice(html.search(/<h1\b/i));const m=after.match(/<[^>]+content=["']([\d.]+)["'][^>]+itemprop=["']price["'][^>]*>/i);
-  if(m)offers.push({price:Number(m[1]),available:/nicht verf[uü]gbar|nicht lieferbar/i.test(after.slice(0,18000))?false:undefined});
+  const after=html.slice(html.search(/<h1\b/i));
+  let price;
+  for(const tag of after.match(/<[^>]+>/g)||[]){
+   if(!/itemprop=["']price["']/i.test(tag))continue;
+   const m=tag.match(/content=["']([\d.,]+)["']/i);
+   if(m){price=priceNumber(m[1]);break}
+  }
+  if(Number.isFinite(price))offers.push({price,available:/nicht verf[uü]gbar|nicht lieferbar/i.test(after.slice(0,18000))?false:undefined});
  }
  const unique=[...new Set(offers.map(o=>o.price))];if(unique.length!==1||!Number.isFinite(unique[0])||unique[0]<=0)throw Error('Kein eindeutiger EUR-Produktpreis');
  return offers[0];

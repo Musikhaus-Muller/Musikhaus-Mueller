@@ -25,6 +25,18 @@ test('normaliza alemán weiß y weiss como el mismo color',()=>{
  assert.equal(parsed.price,1089);
 });
 
+test('PRO LIGHTING acepta itemprop price aunque content aparezca después',()=>{
+ const htmlFixture='<h1>DAP Frigga - Aktive Einzelsäule PA-System - Weiß</h1><meta itemprop="price" content="1089.00">';
+ const parsed=parsePrice(htmlFixture,'DAP Frigga Aktive Einzelsäule PA-System Weiss','www.prolighting.de');
+ assert.equal(parsed.price,1089);
+});
+
+test('PRO LIGHTING acepta itemprop price aunque content aparezca antes',()=>{
+ const htmlFixture='<h1>LD Systems MAUI 28 G3 W, Kompaktes Cardioid Säulen PA System, Weiß</h1><meta content="1439.00" itemprop="price">';
+ const parsed=parsePrice(htmlFixture,'LD Systems MAUI 28 G3 W Kompaktes Cardioid Saeulen PA System Weiss','www.prolighting.de');
+ assert.equal(parsed.price,1439);
+});
+
 test('stock acepta formato corto y no interpreta valores desconocidos como agotado',()=>{
  const fixture=availability=>JSON.stringify({'@type':'Product',name:'MAUI 11 G3',offers:{price:929,priceCurrency:'EUR',availability}});
  const parse=a=>parsePrice('<script type="application/ld+json">'+fixture(a)+'</script>','MAUI 11 G3','www.musikhaus-mueller.de');
