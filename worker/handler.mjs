@@ -92,7 +92,7 @@ function supabaseHeaders(env){
   }
  };
 }
-function mapSupabaseRun(run,results=[]){
+export function mapSupabaseRun(run,results=[]){
  const trigger={schedule:'scheduled',manual:'manual',api:'unknown',import:'unknown'}[run.trigger_type]||'unknown';
  const status={running:'running',success:'complete',partial:'partial',failed:'partial'}[run.status]||run.status;
  const mappedResults=results.map(x=>({
@@ -143,7 +143,7 @@ async function loadSupabaseStatus(env,fetcher=fetch){
 }
 function summary(s){return {updatedAt:s.updatedAt,run:s.run?{id:s.run.id,status:s.run.status,startedAt:s.run.startedAt,finishedAt:s.run.finishedAt,processed:s.run.cursor,total:s.run.total,confirmed:s.run.confirmed,failed:s.run.failed,changed:s.run.changed,issues:s.run.issues}:null};}
 function logRun(run){if(!run)return null;const {groups,blocked,...entry}=run;return {...entry,trigger:run.trigger||'unknown',processed:run.cursor??0};}
-function history(state){return [logRun(state.run),...(state.history||[])].filter(Boolean).sort((a,b)=>Date.parse(b.startedAt)-Date.parse(a.startedAt)).slice(0,30);}
+export function history(state){return [logRun(state.run),...(state.history||[])].filter(Boolean).sort((a,b)=>Date.parse(b.startedAt)-Date.parse(a.startedAt)).slice(0,30);}
 function archive(state,entry){state.history=[entry,...(state.history||[]).filter(x=>x.id!==entry.id)].slice(0,29);}
 export async function refresh(env,fetcher=fetch,clock=()=>Date.now(),trigger='unknown'){
  let {state,etag}=await load(env);const now=clock();

@@ -1,5 +1,5 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';
-const src=await fs.readFile('dist/server/index.js','utf8');const {default:worker,parsePrice,refresh,applyBrowserChecks}=await import('data:text/javascript;base64,'+Buffer.from(src).toString('base64'));const seed=JSON.parse(await fs.readFile('web/seed.json','utf8'));
+const src=await fs.readFile('dist/server/index.js','utf8');const {default:worker,parsePrice,refresh,applyBrowserChecks,history}=await import('data:text/javascript;base64,'+Buffer.from(src).toString('base64'));const seed=JSON.parse(await fs.readFile('web/seed.json','utf8'));
 class Bucket{constructor(){this.data=null;this.version=0}async get(){if(!this.data)return null;return {etag:String(this.version),json:async()=>JSON.parse(this.data)}}async put(k,v,o){if(o.onlyIf?.etagMatches&&o.onlyIf.etagMatches!==String(this.version))return null;if(o.onlyIf instanceof Headers&&this.data)return null;this.data=v;return {etag:String(++this.version)}}}
 const html=(name,price=929,currency='EUR')=>`<script type="application/ld+json">${JSON.stringify({'@type':'Product',name,offers:{price,priceCurrency:currency}})}</script>`;
 test('precio EUR único y producto correcto',()=>{assert.equal(parsePrice(html('LD Systems MAUI 11 G3',929),'MAUI 11 G3','www.kirstein.de').price,929);assert.throws(()=>parsePrice(html('DAVE 18 G4X'),'MAUI 11 G3','www.kirstein.de'));assert.throws(()=>parsePrice(html('MAUI 11 G3',929,'USD'),'MAUI 11 G3','www.kirstein.de'));assert.throws(()=>parsePrice(html('MAUI 11 G3')+html('MAUI 11 G3',999),'MAUI 11 G3','www.kirstein.de'));assert.throws(()=>parsePrice('Just a moment','MAUI','www.kirstein.de'));});
@@ -20,13 +20,13 @@ test('historial persistente distingue trigger, resultados, espera y retención',
  let result=await refresh(env,blocked,clock,'scheduled');
  const firstId=result.run.id;
  while(result.run.status==='running')result=await refresh(env,blocked,clock,'scheduled');
- const read=async()=>await (await worker.fetch(new Request('https://site/api/runs'),env)).json();
- let logs=await read();assert.equal(logs.runs[0].trigger,'scheduled');assert.equal(logs.runs[0].results.length,70);assert.equal(logs.runs[0].status,'partial');assert(logs.runs[0].finishedAt);assert.equal(logs.runs[0].failed,70);
- now+=1000;const skipped=await refresh(env,blocked,clock,'manual');assert(skipped.cooldown);logs=await read();assert.equal(logs.runs[0].status,'skipped');assert.equal(logs.runs[0].trigger,'manual');
- now+=3600000;await refresh(env,blocked,clock,'test');logs=await read();assert.equal(logs.runs[0].trigger,'test');assert(logs.runs.some(r=>r.id===firstId));assert(!('groups' in logs.runs[0]));
+ const read=()=>history(JSON.parse(env.BUCKET.data));
+ let logs=read();assert.equal(logs[0].trigger,'scheduled');assert.equal(logs[0].results.length,70);assert.equal(logs[0].status,'partial');assert(logs[0].finishedAt);assert.equal(logs[0].failed,70);
+ now+=1000;const skipped=await refresh(env,blocked,clock,'manual');assert(skipped.cooldown);logs=read();assert.equal(logs[0].status,'skipped');assert.equal(logs[0].trigger,'manual');
+ now+=3600000;await refresh(env,blocked,clock,'test');logs=read();assert.equal(logs[0].trigger,'test');assert(logs.some(r=>r.id===firstId));assert(!('groups' in logs[0]));
  let state=JSON.parse(env.BUCKET.data);state.run.status='complete';env.BUCKET.data=JSON.stringify(state);
  for(let i=0;i<35;i++){now++;await refresh(env,blocked,clock,'manual');}
- assert.equal((await read()).runs.length,30);
+ assert.equal(read().length,30);
 });
 
 

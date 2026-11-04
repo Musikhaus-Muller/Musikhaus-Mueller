@@ -10,8 +10,10 @@ test('catalog endpoints no longer read R2 snapshot', async () => {
   assert.doesNotMatch(src, /source:'snapshot'/);
 });
 
-test('R2 remains available for history and legacy refresh state', async () => {
+test('R2 remains only for legacy refresh and MCP state', async () => {
   const src = await fs.readFile('worker/handler.mjs','utf8');
-  assert.match(src, /if\(path==='\/api\/runs'\)[\s\S]*load\(env\)/);
-  assert.match(src, /if\(path==='\/api\/status'\)[\s\S]*load\(env\)/);
+  assert.match(src, /export async function refresh\([\s\S]*load\(env\)/);
+  assert.match(src, /q\.params\.name==='refresh_prices'\?await refresh\(env\)/);
+  assert.doesNotMatch(src, /if\(path==='\/api\/runs'\)[\s\S]*load\(env\)/);
+  assert.doesNotMatch(src, /if\(path==='\/api\/status'\)[\s\S]*load\(env\)/);
 });
