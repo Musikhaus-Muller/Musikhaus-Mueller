@@ -7,7 +7,8 @@
     "build": "node scripts/build.mjs",
     "test": "npm run build && node --test tests/*.test.mjs",
     "preview": "node scripts/preview.mjs",
-    "parity:supabase": "node scripts/check-supabase-parity.mjs"
+    "parity:supabase": "node scripts/check-supabase-parity.mjs",
+    "discover:prolighting": "node collector/discover.mjs --shop=prolighting"
   },
   "engines": {
     "node": ">=22"

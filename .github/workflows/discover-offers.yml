@@ -1,0 +1,47 @@
+name: Discover offers
+
+on:
+  workflow_dispatch:
+    inputs:
+      shop:
+        description: Shop to discover missing offers for
+        required: true
+        default: prolighting
+        type: choice
+        options:
+          - prolighting
+      limit:
+        description: Optional maximum number of missing configurations
+        required: false
+        type: string
+  schedule:
+    - cron: '30 6 * * 0'
+
+concurrency:
+  group: offer-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: collector
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+      DISCOVERY_TRIGGER: ${{ github.event_name == 'schedule' && 'schedule' || 'manual' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Discover
+        run: |
+          SHOP="${{ inputs.shop }}"
+          LIMIT="${{ inputs.limit }}"
+          ARGS=("--shop=${SHOP:-prolighting}")
+          if [ -n "$LIMIT" ]; then ARGS+=("--limit=$LIMIT"); fi
+          echo "trigger=$DISCOVERY_TRIGGER shop=${SHOP:-prolighting} limit=${LIMIT:-all}"
+          node discover.mjs "${ARGS[@]}"
