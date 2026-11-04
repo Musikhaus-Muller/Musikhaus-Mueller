@@ -198,14 +198,14 @@ async function browserAttempt(offer) {
 const [shops, configurations, offers] = await Promise.all([
   rest('shops?select=id,slug,name,collector_type&enabled=eq.true'),
   rest('configurations?select=id,legacy_id,name&active=eq.true'),
-  rest('offers?select=id,configuration_id,shop_id,shop_product_name,product_url,calculation&active=eq.true&product_url=not.is.null')
+  rest('offers?select=id,configuration_id,shop_id,shop_product_name,product_url,calculation,metadata&active=eq.true&product_url=not.is.null')
 ]);
 
 const shopMap = new Map(shops.map(x => [x.id, x]));
 const configMap = new Map(configurations.map(x => [x.id, x]));
 const selected = offers
   .map(o => ({ ...o, shop: shopMap.get(o.shop_id), configuration: configMap.get(o.configuration_id) }))
-  .filter(o => o.shop && (!shopFilter || o.shop.slug === shopFilter))
+  .filter(o => o.shop && o.metadata?.collection_disabled !== true && (!shopFilter || o.shop.slug === shopFilter))
   .slice(0, Number.isFinite(limit) ? limit : offers.length);
 
 const [run] = await rest('collection_runs', {

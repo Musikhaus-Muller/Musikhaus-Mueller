@@ -203,6 +203,26 @@
         "calculation": "2 × 1027 € = 2054 €",
         "source": "https://www.kirstein.de/Saeulensysteme/LD-Systems-MAUI-11-G3-Schwarz-Set.html",
         "lastAttempt": "2026-11-03"
+      },
+      "musicstore": {
+        "name": "Music Store Warenkorb · MAUI 11 G3 Stereo + Taschen",
+        "price": 2096,
+        "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
+        "contents": "2 × MAUI 11 G3 schwarz; 2 × MAUI 11 G3 SAT BAG; 2 × MAUI 11 G3 SUB PC.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Music Store Produktseiten/Katalog öffentlich verifiziert · 04.11.2026",
+        "calculation": "2 × 929 € + 2 × 67 € + 2 × 52 € = 2.096 €",
+        "note": "Berechneter Warenkorb aus sechs Einzelartikeln; automatische Einzel-URL-Preisprüfung deaktiviert.",
+        "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-SAT-BAG/art-PAH0023393-000",
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-SUB-PC/art-PAH0023394-000"
+        ]
       }
     }
   },
@@ -288,6 +308,26 @@
         "note": "",
         "source": "https://www.kirstein.de/Saeulensysteme/LD-Systems-MAUI-28-G3-Schwarz-Set.html",
         "lastAttempt": "2026-11-03"
+      },
+      "musicstore": {
+        "name": "Music Store Warenkorb · MAUI 28 G3 + Taschen",
+        "price": 1433,
+        "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
+        "contents": "1 × MAUI 28 G3 schwarz; 1 × MAUI 28 G3 SAT BAG; 1 × MAUI 28 G3 SUB PC.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Music Store Produktseiten/Katalog öffentlich verifiziert · 04.11.2026",
+        "calculation": "1.289 € + 89 € + 55 € = 1.433 €",
+        "note": "Berechneter Warenkorb aus drei Einzelartikeln; automatische Einzel-URL-Preisprüfung deaktiviert.",
+        "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SAT-BAG/art-PAH0023423-000",
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SUB-PC/art-PAH0023395-000"
+        ]
       }
     }
   },
@@ -389,6 +429,26 @@
         "note": "",
         "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g3-stereo-bundle-2x-maui-28-g3-taschen.html",
         "lastAttempt": "2026-11-03"
+      },
+      "musicstore": {
+        "name": "Music Store Warenkorb · MAUI 28 G3 Stereo + Taschen",
+        "price": 2866,
+        "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
+        "contents": "2 × MAUI 28 G3 schwarz; 2 × MAUI 28 G3 SAT BAG; 2 × MAUI 28 G3 SUB PC.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Music Store Produktseiten/Katalog öffentlich verifiziert · 04.11.2026",
+        "calculation": "2 × 1.289 € + 2 × 89 € + 2 × 55 € = 2.866 €",
+        "note": "Berechneter Warenkorb aus sechs Einzelartikeln; automatische Einzel-URL-Preisprüfung deaktiviert.",
+        "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SAT-BAG/art-PAH0023423-000",
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SUB-PC/art-PAH0023395-000"
+        ]
       }
     }
   },
@@ -1067,6 +1127,25 @@
         "note": "Gleiches PA-System, Anzahl Stative und Kabellänge; Zubehörmarke/-modell weicht ab bzw. bei Müller nicht eindeutig angegeben. Kein identischer Warenkorb.",
         "source": "https://www.kirstein.de/PA-Komplettanlagen/LD-Systems-Dave-12-G4X-Set.html",
         "lastAttempt": "2026-11-03"
+      },
+      "musicstore": {
+        "name": "Music Store Warenkorb · DAVE 12 G4X + Stative + 2×10m Kabel",
+        "price": 1123,
+        "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-12-G4X/art-PAH0023214-000",
+        "contents": "1 × DAVE 12 G4X; MUSIC STORE Box 3 Set: 2 × Stativ inkl. Tasche + 2 × Lautsprecherkabel 10 m.",
+        "match": "similar",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Music Store Produktseiten/Katalog öffentlich verifiziert · 04.11.2026",
+        "calculation": "998 € + 125 € = 1.123 €",
+        "note": "Gleiche PA-Anlage und Zubehörfunktion; Zubehörmarke/-modell weicht von anderen Händlern ab. Automatische Einzel-URL-Preisprüfung deaktiviert.",
+        "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-12-G4X/art-PAH0023214-000",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-12-G4X/art-PAH0023214-000",
+          "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Box-3-Set-Kabel-10m-PASSIV/art-PAH343"
+        ]
       }
     }
   },
@@ -1154,6 +1233,25 @@
         "note": "Gleiches PA-System, Anzahl Stative und Kabellänge; Zubehörmarke/-modell weicht ab bzw. bei Müller nicht eindeutig angegeben. Kein identischer Warenkorb.",
         "source": "https://www.kirstein.de/PA-Komplettanlagen/LD-Systems-Dave-15-G4X-Set.html",
         "lastAttempt": "2026-11-03"
+      },
+      "musicstore": {
+        "name": "Music Store Warenkorb · DAVE 15 G4X + Stative + 2×10m Kabel",
+        "price": 1324,
+        "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-15-G4X/art-PAH0023215-000",
+        "contents": "1 × DAVE 15 G4X; MUSIC STORE Box 3 Set: 2 × Stativ inkl. Tasche + 2 × Lautsprecherkabel 10 m.",
+        "match": "similar",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Music Store Produktseiten/Katalog öffentlich verifiziert · 04.11.2026",
+        "calculation": "1.199 € + 125 € = 1.324 €",
+        "note": "Gleiche PA-Anlage und Zubehörfunktion; Zubehörmarke/-modell weicht von anderen Händlern ab. Automatische Einzel-URL-Preisprüfung deaktiviert.",
+        "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-15-G4X/art-PAH0023215-000",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-15-G4X/art-PAH0023215-000",
+          "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Box-3-Set-Kabel-10m-PASSIV/art-PAH343"
+        ]
       }
     }
   },
@@ -1241,6 +1339,25 @@
         "note": "Gleiches PA-System, Anzahl Stative und Kabellänge; Zubehörmarke/-modell weicht ab bzw. bei Müller nicht eindeutig angegeben. Kein identischer Warenkorb.",
         "source": "https://www.kirstein.de/PA-Komplettanlagen/LD-Systems-Dave-18-G4X-Set.html",
         "lastAttempt": "2026-11-03"
+      },
+      "musicstore": {
+        "name": "Music Store Warenkorb · DAVE 18 G4X + Stative + 2×10m Kabel",
+        "price": 1664,
+        "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-18-G4X/art-PAH0023216-000",
+        "contents": "1 × DAVE 18 G4X; MUSIC STORE Box 3 Set: 2 × Stativ inkl. Tasche + 2 × Lautsprecherkabel 10 m.",
+        "match": "similar",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Music Store Produktseiten/Katalog öffentlich verifiziert · 04.11.2026",
+        "calculation": "1.539 € + 125 € = 1.664 €",
+        "note": "Gleiche PA-Anlage und Zubehörfunktion; Zubehörmarke/-modell weicht von anderen Händlern ab. Automatische Einzel-URL-Preisprüfung deaktiviert.",
+        "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-18-G4X/art-PAH0023216-000",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-18-G4X/art-PAH0023216-000",
+          "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Box-3-Set-Kabel-10m-PASSIV/art-PAH343"
+        ]
       }
     }
   },
