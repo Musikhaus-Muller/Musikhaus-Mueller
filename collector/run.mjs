@@ -2,6 +2,7 @@ import { chromium } from 'playwright';
 import { parsePrice } from '../worker/handler.mjs';
 import { strategyFor } from './strategies.mjs';
 import { aggregateComponentResults, expectedNameFromUrl } from './components.mjs';
+import { publicCatalogSourceFor, parseCatalogProductPrice } from './catalog-sources.mjs';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -91,6 +92,48 @@ async function recordObservation({ offer, runId, result }) {
       metadata: { url: offer.product_url }
     }]
   });
+}
+
+async function catalogAttemptTarget(offer, shopSlug) {
+  const sourceUrl = publicCatalogSourceFor(shopSlug, offer.shop_product_name || '');
+  if (!sourceUrl) return { method: 'catalog', status: 'skipped', error: 'No public catalog source configured' };
+
+  let res;
+  try {
+    res = await fetch(sourceUrl, {
+      redirect: 'follow',
+      signal: AbortSignal.timeout(12000),
+      headers: {
+        Accept: 'text/html,application/xhtml+xml',
+        'Accept-Language': 'de-DE,de;q=0.9,en;q=0.6',
+        'User-Agent': 'Mozilla/5.0 (compatible; PA-Bundle-Preisvergleich/1.0; +price-monitor)'
+      }
+    });
+  } catch (e) {
+    return { method: 'catalog', status: 'network_error', error: e.message };
+  }
+  if (res.status === 403 || res.status === 429) {
+    return { method: 'catalog', status: 'blocked', httpStatus: res.status, error: `HTTP ${res.status}` };
+  }
+  if (!res.ok) {
+    return { method: 'catalog', status: 'network_error', httpStatus: res.status, error: `HTTP ${res.status}` };
+  }
+
+  try {
+    const html = await res.text();
+    const parsed = parseCatalogProductPrice(html, offer.shop_product_name || '');
+    const multiplier = multiplierFor(offer);
+    return {
+      method: 'catalog',
+      status: 'success',
+      httpStatus: res.status,
+      price: Math.round(parsed.price * multiplier * 100) / 100,
+      available: parsed.available,
+      evidence: `Official shop catalog fallback: ${sourceUrl}`
+    };
+  } catch (e) {
+    return { method: 'catalog', status: classifyError(e), httpStatus: res.status, error: e.message };
+  }
 }
 
 async function httpAttemptTarget(offer) {
@@ -275,19 +318,11 @@ try {
         await recordComponentObservation({ component, runId: run.id, result: http });
 
         let result = http;
-        const host = new URL(component.product_url).hostname;
-        if (http.status !== 'success' && !httpOnly && strategy.browserFallback) {
-          if (browserBlockedHosts.has(host)) {
-            result = {
-              method: 'browser',
-              status: 'blocked',
-              error: 'Browser retry skipped after CAPTCHA / access block on this host'
-            };
+        if (http.status !== 'success' && strategy.publicSource) {
+          const catalog = await catalogAttemptTarget(target, shop.slug);
+          if (catalog.status === 'success') {
+            result = catalog;
             await recordComponentObservation({ component, runId: run.id, result });
-          } else {
-            result = await browserAttempt(target);
-            await recordComponentObservation({ component, runId: run.id, result });
-            if (result.status === 'captcha' || result.status === 'blocked') browserBlockedHosts.add(host);
           }
         }
         componentResults.push({ component, result });
@@ -305,20 +340,17 @@ try {
       await recordObservation({ offer, runId: run.id, result: http });
 
       final = http;
-      const host = new URL(offer.product_url).hostname;
-      if (http.status !== 'success' && !httpOnly && strategy.browserFallback) {
-        if (browserBlockedHosts.has(host)) {
-          final = { method: 'browser', status: 'blocked', error: 'Browser retry skipped after CAPTCHA / access block on this host' };
+      if (http.status !== 'success' && strategy.publicSource) {
+        const catalog = await catalogAttemptTarget(offer, shop.slug);
+        if (catalog.status === 'success') {
+          final = catalog;
           await recordObservation({ offer, runId: run.id, result: final });
-        } else {
-          final = await browserAttempt(offer);
-          await recordObservation({ offer, runId: run.id, result: final });
-          if (final.status === 'captcha' || final.status === 'blocked') browserBlockedHosts.add(host);
         }
-      } else if (http.status !== 'success' && !strategy.browserFallback) {
+      }
+      if (final.status !== 'success' && !strategy.browserFallback) {
         final = {
-          ...http,
-          error: `${http.error || http.status}; strategy=${strategy.mode}; previous valid price preserved`
+          ...final,
+          error: `${final.error || final.status}; strategy=${strategy.mode}; previous valid price preserved`
         };
       }
     }

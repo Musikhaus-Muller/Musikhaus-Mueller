@@ -5,9 +5,11 @@ export const SHOP_STRATEGIES = {
     publicSource: null
   },
   prolighting: {
-    mode: 'http-browser',
-    browserFallback: true,
-    publicSource: null
+    mode: 'http-with-public-catalog',
+    browserFallback: false,
+    publicSource: {
+      type: 'catalog-map'
+    }
   },
   thomann: {
     mode: 'http-with-public-source',

@@ -10,10 +10,11 @@ test('collector strategies avoid browser retries for known blocked shops', () =>
   assert.equal(strategyFor('musicstore').browserFallback, false);
 });
 
-test('PRO LIGHTING retries with a real browser when HTTP markup has no price', () => {
+test('PRO LIGHTING uses official public catalog fallback without browser retry', () => {
   const prolighting = strategyFor('prolighting');
-  assert.equal(prolighting.mode, 'http-browser');
-  assert.equal(prolighting.browserFallback, true);
+  assert.equal(prolighting.mode, 'http-with-public-catalog');
+  assert.equal(prolighting.browserFallback, false);
+  assert.equal(prolighting.publicSource.type, 'catalog-map');
 });
 
 test('Thomann keeps an explicit public discovery source', () => {
