@@ -28,3 +28,11 @@ test('historial persistente distingue trigger, resultados, espera y retención',
  for(let i=0;i<35;i++){now++;await refresh(env,blocked,clock,'manual');}
  assert.equal((await read()).runs.length,30);
 });
+
+
+test('JSON-LD ItemList anidado permite extraer producto de una categoría',()=>{
+ const nested={"@type":"ItemList",itemListElement:[{"@type":"ListItem",position:1,item:{"@type":"Product",name:"LD Systems STINGER G3 POWER SET A Aktivsystem",offers:{price:"4169.00",priceCurrency:"EUR",availability:"https://schema.org/InStock"}}},{"@type":"ListItem",position:2,item:{"@type":"Product",name:"Otro producto",offers:{price:"999.00",priceCurrency:"EUR"}}}]};
+ const page='<script type="application/ld+json">'+JSON.stringify(nested)+'</script>';
+ const parsed=parsePrice(page,'LD Systems STINGER G3 POWER SET A Aktivsystem','www.hotsound-store.com');
+ assert.equal(parsed.price,4169);assert.equal(parsed.available,true);
+});

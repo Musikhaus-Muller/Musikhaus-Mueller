@@ -170,6 +170,7 @@ const [run] = await rest('collection_runs', {
 });
 
 let checked = 0, updated = 0, failed = 0;
+const browserBlockedHosts = new Set();
 try {
   for (const offer of selected) {
     const shop = offer.shop;
@@ -179,9 +180,16 @@ try {
     await recordObservation({ offer, runId: run.id, result: http });
 
     let final = http;
+    const host = new URL(offer.product_url).hostname;
     if (http.status !== 'success' && !httpOnly) {
-      final = await browserAttempt(offer);
-      await recordObservation({ offer, runId: run.id, result: final });
+      if (browserBlockedHosts.has(host)) {
+        final = { method: 'browser', status: 'blocked', error: 'Browser retry skipped after CAPTCHA / access block on this host' };
+        await recordObservation({ offer, runId: run.id, result: final });
+      } else {
+        final = await browserAttempt(offer);
+        await recordObservation({ offer, runId: run.id, result: final });
+        if (final.status === 'captcha' || final.status === 'blocked') browserBlockedHosts.add(host);
+      }
     }
 
     await rest('collection_results', {

@@ -10,7 +10,7 @@ export function parsePrice(html,expected,host){
  const tokens=normalize(expected.replace(/^2\s*[×x]\s*/, '')).split(' ').filter(t=>!['ld','systems','set','bundle','2','x'].includes(t));
  const matches=name=>{const n=normalize(name);const words=n.split(' ');const required=tokens.filter(t=>/\d/.test(t)||['schwarz','black','weiss','white'].includes(t));return tokens.length>0&&required.every(t=>words.includes(t))&&tokens.filter(t=>words.includes(t)).length/tokens.length>=.65};
  let candidates=[];
- function walk(x){if(!x||typeof x!=='object')return;if(Array.isArray(x)){x.forEach(walk);return}if([].concat(x['@type']||[]).includes('Product')&&matches(x.name||''))candidates.push(x);if(x['@graph'])walk(x['@graph']);}
+ function walk(x){if(!x||typeof x!=='object')return;if(Array.isArray(x)){x.forEach(walk);return}if([].concat(x['@type']||[]).includes('Product')&&matches(x.name||''))candidates.push(x);for(const v of Object.values(x))if(v&&typeof v==='object')walk(v);}
  for(const m of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)){try{walk(JSON.parse(m[1]))}catch{}}
  let offers=[];
  for(const p of candidates)for(const o of [].concat(p.offers||[])){if(o.priceCurrency==='EUR'&&o.price!==undefined)offers.push({price:priceNumber(o.price),available:/^(?:https?:\/\/schema.org\/)?(?:InStock|PreOrder|BackOrder)\/?$/.test(o.availability)?true:/^(?:https?:\/\/schema.org\/)?(?:OutOfStock|SoldOut|Discontinued)\/?$/.test(o.availability)?false:undefined});}
