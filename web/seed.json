@@ -283,16 +283,16 @@
       },
       "thomann": {
         "name": "LD Systems Maui 28 G3 Bundle",
-        "price": 1415,
+        "price": 1409,
         "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm",
         "contents": "1 × MAUI 28 G3; 1 × Sat Bag; 1 × Sub Bag.",
         "source": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm",
-        "evidence": "Produktseite · Webcache",
-        "lastAttempt": "2026-11-03",
+        "evidence": "Thomann Produktseite/Katalog aktuell verifiziert · 04.11.2026",
+        "lastAttempt": "2026-11-04",
         "previousPrice": 1415,
         "previousDate": "2026-10-17",
-        "verifiedToday": false,
-        "priceDate": "2026-10-17",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
         "fetchStatus": "Heute nicht bestätigt (Abrufbegrenzung HTTP 429)",
         "match": "exact"
       },
@@ -389,17 +389,17 @@
       },
       "thomann": {
         "name": "2 × LD Systems Maui 28 G3 Bundle",
-        "price": 2830,
+        "price": 2818,
         "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm",
         "contents": "2 × Einzelbundle: je 1 × MAUI 28 G3, Sat Bag und Sub Bag.",
         "source": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm",
-        "evidence": "Produktseite · Webcache",
-        "calculation": "2 × 1.415 € = 2.830 €",
-        "lastAttempt": "2026-11-03",
+        "evidence": "Thomann Produktseite/Katalog aktuell verifiziert · 04.11.2026",
+        "calculation": "2 × 1.409 € = 2.818 €",
+        "lastAttempt": "2026-11-04",
         "previousPrice": 2830,
         "previousDate": "2026-10-17",
-        "verifiedToday": false,
-        "priceDate": "2026-10-17",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
         "fetchStatus": "Heute nicht bestätigt (Abrufbegrenzung HTTP 429)",
         "match": "exact"
       },
@@ -630,13 +630,13 @@
       },
       "thomann": {
         "name": "LD Systems Maui 28 G3 White Stereo Bundle",
-        "price": 2839,
+        "price": 2669,
         "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_white_stereo_bundle.htm",
         "contents": "2 × MAUI 28 G3 weiß.",
         "match": "exact",
         "verifiedToday": true,
         "priceDate": "2026-11-04",
-        "evidence": "Thomann Produktseite/Katalog öffentlich verifiziert · 04.11.2026",
+        "evidence": "Thomann Produktseite/Katalog aktuell verifiziert · 04.11.2026",
         "note": "Direktes Thomann-Bundle aus zwei weißen MAUI 28 G3.",
         "source": "https://www.thomann.de/de/ld_systems_maui_28_g3_white_stereo_bundle.htm",
         "lastAttempt": "2026-11-04"
@@ -700,16 +700,16 @@
       },
       "thomann": {
         "name": "LD Systems Maui 28 G3 MIX SysLink Bundle",
-        "price": 3079,
+        "price": 3159,
         "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_mix_syslink_bundle.htm",
         "contents": "2 × MAUI 28 G3 MIX, schwarz; 1 × pro snake CAT6E 5 m.",
         "source": "https://www.thomann.de/de/ld_systems_maui_28_g3_mix_syslink_bundle.htm",
-        "evidence": "Produktseite · Webcache",
-        "lastAttempt": "2026-11-03",
+        "evidence": "Thomann Produktseite/Katalog aktuell verifiziert · 04.11.2026",
+        "lastAttempt": "2026-11-04",
         "previousPrice": 3079,
         "previousDate": "2026-10-17",
-        "verifiedToday": false,
-        "priceDate": "2026-10-17",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
         "fetchStatus": "Heute nicht bestätigt (Abrufbegrenzung HTTP 429)",
         "match": "similar"
       },
@@ -1696,18 +1696,18 @@
       },
       "thomann": {
         "name": "LD Systems Stinger 12/Sub18 Power Bundle",
-        "price": 3979,
+        "price": 3959,
         "url": "https://www.thomann.de/de/ld_systems_stinger_12_sub18_power_bundle.htm",
         "contents": "2 × Stinger 12A G3; 2 × SUB 18A G3; 4 Hüllen; 2 × Roadworx Multi Pole + Tasche; 2 × Sommer Monolith1 2,5 m.",
         "source": "https://www.thomann.de/de/ld_systems_stinger_12_sub18_power_bundle.htm",
-        "evidence": "Produktseite · Webcache",
+        "evidence": "Thomann Produktseite/Katalog aktuell verifiziert · 04.11.2026",
         "alternativePrice": 3959,
         "alternativeSource": "https://www.thomann.de/de/cat_GK_paksbs.html",
-        "lastAttempt": "2026-11-03",
+        "lastAttempt": "2026-11-04",
         "previousPrice": 3979,
         "previousDate": "2026-10-17",
-        "verifiedToday": false,
-        "priceDate": "2026-10-17",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
         "fetchStatus": "Heute nicht bestätigt (Abrufbegrenzung HTTP 429)",
         "match": "similar"
       },
@@ -1798,18 +1798,18 @@
       },
       "thomann": {
         "name": "LD Systems Stinger High Power Bundle",
-        "price": 6999,
+        "price": 6669,
         "url": "https://www.thomann.de/de/ld_systems_stinger_high_power_bundle.htm",
         "contents": "2 × Stinger 15A G3; 4 × SUB 18A G3; 6 Hüllen; 2 × Roadworx Multi Pole + Tasche; 4 × Sommer Monolith1 2,5 m.",
         "source": "https://www.thomann.de/de/ld_systems_stinger_high_power_bundle.htm",
-        "evidence": "Produktseite · Webcache",
+        "evidence": "Thomann Produktseite/Katalog aktuell verifiziert · 04.11.2026",
         "alternativePrice": 6635,
         "alternativeSource": "https://www.thomann.de/de/cat_GK_paksbs.html?ls=50&pg=3",
-        "lastAttempt": "2026-11-03",
+        "lastAttempt": "2026-11-04",
         "previousPrice": 6999,
         "previousDate": "2026-10-17",
-        "verifiedToday": false,
-        "priceDate": "2026-10-17",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
         "fetchStatus": "Heute nicht bestätigt (Abrufbegrenzung HTTP 429)",
         "match": "similar"
       },
@@ -1856,16 +1856,16 @@
     "offers": {
       "thomann": {
         "name": "LD Systems Stinger 8/Sub15 Basic Bundle",
-        "price": 2109,
+        "price": 2099,
         "url": "https://www.thomann.de/de/ld_systems_stinger_8_sub15_basic_bundle.htm",
         "contents": "2 × Stinger 8A G3; 1 × SUB 15A G3; 3 Hüllen; 2 × Roadworx Slim Line Stative + Tasche; 2 × pro snake TPM 10 m.",
         "source": "https://www.thomann.de/de/ld_systems_stinger_8_sub15_basic_bundle.htm",
-        "evidence": "Produktseite · Webcache",
-        "lastAttempt": "2026-11-03",
+        "evidence": "Thomann Produktseite/Katalog aktuell verifiziert · 04.11.2026",
+        "lastAttempt": "2026-11-04",
         "previousPrice": 2109,
         "previousDate": "2026-10-17",
-        "verifiedToday": false,
-        "priceDate": "2026-10-17",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
         "fetchStatus": "Heute nicht bestätigt (Abrufbegrenzung HTTP 429)",
         "match": "exact"
       }
@@ -1933,6 +1933,27 @@
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Lautsprecherstative-Bundle/art-PAH431",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-6-m/art-ACC0001265-000"
         ]
+      },
+      "thomann": {
+        "name": "Thomann Warenkorb · ICOA 1215 Bluetooth",
+        "price": 1753.8,
+        "url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+        "contents": "2 × ICOA 12 A BT; 1 × ICOA SUB 15 A; 1 × Gravity SS 5211 B Set 1 (2 Stative + Tasche); 2 × Sommer Stage 22 SGHN 6,0 m.",
+        "match": "similar",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Thomann Produktseiten/Katalog aktuell verifiziert · 04.11.2026",
+        "calculation": "2 × 429 € + 729 € + 129 € + 2 × 18,90 € = 1.753,80 €",
+        "note": "Gleiche Lautsprecherkonfiguration und Zubehörfunktion; Stativ-/Kabelmodell weicht vom Referenzbundle ab.",
+        "source": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+          "https://www.thomann.de/de/ld_systems_icoa_sub_15_a.htm",
+          "https://www.thomann.de/de/gravity_ss_5211_b_set_1.htm",
+          "https://www.thomann.de/de/sommer_cable_stage_22_sghn_bk_60m.htm"
+        ]
       }
     }
   },
@@ -1997,6 +2018,27 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
           "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002"
+        ]
+      },
+      "thomann": {
+        "name": "Thomann Warenkorb · ICOA Club Bluetooth",
+        "price": 2637,
+        "url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+        "contents": "2 × ICOA 12 A BT; 2 × ICOA SUB 18 A; 2 × Gravity SP 2332 B; 2 × Sommer Stage 22 SG0Q 3 m.",
+        "match": "similar",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Thomann Produktseiten/Katalog aktuell verifiziert · 04.11.2026",
+        "calculation": "2 × 429 € + 2 × 845 € + 2 × 22 € + 2 × 22,50 € = 2.637 €",
+        "note": "Gleiche Lautsprecher und Distanzstangenmodell; Kabelmodell weicht vom Referenzbundle ab.",
+        "source": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+          "https://www.thomann.de/de/ld_systems_icoa_sub_18_a.htm",
+          "https://www.thomann.de/de/gravity_sp_2332_b_speaker_stand.htm",
+          "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm"
         ]
       }
     }
@@ -2063,6 +2105,27 @@
           "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002"
         ]
+      },
+      "thomann": {
+        "name": "Thomann Warenkorb · ICOA Club XL Bluetooth",
+        "price": 2717,
+        "url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+        "contents": "2 × ICOA 15 A BT; 2 × ICOA SUB 18 A; 2 × Gravity SP 2332 B; 2 × Sommer Stage 22 SG0Q 3 m.",
+        "match": "similar",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Thomann Produktseiten/Katalog aktuell verifiziert · 04.11.2026",
+        "calculation": "2 × 469 € + 2 × 845 € + 2 × 22 € + 2 × 22,50 € = 2.717 €",
+        "note": "Gleiche Lautsprecher und Distanzstangenmodell; Kabelmodell weicht vom Referenzbundle ab.",
+        "source": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+          "https://www.thomann.de/de/ld_systems_icoa_sub_18_a.htm",
+          "https://www.thomann.de/de/gravity_sp_2332_b_speaker_stand.htm",
+          "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm"
+        ]
       }
     }
   },
@@ -2127,6 +2190,26 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002"
         ]
+      },
+      "thomann": {
+        "name": "Thomann Warenkorb · ICOA Power Bluetooth",
+        "price": 4408,
+        "url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+        "contents": "2 × ICOA 15 A BT; 4 × ICOA SUB 18 A; 4 × Sommer Stage 22 SG0Q 3 m.",
+        "match": "similar",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Thomann Produktseiten/Katalog aktuell verifiziert · 04.11.2026",
+        "calculation": "2 × 469 € + 4 × 845 € + 4 × 22,50 € = 4.408 €",
+        "note": "Gleiche Lautsprecheranzahl und Kabellänge; Kabelmodell weicht vom Referenzbundle ab.",
+        "source": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+          "https://www.thomann.de/de/ld_systems_icoa_sub_18_a.htm",
+          "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm"
+        ]
       }
     }
   },
@@ -2171,6 +2254,30 @@
         "fetchStatus": "Direktabruf erfolgreich",
         "sourceName": "LD Systems ICOA PRO Entertain Touring Bundle Set",
         "match": "exact"
+      },
+      "thomann": {
+        "name": "Thomann Warenkorb · ICOA PRO Entertain Touring",
+        "price": 4949,
+        "url": "https://www.thomann.de/de/ld_systems_icoa_pro_12_a.htm",
+        "contents": "2 × ICOA Pro 12 A; 1 × ICOA SUB Pro 21 A; 2 × ICOA 12 Cover; 1 × ICOA PRO SUB 21 Cover; 1 × ICOA PRO SUB 21 Casterboard; 1 × Gravity SS 5211 B Set 1; 2 × Sommer Stage 22 SGHN 5 m.",
+        "match": "similar",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Thomann Produktseiten/Katalog aktuell verifiziert · 04.11.2026",
+        "calculation": "2 × 1.089 € + 2.190 € + 2 × 66 € + 89 € + 196 € + 129 € + 2 × 17,50 € = 4.949 €",
+        "note": "Gleiche Kernlautsprecher- und Touringfunktion; Stativ-/Kabelmodell weicht vom Müller-Referenzbundle ab.",
+        "source": "https://www.thomann.de/de/ld_systems_icoa_pro_12_a.htm",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.thomann.de/de/ld_systems_icoa_pro_12_a.htm",
+          "https://www.thomann.de/de/ld_systems_icoa_sub_pro_21_a.htm",
+          "https://www.thomann.de/de/ld_systems_icoa_12_cover.htm",
+          "https://www.thomann.de/de/ld_systems_icoa_pro_sub_21_cover.htm",
+          "https://www.thomann.de/de/ld_systems_icoa_pro_sub_21_casterboard.htm",
+          "https://www.thomann.de/de/gravity_ss_5211_b_set_1.htm",
+          "https://www.thomann.de/de/sommer_cable_stage_22_sghn_bk_50m.htm"
+        ]
       }
     }
   },
