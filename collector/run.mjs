@@ -108,6 +108,37 @@ async function httpAttempt(offer, shop) {
 }
 
 let browser;
+
+async function resolveHotSoundProductPage(page, offer) {
+  if (new URL(page.url()).hostname !== 'www.hotsound-store.com') return null;
+  const expected = String(offer.shop_product_name || '').trim();
+  if (!expected) return null;
+
+  const href = await page.locator('a[href]').evaluateAll((anchors, wanted) => {
+    const normalize = value => String(value || '').toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, ' ').trim();
+    const ignored = new Set(['ld','systems','system','aktivsystem','set','club','pa']);
+    const tokens = normalize(wanted).split(' ').filter(t => t.length > 1 && !ignored.has(t));
+    const required = tokens.filter(t => /\d/.test(t));
+    let best = null;
+
+    for (const a of anchors) {
+      if (!a.href || !a.href.startsWith('http')) continue;
+      const text = normalize([a.textContent, a.title, a.getAttribute('aria-label'), a.parentElement?.textContent?.slice(0,500)].filter(Boolean).join(' '));
+      const words = new Set(text.split(' '));
+      if (required.some(t => !words.has(t))) continue;
+      const score = tokens.length ? tokens.filter(t => words.has(t)).length / tokens.length : 0;
+      if (score >= 0.7 && (!best || score > best.score)) best = {href:a.href, score};
+    }
+    return best?.href || null;
+  }, expected);
+
+  if (!href || href === page.url()) return null;
+  const target = new URL(href, page.url());
+  return target.hostname === 'www.hotsound-store.com' ? target.href : null;
+}
+
 async function browserAttempt(offer) {
   try {
     browser ||= await chromium.launch({ headless: true });
@@ -125,7 +156,23 @@ async function browserAttempt(offer) {
       return { method: 'browser', status: 'captcha', httpStatus: response?.status(), error: 'CAPTCHA / access challenge detected' };
     }
     try {
-      const parsed = parsePrice(html, offer.shop_product_name || '', new URL(offer.product_url).hostname);
+      let parsed;
+      let resolvedUrl = page.url();
+      try {
+        parsed = parsePrice(html, offer.shop_product_name || '', new URL(resolvedUrl).hostname);
+      } catch (initialError) {
+        const productUrl = await resolveHotSoundProductPage(page, offer);
+        if (!productUrl) throw initialError;
+        response = await page.goto(productUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
+        await page.waitForTimeout(1200);
+        html = await page.content();
+        title = await page.title().catch(() => '');
+        if (/captcha|just a moment|challenge|access denied/i.test(title + '\n' + html.slice(0, 50000))) {
+          throw new Error('Zugriffsschutz / CAPTCHA');
+        }
+        resolvedUrl = page.url();
+        parsed = parsePrice(html, offer.shop_product_name || '', new URL(resolvedUrl).hostname);
+      }
       const multiplier = multiplierFor(offer);
       await context.close();
       return {
@@ -134,7 +181,9 @@ async function browserAttempt(offer) {
         httpStatus: response?.status(),
         price: Math.round(parsed.price * multiplier * 100) / 100,
         available: parsed.available,
-        evidence: 'Chromium page render with product-name validation'
+        evidence: resolvedUrl === offer.product_url
+          ? 'Chromium page render with product-name validation'
+          : 'Chromium category lookup resolved exact Hot Sound product page before price validation'
       };
     } catch (e) {
       await context.close();
