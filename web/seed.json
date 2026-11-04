@@ -2147,6 +2147,28 @@
         "note": "Gleiche Lautsprecher wie Müller, aber andere Distanzstangen und Kabel. Preis unbestätigt; Recherche 03.11.2026. Direkter Netzabruf scheiterte im Sandbox-DNS; Freigabe abgebrochen.",
         "source": "https://www.hotsound-store.com/ld-systems-icoa-pro-12a-club-pa-set-16057",
         "lastAttempt": "2026-11-03"
+      },
+      "musicstore": {
+        "name": "Music Store Warenkorb · ICOA PRO 12A / 21A",
+        "price": 6627.8,
+        "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-12-A/art-PAH0024126-000",
+        "contents": "2 × ICOA Pro 12 A; 2 × ICOA Pro Sub 21 A; 2 × Gravity SP 2332 B; 2 × XLR 3 m.",
+        "match": "similar",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Music Store Produktseiten/Katalog öffentlich verifiziert · 04.11.2026",
+        "calculation": "2 × 1.089 € + 2 × 2.198 € + 2 × 22 € + 2 × 4,90 € = 6.627,80 €",
+        "note": "Gleiche Lautsprecher und Distanzstangenmodell wie das Müller-Bundle; Kabelmarke/-modell weicht ab. Mehrkomponenten-Warenkorb.",
+        "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-12-A/art-PAH0024126-000",
+        "sourceName": "LD-Systems ICOA Pro 12 A + ICOA Pro Sub 21 A + Gravity SP 2332 B + XLR 3 m",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-12-A/art-PAH0024126-000",
+          "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-Sub-21-A/art-PAH0024128-000",
+          "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
+          "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002"
+        ]
       }
     }
   },
