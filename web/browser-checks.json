@@ -1,0 +1,290 @@
+[
+  {
+    "rowId": "r1",
+    "shop": "mueller",
+    "url": "https://www.musikhaus-mueller.de/ld-systems-maui-11-g3-stereo-bundle-set-schwarz/",
+    "price": 1849,
+    "checkedAt": "2026-11-03T21:30:45Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r2",
+    "shop": "mueller",
+    "url": "https://www.musikhaus-mueller.de/ld-systems-maui-11-g3-stereo-bundle-set-schwarz-mit-taschen/",
+    "price": 1970,
+    "checkedAt": "2026-11-03T21:30:45Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r1",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_stereo_bundle.htm",
+    "price": 1839,
+    "checkedAt": "2026-11-03T21:30:45Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r2",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_bundle.htm",
+    "price": 2058,
+    "checkedAt": "2026-11-03T21:30:45Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r10",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_power_bundle.htm",
+    "price": 3309,
+    "checkedAt": "2026-11-03T21:30:45Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r13",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_maui_11_g2_bundle.htm",
+    "price": 749,
+    "checkedAt": "2026-11-03T21:30:45Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r1",
+    "shop": "kirstein",
+    "url": "https://www.kirstein.de/Saeulensysteme/LD-Systems-MAUI-11-G3-Schwarz.html",
+    "price": 1858,
+    "checkedAt": "2026-11-03T21:30:45Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r2",
+    "shop": "kirstein",
+    "url": "https://www.kirstein.de/Saeulensysteme/LD-Systems-MAUI-11-G3-Schwarz-Set.html",
+    "price": 2054,
+    "checkedAt": "2026-11-03T21:30:45Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r3",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm",
+    "price": 1409,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r4",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm",
+    "price": 2818,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r7",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_mix_syslink_bundle.htm",
+    "price": 3079,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r11",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_power_bundle.htm",
+    "price": 4419,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r12",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_maui_44_g2_power_bundle.htm",
+    "price": 7269,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r14",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_maui_28_g2_bundle.htm",
+    "price": 999,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r15",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_dave_12_g4x_stand_bundle.htm",
+    "price": 1069,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r16",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_dave_15_g4x_stand_bundle.htm",
+    "price": 1275,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r17",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_dave_18_g4x_stand_bundle.htm",
+    "price": 1609,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r18",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_dave_10_g4x_install_bundle.htm",
+    "price": 748,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r19",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_stinger_10_sub15_power_bundle.htm",
+    "price": 3305,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r20",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_stinger_12_sub18_power_bundle.htm",
+    "price": 3959,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r21",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_stinger_high_power_bundle.htm",
+    "price": 6635,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r22",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_stinger_8_sub15_basic_bundle.htm",
+    "price": 2109,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r28",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_icoa_pro_12a_21a_power_set.htm",
+    "price": 7345,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r29",
+    "shop": "thomann",
+    "url": "https://www.thomann.de/de/ld_systems_icoa_pro_15a_21a_power_set.htm",
+    "price": 7759,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r3",
+    "shop": "kirstein",
+    "url": "https://www.kirstein.de/Saeulensysteme/LD-Systems-MAUI-28-G3-Schwarz-Set.html",
+    "price": 1404,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r4",
+    "shop": "kirstein",
+    "url": "https://www.kirstein.de/Saeulensysteme/LD-Systems-MAUI-28-G3-Schwarz-Set.html",
+    "price": 2808,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r5",
+    "shop": "kirstein",
+    "url": "https://www.kirstein.de/Saeulensysteme/LD-Systems-MAUI-28-G3-Schwarz.html",
+    "price": 2578,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r7",
+    "shop": "kirstein",
+    "url": "https://www.kirstein.de/Saeulensysteme/LD-Systems-Maui-28-G3-Mix-Schwarz.html",
+    "price": 3098,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r11",
+    "shop": "kirstein",
+    "url": "https://www.kirstein.de/Saeulensysteme/LD-Systems-MAUI-28-G3-Subwoofer-Cardioid-Set-Schwarz.html",
+    "price": 4768,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r15",
+    "shop": "kirstein",
+    "url": "https://www.kirstein.de/PA-Komplettanlagen/LD-Systems-Dave-12-G4X-Set.html",
+    "price": 1071,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r16",
+    "shop": "kirstein",
+    "url": "https://www.kirstein.de/PA-Komplettanlagen/LD-Systems-Dave-15-G4X-Set.html",
+    "price": 1272,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  },
+  {
+    "rowId": "r17",
+    "shop": "kirstein",
+    "url": "https://www.kirstein.de/PA-Komplettanlagen/LD-Systems-Dave-18-G4X-Set.html",
+    "price": 1612,
+    "checkedAt": "2026-11-03T21:47:19Z",
+    "available": true,
+    "evidence": "Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar."
+  }
+]

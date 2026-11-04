@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "purpose": "Actualizar las fuentes de precios ya asignadas, sin añadir productos ni cambiar equivalencias de bundles.",
+  "access": "Configurar autenticación de servicio para la nueva instalación. No copiar tokens de la cuenta anterior. En Sites, obtener acceso del nuevo proyecto y usarlo únicamente en su propio origen.",
+  "origin": "https://TU-NUEVO-DOMINIO",
+  "steps": [
+    "GET /api/status para conocer el estado previo.",
+    "POST /api/refresh con cabeceras Origin igual a este origen, X-PA-Action: refresh y X-PA-Trigger: scheduled. Esta última identifica el trigger de las 9:00 en el historial. No necesita cuerpo.",
+    "Cada petición procesa hasta tres fuentes. Repetir hasta que run.status sea complete o partial, con un máximo de 30 peticiones por ejecución. Si busy=true, esperar 15 segundos y volver a consultar estado; no forzar ni borrar bloqueos. Si cooldown=true, no iniciar otro ciclo.",
+    "Leer GET /api/status, GET /api/runs y GET /data.json después. Confirmar que el registro del run.id (o logId si cooldown) quedó persistido, con estado, horas, resultados y errores. Si la petición falla antes de llegar al servicio, comunicarlo: no inventar una ejecución en el historial.",
+    "No republicar la web ni alterar el código durante una actualización rutinaria. No sortear CAPTCHA ni bloqueos HTTP. No presentar partial como una actualización completa de todas las tiendas.",
+    "Notificar solo cambios de precios, fallos o una acción necesaria. Si no cambió nada y no hay incidencias nuevas, no enviar actualización de estado."
+  ],
+  "limitations": "Las dos referencias Hot Sound no tienen un precio directo verificado y quedan fuera de la actualización automática. El servicio conserva los precios anteriores en caso de error. Equivalencias y contenido del bundle requieren revisión manual."
+}
