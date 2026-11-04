@@ -20,6 +20,12 @@ export function parsePrice(html,expected,host){
    const m=tag.match(/content=["']([\d.,]+)["']/i);
    if(m){price=priceNumber(m[1]);break}
   }
+  if(!Number.isFinite(price)){
+   const vatIndex=after.search(/inkl\.?\s*MwSt\.?/i);
+   const visible=plain(vatIndex>=0?after.slice(0,vatIndex):after.slice(0,12000));
+   const money=[...visible.matchAll(/\b\d{1,3}(?:\.\d{3})*,\d{2}\s*(?:€|EUR)\b/gi)];
+   if(money.length)price=priceNumber(money.at(-1)[0].replace(/\s*(?:€|EUR)\s*$/i,''));
+  }
   if(Number.isFinite(price))offers.push({price,available:/nicht verf[uü]gbar|nicht lieferbar/i.test(after.slice(0,18000))?false:undefined});
  }
  const unique=[...new Set(offers.map(o=>o.price))];if(unique.length!==1||!Number.isFinite(unique[0])||unique[0]<=0)throw Error('Kein eindeutiger EUR-Produktpreis');
