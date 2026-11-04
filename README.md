@@ -7,7 +7,7 @@ Comparador de 40 configuraciones con 6 tiendas integradas: Musikhaus Müller, Th
 La arquitectura actual separa claramente:
 - **GitHub**: código, tests, migraciones y collector programable.
 - **Supabase**: fuente de verdad para tiendas, configuraciones, ofertas, observaciones de precio y ejecuciones.
-- **Frontend/Worker**: interfaz compatible con el snapshot histórico, con transición segura hacia lectura desde Supabase.
+- **Frontend/Worker**: lectura de catálogo, estado e historial exclusivamente desde Supabase.
 
 El collector conserva siempre el último precio válido cuando un comercio devuelve 403, 429, CAPTCHA o un error de parseo. Actualmente Müller y PRO LIGHTING funcionan por HTTP directo. Thomann, Kirstein, Hot Sound y Music Store pueden bloquear automatización y usan estrategia de preservación del último precio válido.
 
@@ -62,9 +62,14 @@ El frontend no debe consultar tablas internas de collector directamente. La tran
 
 ## Frontend
 
-La UI mantiene `web/seed.json` / snapshot como fallback. Cuando el backend dispone de `SUPABASE_URL` y `SUPABASE_SECRET_KEY`, `/api/catalog` devuelve el catálogo actual desde Supabase. Si Supabase no está disponible, la interfaz continúa funcionando con el snapshot existente.
+Supabase es la única fuente persistente del catálogo, precios, estado e historial. El Worker no usa R2.
 
-Esto permite validar paridad antes de retirar definitivamente R2.
+- `/api/catalog`, `/data.json` y `/data.js`: catálogo desde Supabase.
+- `/api/status` y `/api/runs`: ejecuciones desde Supabase.
+- `/api/refresh`: retirado; la recolección se ejecuta mediante el collector/GitHub Actions.
+- MCP: consulta estado en Supabase; no mantiene persistencia propia.
+
+`web/seed.json` queda como fixture/referencia de desarrollo y para pruebas de paridad, no como fuente de producción.
 
 ## Estrategias por tienda
 
@@ -79,8 +84,7 @@ No se intenta saltar CAPTCHA.
 
 ## Próximos pasos
 
-1. Aplicar y validar la proyección frontend de Supabase.
-2. Configurar las variables de servidor del hosting/Worker.
-3. Comparar `/api/catalog` contra el snapshot actual.
-4. Cambiar definitivamente la UI a Supabase cuando la paridad sea satisfactoria.
-5. Retirar R2 solo después de validar historial, filtros, CSV y casos de bloqueo.
+1. Validar el despliegue del Worker sin binding R2.
+2. Verificar los secrets `SUPABASE_URL` y `SUPABASE_SECRET_KEY` en el entorno de hosting y GitHub Actions.
+3. Ejecutar una recolección programada/manual desde GitHub Actions y comprobar `/api/status` y `/api/runs`.
+4. Ampliar Music Store y otras equivalencias verificables sin saltar CAPTCHA.

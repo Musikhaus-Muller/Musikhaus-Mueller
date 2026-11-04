@@ -27,7 +27,6 @@ const code = await fs.readFile('dist/server/index.js', 'utf8');
 const { default: worker } = await import('data:text/javascript;base64,' + Buffer.from(code).toString('base64'));
 
 const env = {
-  BUCKET: { get: async () => null },
   SUPABASE_URL: process.env.SUPABASE_URL,
   SUPABASE_SECRET_KEY: process.env.SUPABASE_SECRET_KEY,
   SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY
@@ -52,6 +51,6 @@ http.createServer(async (req, res) => {
 }).listen(8767, '127.0.0.1', () => {
   const source = env.SUPABASE_URL && (env.SUPABASE_SECRET_KEY || env.SUPABASE_SERVICE_ROLE_KEY)
     ? 'Supabase enabled'
-    : 'snapshot fallback';
+    : 'Supabase not configured';
   console.log(`http://127.0.0.1:8767 · ${source}`);
 });
