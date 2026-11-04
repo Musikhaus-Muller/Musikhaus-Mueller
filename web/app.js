@@ -1,5 +1,6 @@
-const bundles=window.BUNDLES;
-const SHOPS={mueller:'Musikhaus Müller',thomann:'Thomann',hotsound:'Hot Sound',kirstein:'Kirstein',prolighting:'PRO LIGHTING'};
+let bundles=Array.isArray(window.BUNDLES)?window.BUNDLES:[];
+const SHOPS={mueller:'Musikhaus Müller',thomann:'Thomann',hotsound:'Hot Sound',kirstein:'Kirstein',prolighting:'PRO LIGHTING',musicstore:'Music Store'};
+let catalogSource='snapshot';
 const $=id=>document.getElementById(id),euro=n=>new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR',minimumFractionDigits:0,maximumFractionDigits:2}).format(n);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=s=>s.toLocaleLowerCase('de').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
@@ -33,11 +34,56 @@ $('rows').addEventListener('click',e=>{const b=e.target.closest('[data-detail]')
 $('reset').addEventListener('click',()=>{$('filters').reset();family='Alle';renderTabs();render();});
 $('export').addEventListener('click',()=>{const headers=['Konfiguration','Familie','Händler','Produktname','Preis EUR','Lieferumfang','Vergleichbarkeit','Preisstand','Direkt bestätigt','Berechnung','Verfügbarkeit','Quelle'];const rows=visible.flatMap(r=>entries(r).map(o=>[r.name,r.family,SHOPS[o.key],o.name,o.price,o.contents,o.match==='exact'?'Gleich':'Zubehör abweichend',o.priceDate||'Unbekannt',fresh(o)?'Ja':'Nein',o.calculation||'',o.available===false?'Nicht lieferbar':'Siehe Shop',o.url]));const csv='\uFEFF'+[headers,...rows].map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(';')).join('\r\n');const u=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'})),a=document.createElement('a');a.href=u;a.download='pa-vergleich-'+new Date().toISOString().slice(0,10)+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);});renderTabs();render();
 
+async function loadCatalog(){
+ try{
+  const response=await fetch('/api/catalog',{cache:'no-store',signal:AbortSignal.timeout(15000)});
+  if(!response.ok)throw Error('HTTP '+response.status);
+  const payload=await response.json();
+  if(!Array.isArray(payload.rows))throw Error('Ungültiger Katalog');
+  bundles.splice(0,bundles.length,...payload.rows);
+  catalogSource=payload.source||'snapshot';
+  renderTabs();render();
+  return payload;
+ }catch(e){
+  catalogSource='snapshot';
+  return {source:'snapshot',rows:bundles,error:e.message};
+ }
+}
+loadCatalog();
+
 const updateButton=$('refresh'),updateStatus=$('update-status');
 function showUpdate(s){const r=s.run;if(!r){updateStatus.textContent=s.busy?'Ein anderer Lauf arbeitet gerade.':'Noch kein automatischer Lauf. Mit „Preise aktualisieren“ starten.';return;}const time=new Date(r.finishedAt||r.startedAt).toLocaleString('de-DE');const next=new Date(Date.parse(r.startedAt)+3600000).toLocaleString('de-DE');const issues=new Map();for(const i of r.issues||[]){const label=(SHOPS[i.shop]||i.shop)+': '+i.message;issues.set(label,(issues.get(label)||0)+1);}updateStatus.textContent=(s.cooldown?`Keine neue Abfrage gestartet. Nächster neuer Lauf ab ${next}. Letzter Lauf: `:'')+`${r.status==='running'?'Prüfung läuft':r.status==='partial'?'Prüfung mit Hinweisen abgeschlossen':'Prüfung abgeschlossen'} · ${r.processed}/${r.total} Quellen · ${r.confirmed} bestätigt · ${r.failed} nicht bestätigt · ${r.changed} Preisänderungen · ${time}`+(issues.size?' · Hinweise: '+[...issues].map(([label,count])=>`${label} (${count})`).join('; ')+'. Nicht bestätigte Angebote behalten den letzten Preis.':'');}
 
 async function status(){try{const r=await fetch('/api/status',{signal:AbortSignal.timeout(15000)});if(!r.ok)throw Error();showUpdate(await r.json());}catch{updateStatus.textContent='Aktualisierungsdienst derzeit nicht erreichbar. Gespeicherte Preise bleiben sichtbar.';}}
-updateButton.addEventListener('click',async()=>{updateButton.disabled=true;updateStatus.textContent='Preisprüfung wird gestartet …';try{for(let i=0;i<60;i++){const response=await fetch('/api/refresh',{method:'POST',headers:{'X-PA-Action':'refresh','X-PA-Trigger':'manual'},signal:AbortSignal.timeout(45000)});const s=await response.json();if(!response.ok)throw Error(s.error||'Aktualisierung fehlgeschlagen');showUpdate(s);if(s.busy){updateStatus.textContent+=' · Ein anderer Lauf arbeitet gerade. Bitte später erneut prüfen.';break;}if(s.cooldown||s.run?.status!=='running')break;await new Promise(r=>setTimeout(r,1000));}const d=await fetch('/data.json',{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!d.ok)throw Error('Ergebnis konnte nicht geladen werden');bundles.splice(0,bundles.length,...await d.json());render();}catch(e){updateStatus.textContent='Aktualisierung nicht abgeschlossen: '+e.message+'. Letzte Preise bleiben erhalten.';}finally{updateButton.disabled=false;loadHistory();}});status();
+updateButton.addEventListener('click',async()=>{
+ updateButton.disabled=true;
+ try{
+  if(catalogSource==='supabase'){
+   updateStatus.textContent='Supabase-Katalog wird neu geladen …';
+   const payload=await loadCatalog();
+   updateStatus.textContent=payload.source==='supabase'
+    ?'Supabase-Katalog neu geladen. Preisabfragen laufen über den Collector.'
+    :'Supabase nicht erreichbar; gespeicherter Snapshot bleibt sichtbar.';
+   return;
+  }
+  updateStatus.textContent='Preisprüfung wird gestartet …';
+  for(let i=0;i<60;i++){
+   const response=await fetch('/api/refresh',{method:'POST',headers:{'X-PA-Action':'refresh','X-PA-Trigger':'manual'},signal:AbortSignal.timeout(45000)});
+   const s=await response.json();
+   if(!response.ok)throw Error(s.error||'Aktualisierung fehlgeschlagen');
+   showUpdate(s);
+   if(s.busy){updateStatus.textContent+=' · Ein anderer Lauf arbeitet gerade. Bitte später erneut prüfen.';break;}
+   if(s.cooldown||s.run?.status!=='running')break;
+   await new Promise(r=>setTimeout(r,1000));
+  }
+  await loadCatalog();
+ }catch(e){
+  updateStatus.textContent='Aktualisierung nicht abgeschlossen: '+e.message+'. Letzte Preise bleiben erhalten.';
+ }finally{
+  updateButton.disabled=false;
+  loadHistory();
+ }
+});status();
 
 const runTime=t=>t?new Date(t).toLocaleString('de-DE',{timeZone:'Europe/Madrid'}):'—';
 async function loadHistory(){const target=$('run-history');try{const response=await fetch('/api/runs',{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!response.ok)throw Error('HTTP '+response.status);const data=await response.json();if(!Array.isArray(data.runs))throw Error('Ungültiges Protokoll');target.innerHTML=data.runs.length?data.runs.map(r=>{const trigger={scheduled:'Trigger 09:00',manual:'Manuell',test:'Test',unknown:'Auslöser unbekannt'}[r.trigger]||'Auslöser unbekannt';const label={running:'Läuft / noch nicht abgeschlossen',partial:'Mit Hinweisen beendet',complete:'Abgeschlossen',skipped:'Nicht gestartet (Wartezeit)'}[r.status]||r.status;const duration=r.finishedAt?Math.max(0,Math.round((Date.parse(r.finishedAt)-Date.parse(r.startedAt))/1000))+' s':'—';return `<details style="margin-top:16px;padding:12px;border:1px solid #ccd4df;border-radius:8px"><summary><b>${esc(trigger)} · ${esc(runTime(r.startedAt))}</b> · ${esc(label)}</summary><p>Ende: ${esc(runTime(r.finishedAt))} · Dauer: ${duration}<br>${r.processed||0}/${r.total||0} Quellen · ${r.confirmed||0} bestätigt · ${r.failed||0} nicht bestätigt · ${r.changed||0} Preisänderungen</p>${r.reason?'<p>'+esc(r.reason)+'</p>':''}<p>ID: ${esc(r.id)}</p>${(r.results||[]).length?'<ul>'+r.results.map(x=>'<li>'+esc(SHOPS[x.shop]||x.shop)+' · <a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+esc(x.product)+'</a>: '+esc(x.message)+(x.changes?.length?' · '+x.changes.map(c=>esc(c.product)+': '+euro(c.previousPrice)+' → '+euro(c.price)).join('; '):'')+'</li>').join('')+'</ul>':(r.issues||[]).length?'<ul>'+r.issues.map(x=>'<li>'+esc(SHPSafe(x.shop))+': '+esc(x.message)+'</li>').join('')+'</ul>':'<p>Keine Einzelfehler protokolliert.</p>'}</details>`;}).join(''):'Noch keine Ausführung registriert.';}catch(e){target.textContent='Protokoll nicht geladen: '+e.message;}}

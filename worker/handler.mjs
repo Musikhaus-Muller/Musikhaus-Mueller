@@ -34,6 +34,50 @@ export function applyBrowserChecks(state){
 }
 async function load(env){if(!env.BUCKET)throw Error('Preisspeicher nicht verfügbar');const obj=await env.BUCKET.get(KEY);const state=obj?await obj.json():{rows:structuredClone(SEED),run:null,updatedAt:null};return {etag:obj?.etag,state:applyBrowserChecks(state)};}
 async function save(env,state,etag){return env.BUCKET.put(KEY,JSON.stringify(state),{onlyIf:etag?{etagMatches:etag}:new Headers({'If-None-Match':'*'}),httpMetadata:{contentType:'application/json'}});}
+export function toFrontendRows(items){
+ const rows=new Map();
+ for(const x of items||[]){
+  if(!rows.has(x.legacy_id))rows.set(x.legacy_id,{id:x.legacy_id,brand:x.brand,family:x.family,name:x.configuration_name,sub:x.subtitle||'',note:x.configuration_note||'',offers:{}});
+  const row=rows.get(x.legacy_id);
+  const observed=x.price_observed_at||null,lastAttempt=x.last_attempt_at||null;
+  const offer={
+   name:x.shop_product_name||x.source_name||'',
+   price:x.price===null||x.price===undefined?null:Number(x.price),
+   url:x.product_url,
+   contents:x.contents||'',
+   match:x.match_type||'exact',
+   calculation:x.calculation||null,
+   note:x.offer_note||'',
+   source:x.source_url||x.product_url,
+   sourceName:x.source_name||x.shop_product_name||'',
+   evidence:x.evidence||'',
+   priceDate:observed?observed.slice(0,10):null,
+   checkedAt:observed,
+   lastAttempt:lastAttempt?lastAttempt.slice(0,10):null,
+   lastAttemptAt:lastAttempt,
+   verifiedToday:x.last_attempt_status==='success'&&Boolean(observed),
+   fetchStatus:x.last_attempt_status==='success'?'Preis automatisch bestätigt':x.last_attempt_status?('Letzter Abruf: '+x.last_attempt_status+(x.last_attempt_error?' · '+x.last_attempt_error:'')):'Kein automatischer Abruf',
+   verificationMethod:x.price_source_method||null
+  };
+  if(x.availability==='available')offer.available=true;
+  if(x.availability==='unavailable')offer.available=false;
+  row.offers[x.shop_slug]=offer;
+  row[x.shop_slug]=offer;
+ }
+ return [...rows.values()].sort((a,b)=>String(a.id).localeCompare(String(b.id),undefined,{numeric:true}));
+}
+async function loadSupabaseCatalog(env,fetcher=fetch){
+ const base=env.SUPABASE_URL,key=env.SUPABASE_SECRET_KEY||env.SUPABASE_SERVICE_ROLE_KEY;
+ if(!base||!key)return null;
+ const headers={apikey:key,'content-type':'application/json'};
+ if(key.startsWith('eyJ'))headers.Authorization='Bearer '+key;
+ const response=await fetcher(base.replace(/\/$/,'')+'/rest/v1/frontend_offer_rows?select=*&order=legacy_id.asc,shop_slug.asc',{headers,signal:AbortSignal.timeout(15000)});
+ if(!response.ok)throw Error('Supabase-Katalog HTTP '+response.status);
+ return toFrontendRows(await response.json());
+}
+async function fallbackRows(env){
+ try{return (await load(env)).state.rows}catch{return structuredClone(SEED)}
+}
 function summary(s){return {updatedAt:s.updatedAt,run:s.run?{id:s.run.id,status:s.run.status,startedAt:s.run.startedAt,finishedAt:s.run.finishedAt,processed:s.run.cursor,total:s.run.total,confirmed:s.run.confirmed,failed:s.run.failed,changed:s.run.changed,issues:s.run.issues}:null};}
 function logRun(run){if(!run)return null;const {groups,blocked,...entry}=run;return {...entry,trigger:run.trigger||'unknown',processed:run.cursor??0};}
 function history(state){return [logRun(state.run),...(state.history||[])].filter(Boolean).sort((a,b)=>Date.parse(b.startedAt)-Date.parse(a.startedAt)).slice(0,30);}
@@ -90,6 +134,15 @@ export default{async fetch(request,env){
   if(path==='/api/refresh'&&request.method==='POST'){
    if(request.headers.get('origin')!==url.origin||request.headers.get('x-pa-action')!=='refresh')return json({error:'Origen no autorizado'},403);
    const requested=request.headers.get('x-pa-trigger');const trigger=['scheduled','manual','test'].includes(requested)?requested:'unknown';return json(await refresh(env,fetch,()=>Date.now(),trigger));
+  }
+  if(path==='/api/catalog'){
+   try{
+    const rows=await loadSupabaseCatalog(env);
+    if(rows)return json({source:'supabase',rows});
+   }catch(e){
+    return json({source:'snapshot',rows:await fallbackRows(env),warning:e.message});
+   }
+   return json({source:'snapshot',rows:await fallbackRows(env)});
   }
   if(path==='/api/runs')return json({timezone:'Europe/Madrid',retention:30,runs:history((await load(env)).state)});
   if(path==='/api/status')return json(summary((await load(env)).state));
