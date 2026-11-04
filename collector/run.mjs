@@ -1,5 +1,6 @@
 import { chromium } from 'playwright';
 import { parsePrice } from '../worker/handler.mjs';
+import { strategyFor } from './strategies.mjs';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -214,7 +215,7 @@ const [run] = await rest('collection_runs', {
     trigger_type: process.env.GITHUB_ACTIONS ? 'schedule' : 'manual',
     status: 'running',
     offers_total: selected.length,
-    metadata: { shop: shopFilter, httpOnly }
+    metadata: { shop: shopFilter, httpOnly, strategyVersion: 1 }
   }]
 });
 
@@ -223,6 +224,7 @@ const browserBlockedHosts = new Set();
 try {
   for (const offer of selected) {
     const shop = offer.shop;
+    const strategy = strategyFor(shop.slug);
     process.stdout.write(`[${checked + 1}/${selected.length}] ${shop.name} · ${offer.configuration?.name || offer.id} ... `);
 
     const http = await httpAttempt(offer, shop);
@@ -230,7 +232,7 @@ try {
 
     let final = http;
     const host = new URL(offer.product_url).hostname;
-    if (http.status !== 'success' && !httpOnly) {
+    if (http.status !== 'success' && !httpOnly && strategy.browserFallback) {
       if (browserBlockedHosts.has(host)) {
         final = { method: 'browser', status: 'blocked', error: 'Browser retry skipped after CAPTCHA / access block on this host' };
         await recordObservation({ offer, runId: run.id, result: final });
@@ -239,6 +241,11 @@ try {
         await recordObservation({ offer, runId: run.id, result: final });
         if (final.status === 'captcha' || final.status === 'blocked') browserBlockedHosts.add(host);
       }
+    } else if (http.status !== 'success' && !strategy.browserFallback) {
+      final = {
+        ...http,
+        error: `${http.error || http.status}; strategy=${strategy.mode}; previous valid price preserved`
+      };
     }
 
     await rest('collection_results', {
