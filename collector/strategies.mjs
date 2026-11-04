@@ -28,8 +28,8 @@ export const SHOP_STRATEGIES = {
     publicSource: null
   },
   musicstore: {
-    mode: 'hybrid-discovery',
-    browserFallback: true,
+    mode: 'http-preserve-on-block',
+    browserFallback: false,
     publicSource: null
   }
 };
