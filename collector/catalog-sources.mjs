@@ -45,24 +45,36 @@ export function parseCatalogProductPrice(html, expected) {
   const required=tokens.filter(t=>/\d/.test(t)||['schwarz','black','weiss','white'].includes(t));
   let best=-1;
   let bestScore=0;
+  let bestWindow='';
 
   for(let i=0;i<lines.length;i++){
-    const words=new Set(normalize(lines[i]).split(' '));
+    const window=lines.slice(i,Math.min(lines.length,i+4)).join(' ');
+    const words=new Set(normalize(window).split(' '));
     if(required.some(t=>!words.has(t))) continue;
     const score=tokens.length?tokens.filter(t=>words.has(t)).length/tokens.length:0;
-    if(score>=0.6 && score>bestScore){best=i;bestScore=score}
+    if(score>=0.55 && score>bestScore){
+      best=i;
+      bestScore=score;
+      bestWindow=window;
+    }
   }
   if(best<0) throw new Error('Catalog product not found');
 
-  for(let i=best+1;i<Math.min(lines.length,best+14);i++){
-    const line=lines[i];
-    if(/finanzierung|monat|uvp|retail price/i.test(line)) continue;
-    const m=line.match(/\b\d{1,3}(?:\.\d{3})*,\d{2}\s*(?:€|EUR)(?![A-Za-z0-9_])/i)
-      || line.match(/\b\d{1,3}(?:,\d{3})*\.\d{2}\s*(?:€|EUR)(?![A-Za-z0-9_])/i);
-    if(!m) continue;
+  const searchLines=[
+    bestWindow,
+    ...lines.slice(best+1,Math.min(lines.length,best+18))
+  ];
+
+  for(let i=0;i<searchLines.length;i++){
+    const line=searchLines[i];
+    if(/finanzierung|monat/i.test(line)) continue;
+    const candidates=[...line.matchAll(/\b\d{1,3}(?:\.\d{3})*,\d{2}\s*(?:€|EUR)(?![A-Za-z0-9_])/gi)];
+    const filtered=candidates.filter(m=>!/uvp|retail price/i.test(line.slice(Math.max(0,m.index-20),m.index)));
+    if(!filtered.length) continue;
+    const m=filtered.at(-1);
     const price=priceNumber(m[0]);
     if(!Number.isFinite(price)||price<=0) continue;
-    const availabilityWindow=lines.slice(i+1,i+5).join(' ');
+    const availabilityWindow=searchLines.slice(i+1,i+5).join(' ');
     const available=/lieferbar|available/i.test(availabilityWindow)?true:/nicht verf[uü]gbar|nicht lieferbar/i.test(availabilityWindow)?false:undefined;
     return {price,available};
   }

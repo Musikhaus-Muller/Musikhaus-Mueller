@@ -21,3 +21,16 @@ test('catalog parser extracts related Frigga white price',()=>{
   assert.equal(out.price,1080);
   assert.equal(out.available,true);
 });
+
+
+test('catalog parser matches product name split across multiple HTML blocks',()=>{
+  const html='<div>LD Systems MAUI 28 G3 W</div><div>Kompaktes Cardioid Säulen PA System</div><div>Weiß</div><div>UVP: 1.559,90 €</div><div>1.329,00 €</div><div>Ab ZentralLager lieferbar</div>';
+  const out=parseCatalogProductPrice(html,'2 × LD Systems MAUI 28 G3 W, Kompaktes Cardioid Säulen PA System, Weiß');
+  assert.equal(out.price,1329);
+});
+
+test('catalog parser finds Frigga price when name and price share a compact product block',()=>{
+  const html='<section><span>DAP Frigga</span><span>Aktive Einzelsäule PA-System</span><span>Weiß</span><span>1.080,00 €</span><span>lieferbar</span></section>';
+  const out=parseCatalogProductPrice(html,'dap frigga aktive einzelsaeule pa system weiss');
+  assert.equal(out.price,1080);
+});
