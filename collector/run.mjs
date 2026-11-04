@@ -323,6 +323,11 @@ try {
           if (catalog.status === 'success') {
             result = catalog;
             await recordComponentObservation({ component, runId: run.id, result });
+          } else if (catalog.status !== 'skipped') {
+            result = {
+              ...http,
+              error: `${http.error || http.status}; catalog=${catalog.error || catalog.status}`
+            };
           }
         }
         componentResults.push({ component, result });
@@ -345,6 +350,11 @@ try {
         if (catalog.status === 'success') {
           final = catalog;
           await recordObservation({ offer, runId: run.id, result: final });
+        } else if (catalog.status !== 'skipped') {
+          final = {
+            ...http,
+            error: `${http.error || http.status}; catalog=${catalog.error || catalog.status}`
+          };
         }
       }
       if (final.status !== 'success' && !strategy.browserFallback) {

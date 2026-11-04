@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import { publicCatalogSourceFor, parseCatalogProductPrice } from '../collector/catalog-sources.mjs';
 
 test('PRO LIGHTING maps white MAUI and Frigga to official public catalog sources',()=>{
-  assert.match(publicCatalogSourceFor('prolighting','LD Systems MAUI 28 G3 W Weiß'),/maui-serie/);
-  assert.match(publicCatalogSourceFor('prolighting','DAP Frigga Aktive Einzelsäule PA-System Weiß'),/frigga-bodenplatte/);
+  assert.match(publicCatalogSourceFor('prolighting','LD Systems MAUI 28 G3 W Weiß'),/\/de\/kategorie\/3528/);
+  assert.match(publicCatalogSourceFor('prolighting','DAP Frigga Aktive Einzelsäule PA-System Weiß'),/frigga-aktive-einzelsaeule-pa-system-weiss\.html\?fscs=1/);
   assert.equal(publicCatalogSourceFor('prolighting','DAP Frigga schwarz'),null);
 });
 

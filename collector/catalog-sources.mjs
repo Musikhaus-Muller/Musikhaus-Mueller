@@ -30,10 +30,10 @@ export function publicCatalogSourceFor(shopSlug, expected) {
   if (shopSlug !== 'prolighting') return null;
   const n=normalize(expected);
   if (n.includes('maui 28 g3') && (n.includes('weiss') || n.includes('white'))) {
-    return 'https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie.html?sort=6&view=classic';
+    return 'https://www.prolighting.de/de/kategorie/3528';
   }
   if (n.includes('frigga') && (n.includes('weiss') || n.includes('white'))) {
-    return 'https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/dap-frigga-bodenplatte-fuer-frigga-subwoofer.html';
+    return 'https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-weiss.html?fscs=1';
   }
   return null;
 }
