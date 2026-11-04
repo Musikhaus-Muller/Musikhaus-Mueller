@@ -75,8 +75,10 @@ async function loadSupabaseCatalog(env,fetcher=fetch){
  if(!response.ok)throw Error('Supabase-Katalog HTTP '+response.status);
  return toFrontendRows(await response.json());
 }
-async function fallbackRows(env){
- try{return (await load(env)).state.rows}catch{return structuredClone(SEED)}
+async function requireSupabaseCatalog(env){
+ const rows=await loadSupabaseCatalog(env);
+ if(!rows)throw Error('Supabase-Katalog nicht konfiguriert');
+ return rows;
 }
 function summary(s){return {updatedAt:s.updatedAt,run:s.run?{id:s.run.id,status:s.run.status,startedAt:s.run.startedAt,finishedAt:s.run.finishedAt,processed:s.run.cursor,total:s.run.total,confirmed:s.run.confirmed,failed:s.run.failed,changed:s.run.changed,issues:s.run.issues}:null};}
 function logRun(run){if(!run)return null;const {groups,blocked,...entry}=run;return {...entry,trigger:run.trigger||'unknown',processed:run.cursor??0};}
@@ -136,18 +138,16 @@ export default{async fetch(request,env){
    const requested=request.headers.get('x-pa-trigger');const trigger=['scheduled','manual','test'].includes(requested)?requested:'unknown';return json(await refresh(env,fetch,()=>Date.now(),trigger));
   }
   if(path==='/api/catalog'){
-   try{
-    const rows=await loadSupabaseCatalog(env);
-    if(rows)return json({source:'supabase',rows});
-   }catch(e){
-    return json({source:'snapshot',rows:await fallbackRows(env),warning:e.message});
-   }
-   return json({source:'snapshot',rows:await fallbackRows(env)});
+   const rows=await requireSupabaseCatalog(env);
+   return json({source:'supabase',rows});
   }
   if(path==='/api/runs')return json({timezone:'Europe/Madrid',retention:30,runs:history((await load(env)).state)});
   if(path==='/api/status')return json(summary((await load(env)).state));
-  if(path==='/data.json')return json((await load(env)).state.rows);
-  if(path==='/data.js')return new Response('window.BUNDLES='+JSON.stringify((await load(env)).state.rows)+';',{headers:{'content-type':'text/javascript','cache-control':'no-store'}});
+  if(path==='/data.json')return json(await requireSupabaseCatalog(env));
+  if(path==='/data.js'){
+   const rows=await requireSupabaseCatalog(env);
+   return new Response('window.BUNDLES='+JSON.stringify(rows)+';',{headers:{'content-type':'text/javascript','cache-control':'no-store'}});
+  }
   const key=path==='/'?'/index.html':path;if(ASSETS[key])return new Response(ASSETS[key],{headers:{'content-type':key.endsWith('.csv')?'text/csv; charset=utf-8':key.endsWith('.json')?'application/json':key.endsWith('.css')?'text/css':key.endsWith('.js')?'text/javascript':'text/html','cache-control':'no-cache'}});
   return json({error:'Not found'},404);
  }catch(e){return json({error:e.message},503);}
