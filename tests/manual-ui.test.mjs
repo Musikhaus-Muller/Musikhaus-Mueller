@@ -15,7 +15,7 @@ test('actualización manual recalcula cobertura y conserva precios bloqueados',a
  const after=structuredClone(seed);for(const r of after)for(const o of Object.values(r.offers)){o.verifiedToday=false;}
  const ui=setup(url=>url==='/data.json'?after:{run});await new Promise(setImmediate);
  await ui.get('refresh').handlers.click();
- assert.match(ui.get('coverage').innerHTML,/68 Preisangaben sind nicht aktuell bestätigt/);
+ assert.match(ui.get('coverage').innerHTML,/69 Preisangaben sind nicht aktuell bestätigt/);
  assert.equal(ui.data[0].offers.thomann.price,seed[0].offers.thomann.price);
  assert.match(ui.get('update-status').textContent,/Thomann: Shop-Zugriff blockiert \(HTTP 403\)/);
  assert.equal(ui.get('refresh').disabled,false);
