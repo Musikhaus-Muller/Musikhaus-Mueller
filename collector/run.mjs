@@ -1,6 +1,7 @@
 import { chromium } from 'playwright';
 import { parsePrice } from '../worker/handler.mjs';
 import { strategyFor } from './strategies.mjs';
+import { aggregateComponentResults, expectedNameFromUrl } from './components.mjs';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -47,6 +48,28 @@ function multiplierFor(offer) {
   return m ? Number(m[1]) : 1;
 }
 
+async function recordComponentObservation({ component, runId, result }) {
+  await rest('component_price_observations', {
+    method: 'POST',
+    prefer: 'return=minimal',
+    body: [{
+      offer_component_id: component.id,
+      run_id: runId,
+      price: result.price ?? null,
+      currency: 'EUR',
+      availability: result.available === undefined ? null : (result.available ? 'available' : 'unavailable'),
+      status: result.status,
+      source_method: result.method,
+      http_status: result.httpStatus ?? null,
+      verified: result.status === 'success',
+      evidence: result.evidence ?? null,
+      error_message: result.error ?? null,
+      observed_at: new Date().toISOString(),
+      metadata: { url: component.product_url, quantity: component.quantity }
+    }]
+  });
+}
+
 async function recordObservation({ offer, runId, result }) {
   await rest('price_observations', {
     method: 'POST',
@@ -70,7 +93,7 @@ async function recordObservation({ offer, runId, result }) {
   });
 }
 
-async function httpAttempt(offer, shop) {
+async function httpAttemptTarget(offer) {
   let res;
   try {
     res = await fetch(offer.product_url, {
@@ -195,17 +218,28 @@ async function browserAttempt(offer) {
   }
 }
 
-const [shops, configurations, offers] = await Promise.all([
+const [shops, configurations, offers, offerComponents] = await Promise.all([
   rest('shops?select=id,slug,name,collector_type&enabled=eq.true'),
   rest('configurations?select=id,legacy_id,name&active=eq.true'),
-  rest('offers?select=id,configuration_id,shop_id,shop_product_name,product_url,calculation,metadata&active=eq.true&product_url=not.is.null')
+  rest('offers?select=id,configuration_id,shop_id,shop_product_name,product_url,calculation,metadata&active=eq.true&product_url=not.is.null'),
+  rest('offer_components?select=id,offer_id,position,label,quantity,product_url,expected_product_name,metadata&active=eq.true&order=offer_id.asc,position.asc')
 ]);
 
 const shopMap = new Map(shops.map(x => [x.id, x]));
 const configMap = new Map(configurations.map(x => [x.id, x]));
+const componentsByOffer = new Map();
+for (const component of offerComponents) {
+  if (!componentsByOffer.has(component.offer_id)) componentsByOffer.set(component.offer_id, []);
+  componentsByOffer.get(component.offer_id).push(component);
+}
 const selected = offers
-  .map(o => ({ ...o, shop: shopMap.get(o.shop_id), configuration: configMap.get(o.configuration_id) }))
-  .filter(o => o.shop && o.metadata?.collection_disabled !== true && (!shopFilter || o.shop.slug === shopFilter))
+  .map(o => ({
+    ...o,
+    shop: shopMap.get(o.shop_id),
+    configuration: configMap.get(o.configuration_id),
+    components: componentsByOffer.get(o.id) || []
+  }))
+  .filter(o => o.shop && (o.metadata?.collection_disabled !== true || o.components.length > 0) && (!shopFilter || o.shop.slug === shopFilter))
   .slice(0, Number.isFinite(limit) ? limit : offers.length);
 
 const [run] = await rest('collection_runs', {
@@ -227,25 +261,48 @@ try {
     const strategy = strategyFor(shop.slug);
     process.stdout.write(`[${checked + 1}/${selected.length}] ${shop.name} · ${offer.configuration?.name || offer.id} ... `);
 
-    const http = await httpAttempt(offer, shop);
-    await recordObservation({ offer, runId: run.id, result: http });
-
-    let final = http;
-    const host = new URL(offer.product_url).hostname;
-    if (http.status !== 'success' && !httpOnly && strategy.browserFallback) {
-      if (browserBlockedHosts.has(host)) {
-        final = { method: 'browser', status: 'blocked', error: 'Browser retry skipped after CAPTCHA / access block on this host' };
-        await recordObservation({ offer, runId: run.id, result: final });
-      } else {
-        final = await browserAttempt(offer);
-        await recordObservation({ offer, runId: run.id, result: final });
-        if (final.status === 'captcha' || final.status === 'blocked') browserBlockedHosts.add(host);
+    let final;
+    if (offer.components.length > 0) {
+      const componentResults = [];
+      for (const component of offer.components) {
+        const expected = component.expected_product_name || component.label || expectedNameFromUrl(component.product_url);
+        const result = await httpAttemptTarget({
+          product_url: component.product_url,
+          shop_product_name: expected,
+          calculation: null
+        });
+        await recordComponentObservation({ component, runId: run.id, result });
+        componentResults.push({ component, result });
       }
-    } else if (http.status !== 'success' && !strategy.browserFallback) {
-      final = {
-        ...http,
-        error: `${http.error || http.status}; strategy=${strategy.mode}; previous valid price preserved`
-      };
+      final = aggregateComponentResults(componentResults);
+      if (final.status !== 'success' && !strategy.browserFallback) {
+        final = {
+          ...final,
+          error: `${final.error || final.status}; strategy=${strategy.mode}; previous valid bundle price preserved`
+        };
+      }
+      await recordObservation({ offer, runId: run.id, result: final });
+    } else {
+      const http = await httpAttemptTarget(offer);
+      await recordObservation({ offer, runId: run.id, result: http });
+
+      final = http;
+      const host = new URL(offer.product_url).hostname;
+      if (http.status !== 'success' && !httpOnly && strategy.browserFallback) {
+        if (browserBlockedHosts.has(host)) {
+          final = { method: 'browser', status: 'blocked', error: 'Browser retry skipped after CAPTCHA / access block on this host' };
+          await recordObservation({ offer, runId: run.id, result: final });
+        } else {
+          final = await browserAttempt(offer);
+          await recordObservation({ offer, runId: run.id, result: final });
+          if (final.status === 'captcha' || final.status === 'blocked') browserBlockedHosts.add(host);
+        }
+      } else if (http.status !== 'success' && !strategy.browserFallback) {
+        final = {
+          ...http,
+          error: `${http.error || http.status}; strategy=${strategy.mode}; previous valid price preserved`
+        };
+      }
     }
 
     await rest('collection_results', {

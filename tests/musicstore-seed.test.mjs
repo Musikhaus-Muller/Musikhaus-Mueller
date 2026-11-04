@@ -38,8 +38,10 @@ test('Music Store 40/40 audit contains 19 verified offers with safe multi-compon
   }
 });
 
-test('collector skips offers explicitly disabled for single-URL collection', async () => {
+test('collector v2 collects component-backed offers instead of skipping them', async () => {
   const src = await fs.readFile('collector/run.mjs','utf8');
-  assert.match(src, /calculation,metadata/);
-  assert.match(src, /o\.metadata\?\.collection_disabled !== true/);
+  assert.match(src, /offer_components\?select=/);
+  assert.match(src, /componentsByOffer/);
+  assert.match(src, /collection_disabled !== true \|\| o\.components\.length > 0/);
+  assert.match(src, /aggregateComponentResults/);
 });
