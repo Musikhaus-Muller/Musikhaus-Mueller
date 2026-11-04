@@ -92,12 +92,12 @@
         "contents": "2 × MAUI 11 G3 schwarz.",
         "match": "exact",
         "verifiedToday": true,
-        "priceDate": "2026-11-03",
-        "evidence": "Produktseite direkt (HTTP 200), sichtbarer Artikelpreis und Lieferumfang geprüft · 03.11.2026",
+        "priceDate": "2026-11-04",
+        "evidence": "PRO LIGHTING Produktseite/Katalog aktuell verifiziert · 04.11.2026",
         "note": "Berechneter Warenkorb aus zwei identischen Einzelangeboten.",
         "calculation": "2 × 929 € = 1858 €",
         "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-11-g3-portables-cardioid-saeulen-pa-system.html",
-        "lastAttempt": "2026-11-03"
+        "lastAttempt": "2026-11-04"
       },
       "musicstore": {
         "name": "2 × LD-Systems MAUI 11 G3 Schwarz",
@@ -328,6 +328,19 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SAT-BAG/art-PAH0023423-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SUB-PC/art-PAH0023395-000"
         ]
+      },
+      "prolighting": {
+        "name": "LD Systems MAUI 28 G3 + Taschenset",
+        "price": 1289,
+        "url": "https://www.prolighting.de/de/artikel/127076",
+        "contents": "1 × MAUI 28 G3 schwarz; 1 × Säulentasche; 1 × Subwooferhülle.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "PRO LIGHTING Produktseite/Katalog aktuell verifiziert · 04.11.2026",
+        "note": "Direktes PRO LIGHTING Set mit gleicher Referenzkonfiguration.",
+        "source": "https://www.prolighting.de/de/artikel/127076",
+        "lastAttempt": "2026-11-04"
       }
     }
   },
@@ -424,11 +437,11 @@
         "contents": "2 × MAUI 28 G3 schwarz; 2 × Säulentasche; 2 × Subwooferhülle.",
         "match": "exact",
         "verifiedToday": true,
-        "priceDate": "2026-11-03",
-        "evidence": "Produktseite direkt (HTTP 200), sichtbarer Artikelpreis und Lieferumfang geprüft · 03.11.2026",
+        "priceDate": "2026-11-04",
+        "evidence": "PRO LIGHTING Produktseite/Katalog aktuell verifiziert · 04.11.2026",
         "note": "",
         "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g3-stereo-bundle-2x-maui-28-g3-taschen.html",
-        "lastAttempt": "2026-11-03"
+        "lastAttempt": "2026-11-04"
       },
       "musicstore": {
         "name": "Music Store Warenkorb · MAUI 28 G3 Stereo + Taschen",
@@ -515,12 +528,12 @@
         "contents": "2 × MAUI 28 G3 schwarz.",
         "match": "exact",
         "verifiedToday": true,
-        "priceDate": "2026-11-03",
-        "evidence": "Produktseite direkt (HTTP 200), sichtbarer Artikelpreis und Lieferumfang geprüft · 03.11.2026",
+        "priceDate": "2026-11-04",
+        "evidence": "PRO LIGHTING Produktseite/Katalog aktuell verifiziert · 04.11.2026",
         "note": "Berechneter Warenkorb aus zwei identischen Einzelangeboten.",
         "calculation": "2 × 1289 € = 2578 €",
         "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g3-kompaktes-cardioid-saeulen-pa-system.html",
-        "lastAttempt": "2026-11-03"
+        "lastAttempt": "2026-11-04"
       },
       "musicstore": {
         "name": "2 × LD-Systems MAUI 28 G3 Schwarz",
@@ -606,12 +619,12 @@
         "contents": "2 × MAUI 28 G3 weiß.",
         "match": "exact",
         "verifiedToday": true,
-        "priceDate": "2026-11-03",
-        "evidence": "Produktseite direkt (HTTP 200), sichtbarer Artikelpreis und Lieferumfang geprüft · 03.11.2026",
+        "priceDate": "2026-11-04",
+        "evidence": "PRO LIGHTING Produktseite/Katalog aktuell verifiziert · 04.11.2026",
         "note": "Berechneter Warenkorb aus zwei identischen Einzelangeboten.",
         "calculation": "2 × 1329 € = 2658 €",
         "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g3-w-kompaktes-cardioid-saeulen-pa-system-weiss.html",
-        "lastAttempt": "2026-11-03"
+        "lastAttempt": "2026-11-04"
       },
       "musicstore": {
         "name": "2 × LD-Systems MAUI 28 G3 W",
@@ -752,12 +765,12 @@
         "contents": "2 × MAUI 28 G3 MIX schwarz.",
         "match": "exact",
         "verifiedToday": true,
-        "priceDate": "2026-11-03",
-        "evidence": "Produktseite direkt (HTTP 200), sichtbarer Artikelpreis und Lieferumfang geprüft · 03.11.2026",
+        "priceDate": "2026-11-04",
+        "evidence": "PRO LIGHTING Produktseite/Katalog aktuell verifiziert · 04.11.2026",
         "note": "Berechneter Warenkorb aus zwei identischen Einzelangeboten.",
         "calculation": "2 × 1549 € = 3098 €",
         "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g3-mix-kompaktes-cardioid-saeulen-pa-system-mit-digital-mixer-schwarz.html",
-        "lastAttempt": "2026-11-03"
+        "lastAttempt": "2026-11-04"
       },
       "musicstore": {
         "name": "2 × LD-Systems MAUI 28 G3 MIX Schwarz",
@@ -1646,12 +1659,12 @@
         "contents": "2 × STINGER 10 A G3; 2 × SUB 15 A G3; 2 × Top-Cover; 2 × Sub-Cover; 2 × Rollbrett.",
         "match": "similar",
         "verifiedToday": true,
-        "priceDate": "2026-11-03",
-        "evidence": "Produktseite direkt (HTTP 200), sichtbarer Artikelpreis und Lieferumfang geprüft · 03.11.2026",
+        "priceDate": "2026-11-04",
+        "evidence": "PRO LIGHTING Produktseite/Katalog aktuell verifiziert · 04.11.2026",
         "note": "Shop meldet aktuell nicht verfügbar; nicht in der Preisrangfolge berücksichtigt. Zusätzliche Subwooferhüllen gegenüber der erfassten Referenzkonfiguration.",
         "available": false,
         "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-stinger-g3-serie/ld-systems-stinger-g3-event-set-a-2-x-10-aktiv-pa-lautsprecher-2-x-15-aktiv-subwoofer.html",
-        "lastAttempt": "2026-11-03"
+        "lastAttempt": "2026-11-04"
       }
     }
   },
@@ -1748,12 +1761,12 @@
         "contents": "2 × STINGER 12 A G3; 2 × SUB 18 A G3; 4 × Cover; 2 × Rollbrett.",
         "match": "exact",
         "verifiedToday": true,
-        "priceDate": "2026-11-03",
-        "evidence": "Produktseite direkt (HTTP 200), sichtbarer Artikelpreis und Lieferumfang geprüft · 03.11.2026",
+        "priceDate": "2026-11-04",
+        "evidence": "PRO LIGHTING Produktseite/Katalog aktuell verifiziert · 04.11.2026",
         "note": "Shop meldet aktuell nicht verfügbar; nicht in der Preisrangfolge berücksichtigt.",
         "available": false,
         "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-stinger-g3-serie/ld-systems-stinger-g3-power-set-a-2-x-12-aktiv-pa-lautsprecher-2-x-18-aktiv-subwoofer.html",
-        "lastAttempt": "2026-11-03"
+        "lastAttempt": "2026-11-04"
       }
     }
   },
@@ -1838,12 +1851,12 @@
         "contents": "2 × STINGER 15 A G3; 4 × SUB 18 A G3; 6 × Cover; 4 × Rollbrett.",
         "match": "exact",
         "verifiedToday": true,
-        "priceDate": "2026-11-03",
-        "evidence": "Produktseite direkt (HTTP 200), sichtbarer Artikelpreis und Lieferumfang geprüft · 03.11.2026",
+        "priceDate": "2026-11-04",
+        "evidence": "PRO LIGHTING Produktseite/Katalog aktuell verifiziert · 04.11.2026",
         "note": "Shop meldet aktuell nicht verfügbar; nicht in der Preisrangfolge berücksichtigt.",
         "available": false,
         "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-stinger-g3-serie/ld-systems-stinger-g3-impact-set-a-2-x-15-aktiv-pa-lautsprecher-4-x-18-aktiv-subwoofer.html",
-        "lastAttempt": "2026-11-03"
+        "lastAttempt": "2026-11-04"
       }
     }
   },
@@ -2498,12 +2511,12 @@
         "contents": "2 × DAP Frigga schwarz.",
         "match": "exact",
         "verifiedToday": true,
-        "priceDate": "2026-11-03",
-        "evidence": "Produktseite direkt (HTTP 200), sichtbarer Artikelpreis und Lieferumfang geprüft · 03.11.2026",
+        "priceDate": "2026-11-04",
+        "evidence": "PRO LIGHTING Produktseite/Katalog aktuell verifiziert · 04.11.2026",
         "note": "Berechneter Warenkorb aus zwei identischen Einzelangeboten.",
         "calculation": "2 × 1049 € = 2098 €",
         "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-schwarz.html",
-        "lastAttempt": "2026-11-03"
+        "lastAttempt": "2026-11-04"
       }
     }
   },
@@ -2551,17 +2564,17 @@
       },
       "prolighting": {
         "name": "2 × DAP Frigga - Aktive Einzelsäule PA-System - Weiß",
-        "price": 2160,
+        "price": 2178,
         "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-weiss.html",
         "contents": "2 × DAP Frigga weiß.",
         "match": "exact",
         "verifiedToday": true,
-        "priceDate": "2026-11-03",
-        "evidence": "Produktseite direkt (HTTP 200), sichtbarer Artikelpreis und Lieferumfang geprüft · 03.11.2026",
+        "priceDate": "2026-11-04",
+        "evidence": "PRO LIGHTING Produktseite/Katalog aktuell verifiziert · 04.11.2026",
         "note": "Berechneter Warenkorb aus zwei identischen Einzelangeboten.",
-        "calculation": "2 × 1080 € = 2160 €",
+        "calculation": "2 × 1.089 € = 2.178 €",
         "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-weiss.html",
-        "lastAttempt": "2026-11-03"
+        "lastAttempt": "2026-11-04"
       }
     }
   },
@@ -2606,6 +2619,26 @@
         "fetchStatus": "Direktabruf erfolgreich",
         "sourceName": "DAP Frigga Stereo Bundle Set schwarz mit Taschen",
         "match": "exact"
+      },
+      "prolighting": {
+        "name": "PRO LIGHTING Warenkorb · FRIGGA Stereo schwarz + Taschen",
+        "price": 2529.6,
+        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-schwarz.html",
+        "contents": "2 × DAP Frigga schwarz; 2 × Tragetasche für Frigga Top; 2 × Transporthülle für Frigga Sub.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "PRO LIGHTING Produktseite/Katalog aktuell verifiziert · 04.11.2026",
+        "note": "Gleiche System- und Taschen/Hüllen-Konfiguration wie die Referenz.",
+        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-schwarz.html",
+        "lastAttempt": "2026-11-04",
+        "calculation": "2 × (1.049 € + 127,90 € + 87,90 €) = 2.529,60 €",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-schwarz.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/dap-tragetasche-fuer-frigga-top-schwarz-codura.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/dap-transporthuelle-fuer-frigga-sub-schwarz-codura.html"
+        ]
       }
     }
   },
@@ -2650,6 +2683,26 @@
         "fetchStatus": "Direktabruf erfolgreich",
         "sourceName": "DAP Frigga Stereo Bundle Set weiß mit Taschen",
         "match": "exact"
+      },
+      "prolighting": {
+        "name": "PRO LIGHTING Warenkorb · FRIGGA Stereo weiß + Taschen",
+        "price": 2609.6,
+        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-weiss.html",
+        "contents": "2 × DAP Frigga weiß; 2 × Tragetasche für Frigga Top; 2 × Transporthülle für Frigga Sub.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "PRO LIGHTING Produktseite/Katalog aktuell verifiziert · 04.11.2026",
+        "note": "Gleiche System- und Taschen/Hüllen-Konfiguration wie die Referenz.",
+        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-weiss.html",
+        "lastAttempt": "2026-11-04",
+        "calculation": "2 × (1.089 € + 127,90 € + 87,90 €) = 2.609,60 €",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-weiss.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/dap-tragetasche-fuer-frigga-top-schwarz-codura.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/dap-transporthuelle-fuer-frigga-sub-schwarz-codura.html"
+        ]
       }
     }
   },
@@ -2694,6 +2747,26 @@
         "fetchStatus": "Direktabruf erfolgreich",
         "sourceName": "DAP Frigga Bundle Set schwarz mit Taschen",
         "match": "exact"
+      },
+      "prolighting": {
+        "name": "PRO LIGHTING Warenkorb · FRIGGA Schwarz + Taschen",
+        "price": 1264.8,
+        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-schwarz.html",
+        "contents": "1 × DAP Frigga schwarz; 1 × Tragetasche für Frigga Top; 1 × Transporthülle für Frigga Sub.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "PRO LIGHTING Produktseite/Katalog aktuell verifiziert · 04.11.2026",
+        "note": "Gleiche System- und Taschen/Hüllen-Konfiguration wie die Referenz.",
+        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-schwarz.html",
+        "lastAttempt": "2026-11-04",
+        "calculation": "1.049 € + 127,90 € + 87,90 € = 1.264,80 €",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-schwarz.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/dap-tragetasche-fuer-frigga-top-schwarz-codura.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/dap-transporthuelle-fuer-frigga-sub-schwarz-codura.html"
+        ]
       }
     }
   },
@@ -2738,6 +2811,26 @@
         "fetchStatus": "Direktabruf erfolgreich",
         "sourceName": "DAP Frigga Bundle Set weiß mit Taschen",
         "match": "exact"
+      },
+      "prolighting": {
+        "name": "PRO LIGHTING Warenkorb · FRIGGA Weiß + Taschen",
+        "price": 1304.8,
+        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-weiss.html",
+        "contents": "1 × DAP Frigga weiß; 1 × Tragetasche für Frigga Top; 1 × Transporthülle für Frigga Sub.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "PRO LIGHTING Produktseite/Katalog aktuell verifiziert · 04.11.2026",
+        "note": "Gleiche System- und Taschen/Hüllen-Konfiguration wie die Referenz.",
+        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-weiss.html",
+        "lastAttempt": "2026-11-04",
+        "calculation": "1.089 € + 127,90 € + 87,90 € = 1.304,80 €",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-weiss.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/dap-tragetasche-fuer-frigga-top-schwarz-codura.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/dap-transporthuelle-fuer-frigga-sub-schwarz-codura.html"
+        ]
       }
     }
   },
