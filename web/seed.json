@@ -536,6 +536,24 @@
         "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
         "sourceName": "LD-Systems MAUI 28 G3 Schwarz",
         "lastAttempt": "2026-11-04"
+      },
+      "thomann": {
+        "name": "2 × LD Systems Maui 28 G3",
+        "price": 2578,
+        "url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
+        "contents": "2 × MAUI 28 G3 schwarz.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Thomann Produktseite/Katalog öffentlich verifiziert · 04.11.2026",
+        "calculation": "2 × 1.289 € = 2.578 €",
+        "note": "Berechneter Warenkorb aus zwei identischen Einzelangeboten.",
+        "source": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.thomann.de/de/ld_systems_maui_28_g3.htm"
+        ]
       }
     }
   },
@@ -608,6 +626,19 @@
         "calculation": "2 × 1.349 € = 2.698 €",
         "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-W/art-PAH0023386-000",
         "sourceName": "LD-Systems MAUI 28 G3 W",
+        "lastAttempt": "2026-11-04"
+      },
+      "thomann": {
+        "name": "LD Systems Maui 28 G3 White Stereo Bundle",
+        "price": 2839,
+        "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_white_stereo_bundle.htm",
+        "contents": "2 × MAUI 28 G3 weiß.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Thomann Produktseite/Katalog öffentlich verifiziert · 04.11.2026",
+        "note": "Direktes Thomann-Bundle aus zwei weißen MAUI 28 G3.",
+        "source": "https://www.thomann.de/de/ld_systems_maui_28_g3_white_stereo_bundle.htm",
         "lastAttempt": "2026-11-04"
       }
     }
@@ -783,6 +814,24 @@
         "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-44-G2/art-PAH0021585-000",
         "sourceName": "LD-Systems MAUI 44 G2",
         "lastAttempt": "2026-11-04"
+      },
+      "thomann": {
+        "name": "2 × LD Systems Maui 44 G2",
+        "price": 4358,
+        "url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+        "contents": "2 × MAUI 44 G2 schwarz.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Thomann Produktseite/Katalog öffentlich verifiziert · 04.11.2026",
+        "calculation": "2 × 2.179 € = 4.358 €",
+        "note": "Berechneter Warenkorb aus zwei identischen Einzelangeboten.",
+        "source": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.thomann.de/de/ld_systems_maui_44_g2.htm"
+        ]
       }
     }
   },
@@ -827,6 +876,27 @@
         "fetchStatus": "Direktabruf erfolgreich",
         "sourceName": "LD Systems Maui 44 G2 Stereo Bundle Set schwarz mit T&R",
         "match": "exact"
+      },
+      "thomann": {
+        "name": "Thomann Warenkorb · MAUI 44 G2 Stereo Touring",
+        "price": 4936,
+        "url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+        "contents": "2 × MAUI 44 G2; 2 × Sub Bag; 2 × Sat Bag; 2 × Wheelboard.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Thomann Produktseite/Katalog öffentlich verifiziert · 04.11.2026",
+        "calculation": "2 × 2.179 € + 2 × 65 € + 2 × 99 € + 2 × 125 € = 4.936 €",
+        "note": "Gleiche System-, Hüllen- und Rollbrett-Konfiguration wie das Referenzbundle.",
+        "source": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+        "lastAttempt": "2026-11-04",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+          "https://www.thomann.de/de/ld_systems_maui_44_g2_sub_bag.htm",
+          "https://www.thomann.de/de/ld_systems_maui_44_g2_sat_bag.htm",
+          "https://www.thomann.de/de/ld_systems_wheelboard_f._maui_44_g2.htm"
+        ]
       }
     }
   },
