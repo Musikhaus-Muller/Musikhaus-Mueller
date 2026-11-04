@@ -89,3 +89,29 @@ export function parseCatalogProductPrice(html, expected) {
   }
   throw new Error('Catalog product price not found');
 }
+
+
+export function catalogDiagnostic(html, expected) {
+  const text=decode(html);
+  const lines=text.split(/\n+/).map(x=>x.trim()).filter(Boolean);
+  const tokens=significantTokens(expected);
+  const needles=tokens.filter(t=>t.length>=3).slice(0,8);
+  const hits=[];
+  for(let i=0;i<lines.length;i++){
+    const n=normalize(lines[i]);
+    if(needles.some(t=>n.includes(t))){
+      hits.push(lines.slice(Math.max(0,i-1),Math.min(lines.length,i+3)).join(' | ').slice(0,500));
+      if(hits.length>=4)break;
+    }
+  }
+  const prices=[...text.matchAll(/\b\d{1,3}(?:\.\d{3})*,\d{2}\s*(?:€|EUR)(?![A-Za-z0-9_])/gi)]
+    .slice(0,12)
+    .map(m=>m[0]);
+  return {
+    expected:String(expected||'').slice(0,180),
+    tokens,
+    hits,
+    prices,
+    textLength:text.length
+  };
+}

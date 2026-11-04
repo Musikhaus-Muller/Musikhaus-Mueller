@@ -2,7 +2,7 @@ import { chromium } from 'playwright';
 import { parsePrice } from '../worker/handler.mjs';
 import { strategyFor } from './strategies.mjs';
 import { aggregateComponentResults, expectedNameFromUrl } from './components.mjs';
-import { publicCatalogSourceFor, parseCatalogProductPrice } from './catalog-sources.mjs';
+import { publicCatalogSourceFor, parseCatalogProductPrice, catalogDiagnostic } from './catalog-sources.mjs';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -119,8 +119,8 @@ async function catalogAttemptTarget(offer, shopSlug) {
     return { method: 'catalog', status: 'network_error', httpStatus: res.status, error: `HTTP ${res.status}` };
   }
 
+  const html = await res.text();
   try {
-    const html = await res.text();
     const parsed = parseCatalogProductPrice(html, offer.shop_product_name || '');
     const multiplier = multiplierFor(offer);
     return {
@@ -132,7 +132,13 @@ async function catalogAttemptTarget(offer, shopSlug) {
       evidence: `Official shop catalog fallback: ${sourceUrl}`
     };
   } catch (e) {
-    return { method: 'catalog', status: classifyError(e), httpStatus: res.status, error: e.message };
+    const diagnostic = catalogDiagnostic(html, offer.shop_product_name || '');
+    return {
+      method: 'catalog',
+      status: classifyError(e),
+      httpStatus: res.status,
+      error: `${e.message}; diagnostic=${JSON.stringify(diagnostic)}`
+    };
   }
 }
 
