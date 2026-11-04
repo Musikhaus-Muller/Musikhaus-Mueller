@@ -75,12 +75,19 @@ export function discoverySourcesFor(config) {
 }
 
 function parsePrice(text) {
-  const clean = stripTags(text);
-  const matches = [...clean.matchAll(/\d{1,3}(?:\.\d{3})*,\d{2}\s*(?:€|EUR)(?![A-Za-z0-9_])/gi)];
+  const blockText = decode(text)
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<\/p>|<\/div>|<\/li>|<\/span>|<\/section>|<\/article>/gi, '\n')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/[ \t]+/g, ' ')
+    .replace(/\n\s+/g, '\n');
+
+  const matches = [...blockText.matchAll(/\d{1,3}(?:\.\d{3})*,\d{2}\s*(?:€|EUR)(?![A-Za-z0-9_])/gi)];
   for (let i = matches.length - 1; i >= 0; i--) {
     const m = matches[i];
-    const before = clean.slice(Math.max(0, m.index - 40), m.index);
-    if (/uvp|finanzierung|monat(?:lich)?/i.test(before)) continue;
+    const lineStart = blockText.lastIndexOf('\n', m.index - 1) + 1;
+    const sameLineBefore = blockText.slice(lineStart, m.index);
+    if (/uvp|finanzierung|monat(?:lich)?/i.test(sameLineBefore)) continue;
     const price = Number(
       m[0].replace(/\s*(?:€|EUR)\s*$/i, '').replace(/\./g, '').replace(',', '.')
     );
