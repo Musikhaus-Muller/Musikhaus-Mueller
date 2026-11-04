@@ -6,12 +6,12 @@ test('Music Store seed contains 10 verified offers with safe multi-component han
   const seed = JSON.parse(await fs.readFile('web/seed.json', 'utf8'));
   const expected = new Map([
     ['r1', 1858], ['r2', 2096], ['r3', 1433], ['r4', 2866],
-    ['r5', 2578], ['r6', 2698], ['r7', 3098],
+    ['r5', 2578], ['r6', 2698], ['r7', 3098], ['r8', 4358],
     ['r15', 1123], ['r16', 1324], ['r17', 1664]
   ]);
 
   const actual = seed.filter(r => r.offers?.musicstore);
-  assert.equal(actual.length, 10);
+  assert.equal(actual.length, 11);
 
   for (const [id, price] of expected) {
     const row = seed.find(r => r.id === id);

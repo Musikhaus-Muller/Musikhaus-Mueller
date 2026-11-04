@@ -768,6 +768,21 @@
         "fetchStatus": "Direktabruf erfolgreich",
         "sourceName": "LD Systems MAUI 44 G2 Stereo Bundle Set schwarz",
         "match": "exact"
+      },
+      "musicstore": {
+        "name": "2 × LD-Systems MAUI 44 G2",
+        "price": 4358,
+        "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-44-G2/art-PAH0021585-000",
+        "contents": "2 × MAUI 44 G2 schwarz.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-04",
+        "evidence": "Music Store Produktseite öffentlich verifiziert · 04.11.2026",
+        "calculation": "2 × 2.179 € = 4.358 €",
+        "note": "Berechneter Warenkorb aus zwei identischen Einzelangeboten.",
+        "source": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-44-G2/art-PAH0021585-000",
+        "sourceName": "LD-Systems MAUI 44 G2",
+        "lastAttempt": "2026-11-04"
       }
     }
   },
