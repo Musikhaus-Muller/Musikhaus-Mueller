@@ -57,8 +57,8 @@ export function parseCatalogProductPrice(html, expected) {
   for(let i=best+1;i<Math.min(lines.length,best+14);i++){
     const line=lines[i];
     if(/finanzierung|monat|uvp|retail price/i.test(line)) continue;
-    const m=line.match(/\b\d{1,3}(?:\.\d{3})*,\d{2}\s*(?:€|EUR)\b/i)
-      || line.match(/\b\d{1,3}(?:,\d{3})*\.\d{2}\s*(?:€|EUR)\b/i);
+    const m=line.match(/\b\d{1,3}(?:\.\d{3})*,\d{2}\s*(?:€|EUR)(?![A-Za-z0-9_])/i)
+      || line.match(/\b\d{1,3}(?:,\d{3})*\.\d{2}\s*(?:€|EUR)(?![A-Za-z0-9_])/i);
     if(!m) continue;
     const price=priceNumber(m[0]);
     if(!Number.isFinite(price)||price<=0) continue;
