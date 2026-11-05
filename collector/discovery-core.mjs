@@ -51,7 +51,7 @@ function modelNumbers(value) {
 
 function accessoryKind(value) {
   const n = normalize(value);
-  if (/\b(sat bag|sub pc|bag|tasche|tragetasche|schutzhuelle|schutzhulle|cover|rollbrett|roll board|caster board|cb|pc)\b/.test(n)) {
+  if (/\b(sat bag|sub pc|bag|tasche|tragetasche|schutzhuelle|schutzhulle|cover|rollbrett|roll board|caster board|cb|pc|xlr|kabel|cable|stativ|stative|speaker stand|distanzstange|powercon|power twist)\b/.test(n)) {
     return 'accessory';
   }
   return null;

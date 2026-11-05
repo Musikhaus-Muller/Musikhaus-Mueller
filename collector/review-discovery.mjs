@@ -47,7 +47,7 @@ for(const c of candidates){
 }
 
 const counts={unique_high:0,ambiguous_high:0,components_review:0,manual_review:0,weak:0,none:0};
-const componentCounts={component_ready_review:0,ambiguous_components:0,weak_components:0,incomplete_components:0,no_recipe:0};
+const componentCounts={exact_recipe_match:0,similar_recipe_match:0,incomplete_recipe:0,wrong_recipe:0};
 const rows=[];
 const componentRows=[];
 
