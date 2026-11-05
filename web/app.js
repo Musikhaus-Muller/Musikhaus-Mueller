@@ -5,6 +5,7 @@ const $=id=>document.getElementById(id),euro=n=>new Intl.NumberFormat('de-DE',{s
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=s=>s.toLocaleLowerCase('de').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 const date=d=>d?d.split('-').reverse().join('.'):'nicht live bestätigt';
+const timestamp=value=>value?new Date(value).toLocaleString('de-DE',{timeZone:'Europe/Madrid'}):'—';
 let family='Alle',expanded=new Set(),visible=[];
 const keys=()=> $('shop').value==='all'?Object.keys(SHOPS):['mueller',$('shop').value];
 const entries=(r,all=false)=>(all?Object.keys(SHOPS):keys()).filter(k=>r.offers[k]&&Number.isFinite(r.offers[k].price)).map(k=>({key:k,...r.offers[k]}));
@@ -17,7 +18,7 @@ function result(r){const a=comparable(r);if(a.length<2)return {label:'Kein belas
 const thomannLower=r=>{const m=r.offers.mueller,t=r.offers.thomann;return fresh(m)&&fresh(t)&&m.available!==false&&t.available!==false&&t.price<m.price;};
 function renderTabs(){$('families').innerHTML=['Alle','MAUI','DAVE','STINGER','ICOA','Frigga','Wharfedale'].map(f=>`<button type="button" class="${family===f?'active':''}" data-family="${f}" aria-pressed="${family===f}">${f}<span>${f==='Alle'?bundles.length:bundles.filter(r=>r.family===f).length}</span></button>`).join('');}
 function cell(r,k,res){const o=r.offers[k];if(!o)return '<span class="missing">—<br>Kein belegtes<br>Gegenangebot</span>';const red=k==='thomann'&&thomannLower(r),win=res.winners.includes(k);return `<div class="price ${red?'thomann-red':win?'winner':''}">${euro(o.price)}</div><div class="price-meta ${fresh(o)?'':'stale-price'}">${fresh(o)?'Geprüft: '+date(o.priceDate):'Nicht live bestätigt'+(o.priceDate?' · '+date(o.priceDate):'')}</div><span class="badge ${o.match==='exact'?'':'amber'}">${o.match==='exact'?'Gleicher Lieferumfang':'Zubehör abweichend'}</span>${o.available===false?'<div class="stale-price price-meta">Nicht lieferbar</div>':''}${o.calculation?'<div class="price-meta">Berechneter Warenkorb</div>':''}${red?'<div class="price-meta thomann-red">'+euro(r.offers.mueller.price-o.price)+' unter Müller'+(o.match!=='exact'?' · Zubehör abweichend':'')+'</div>':''}<a class="shoplink" href="${esc(o.url)}" target="_blank" rel="noopener noreferrer">Angebot / Quelle ↗</a>`;}
-function detail(k,o){return `<div><h3>${SHOPS[k]}</h3>${o?`<strong>${esc(o.name)}</strong><p>${esc(o.contents)}</p>${o.calculation?'<p><b>'+esc(o.calculation)+'</b></p>':''}<p>${esc(o.note||'')} ${esc(o.shipping||'Versandkosten nicht in der Preiswertung berücksichtigt.')}</p><p><b>${esc(o.fetchStatus|| (fresh(o)?'Direktabruf bestätigt':'Nicht live bestätigt'))}</b><br>Preisstand: ${date(o.priceDate)}<br><a href="${esc(o.source||o.url)}" target="_blank" rel="noopener noreferrer">${esc(o.evidence||'Produktquelle')} ↗</a></p>${o.sources?.length?'<p>'+o.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name||s.url)} ↗</a>`).join('<br>')+'</p>':''}`:'<p>Kein passendes Angebot belegt. Dies ist keine Aussage über das gesamte Shopsortiment.</p>'}</div>`;}
+function detail(k,o){return `<div><h3>${SHOPS[k]}</h3>${o?`<strong>${esc(o.name)}</strong><p>${esc(o.contents)}</p>${o.calculation?'<p><b>'+esc(o.calculation)+'</b></p>':''}<p>${esc(o.note||'')} ${esc(o.shipping||'Versandkosten nicht in der Preiswertung berücksichtigt.')}</p><p><b>${esc(o.fetchStatus|| (fresh(o)?'Direktabruf bestätigt':'Nicht live bestätigt'))}</b><br>Letzter gültiger Preis: ${esc(timestamp(o.checkedAt))}<br>Letzter Abruf: ${esc(timestamp(o.lastAttemptAt))}<br><a href="${esc(o.source||o.url)}" target="_blank" rel="noopener noreferrer">${esc(o.evidence||'Produktquelle')} ↗</a></p>${o.sources?.length?'<p>'+o.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name||s.url)} ↗</a>`).join('<br>')+'</p>':''}`:'<p>Kein passendes Angebot belegt. Dies ist keine Aussage über das gesamte Shopsortiment.</p>'}</div>`;}
 function render(){renderCoverage();const q=norm($('query').value.trim()),min=$('min').value===''?0:Number($('min').value),max=$('max').value===''?Infinity:Number($('max').value),status=$('status').value;
 visible=bundles.filter(r=>(family==='Alle'||family===r.family)&&norm([r.brand,r.name,r.sub,...entries(r).flatMap(o=>[o.name,o.contents])].join(' ')).includes(q)&&low(r)>=min&&low(r)<=max&&(status==='all'||status==='paired'&&entries(r).length>1||status==='exact'&&comparable(r).length>1||status==='similar'&&entries(r).some(o=>o.match==='similar')||status==='unmatched'&&entries(r).length<2));
 const sort=$('sort').value;if(sort==='asc'||sort==='desc')visible.sort((a,b)=>(low(a)-low(b))*(sort==='asc'?1:-1));if(sort==='name')visible.sort((a,b)=>a.name.localeCompare(b.name,'de',{numeric:true}));if(sort==='saving')visible.sort((a,b)=>spread(b)-spread(a));
@@ -52,40 +53,32 @@ async function loadCatalog(){
 loadCatalog();
 
 const updateButton=$('refresh'),updateStatus=$('update-status');
-function showUpdate(s){const r=s.run;if(!r){updateStatus.textContent=s.busy?'Ein anderer Lauf arbeitet gerade.':'Noch kein automatischer Lauf. Mit „Preise aktualisieren“ starten.';return;}const time=new Date(r.finishedAt||r.startedAt).toLocaleString('de-DE');const next=new Date(Date.parse(r.startedAt)+3600000).toLocaleString('de-DE');const issues=new Map();for(const i of r.issues||[]){const label=(SHOPS[i.shop]||i.shop)+': '+i.message;issues.set(label,(issues.get(label)||0)+1);}updateStatus.textContent=(s.cooldown?`Keine neue Abfrage gestartet. Nächster neuer Lauf ab ${next}. Letzter Lauf: `:'')+`${r.status==='running'?'Prüfung läuft':r.status==='partial'?'Prüfung mit Hinweisen abgeschlossen':'Prüfung abgeschlossen'} · ${r.processed}/${r.total} Quellen · ${r.confirmed} bestätigt · ${r.failed} nicht bestätigt · ${r.changed} Preisänderungen · ${time}`+(issues.size?' · Hinweise: '+[...issues].map(([label,count])=>`${label} (${count})`).join('; ')+'. Nicht bestätigte Angebote behalten den letzten Preis.':'');}
+function showUpdate(s,accepted=false){const r=s.run;if(!r){updateStatus.textContent=s.busy?'Ein anderer Lauf arbeitet gerade.':'Noch keine Ausführung registriert. Mit „Preise aktualisieren“ starten.';return;}const labels={running:'Läuft',success:'Erfolgreich',partial:'Teilweise erfolgreich',failed:'Fehlgeschlagen'};const trigger={scheduled:'Programmiert',manual:'Manuell'}[r.trigger]||'unbekannt';const shops=(r.shops||[]).map(x=>`${SHOPS[x.shop]||x.shop}: ${labels[x.status]||x.status} (${x.confirmed}/${x.total})`).join(' · ');const issues=new Map();for(const i of r.issues||[]){const label=(SHOPS[i.shop]||i.shop)+': '+i.message;issues.set(label,(issues.get(label)||0)+1);}updateStatus.textContent=`${accepted?'Manuelle Aktualisierung gestartet · ':''}${labels[r.status]||r.status} · ${trigger} · ${r.processed}/${r.total} Angebote · ${r.confirmed} bestätigt · ${r.failed} fehlgeschlagen · ${timestamp(r.finishedAt||r.startedAt)}`+(shops?' · '+shops:'')+(issues.size?' · '+[...issues].map(([label,count])=>`${label} (${count})`).join('; ')+'. Der letzte gültige Preis bleibt bei Fehlern erhalten.':'');}
 
-async function status(){try{const r=await fetch('/api/status',{signal:AbortSignal.timeout(15000)});if(!r.ok)throw Error();showUpdate(await r.json());}catch{updateStatus.textContent='Aktualisierungsdienst derzeit nicht erreichbar. Gespeicherte Preise bleiben sichtbar.';}}
+async function status(){try{const r=await fetch('/api/status',{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!r.ok)throw Error('HTTP '+r.status);const current=await r.json();showUpdate(current);return current;}catch{updateStatus.textContent='Aktualisierungsdienst derzeit nicht erreichbar. Gespeicherte Preise bleiben sichtbar.';return null;}}
+async function monitorRun(runId){for(let attempt=0;attempt<184;attempt++){await new Promise(resolve=>setTimeout(resolve,15000));try{const response=await fetch('/api/status',{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!response.ok)continue;const current=await response.json();if(current.run?.id!==runId)continue;showUpdate(current);if(current.run.status!=='running'){await Promise.all([loadCatalog(),loadHistory()]);showUpdate(current);return;}}catch{}}updateStatus.textContent='La actualización sigue sin confirmación final. Los precios válidos permanecen visibles; consulte el protocolo de ejecuciones.';}
 updateButton.addEventListener('click',async()=>{
  updateButton.disabled=true;
  try{
-  if(catalogSource==='supabase'){
-   updateStatus.textContent='Supabase-Katalog wird neu geladen …';
-   const payload=await loadCatalog();
-   updateStatus.textContent=payload.source==='supabase'
-    ?'Supabase-Katalog neu geladen. Preisabfragen laufen über den Collector.'
-    :'Supabase nicht erreichbar; gespeicherter Snapshot bleibt sichtbar.';
-   return;
-  }
-  updateStatus.textContent='Preisprüfung wird gestartet …';
-  for(let i=0;i<60;i++){
-   const response=await fetch('/api/refresh',{method:'POST',headers:{'X-PA-Action':'refresh','X-PA-Trigger':'manual'},signal:AbortSignal.timeout(45000)});
-   const s=await response.json();
-   if(!response.ok)throw Error(s.error||'Aktualisierung fehlgeschlagen');
-   showUpdate(s);
-   if(s.busy){updateStatus.textContent+=' · Ein anderer Lauf arbeitet gerade. Bitte später erneut prüfen.';break;}
-   if(s.cooldown||s.run?.status!=='running')break;
-   await new Promise(r=>setTimeout(r,1000));
-  }
-  await loadCatalog();
+  updateStatus.textContent='Manuelle Preisaktualisierung wird sicher gestartet …';
+  const response=await fetch('/api/updates/manual',{method:'POST',headers:{'X-PA-Action':'refresh','X-PA-Trigger':'manual'},signal:AbortSignal.timeout(20000)});
+  const s=await response.json();
+  if(!response.ok&&response.status!==409)throw Error(s.error||'Aktualisierung fehlgeschlagen');
+  showUpdate(s,Boolean(s.accepted));
+  await loadHistory();
+  if(s.run?.status==='running')void monitorRun(s.run.id);
+  else if(s.accepted)await Promise.all([loadCatalog(),loadHistory()]);
  }catch(e){
-  updateStatus.textContent='Aktualisierung nicht abgeschlossen: '+e.message+'. Letzte Preise bleiben erhalten.';
+  const current=await status();
+  await loadHistory();
+  if(current?.run?.status==='running')void monitorRun(current.run.id);
+  else updateStatus.textContent='Aktualisierung nicht abgeschlossen: '+e.message+'. Letzte Preise bleiben erhalten.';
  }finally{
   updateButton.disabled=false;
-  loadHistory();
  }
 });status();
 
 const runTime=t=>t?new Date(t).toLocaleString('de-DE',{timeZone:'Europe/Madrid'}):'—';
-async function loadHistory(){const target=$('run-history');try{const response=await fetch('/api/runs',{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!response.ok)throw Error('HTTP '+response.status);const data=await response.json();if(!Array.isArray(data.runs))throw Error('Ungültiges Protokoll');target.innerHTML=data.runs.length?data.runs.map(r=>{const trigger={scheduled:'Trigger 09:00',manual:'Manuell',test:'Test',unknown:'Auslöser unbekannt'}[r.trigger]||'Auslöser unbekannt';const label={running:'Läuft / noch nicht abgeschlossen',partial:'Mit Hinweisen beendet',complete:'Abgeschlossen',skipped:'Nicht gestartet (Wartezeit)'}[r.status]||r.status;const duration=r.finishedAt?Math.max(0,Math.round((Date.parse(r.finishedAt)-Date.parse(r.startedAt))/1000))+' s':'—';return `<details style="margin-top:16px;padding:12px;border:1px solid #ccd4df;border-radius:8px"><summary><b>${esc(trigger)} · ${esc(runTime(r.startedAt))}</b> · ${esc(label)}</summary><p>Ende: ${esc(runTime(r.finishedAt))} · Dauer: ${duration}<br>${r.processed||0}/${r.total||0} Quellen · ${r.confirmed||0} bestätigt · ${r.failed||0} nicht bestätigt · ${r.changed||0} Preisänderungen</p>${r.reason?'<p>'+esc(r.reason)+'</p>':''}<p>ID: ${esc(r.id)}</p>${(r.results||[]).length?'<ul>'+r.results.map(x=>'<li>'+esc(SHOPS[x.shop]||x.shop)+' · <a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+esc(x.product)+'</a>: '+esc(x.message)+(x.changes?.length?' · '+x.changes.map(c=>esc(c.product)+': '+euro(c.previousPrice)+' → '+euro(c.price)).join('; '):'')+'</li>').join('')+'</ul>':(r.issues||[]).length?'<ul>'+r.issues.map(x=>'<li>'+esc(SHPSafe(x.shop))+': '+esc(x.message)+'</li>').join('')+'</ul>':'<p>Keine Einzelfehler protokolliert.</p>'}</details>`;}).join(''):'Noch keine Ausführung registriert.';}catch(e){target.textContent='Protokoll nicht geladen: '+e.message;}}
+async function loadHistory(){const target=$('run-history');try{const response=await fetch('/api/runs',{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!response.ok)throw Error('HTTP '+response.status);const data=await response.json();if(!Array.isArray(data.runs))throw Error('Ungültiges Protokoll');target.innerHTML=data.runs.length?data.runs.map(r=>{const trigger={scheduled:'Programmiert',manual:'Manuell',test:'Test',unknown:'Auslöser unbekannt'}[r.trigger]||'Auslöser unbekannt';const label={running:'Läuft / noch nicht abgeschlossen',success:'Erfolgreich',partial:'Teilweise erfolgreich',failed:'Fehlgeschlagen',complete:'Abgeschlossen',skipped:'Nicht gestartet'}[r.status]||r.status;const duration=r.finishedAt?Math.max(0,Math.round((Date.parse(r.finishedAt)-Date.parse(r.startedAt))/1000))+' s':'—';const shops=(r.shops||[]).map(x=>`${SHOPS[x.shop]||x.shop}: ${x.confirmed}/${x.total} bestätigt, ${x.failed} fehlgeschlagen`).join(' · ');return `<details style="margin-top:16px;padding:12px;border:1px solid #ccd4df;border-radius:8px"><summary><b>${esc(trigger)} · ${esc(runTime(r.startedAt))}</b> · ${esc(label)}</summary><p>Ende: ${esc(runTime(r.finishedAt))} · Dauer: ${duration}<br>${r.processed||0}/${r.total||0} Angebote · ${r.confirmed||0} bestätigt · ${r.failed||0} fehlgeschlagen</p>${shops?'<p>Pro Händler: '+esc(shops)+'</p>':''}${r.reason?'<p>'+esc(r.reason)+'</p>':''}<p>ID: ${esc(r.id)}</p>${(r.results||[]).length?'<ul>'+r.results.map(x=>'<li>'+esc(SHOPS[x.shop]||x.shop)+' · <a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+esc(x.product)+'</a>: '+esc(x.message)+(x.changes?.length?' · '+x.changes.map(c=>esc(c.product)+': '+euro(c.previousPrice)+' → '+euro(c.price)).join('; '):'')+'</li>').join('')+'</ul>':(r.issues||[]).length?'<ul>'+r.issues.map(x=>'<li>'+esc(SHPSafe(x.shop))+': '+esc(x.message)+'</li>').join('')+'</ul>':'<p>Keine Einzelfehler protokolliert.</p>'}</details>`;}).join(''):'Noch keine Ausführung registriert.';}catch(e){target.textContent='Protokoll nicht geladen: '+e.message;}}
 function SHPSafe(shop){return SHOPS[shop]||shop;}
 $('reload-history').addEventListener('click',loadHistory);loadHistory();

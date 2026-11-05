@@ -20,6 +20,10 @@ on:
         description: Optional maximum number of offers
         required: false
         type: string
+      run_id:
+        description: Existing Supabase run reserved by the website
+        required: false
+        type: string
   schedule:
     - cron: '15 7 * * *'
 
@@ -59,6 +63,7 @@ jobs:
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
       COLLECT_TRIGGER: ${{ github.event_name == 'schedule' && 'schedule' || 'manual' }}
+      COLLECT_RUN_ID: ${{ inputs.run_id }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -67,6 +72,7 @@ jobs:
       - run: npm install
       - run: npx playwright install --with-deps chromium
       - name: Collect
+        id: collect
         run: |
           SHOP="${{ inputs.shop }}"
           LIMIT="${{ inputs.limit }}"
@@ -75,3 +81,10 @@ jobs:
           if [ -n "$SHOP" ] && [ "$SHOP" != "all" ]; then ARGS+=("--shop=$SHOP"); fi
           if [ -n "$LIMIT" ]; then ARGS+=("--limit=$LIMIT"); fi
           node run.mjs "${ARGS[@]}"
+      - name: Finalize failed manual run
+        if: ${{ always() && inputs.run_id != '' && steps.collect.outcome != 'success' }}
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+          COLLECT_RUN_ID: ${{ inputs.run_id }}
+        run: node finalize-run.mjs

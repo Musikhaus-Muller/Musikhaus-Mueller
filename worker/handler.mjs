@@ -99,7 +99,7 @@ function supabaseHeaders(env){
 }
 export function mapSupabaseRun(run,results=[]){
  const trigger={schedule:'scheduled',manual:'manual',api:'unknown',import:'unknown'}[run.trigger_type]||'unknown';
- const status={running:'running',success:'complete',partial:'partial',failed:'partial'}[run.status]||run.status;
+ const status=run.status;
  const mappedResults=results.map(x=>({
   shop:x.offer?.shop?.slug||'unknown',
   url:x.offer?.product_url||'',
@@ -110,6 +110,16 @@ export function mapSupabaseRun(run,results=[]){
   changes:[]
  }));
  const issues=mappedResults.filter(x=>x.status==='error').map(x=>({shop:x.shop,url:x.url,message:x.message}));
+ const shops=[...mappedResults.reduce((groups,result)=>{
+  const group=groups.get(result.shop)||{shop:result.shop,total:0,confirmed:0,failed:0};
+  group.total++;
+  if(result.status==='confirmed')group.confirmed++;else group.failed++;
+  groups.set(result.shop,group);
+  return groups;
+ },new Map()).values()].map(shop=>({
+  ...shop,
+  status:shop.failed===0?'success':shop.confirmed>0?'partial':'failed'
+ }));
  return {
   id:run.id,
   trigger,
@@ -121,6 +131,7 @@ export function mapSupabaseRun(run,results=[]){
   confirmed:run.offers_updated||0,
   failed:run.offers_failed||0,
   changed:0,
+  shops,
   issues,
   results:mappedResults
  };
@@ -144,7 +155,70 @@ async function loadSupabaseRuns(env,fetcher=fetch,limit=30){
 }
 async function loadSupabaseStatus(env,fetcher=fetch){
  const runs=await loadSupabaseRuns(env,fetcher,1);
- return {updatedAt:runs[0]?.finishedAt||null,run:runs[0]||null};
+ return {updatedAt:runs[0]?.finishedAt||runs[0]?.startedAt||null,run:runs[0]||null};
+}
+async function updateRun(env,runId,body,fetcher=fetch){
+ const {base,headers}=supabaseHeaders(env);
+ const response=await fetcher(base+`/rest/v1/collection_runs?id=eq.${encodeURIComponent(runId)}&status=eq.running`,{
+  method:'PATCH',headers:{...headers,Prefer:'return=minimal'},body:JSON.stringify(body),signal:AbortSignal.timeout(15000)
+ });
+ if(!response.ok)throw Error('Supabase-Runs HTTP '+response.status);
+}
+export async function dispatchManualPriceUpdate(request,env,fetcher=fetch){
+ const url=new URL(request.url);
+ if(request.headers.get('Origin')!==url.origin||
+    request.headers.get('X-PA-Action')!=='refresh'||
+    request.headers.get('X-PA-Trigger')!=='manual'){
+  return json({error:'Ungültige oder fremde Anfrage'},403);
+ }
+ if(!env.GITHUB_ACTIONS_TOKEN)return json({error:'GitHub Actions ist nicht konfiguriert'},503);
+ try{
+  const {base,headers}=supabaseHeaders(env);
+  const reservationResponse=await fetcher(base+'/rest/v1/rpc/acquire_manual_collection_run',{
+   method:'POST',headers,body:'{}',signal:AbortSignal.timeout(15000)
+  });
+  if(!reservationResponse.ok)throw Error('Supabase-Reservierung HTTP '+reservationResponse.status);
+  const reservations=await reservationResponse.json();
+  const reservation=Array.isArray(reservations)?reservations[0]:reservations;
+  if(!reservation?.run_id||!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(reservation.run_id)){
+   throw Error('Supabase lieferte keine gültige Ausführungs-ID');
+  }
+  if(reservation.busy){
+   const run=mapSupabaseRun({
+    id:reservation.run_id,trigger_type:reservation.trigger_type||'manual',status:'running',started_at:reservation.started_at,
+    offers_total:0,offers_checked:0,offers_updated:0,offers_failed:0
+   });
+   return json({busy:true,updatedAt:reservation.started_at,run},409);
+  }
+  let dispatch;
+  try{
+   dispatch=await fetcher('https://api.github.com/repos/Musikhaus-Muller/Musikhaus-Mueller/actions/workflows/collect-prices.yml/dispatches',{
+    method:'POST',
+    headers:{
+     Authorization:`Bearer ${env.GITHUB_ACTIONS_TOKEN}`,
+     Accept:'application/vnd.github+json',
+     'X-GitHub-Api-Version':'2022-11-28',
+     'Content-Type':'application/json',
+     'User-Agent':'PA-Radar-Price-Update'
+    },
+    body:JSON.stringify({ref:'main',inputs:{shop:'all',run_id:reservation.run_id}}),
+    signal:AbortSignal.timeout(15000)
+   });
+   if(dispatch.status!==204)throw Error(`GitHub Actions dispatch HTTP ${dispatch.status}`);
+  }catch(error){
+   await updateRun(env,reservation.run_id,{
+    status:'failed',finished_at:new Date().toISOString()
+   },fetcher);
+   throw error;
+  }
+  const run=mapSupabaseRun({
+   id:reservation.run_id,trigger_type:reservation.trigger_type||'manual',status:'running',started_at:reservation.started_at,
+   offers_total:0,offers_checked:0,offers_updated:0,offers_failed:0
+  });
+  return json({accepted:true,updatedAt:reservation.started_at,run},202);
+ }catch(error){
+  return json({error:error.message},502);
+ }
 }
 const toolList=[
  {name:'refresh_prices',description:'Devuelve el estado actual de la recolección. La actualización de precios se ejecuta mediante el collector programado en GitHub Actions.',inputSchema:{type:'object',properties:{},additionalProperties:false}},
@@ -171,8 +245,9 @@ export default{async fetch(request,env){
    return json({jsonrpc:'2.0',id:q.id,result});
   }
   if(path==='/api/refresh'&&request.method==='POST'){
-   return json({error:'Endpoint retirado',collector:'github-actions',message:'La actualización de precios se ejecuta mediante el collector programado.'},410);
+   return json({error:'Endpoint retirado',collector:'github-actions',message:'Use el disparador de actualización manual.'},410);
   }
+  if(path==='/api/updates/manual'&&request.method==='POST')return await dispatchManualPriceUpdate(request,env);
   if(path==='/api/catalog'){
    const rows=await requireSupabaseCatalog(env);
    return json({source:'supabase',rows});

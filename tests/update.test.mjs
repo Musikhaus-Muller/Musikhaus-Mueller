@@ -94,11 +94,15 @@ test('JSON-LD ItemList anidado permite extraer producto de una categoría',()=>{
  assert.equal(parsed.available,true);
 });
 
-test('API refresh legacy está retirada',async()=>{
- const r=await worker.fetch(new Request('https://site/api/refresh',{method:'POST'}),{});
- assert.equal(r.status,410);
+test('legacy refresh stays retired and manual update requires server configuration',async()=>{
+ const legacy=await worker.fetch(new Request('https://site/api/refresh',{method:'POST'}),{});
+ assert.equal(legacy.status,410);
+ const forbidden=await worker.fetch(new Request('https://site/api/updates/manual',{method:'POST'}),{});
+ assert.equal(forbidden.status,403);
+ const r=await worker.fetch(new Request('https://site/api/updates/manual',{method:'POST',headers:{Origin:'https://site','X-PA-Action':'refresh','X-PA-Trigger':'manual'}}),{});
+ assert.equal(r.status,503);
  const body=await r.json();
- assert.equal(body.collector,'github-actions');
+ assert.match(body.error,/GitHub Actions no está configurado|GitHub Actions ist nicht konfiguriert/);
 });
 
 test('MCP conserva las dos herramientas sin depender de R2',async()=>{

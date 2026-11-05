@@ -66,8 +66,14 @@ Supabase es la única fuente persistente del catálogo, precios, estado e histor
 
 - `/api/catalog`, `/data.json` y `/data.js`: catálogo desde Supabase.
 - `/api/status` y `/api/runs`: ejecuciones desde Supabase.
-- `/api/refresh`: retirado; la recolección se ejecuta mediante el collector/GitHub Actions.
+- `POST /api/updates/manual`: reserva una ejecución atómica en Supabase y dispara `collect-prices.yml` mediante GitHub Actions. El endpoint legacy `/api/refresh` permanece retirado. El token de GitHub solo vive en el Worker.
 - MCP: consulta estado en Supabase; no mantiene persistencia propia.
+
+Para habilitar el botón web:
+
+1. Aplicar `supabase/migrations/20261105220000_manual_collection_dispatch.sql`.
+2. Configurar `GITHUB_ACTIONS_TOKEN` como secreto del Worker con acceso `Actions: Read and write` únicamente a este repositorio. No exponerlo al navegador ni incluirlo en archivos versionados.
+3. Confirmar que GitHub Actions puede ejecutar `collect-prices.yml` y que los secrets `SUPABASE_URL` y `SUPABASE_SECRET_KEY` están configurados en el repositorio.
 
 `web/seed.json` queda como fixture/referencia de desarrollo y para pruebas de paridad, no como fuente de producción.
 

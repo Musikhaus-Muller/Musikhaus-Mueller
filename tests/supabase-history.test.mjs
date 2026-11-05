@@ -21,6 +21,19 @@ test('Supabase run mapper preserves existing frontend history shape',()=>{
  assert.equal(mapped.failed,2);
  assert.equal(mapped.results.length,2);
  assert.equal(mapped.issues[0].shop,'musicstore');
+ assert.deepEqual(mapped.shops,[
+  {shop:'mueller',total:1,confirmed:1,failed:0,status:'success'},
+  {shop:'musicstore',total:1,confirmed:0,failed:1,status:'failed'}
+ ]);
+});
+
+test('Supabase run mapper preserves failed state and identifies manual trigger',()=>{
+ const mapped=mod.mapSupabaseRun({
+  id:'run-failed',trigger_type:'manual',status:'failed',
+  started_at:'2026-11-04T07:15:00Z',finished_at:'2026-11-04T07:16:00Z'
+ });
+ assert.equal(mapped.trigger,'manual');
+ assert.equal(mapped.status,'failed');
 });
 
 test('history and status endpoints use Supabase, not R2',async()=>{

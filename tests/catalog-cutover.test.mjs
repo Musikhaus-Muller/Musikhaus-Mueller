@@ -15,5 +15,7 @@ test('R2 is fully removed from the Worker runtime', async () => {
   assert.doesNotMatch(src, /BUCKET/);
   assert.doesNotMatch(src, /price-snapshot-v1\.json/);
   assert.doesNotMatch(src, /export async function refresh/);
+  assert.match(src, /dispatchManualPriceUpdate/);
+  assert.match(src, /actions\/workflows\/collect-prices\.yml\/dispatches/);
   assert.match(src, /Endpoint retirado/);
 });
