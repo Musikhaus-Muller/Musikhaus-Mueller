@@ -2,7 +2,8 @@ import {
   discoverySourcesFor,
   extractCatalogCandidates,
   scoreDiscoveryCandidate,
-  likelyNeedsComponents
+  likelyNeedsComponents,
+  confidenceBand
 } from './discovery-core.mjs';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
@@ -70,7 +71,9 @@ const [run] = await rest('discovery_runs', {
 });
 
 const sourceCache = new Map();
+const sourceErrors = new Map();
 const errors = [];
+const confidenceCounts = { high: 0, medium: 0, low: 0 };
 let candidatesFound = 0;
 let configurationsWithCandidate = 0;
 let noSource = 0;
@@ -85,6 +88,7 @@ for (const config of missing) {
 
   const all = [];
   for (const sourceUrl of sources) {
+    if (sourceErrors.has(sourceUrl)) continue;
     try {
       if (!sourceCache.has(sourceUrl)) sourceCache.set(sourceUrl, await fetchHtml(sourceUrl));
       const html = sourceCache.get(sourceUrl);
@@ -92,7 +96,9 @@ for (const config of missing) {
         all.push({ ...candidate, sourceUrl });
       }
     } catch (e) {
-      errors.push({ configuration: config.legacy_id, sourceUrl, message: e.message });
+      const error = { configuration: config.legacy_id, sourceUrl, message: e.message };
+      sourceErrors.set(sourceUrl, error);
+      errors.push(error);
     }
   }
 
@@ -111,6 +117,8 @@ for (const config of missing) {
   configurationsWithCandidate++;
   for (let rank = 0; rank < ranked.length; rank++) {
     const { candidate, match } = ranked[rank];
+    const confidence = confidenceBand(match.score);
+    confidenceCounts[confidence]++;
     await rest('discovery_candidates?on_conflict=configuration_id,shop_id,candidate_url', {
       method: 'POST',
       prefer: 'resolution=merge-duplicates,return=minimal',
@@ -130,14 +138,15 @@ for (const config of missing) {
           rank: rank + 1,
           matched_tokens: match.matchedTokens || [],
           likely_requires_components: likelyNeedsComponents(config),
-          collector_version: '2.1'
+          collector_version: '2.1',
+          confidence
         },
         discovered_at: new Date().toISOString()
       }]
     });
     candidatesFound++;
   }
-  console.log(`[${config.legacy_id}] ${config.name} ... ${ranked.length} candidate(s), best=${ranked[0].match.score}`);
+  console.log(`[${config.legacy_id}] ${config.name} ... ${ranked.length} candidate(s), best=${ranked[0].match.score} (${confidenceBand(ranked[0].match.score)})`);
 }
 
 const status = errors.length ? (candidatesFound ? 'partial' : 'failed') : 'success';
@@ -155,10 +164,15 @@ await rest(`discovery_runs?id=eq.${run.id}`, {
       mode: 'proposal-only',
       configurations_with_candidate: configurationsWithCandidate,
       configurations_without_source: noSource,
+      confidence_counts: confidenceCounts,
       errors
     }
   }
 });
+
+if (errors.length) {
+  console.log('sourceErrors=' + JSON.stringify(errors, null, 2));
+}
 
 console.log(JSON.stringify({
   runId: run.id,
@@ -168,5 +182,6 @@ console.log(JSON.stringify({
   configurationsWithCandidate,
   candidatesFound,
   noSource,
+  confidence: confidenceCounts,
   errors: errors.length
 }, null, 2));

@@ -4,7 +4,8 @@ import {
   discoverySourcesFor,
   extractCatalogCandidates,
   scoreDiscoveryCandidate,
-  likelyNeedsComponents
+  likelyNeedsComponents,
+  confidenceBand
 } from '../collector/discovery-core.mjs';
 
 test('PRO LIGHTING discovery has official sources for supported LD Systems families',()=>{
@@ -42,4 +43,12 @@ test('discovery accepts same model/generation/color with a high score',()=>{
 test('discovery flags bundles likely to require components instead of auto-publishing them',()=>{
   assert.equal(likelyNeedsComponents({name:'MAUI 28 G3 Stereo + Taschen',subtitle:'2 Systeme + 4 Taschen/Hüllen'}),true);
   assert.equal(likelyNeedsComponents({name:'MAUI 28 G3 Stereo',subtitle:'2 Säulensysteme'}),false);
+});
+
+
+test('discovery confidence bands keep weak candidates visibly separate',()=>{
+  assert.equal(confidenceBand(1),'high');
+  assert.equal(confidenceBand(0.96),'high');
+  assert.equal(confidenceBand(0.85),'medium');
+  assert.equal(confidenceBand(0.75),'low');
 });

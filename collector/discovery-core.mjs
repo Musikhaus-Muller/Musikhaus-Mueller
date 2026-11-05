@@ -165,3 +165,10 @@ export function likelyNeedsComponents(config) {
   const n = normalize([config.name, config.subtitle].filter(Boolean).join(' '));
   return /taschen|hullen|stativen|stative|power|touring|2 tops|4 sub|2 sub|install/.test(n);
 }
+
+
+export function confidenceBand(score) {
+  if (score >= 0.90) return 'high';
+  if (score >= 0.80) return 'medium';
+  return 'low';
+}
