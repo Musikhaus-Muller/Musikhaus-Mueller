@@ -43,22 +43,45 @@ test('formatted candidate exposes id score confidence price and URL',()=>{
 });
 
 
-test('component review reports complete recipe ready only when all components are covered strongly',()=>{
-  const recipe=[{key:'top'},{key:'sub'}];
+test('component review marks exact Mueller recipe when all structural components match strongly',()=>{
+  const recipe=[
+    {key:'top',role:'structural'},
+    {key:'sub',role:'structural'}
+  ];
   const groups=new Map([
-    ['top',[{match_score:0.96}]],
-    ['sub',[{match_score:0.92}]]
+    ['top',[{match_score:0.99}]],
+    ['sub',[{match_score:0.97}]]
   ]);
-  assert.deepEqual(componentReviewSignal(recipe,groups),{signal:'component_ready_review',covered:2,total:2});
+  assert.deepEqual(componentReviewSignal(recipe,groups),{signal:'exact_recipe_match',covered:2,total:2});
 });
 
-test('component review reports incomplete and weak recipes safely',()=>{
-  const recipe=[{key:'top'},{key:'sub'}];
-  assert.equal(componentReviewSignal(recipe,new Map([['top',[{match_score:0.95}]]])).signal,'incomplete_components');
+test('component review marks equivalent secondary accessories as similar recipe',()=>{
+  const recipe=[
+    {key:'top',role:'structural'},
+    {key:'cable',role:'secondary'}
+  ];
+  const groups=new Map([
+    ['top',[{match_score:0.99}]],
+    ['cable',[{match_score:0.88}]]
+  ]);
+  assert.deepEqual(componentReviewSignal(recipe,groups),{signal:'similar_recipe_match',covered:2,total:2});
+});
+
+test('component review marks missing required Mueller components as incomplete',()=>{
+  const recipe=[{key:'top',role:'structural'},{key:'sub',role:'structural'}];
+  assert.deepEqual(componentReviewSignal(recipe,new Map([
+    ['top',[{match_score:0.98}]]
+  ])),{signal:'incomplete_recipe',covered:1,total:2});
+});
+
+test('component review marks weak or ambiguous structural matches as wrong recipe',()=>{
+  const recipe=[{key:'top',role:'structural'}];
   assert.equal(componentReviewSignal(recipe,new Map([
-    ['top',[{match_score:0.95}]],
-    ['sub',[{match_score:0.72}]]
-  ])).signal,'weak_components');
+    ['top',[{match_score:0.75}]]
+  ])).signal,'wrong_recipe');
+  assert.equal(componentReviewSignal(recipe,new Map([
+    ['top',[{match_score:0.98},{match_score:0.96}]]
+  ])).signal,'wrong_recipe');
 });
 
 test('formatted component candidate preserves quantity and component identity',()=>{

@@ -33,27 +33,46 @@ export function formatCandidate(candidate, rank) {
 
 export function componentReviewSignal(recipeComponents, candidateGroups) {
   const components = Array.isArray(recipeComponents) ? recipeComponents : [];
-  if (!components.length) return { signal: 'no_recipe', covered: 0, total: 0 };
+  if (!components.length) return { signal: 'incomplete_recipe', covered: 0, total: 0 };
 
   let covered = 0;
-  let weak = false;
-  let ambiguous = false;
+  let secondaryVariation = false;
 
   for (const component of components) {
     const list = [...(candidateGroups.get(component.key) || [])]
       .sort((a,b)=>Number(b.match_score)-Number(a.match_score));
+
     if (!list.length) continue;
     covered++;
+
     const top = Number(list[0].match_score || 0);
     const second = list[1] ? Number(list[1].match_score || 0) : null;
-    if (top < 0.80) weak = true;
-    if (second !== null && Math.abs(top-second) < 0.05) ambiguous = true;
+    const role = component.role || (component.kind === 'accessory' ? 'secondary' : 'structural');
+
+    if (role === 'structural') {
+      if (top < 0.90) {
+        return { signal: 'wrong_recipe', covered, total: components.length };
+      }
+      if (second !== null && Math.abs(top-second) < 0.05) {
+        return { signal: 'wrong_recipe', covered, total: components.length };
+      }
+    } else {
+      if (top < 0.80) {
+        return { signal: 'wrong_recipe', covered, total: components.length };
+      }
+      if (top < 0.95) secondaryVariation = true;
+    }
   }
 
-  if (covered < components.length) return { signal: 'incomplete_components', covered, total: components.length };
-  if (weak) return { signal: 'weak_components', covered, total: components.length };
-  if (ambiguous) return { signal: 'ambiguous_components', covered, total: components.length };
-  return { signal: 'component_ready_review', covered, total: components.length };
+  if (covered < components.length) {
+    return { signal: 'incomplete_recipe', covered, total: components.length };
+  }
+
+  if (secondaryVariation) {
+    return { signal: 'similar_recipe_match', covered, total: components.length };
+  }
+
+  return { signal: 'exact_recipe_match', covered, total: components.length };
 }
 
 export function formatComponentCandidate(candidate, rank) {
