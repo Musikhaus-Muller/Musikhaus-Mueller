@@ -5,7 +5,8 @@ import {
   likelyNeedsComponents,
   confidenceBand,
   scoreComponentCandidate,
-  discoveryRecipe
+  discoveryRecipe,
+  discoverySeedCandidatesFor
 } from './discovery-core.mjs';
 import { createCandidatePriceResolver } from './discovery-pricing.mjs';
 
@@ -94,7 +95,7 @@ for (const config of missing) {
     continue;
   }
 
-  const all = [];
+  const all = discoverySeedCandidatesFor(config).map(candidate => ({ ...candidate, sourceUrl: candidate.url }));
   for (const sourceUrl of sources) {
     if (sourceErrors.has(sourceUrl)) continue;
     try {

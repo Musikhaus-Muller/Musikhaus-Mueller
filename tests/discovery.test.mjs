@@ -7,7 +7,8 @@ import {
   likelyNeedsComponents,
   confidenceBand,
   scoreComponentCandidate,
-  discoveryRecipe
+  discoveryRecipe,
+  discoverySeedCandidatesFor
 } from '../collector/discovery-core.mjs';
 
 test('PRO LIGHTING discovery has official sources for supported LD Systems families',()=>{
@@ -321,4 +322,17 @@ test('component discovery does not cross-match padded cover product families',()
     scoreComponentCandidate(cover,{name:'LD Systems ICOA 15 PC - Gepolsterte Schutzhülle'}).accepted,
     true
   );
+});
+
+
+test('discovery seeds exact official generic accessory products without relaxing matching',()=>{
+  const seeds=discoverySeedCandidatesFor({family:'ICOA',name:'ICOA Club'});
+  assert.ok(seeds.some(x=>x.name.includes('3 STAR MMF 0300') && x.name.includes('3 m')));
+  assert.ok(seeds.some(x=>x.name.includes('Gravity SP 2332 B')));
+  const xlr={expected:'XLR Kabel 3 m',label:'XLR 3m',kind:'accessory'};
+  const stand={expected:'Gravity SP 2332 B',label:'Gravity SP 2332 B',kind:'accessory'};
+  const xlrSeed=seeds.find(x=>x.name.includes('3 STAR MMF 0300'));
+  const standSeed=seeds.find(x=>x.name.includes('Gravity SP 2332 B'));
+  assert.equal(scoreComponentCandidate(xlr,xlrSeed).accepted,true);
+  assert.equal(scoreComponentCandidate(stand,standSeed).accepted,true);
 });

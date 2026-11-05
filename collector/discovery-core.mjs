@@ -380,3 +380,21 @@ export function discoveryRecipe(config) {
   if (!recipe || recipe.mode !== 'components' || !Array.isArray(recipe.components)) return null;
   return recipe;
 }
+
+
+export function discoverySeedCandidatesFor(config) {
+  const family = normalize(config?.family);
+  if (!['maui','stinger','icoa'].includes(family)) return [];
+  return [
+    {
+      name: 'ah Cables 3 STAR MMF 0300 - Mikrofonkabel - Adam Hall XLR Female x XLR Male - 3 m',
+      url: 'https://www.prolighting.de/en/accessories/cable-connectors/audio-cable/xlr-xlr/ah-cables-3-star-mmf-0300-mikrofonkabel-adam-hall-r-xlr-female-x-xlr-male-3-m.html',
+      price: null
+    },
+    {
+      name: 'Gravity SP 2332 B - Verstellbares Distanzrohr, 35 mm auf M20, 1400 mm',
+      url: 'https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html',
+      price: null
+    }
+  ];
+}
