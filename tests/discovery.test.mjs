@@ -102,6 +102,33 @@ test('component discovery enforces model numbers for ICOA recipes',()=>{
   assert.equal(scoreComponentCandidate(component,{name:'LD Systems ICOA 12 A BT'}).accepted,true);
 });
 
+test('component discovery keeps ICOA PRO and BT model variants strict',()=>{
+  const bt={expected:'LD Systems ICOA 15 A BT',label:'ICOA 15 A BT',kind:'main'};
+  const pro={expected:'LD Systems ICOA PRO 15 A',label:'ICOA PRO 15 A',kind:'main'};
+  const proSub={expected:'LD Systems ICOA PRO SUB 21 A',label:'ICOA PRO SUB 21 A',kind:'main'};
+
+  assert.equal(
+    scoreComponentCandidate(bt,{name:'LD Systems ICOA 15 A - Aktiver koaxialer PA-Lautsprecher'}).reason,
+    'model_variant_mismatch'
+  );
+  assert.equal(
+    scoreComponentCandidate(bt,{name:'LD Systems ICOA PRO 15 A - Aktiver Lautsprecher mit Bluetooth'}).reason,
+    'model_variant_mismatch'
+  );
+  assert.equal(
+    scoreComponentCandidate(pro,{name:'LD Systems ICOA 15 A BT - Aktiver Lautsprecher mit Bluetooth'}).reason,
+    'model_variant_mismatch'
+  );
+  assert.equal(
+    scoreComponentCandidate(pro,{name:'LD Systems ICOA PRO 15 A - Aktiver Lautsprecher mit Bluetooth'}).accepted,
+    true
+  );
+  assert.equal(
+    scoreComponentCandidate(proSub,{name:'LD Systems ICOA SUB 21 A PRO - Aktiver Subwoofer'}).accepted,
+    true
+  );
+});
+
 test('discovery recipe is read from configuration metadata only when component mode is valid',()=>{
   assert.equal(discoveryRecipe({metadata:{}}),null);
   const recipe={mode:'components',components:[{key:'main'}]};

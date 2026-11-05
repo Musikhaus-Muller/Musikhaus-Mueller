@@ -123,6 +123,15 @@ function structuralSubtype(value) {
   return 'system';
 }
 
+function icoaStructuralVariant(value) {
+  const n = normalize(value);
+  if (!/\bicoa\b/.test(n)) return null;
+  return {
+    pro: /\bicoa\s+pro\b/.test(n) || /\bicoa\s+sub\s+\d{1,2}\s+a\s+pro\b/.test(n),
+    bt: /\bicoa\s+\d{1,2}\s+a\s+bt\b/.test(n)
+  };
+}
+
 function expectsStandaloneMainProduct(config) {
   return !likelyNeedsComponents(config);
 }
@@ -294,6 +303,14 @@ export function scoreComponentCandidate(component, candidate) {
     const candidateSubtype = structuralSubtype(candidateName);
     if (expectedSubtype !== candidateSubtype) {
       return { score: 0, accepted: false, reason: 'structural_subtype_mismatch' };
+    }
+
+    const expectedIcoa = icoaStructuralVariant(expectedName);
+    const candidateIcoa = icoaStructuralVariant(candidateName);
+    if (expectedIcoa && candidateIcoa && (
+      expectedIcoa.pro !== candidateIcoa.pro || expectedIcoa.bt !== candidateIcoa.bt
+    )) {
+      return { score: 0, accepted: false, reason: 'model_variant_mismatch' };
     }
   }
 
