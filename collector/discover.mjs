@@ -7,6 +7,7 @@ import {
   scoreComponentCandidate,
   discoveryRecipe
 } from './discovery-core.mjs';
+import { createCandidatePriceResolver } from './discovery-pricing.mjs';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -73,6 +74,7 @@ const [run] = await rest('discovery_runs', {
 });
 
 const sourceCache = new Map();
+const resolveCandidatePrice = createCandidatePriceResolver();
 const sourceErrors = new Map();
 const errors = [];
 const confidenceCounts = { high: 0, medium: 0, low: 0 };
@@ -124,6 +126,7 @@ for (const config of missing) {
 
       for (let rank = 0; rank < rankedComponents.length; rank++) {
         const { candidate, match } = rankedComponents[rank];
+        const pricedCandidate = await resolveCandidatePrice(candidate);
         const confidence = confidenceBand(match.score);
         componentConfidenceCounts[confidence]++;
         await rest('discovery_component_candidates?on_conflict=configuration_id,shop_id,component_key,candidate_url', {
@@ -140,7 +143,7 @@ for (const config of missing) {
             status: 'proposed',
             candidate_name: candidate.name,
             candidate_url: candidate.url,
-            candidate_price: candidate.price,
+            candidate_price: pricedCandidate.price,
             currency: 'EUR',
             match_score: match.score,
             source_url: candidate.sourceUrl,
@@ -149,7 +152,9 @@ for (const config of missing) {
               expected: component.expected || component.label,
               matched_tokens: match.matchedTokens || [],
               confidence,
-              collector_version: '2.1-component'
+              collector_version: '2.1-component',
+              price_source: pricedCandidate.priceSource || null,
+              price_error: pricedCandidate.priceError || null
             },
             discovered_at: new Date().toISOString()
           }]
@@ -179,6 +184,7 @@ for (const config of missing) {
   configurationsWithCandidate++;
   for (let rank = 0; rank < ranked.length; rank++) {
     const { candidate, match } = ranked[rank];
+    const pricedCandidate = await resolveCandidatePrice(candidate);
     const confidence = confidenceBand(match.score);
     confidenceCounts[confidence]++;
     await rest('discovery_candidates?on_conflict=configuration_id,shop_id,candidate_url', {
@@ -191,7 +197,7 @@ for (const config of missing) {
         status: 'proposed',
         candidate_name: candidate.name,
         candidate_url: candidate.url,
-        candidate_price: candidate.price,
+        candidate_price: pricedCandidate.price,
         currency: 'EUR',
         match_score: match.score,
         source_url: candidate.sourceUrl,
@@ -201,7 +207,9 @@ for (const config of missing) {
           matched_tokens: match.matchedTokens || [],
           likely_requires_components: likelyNeedsComponents(config),
           collector_version: '2.1',
-          confidence
+          confidence,
+          price_source: pricedCandidate.priceSource || null,
+          price_error: pricedCandidate.priceError || null
         },
         discovered_at: new Date().toISOString()
       }]

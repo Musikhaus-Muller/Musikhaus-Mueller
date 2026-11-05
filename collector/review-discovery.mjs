@@ -4,6 +4,7 @@ import {
   componentReviewSignal,
   formatComponentCandidate
 } from './review-core.mjs';
+import { comparableRecipeTotal } from './discovery-pricing.mjs';
 
 const SUPABASE_URL=process.env.SUPABASE_URL;
 const SUPABASE_KEY=process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -87,6 +88,7 @@ for(const config of configs){
     signal:review.signal,
     covered:review.covered,
     total:review.total,
+    comparableTotal:comparableRecipeTotal(components,review.signal),
     components
   });
 }
@@ -113,7 +115,7 @@ componentRows.sort((a,b)=>String(a.legacyId).localeCompare(String(b.legacyId),un
 
 console.log(`review run=${run.id} shop=${shopSlug} discoveryStatus=${run.status}`);
 for(const row of componentRows){
-  console.log(`[${row.legacyId}] ${row.configuration} ... ${row.signal} | coverage=${row.covered}/${row.total}`);
+  console.log(`[${row.legacyId}] ${row.configuration} ... ${row.signal} | coverage=${row.covered}/${row.total}${row.comparableTotal===null?'':` | comparableTotal=${row.comparableTotal} EUR`}`);
   for(const component of row.components){
     const t1=component.top1;
     console.log(`  [${component.key}] qty=${component.quantity} ${component.label} | ${t1 ? `top1=${t1.score} ${t1.price ?? 'no-price'} EUR` : 'no_candidate'}`);
@@ -136,5 +138,6 @@ console.log(JSON.stringify({
   componentConfigurationsReviewed:componentRows.length,
   signals:counts,
   componentSignals:componentCounts,
+  comparableTotalsAvailable:componentRows.filter(x=>x.comparableTotal!==null).length,
   note:'Read-only review report. No candidate status or offer was modified.'
 },null,2));
