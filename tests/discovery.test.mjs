@@ -234,3 +234,42 @@ test('component discovery rejects MIX variant when Mueller recipe expects standa
     'structural_subtype_mismatch'
   );
 });
+
+
+test('supported component recipes include generic PRO LIGHTING accessory sources',()=>{
+  const sources=discoverySourcesFor({family:'ICOA',name:'ICOA PRO 15A'});
+  assert.ok(sources.some(x=>x.includes('/audiokabel/xlr-xlr.html')));
+  assert.ok(sources.some(x=>x.includes('/stromkabel/powerconkabel.html')));
+  assert.ok(sources.some(x=>x.includes('/hersteller/gravity.html')));
+  assert.ok(sources.some(x=>x.includes('/stativtaschen.html')));
+});
+
+test('component discovery distinguishes XLR, PowerCon and hybrid cables',()=>{
+  const xlr={expected:'XLR Kabel 3 m',label:'XLR 3m',kind:'accessory'};
+  const power={expected:'PowerCon Kabel 3 m',label:'PowerCon 3m',kind:'accessory'};
+
+  assert.equal(
+    scoreComponentCandidate(xlr,{name:'DAP XLR Mikrofon Kabel schwarz 3m'}).accepted,
+    true
+  );
+  assert.equal(
+    scoreComponentCandidate(xlr,{name:'DAP powerCON/XLR M - powerCON/XLR F - DMX / Strom - 3 m'}).reason,
+    'accessory_subtype_mismatch'
+  );
+  assert.equal(
+    scoreComponentCandidate(power,{name:'PROmagiX Powercon Verbindungskabel 1,5 mm² 3 m'}).accepted,
+    true
+  );
+  assert.equal(
+    scoreComponentCandidate(power,{name:'DAP XLR Mikrofon Kabel schwarz 3m'}).reason,
+    'accessory_subtype_mismatch'
+  );
+});
+
+test('component discovery keeps cable length strict',()=>{
+  const xlr3={expected:'XLR Kabel 3 m',label:'XLR 3m',kind:'accessory'};
+  assert.equal(
+    scoreComponentCandidate(xlr3,{name:'ADJ AC-XMXF/5 microphone cable XLR/XLR 5m'}).reason,
+    'model_number_mismatch'
+  );
+});

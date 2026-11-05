@@ -66,7 +66,10 @@ function accessorySubtype(value) {
   if (/\bpc\b/.test(n)) return 'padded_cover';
   if (/\b(cover|schutzhuelle|schutzhulle|hulle)\b/.test(n)) return 'cover';
   if (/\b(stativ|stative|speaker stand|distanzstange)\b/.test(n)) return 'stand';
-  if (/\b(xlr|powercon|power twist|kabel|cable)\b/.test(n)) return 'cable';
+  if (/\b(xlr)\b/.test(n) && /\b(powercon|power con|p con|power twist)\b/.test(n)) return 'hybrid_cable';
+  if (/\b(powercon|power con|p con|power twist)\b/.test(n)) return 'powercon_cable';
+  if (/\b(xlr)\b/.test(n)) return 'xlr_cable';
+  if (/\b(kabel|cable)\b/.test(n)) return 'cable';
   if (/\b(easymount|traversenhalterung|halterung)\b/.test(n)) return 'mount';
   return null;
 }
@@ -105,21 +108,29 @@ export function discoverySourcesFor(config) {
   const family = normalize(config.family);
   const name = normalize(config.name);
   const ldBase = 'https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems.html?view=classic';
+  const accessorySources = [
+    'https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr.html?view=classic',
+    'https://www.prolighting.de/de/zubehoer/kabel-stecker/stromkabel/powerconkabel.html?view=classic',
+    'https://www.prolighting.de/de/hersteller/gravity.html?sort=2&view=list',
+    'https://www.prolighting.de/de/zubehoer/cases-racks-taschen/taschen/stativtaschen.html?sort=1&view=list'
+  ];
 
   if (family === 'maui') return [
     'https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie.html?view=classic',
-    ldBase
+    ldBase,
+    ...accessorySources
   ];
   if (family === 'dave') return [ldBase];
   if (family === 'stinger') return [
     'https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-stinger-g3-serie.html?view=classic',
-    ldBase
+    ldBase,
+    ...accessorySources
   ];
   if (family === 'icoa') {
     const specific = name.includes('pro')
       ? 'https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-pro-serie.html?view=classic'
       : 'https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie.html?view=classic';
-    return [specific, ldBase];
+    return [specific, ldBase, ...accessorySources];
   }
   if (family === 'frigga') return [
     'https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets.html?view=classic'
