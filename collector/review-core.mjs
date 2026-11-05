@@ -91,6 +91,8 @@ export function formatComponentCandidate(candidate, rank) {
     price: candidate.candidate_price === null ? null : Number(candidate.candidate_price),
     score: Number(candidate.match_score),
     confidence: candidate.metadata?.confidence || null,
+    priceSource: candidate.metadata?.price_source || null,
+    priceError: candidate.metadata?.price_error || null,
     url: candidate.candidate_url,
     source: candidate.source_url
   };
