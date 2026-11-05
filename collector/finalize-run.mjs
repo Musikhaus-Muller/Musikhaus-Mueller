@@ -8,7 +8,7 @@ if (!runId || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 }
 
 const response = await fetch(
-  `${SUPABASE_URL}/rest/v1/collection_runs?id=eq.${encodeURIComponent(runId)}&status=eq.running`,
+  `${SUPABASE_URL}/rest/v1/collection_runs?id=eq.${encodeURIComponent(runId)}&status=in.(running,success,partial)&metadata->>source=eq.web`,
   {
     method: 'PATCH',
     headers: {
@@ -17,7 +17,15 @@ const response = await fetch(
       Prefer: 'return=minimal',
       ...(SUPABASE_KEY.startsWith('eyJ') ? { Authorization: `Bearer ${SUPABASE_KEY}` } : {})
     },
-    body: JSON.stringify({ status: 'failed', finished_at: new Date().toISOString() })
+    body: JSON.stringify({
+      status: 'failed',
+      finished_at: new Date().toISOString(),
+      metadata: {
+        source: 'web',
+        lifecycle: 'failed',
+        error: 'GitHub Actions collection job did not complete successfully'
+      }
+    })
   }
 );
 

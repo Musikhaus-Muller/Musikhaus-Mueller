@@ -301,7 +301,15 @@ if (process.env.COLLECT_RUN_ID) {
   [run] = await rest(`collection_runs?id=eq.${encodeURIComponent(runId)}&status=eq.running`, {
     method: 'PATCH',
     prefer: 'return=representation',
-    body: { offers_total: selected.length, metadata: { ...runMetadata, source: 'web' } }
+    body: {
+      offers_total: selected.length,
+      metadata: {
+        ...(run.metadata || {}),
+        ...runMetadata,
+        source: 'web',
+        lifecycle: 'running'
+      }
+    }
   });
   if (!run) throw new Error(`Reserved collection run not found: ${runId}`);
 } else {
@@ -420,7 +428,12 @@ try {
       finished_at: new Date().toISOString(),
       offers_checked: checked,
       offers_updated: updated,
-      offers_failed: failed
+      offers_failed: failed,
+      metadata: {
+        ...(run.metadata || runMetadata),
+        lifecycle: status === 'success' ? 'success' : status === 'partial' ? 'partial' : 'failed',
+        collector_finished_at: new Date().toISOString()
+      }
     }
   });
   console.log(JSON.stringify({ runId: run.id, status, checked, updated, failed }, null, 2));

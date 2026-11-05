@@ -7,7 +7,7 @@ test('workflow exposes explicit shop choice and passes manual/schedule trigger',
   assert.match(wf,/type: choice/);
   assert.match(wf,/\n\s+- all/);
   assert.match(wf,/COLLECT_TRIGGER:/);
-  assert.match(wf,/COLLECT_RUN_ID: \$\{\{ inputs\.run_id \}\}/);
+  assert.match(wf,/COLLECT_RUN_ID: \$\{\{ inputs\.collection_run_id \}\}/);
   assert.match(wf,/github\.event_name == 'schedule'/);
   assert.match(wf,/\[ "\$SHOP" != "all" \]/);
 });
@@ -32,8 +32,10 @@ test('one non-overlapping daily workflow discovers then collects every shop', as
 test('manual collection run is finalized if setup or collection fails', async () => {
   const wf = await fs.readFile('.github/workflows/collect-prices.yml','utf8');
   const finalizer = await fs.readFile('collector/finalize-run.mjs','utf8');
+  assert.match(wf,/Claim website-reserved run/);
+  assert.match(wf,/inputs\.collection_run_id != '' && steps\.claim\.outcome == 'success'/);
   assert.match(wf,/Finalize failed manual run/);
-  assert.match(wf,/inputs\.run_id != '' && steps\.collect\.outcome != 'success'/);
+  assert.match(wf,/steps\.collect\.outcome != 'success'/);
   assert.match(finalizer,/status: 'failed'/);
 });
 
