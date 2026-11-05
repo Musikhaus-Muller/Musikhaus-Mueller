@@ -1,0 +1,4 @@
+update public.configurations
+set metadata=jsonb_set(coalesce(metadata,'{}'::jsonb),'{discovery_recipe}','{"mode":"components","recipe_version":2,"reference_shop":"mueller","components":[{"key":"top","label":"STINGER 8 A G3","quantity":2,"expected":"LD Systems STINGER 8 A G3","kind":"main","role":"structural"},{"key":"sub","label":"STINGER SUB 15 A G3","quantity":1,"expected":"LD Systems STINGER SUB 15 A G3","kind":"main","role":"structural"},{"key":"covers","label":"Lautsprecher Hüllen","quantity":3,"expected":"Lautsprecher Hülle","kind":"accessory","role":"secondary"},{"key":"stands","label":"Stativpaar mit Tasche","quantity":2,"expected":"Speaker Stand Stativ","kind":"accessory","role":"secondary"},{"key":"xlr_10m","label":"XLR Kabel 10 m","quantity":2,"expected":"XLR Kabel 10 m","kind":"accessory","role":"secondary"}]}'::jsonb,true),
+updated_at=now()
+where legacy_id='r22';
