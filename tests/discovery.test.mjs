@@ -52,3 +52,30 @@ test('discovery confidence bands keep weak candidates visibly separate',()=>{
   assert.equal(confidenceBand(0.85),'medium');
   assert.equal(confidenceBand(0.75),'low');
 });
+
+
+test('discovery rejects MAUI accessories as primary candidates',()=>{
+  const config={brand:'LD Systems',family:'MAUI',name:'MAUI 44 G2 Stereo',subtitle:'2 Säulensysteme'};
+  for (const name of [
+    'LD Systems MAUI 44 G2 CB - Rollbrett für MAUI 44 G2',
+    'LD Systems MAUI 44 G2 SAT BAG',
+    'LD Systems MAUI 44 G2 SUB PC - Gepolsterte Schutzhülle'
+  ]) {
+    const match=scoreDiscoveryCandidate(config,{name});
+    assert.equal(match.accepted,false,name);
+    assert.equal(match.reason,'accessory_mismatch',name);
+  }
+});
+
+test('discovery keeps the actual MAUI system as a candidate',()=>{
+  const config={brand:'LD Systems',family:'MAUI',name:'MAUI 44 G2 Stereo',subtitle:'2 Säulensysteme'};
+  const match=scoreDiscoveryCandidate(config,{name:'LD Systems MAUI 44 G2 - Säulen PA System'});
+  assert.equal(match.accepted,true);
+});
+
+test('bundle configurations do not promote accessory-only pages as their main candidate',()=>{
+  const config={brand:'LD Systems',family:'MAUI',name:'MAUI 11 G3 Power Bundle',subtitle:'System + Taschen'};
+  const match=scoreDiscoveryCandidate(config,{name:'LD Systems MAUI 11 G3 SAT BAG, Gepolsterte Tragetasche'});
+  assert.equal(match.accepted,false);
+  assert.equal(match.reason,'accessory_mismatch');
+});

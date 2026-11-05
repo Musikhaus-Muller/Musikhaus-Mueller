@@ -48,6 +48,25 @@ function modelNumbers(value) {
   return [...new Set(normalize(value).match(/\b\d{1,3}\b/g) || [])];
 }
 
+
+function accessoryKind(value) {
+  const n = normalize(value);
+  if (/\b(sat bag|sub pc|bag|tasche|tragetasche|schutzhuelle|schutzhulle|cover|rollbrett|roll board|caster board|cb|pc)\b/.test(n)) {
+    return 'accessory';
+  }
+  return null;
+}
+
+function expectsStandaloneMainProduct(config) {
+  return !likelyNeedsComponents(config);
+}
+
+function candidateLooksLikeMainSystem(value) {
+  const n = normalize(value);
+  return /\b(maui|dave|stinger|icoa|frigga)\b/.test(n)
+    && !accessoryKind(n);
+}
+
 export function discoverySourcesFor(config) {
   const family = normalize(config.family);
   const name = normalize(config.name);
@@ -125,6 +144,14 @@ export function extractCatalogCandidates(html, sourceUrl) {
 export function scoreDiscoveryCandidate(config, candidate) {
   const expected = [config.brand, config.family, config.name, config.subtitle].filter(Boolean).join(' ');
   const candidateName = candidate.name || '';
+
+  if (accessoryKind(candidateName)) {
+    return { score: 0, accepted: false, reason: 'accessory_mismatch' };
+  }
+
+  if (expectsStandaloneMainProduct(config) && !candidateLooksLikeMainSystem(candidateName)) {
+    return { score: 0, accepted: false, reason: 'main_product_mismatch' };
+  }
   const expectedGen = generationOf(expected);
   const candidateGen = generationOf(candidateName);
   if (expectedGen && candidateGen && expectedGen !== candidateGen) {
