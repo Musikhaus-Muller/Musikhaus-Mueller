@@ -97,6 +97,7 @@ function accessorySubtype(value) {
   if (/\b(stativ|stative|speaker stand|distanzstange|distanzrohr)\b/.test(n) || /\b(?:sp|tsp)\s*\d{4}\s*b\b/.test(n)) return 'stand';
   if (/\b(xlr)\b/.test(n) && /\b(powercon|power con|p con|power twist)\b/.test(n)) return 'hybrid_cable';
   if (/\b(powercon|power con|p con|power twist)\b/.test(n)) return 'powercon_cable';
+  if (/\b(dmx|dmx512)\b/.test(n) && /\b(xlr)\b/.test(n)) return 'dmx_xlr_cable';
   if (/\b(xlr)\b/.test(n)) return 'xlr_cable';
   if (/\b(kabel|cable)\b/.test(n)) return 'cable';
   if (/\b(easymount|traversenhalterung|halterung)\b/.test(n)) return 'mount';

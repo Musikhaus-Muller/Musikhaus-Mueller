@@ -267,6 +267,26 @@ test('component discovery distinguishes XLR, PowerCon and hybrid cables',()=>{
   );
 });
 
+test('component discovery rejects DMX XLR as an audio XLR cable',()=>{
+  const audioXlr={expected:'XLR Kabel 3 m',label:'XLR 3m',kind:'accessory'};
+
+  for (const name of [
+    'DAP FLX DMX Kabel XLR 3-pol 3 m',
+    'Cameo DMX 512 Kabel XLR 5-pol 3m'
+  ]) {
+    assert.equal(
+      scoreComponentCandidate(audioXlr,{name}).reason,
+      'accessory_subtype_mismatch',
+      name
+    );
+  }
+
+  assert.equal(
+    scoreComponentCandidate(audioXlr,{name:'ah Cables XLR Mikrofonkabel XLR Female auf XLR Male 3 m'}).accepted,
+    true
+  );
+});
+
 test('component discovery keeps cable length strict',()=>{
   const xlr3={expected:'XLR Kabel 3 m',label:'XLR 3m',kind:'accessory'};
   assert.equal(
