@@ -163,14 +163,18 @@ test('component discovery requires explicit generation when Mueller recipe speci
   );
 });
 
-test('component discovery treats PC as cover subtype and rejects mounts for covers',()=>{
+test('component discovery treats PC as padded cover and rejects mounts or WPC substitutes',()=>{
   const cover={expected:'ICOA 15 PC',label:'ICOA 15 PC',kind:'accessory'};
   assert.equal(
     scoreComponentCandidate(cover,{name:'LD Systems EasyMount Traversenhalterung für ICOA PRO 15'}).reason,
     'accessory_subtype_mismatch'
   );
   assert.equal(
-    scoreComponentCandidate(cover,{name:'LD Systems ICOA 15 WPC Wetterschutzhülle'}).accepted,
+    scoreComponentCandidate(cover,{name:'LD Systems ICOA 15 WPC Wetterschutzhülle'}).reason,
+    'accessory_subtype_mismatch'
+  );
+  assert.equal(
+    scoreComponentCandidate(cover,{name:'LD Systems ICOA 15 PC Gepolsterte Schutzhülle'}).accepted,
     true
   );
 });
