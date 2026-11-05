@@ -270,7 +270,7 @@ test('component discovery keeps cable length strict',()=>{
   const xlr3={expected:'XLR Kabel 3 m',label:'XLR 3m',kind:'accessory'};
   assert.equal(
     scoreComponentCandidate(xlr3,{name:'ADJ AC-XMXF/5 microphone cable XLR/XLR 5m'}).reason,
-    'model_number_mismatch'
+    'cable_length_mismatch'
   );
 });
 
