@@ -273,3 +273,11 @@ test('component discovery keeps cable length strict',()=>{
     'model_number_mismatch'
   );
 });
+
+
+test('component discovery accepts the exact Gravity SP 2332 B stand component',()=>{
+  const stand={expected:'Gravity SP 2332 B',label:'Gravity SP 2332 B',kind:'accessory'};
+  const exact=scoreComponentCandidate(stand,{name:'Gravity SP 2332 B - Verstellbares Distanzrohr 35 mm auf M20, 1400 mm'});
+  assert.equal(exact.accepted,true);
+  assert.ok(exact.score>=0.68);
+});
