@@ -36,14 +36,19 @@ export function componentReviewSignal(recipeComponents, candidateGroups) {
   if (!components.length) return { signal: 'incomplete_recipe', covered: 0, total: 0 };
 
   let covered = 0;
+  for (const component of components) {
+    if ((candidateGroups.get(component.key) || []).length) covered++;
+  }
+
+  if (covered < components.length) {
+    return { signal: 'incomplete_recipe', covered, total: components.length };
+  }
+
   let secondaryVariation = false;
 
   for (const component of components) {
     const list = [...(candidateGroups.get(component.key) || [])]
       .sort((a,b)=>Number(b.match_score)-Number(a.match_score));
-
-    if (!list.length) continue;
-    covered++;
 
     const top = Number(list[0].match_score || 0);
     const second = list[1] ? Number(list[1].match_score || 0) : null;
@@ -62,10 +67,6 @@ export function componentReviewSignal(recipeComponents, candidateGroups) {
       }
       if (top < 0.95) secondaryVariation = true;
     }
-  }
-
-  if (covered < components.length) {
-    return { signal: 'incomplete_recipe', covered, total: components.length };
   }
 
   if (secondaryVariation) {

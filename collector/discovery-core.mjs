@@ -51,10 +51,35 @@ function modelNumbers(value) {
 
 function accessoryKind(value) {
   const n = normalize(value);
-  if (/\b(sat bag|sub pc|bag|tasche|tragetasche|schutzhuelle|schutzhulle|cover|rollbrett|roll board|caster board|cb|pc|xlr|kabel|cable|stativ|stative|speaker stand|distanzstange|powercon|power twist)\b/.test(n)) {
+  if (/\b(sat bag|sub bag|sub pc|wpc|bag|tasche|tragetasche|schutzhuelle|schutzhulle|wetterschutzhuelle|cover|rollbrett|roll board|caster board|cb|pc|easymount|traversenhalterung|halterung|xlr|kabel|cable|stativ|stative|speaker stand|distanzstange|powercon|power twist)\b/.test(n)) {
     return 'accessory';
   }
   return null;
+}
+
+function accessorySubtype(value) {
+  const n = normalize(value);
+  if (/\b(sat bag|saulen.*bag|tragetasche.*saulen)\b/.test(n)) return 'sat_bag';
+  if (/\b(sub bag|sub pc|subwooferhulle|subwoofer.*schutzhuelle)\b/.test(n)) return 'sub_cover';
+  if (/\b(cb|rollbrett|roll board|caster board)\b/.test(n)) return 'rollboard';
+  if (/\b(wpc|wetterschutzhuelle|cover|schutzhuelle|schutzhulle|hulle)\b/.test(n)) return 'cover';
+  if (/\b(stativ|stative|speaker stand|distanzstange)\b/.test(n)) return 'stand';
+  if (/\b(xlr|powercon|power twist|kabel|cable)\b/.test(n)) return 'cable';
+  if (/\b(easymount|traversenhalterung|halterung)\b/.test(n)) return 'mount';
+  return null;
+}
+
+function activeKind(value) {
+  const n = normalize(value);
+  if (/\b(passiv|passive|passiver)\b/.test(n)) return 'passive';
+  if (/\b(aktiv|aktive|aktiver|active)\b/.test(n)) return 'active';
+  if (/\b\d{1,2}\s*a\b/.test(n) || /\bsub\s+\d{1,2}\s+a\b/.test(n)) return 'active';
+  return null;
+}
+
+function isBundleProduct(value) {
+  const n = normalize(value);
+  return /\b(stereo bundle|bundle|bundle set|2x|2 x)\b/.test(n);
 }
 
 function expectsStandaloneMainProduct(config) {
@@ -209,6 +234,27 @@ export function scoreComponentCandidate(component, candidate) {
 
   if (expectedAccessory !== candidateAccessory) {
     return { score: 0, accepted: false, reason: 'component_kind_mismatch' };
+  }
+
+  if (!expectedAccessory && isBundleProduct(candidateName) && !isBundleProduct(expectedName)) {
+    return { score: 0, accepted: false, reason: 'bundle_component_mismatch' };
+  }
+
+  if (expectedAccessory) {
+    const expectedSubtype = accessorySubtype(expectedName);
+    const candidateSubtype = accessorySubtype(candidateName);
+    if (expectedSubtype && candidateSubtype && expectedSubtype !== candidateSubtype) {
+      return { score: 0, accepted: false, reason: 'accessory_subtype_mismatch' };
+    }
+  }
+
+  const expectedActive = activeKind(expectedName);
+  const candidateActive = activeKind(candidateName);
+  if (expectedActive && candidateActive && expectedActive !== candidateActive) {
+    return { score: 0, accepted: false, reason: 'amplification_mismatch' };
+  }
+  if (expectedActive === 'active' && !candidateActive && /\b\d{1,2}\s+a\b/.test(normalize(expectedName))) {
+    return { score: 0, accepted: false, reason: 'amplification_mismatch' };
   }
 
   const expectedGen = generationOf(expectedName);

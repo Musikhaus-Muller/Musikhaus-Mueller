@@ -95,3 +95,17 @@ test('formatted component candidate preserves quantity and component identity',(
   assert.equal(out.key,'sub');
   assert.equal(out.score,1);
 });
+
+
+test('component review prefers incomplete recipe over wrong quality when components are missing',()=>{
+  const recipe=[
+    {key:'main',role:'structural'},
+    {key:'sub',role:'structural'},
+    {key:'cable',role:'secondary'}
+  ];
+  const groups=new Map([
+    ['main',[{match_score:0.70}]],
+    ['sub',[{match_score:1.00}]]
+  ]);
+  assert.deepEqual(componentReviewSignal(recipe,groups),{signal:'incomplete_recipe',covered:2,total:3});
+});

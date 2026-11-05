@@ -106,3 +106,46 @@ test('discovery recipe is read from configuration metadata only when component m
   const recipe={mode:'components',components:[{key:'main'}]};
   assert.deepEqual(discoveryRecipe({metadata:{discovery_recipe:recipe}}),recipe);
 });
+
+
+test('component discovery rejects white when Mueller recipe explicitly expects black',()=>{
+  const component={expected:'LD Systems MAUI 11 G3 schwarz',label:'MAUI 11 G3',kind:'main'};
+  assert.equal(
+    scoreComponentCandidate(component,{name:'LD Systems MAUI 11 G3 W Portables Cardioid Säulen PA System Weiß'}).reason,
+    'color_mismatch'
+  );
+});
+
+test('component discovery rejects bundle pages when recipe component expects one product type',()=>{
+  const component={expected:'LD Systems MAUI 28 G3 schwarz',label:'MAUI 28 G3',kind:'main'};
+  assert.equal(
+    scoreComponentCandidate(component,{name:'LD Systems MAUI 28 G3 Stereo Bundle 2x Maui 28 G3 + Taschen'}).reason,
+    'bundle_component_mismatch'
+  );
+});
+
+test('component discovery distinguishes active and passive STINGER products',()=>{
+  const component={expected:'LD Systems STINGER 8 A G3',label:'STINGER 8 A G3',kind:'main'};
+  assert.equal(scoreComponentCandidate(component,{name:'LD Systems STINGER 8 G3'}).reason,'amplification_mismatch');
+  assert.equal(scoreComponentCandidate(component,{name:'LD Systems STINGER 8 A G3'}).accepted,true);
+});
+
+test('component discovery distinguishes accessory subtypes',()=>{
+  const sat={expected:'LD Systems MAUI 44 G2 SAT BAG',label:'SAT BAG',kind:'accessory'};
+  assert.equal(
+    scoreComponentCandidate(sat,{name:'LD Systems MAUI 44 G2 CB - Rollbrett'}).reason,
+    'accessory_subtype_mismatch'
+  );
+});
+
+test('component discovery treats WPC and EasyMount pages as accessories',()=>{
+  const main={expected:'LD Systems ICOA PRO 12 A',label:'ICOA PRO 12 A',kind:'main'};
+  assert.equal(
+    scoreComponentCandidate(main,{name:'LD Systems ICOA 12 WPC Wetterschutzhülle für ICOA PRO 12'}).reason,
+    'component_kind_mismatch'
+  );
+  assert.equal(
+    scoreComponentCandidate(main,{name:'LD Systems EasyMount Traversenhalterung für ICOA PRO 12'}).reason,
+    'component_kind_mismatch'
+  );
+});
