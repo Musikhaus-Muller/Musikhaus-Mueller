@@ -29,7 +29,13 @@ const stop = new Set([
 ]);
 
 function tokens(value) {
-  return normalize(value).split(' ').filter(t => t.length > 1 && !stop.has(t));
+  const base=normalize(value).split(' ').filter(t => t.length > 1 && !stop.has(t));
+  const expanded=[];
+  for(const token of base){
+    expanded.push(token);
+    if(token.endsWith('kabel') && token!=='kabel') expanded.push('kabel');
+  }
+  return [...new Set(expanded)];
 }
 
 function colorOf(value) {
