@@ -62,7 +62,7 @@ function accessorySubtype(value) {
   if (/\b(sat bag|saulen.*bag|tragetasche.*saulen)\b/.test(n)) return 'sat_bag';
   if (/\b(sub bag|sub pc|subwooferhulle|subwoofer.*schutzhuelle)\b/.test(n)) return 'sub_cover';
   if (/\b(cb|rollbrett|roll board|caster board)\b/.test(n)) return 'rollboard';
-  if (/\b(wpc|wetterschutzhuelle|cover|schutzhuelle|schutzhulle|hulle)\b/.test(n)) return 'cover';
+  if (/\b(wpc|pc|wetterschutzhuelle|cover|schutzhuelle|schutzhulle|hulle)\b/.test(n)) return 'cover';
   if (/\b(stativ|stative|speaker stand|distanzstange)\b/.test(n)) return 'stand';
   if (/\b(xlr|powercon|power twist|kabel|cable)\b/.test(n)) return 'cable';
   if (/\b(easymount|traversenhalterung|halterung)\b/.test(n)) return 'mount';
@@ -259,7 +259,7 @@ export function scoreComponentCandidate(component, candidate) {
 
   const expectedGen = generationOf(expectedName);
   const candidateGen = generationOf(candidateName);
-  if (expectedGen && candidateGen && expectedGen !== candidateGen) {
+  if (expectedGen && candidateGen !== expectedGen) {
     return { score: 0, accepted: false, reason: 'generation_mismatch' };
   }
 

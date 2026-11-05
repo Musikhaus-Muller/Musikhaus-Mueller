@@ -149,3 +149,28 @@ test('component discovery treats WPC and EasyMount pages as accessories',()=>{
     'component_kind_mismatch'
   );
 });
+
+
+test('component discovery requires explicit generation when Mueller recipe specifies it',()=>{
+  const g3={expected:'LD Systems MAUI 11 G3 schwarz',label:'MAUI 11 G3',kind:'main'};
+  assert.equal(
+    scoreComponentCandidate(g3,{name:'LD Systems MAUI 11'}).reason,
+    'generation_mismatch'
+  );
+  assert.equal(
+    scoreComponentCandidate(g3,{name:'LD Systems MAUI 11 G3'}).accepted,
+    true
+  );
+});
+
+test('component discovery treats PC as cover subtype and rejects mounts for covers',()=>{
+  const cover={expected:'ICOA 15 PC',label:'ICOA 15 PC',kind:'accessory'};
+  assert.equal(
+    scoreComponentCandidate(cover,{name:'LD Systems EasyMount Traversenhalterung für ICOA PRO 15'}).reason,
+    'accessory_subtype_mismatch'
+  );
+  assert.equal(
+    scoreComponentCandidate(cover,{name:'LD Systems ICOA 15 WPC Wetterschutzhülle'}).accepted,
+    true
+  );
+});
