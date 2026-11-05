@@ -10,6 +10,7 @@ const decode = value => String(value || '')
 export const normalize = value => decode(value)
   .toLowerCase()
   .replace(/ß/g, 'ss')
+  .replace(/(\d)m\b/g, '$1 m')
   .normalize('NFD')
   .replace(/[\u0300-\u036f]/g, '')
   .replace(/saeulen|säulen/g, 'saulen')
@@ -51,7 +52,7 @@ function modelNumbers(value) {
 
 function accessoryKind(value) {
   const n = normalize(value);
-  if (/\b(sat bag|sub bag|sub pc|wpc|bag|tasche|tragetasche|schutzhuelle|schutzhulle|wetterschutzhuelle|cover|rollbrett|roll board|caster board|casterboard|cb|pc|easymount|traversenhalterung|halterung|xlr|kabel|cable|stativ|stative|speaker stand|distanzstange|powercon|power twist)\b/.test(n)) {
+  if (/\b(sat bag|sub bag|sub pc|wpc|bag|tasche|tragetasche|schutzhuelle|schutzhulle|wetterschutzhuelle|cover|rollbrett|roll board|caster board|casterboard|cb|pc|easymount|traversenhalterung|halterung|xlr|kabel|cable|stativ|stative|speaker stand|distanzstange|distanzrohr|powercon|power twist)\b/.test(n)) {
     return 'accessory';
   }
   return null;
@@ -65,7 +66,7 @@ function accessorySubtype(value) {
   if (/\b(wpc|wetterschutzhuelle)\b/.test(n)) return 'weather_cover';
   if (/\bpc\b/.test(n)) return 'padded_cover';
   if (/\b(cover|schutzhuelle|schutzhulle|hulle)\b/.test(n)) return 'cover';
-  if (/\b(stativ|stative|speaker stand|distanzstange)\b/.test(n)) return 'stand';
+  if (/\b(stativ|stative|speaker stand|distanzstange|distanzrohr)\b/.test(n)) return 'stand';
   if (/\b(xlr)\b/.test(n) && /\b(powercon|power con|p con|power twist)\b/.test(n)) return 'hybrid_cable';
   if (/\b(powercon|power con|p con|power twist)\b/.test(n)) return 'powercon_cable';
   if (/\b(xlr)\b/.test(n)) return 'xlr_cable';
