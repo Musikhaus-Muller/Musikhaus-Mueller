@@ -205,15 +205,18 @@ test('reconciliation expires only reserved or queued web runs, never a claimed c
  assert.doesNotMatch(reconciliation,/metadata->>'lifecycle' = 'running'/);
  assert.match(claim,/'lifecycle',\s*'running'/);
  assert.match(sql,/'lifecycle',\s*'queued'[\s\S]*'dispatch_accepted_at',\s*now\(\)/);
- assert.match(sql,/perform public\.reconcile_manual_collection_runs\(\)/);
+ const acquire=sql.match(/create or replace function public\.acquire_manual_collection_run\(\)([\s\S]*?)\$\$;/)?.[1]||'';
+ assert.doesNotMatch(acquire,/reconcile_manual_collection_runs/);
  assert.match(sql,/where id = p_run_id\s+and status = 'running'/);
 });
 
-test('a later reservation is allowed after reconciliation marks a lost dispatch failed',async()=>{
+test('a later reservation is allowed after the GitHub-aware reconciler marks a lost dispatch failed',async()=>{
  const sql=await fs.readFile('supabase/migrations/20261105225000_manual_collection_lifecycle.sql','utf8');
+ const acquireRun=sql.match(/create or replace function public\.acquire_manual_collection_run\(\)([\s\S]*?)\$\$;/)?.[1]||'';
  assert.match(sql,/set status = 'failed'[\s\S]*'lifecycle', 'failed'[\s\S]*metadata->>'lifecycle' = 'queued'/);
- assert.match(sql,/perform public\.reconcile_manual_collection_runs\(\);[\s\S]*where cr\.status = 'running'/);
- assert.match(sql,/insert into public\.collection_runs \(trigger_type, status, offers_total, metadata\)/);
+ assert.doesNotMatch(acquireRun,/reconcile_manual_collection_runs/);
+ assert.match(acquireRun,/where cr\.status = 'running'/);
+ assert.match(acquireRun,/insert into public\.collection_runs \(trigger_type, status, offers_total, metadata\)/);
 });
 
 test('frontend contains no backend credentials and workflow responses contain no secrets',async()=>{

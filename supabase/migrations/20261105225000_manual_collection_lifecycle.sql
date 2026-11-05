@@ -42,8 +42,10 @@ declare
   reserved_run public.collection_runs%rowtype;
 begin
   perform pg_advisory_xact_lock(20261105, 1);
-  perform public.reconcile_manual_collection_runs();
 
+  -- Orphan cleanup runs only from the scheduled GitHub-aware reconciler.
+  -- Calling it here without active GitHub run IDs could falsely expire
+  -- a legitimate workflow that is still queued by Actions.
   select cr.*
   into active_run
   from public.collection_runs cr
