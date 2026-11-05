@@ -281,3 +281,44 @@ test('component discovery accepts the exact Gravity SP 2332 B stand component',(
   assert.equal(exact.accepted,true);
   assert.ok(exact.score>=0.68);
 });
+
+
+test('component discovery does not confuse XLR pin count with cable length',()=>{
+  const xlr3={expected:'XLR Kabel 3 m',label:'XLR 3m',kind:'accessory'};
+  assert.equal(
+    scoreComponentCandidate(xlr3,{name:'ROLAND RMC-B20 XLR 3-pol female / XLR 3-pol male / 6,00m'}).reason,
+    'cable_length_mismatch'
+  );
+  assert.equal(
+    scoreComponentCandidate(xlr3,{name:'Cordial Y-Kabel 0,3m XLR Female / 2x XLR Male'}).reason,
+    'cable_length_mismatch'
+  );
+  assert.equal(
+    scoreComponentCandidate(xlr3,{name:'CORDIAL PROLINE XLR KABEL 3m'}).accepted,
+    true
+  );
+});
+
+test('component discovery requires exact Gravity stand model prefix',()=>{
+  const stand={expected:'Gravity SP 2332 B',label:'Gravity SP 2332 B',kind:'accessory'};
+  assert.equal(
+    scoreComponentCandidate(stand,{name:'Gravity TSP 2332 B - Verstellbares Touring Distanzrohr'}).reason,
+    'stand_model_mismatch'
+  );
+  assert.equal(
+    scoreComponentCandidate(stand,{name:'Gravity SP 2332 B - Verstellbares Distanzrohr'}).accepted,
+    true
+  );
+});
+
+test('component discovery does not cross-match padded cover product families',()=>{
+  const cover={expected:'ICOA 15 PC',label:'ICOA 15 PC',kind:'accessory'};
+  assert.equal(
+    scoreComponentCandidate(cover,{name:'LD Systems STINGER 15 G3 PC - Gepolsterte Schutzhülle'}).reason,
+    'accessory_family_mismatch'
+  );
+  assert.equal(
+    scoreComponentCandidate(cover,{name:'LD Systems ICOA 15 PC - Gepolsterte Schutzhülle'}).accepted,
+    true
+  );
+});

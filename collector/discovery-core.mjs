@@ -55,6 +55,28 @@ function modelNumbers(value) {
   return [...new Set(normalize(value).match(/\b\d{1,3}\b/g) || [])];
 }
 
+function cableLengthMeters(value) {
+  const raw = decode(value).toLowerCase().replace(/&nbsp;|&#160;/gi, ' ');
+  const matches = [...raw.matchAll(/(?:^|[^a-z0-9])(\d+(?:[.,]\d+)?)\s*m\b/gi)];
+  if (!matches.length) return null;
+  const parsed = Number(matches[matches.length - 1][1].replace(',', '.'));
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function gravityModel(value) {
+  const n = normalize(value);
+  const m = n.match(/\b(sp|tsp)\s*(\d{4})\s*b\b/);
+  return m ? `${m[1]}-${m[2]}-b` : null;
+}
+
+function accessoryFamily(value) {
+  const n = normalize(value);
+  for (const family of ['icoa','stinger','maui','dave']) {
+    if (new RegExp(`\\b${family}\\b`).test(n)) return family;
+  }
+  return null;
+}
+
 
 function accessoryKind(value) {
   const n = normalize(value);
@@ -280,6 +302,30 @@ export function scoreComponentCandidate(component, candidate) {
     const candidateSubtype = accessorySubtype(candidateName);
     if (expectedSubtype && candidateSubtype && expectedSubtype !== candidateSubtype) {
       return { score: 0, accepted: false, reason: 'accessory_subtype_mismatch' };
+    }
+
+    if (['xlr_cable','powercon_cable','hybrid_cable','cable'].includes(expectedSubtype)) {
+      const expectedLength = cableLengthMeters(expectedName);
+      const candidateLength = cableLengthMeters(candidateName);
+      if (expectedLength !== null && candidateLength !== expectedLength) {
+        return { score: 0, accepted: false, reason: 'cable_length_mismatch' };
+      }
+    }
+
+    if (expectedSubtype === 'stand') {
+      const expectedGravity = gravityModel(expectedName);
+      const candidateGravity = gravityModel(candidateName);
+      if (expectedGravity && candidateGravity !== expectedGravity) {
+        return { score: 0, accepted: false, reason: 'stand_model_mismatch' };
+      }
+    }
+
+    if (['padded_cover','sub_cover','cover','weather_cover'].includes(expectedSubtype)) {
+      const expectedFamily = accessoryFamily(expectedName);
+      const candidateFamily = accessoryFamily(candidateName);
+      if (expectedFamily && candidateFamily !== expectedFamily) {
+        return { score: 0, accepted: false, reason: 'accessory_family_mismatch' };
+      }
     }
   }
 
