@@ -199,3 +199,57 @@ export function confidenceBand(score) {
   if (score >= 0.80) return 'medium';
   return 'low';
 }
+
+
+export function scoreComponentCandidate(component, candidate) {
+  const expectedName = component?.expected || component?.label || '';
+  const candidateName = candidate?.name || '';
+  const expectedAccessory = component?.kind === 'accessory';
+  const candidateAccessory = Boolean(accessoryKind(candidateName));
+
+  if (expectedAccessory !== candidateAccessory) {
+    return { score: 0, accepted: false, reason: 'component_kind_mismatch' };
+  }
+
+  const expectedGen = generationOf(expectedName);
+  const candidateGen = generationOf(candidateName);
+  if (expectedGen && candidateGen && expectedGen !== candidateGen) {
+    return { score: 0, accepted: false, reason: 'generation_mismatch' };
+  }
+
+  const expectedColor = colorOf(expectedName);
+  const candidateColor = colorOf(candidateName);
+  if (expectedColor && candidateColor && expectedColor !== candidateColor) {
+    return { score: 0, accepted: false, reason: 'color_mismatch' };
+  }
+
+  const requiredNumbers = modelNumbers(expectedName);
+  const candidateNums = new Set(modelNumbers(candidateName));
+  if (requiredNumbers.some(n => !candidateNums.has(n))) {
+    return { score: 0, accepted: false, reason: 'model_number_mismatch' };
+  }
+
+  const wanted = tokens(expectedName);
+  const got = new Set(tokens(candidateName));
+  const matched = wanted.filter(t => got.has(t));
+  let score = wanted.length ? matched.length / wanted.length : 0;
+
+  if (expectedGen && candidateGen === expectedGen) score += 0.08;
+  if (expectedColor && candidateColor === expectedColor) score += 0.08;
+  if (requiredNumbers.length) score += 0.08;
+  if (expectedAccessory && candidateAccessory) score += 0.05;
+  score = Math.min(1, Math.round(score * 10000) / 10000);
+
+  return {
+    score,
+    accepted: score >= 0.68,
+    reason: score >= 0.68 ? 'component_candidate' : 'low_score',
+    matchedTokens: matched
+  };
+}
+
+export function discoveryRecipe(config) {
+  const recipe = config?.metadata?.discovery_recipe;
+  if (!recipe || recipe.mode !== 'components' || !Array.isArray(recipe.components)) return null;
+  return recipe;
+}

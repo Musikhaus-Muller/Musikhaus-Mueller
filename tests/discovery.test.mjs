@@ -5,7 +5,9 @@ import {
   extractCatalogCandidates,
   scoreDiscoveryCandidate,
   likelyNeedsComponents,
-  confidenceBand
+  confidenceBand,
+  scoreComponentCandidate,
+  discoveryRecipe
 } from '../collector/discovery-core.mjs';
 
 test('PRO LIGHTING discovery has official sources for supported LD Systems families',()=>{
@@ -78,4 +80,29 @@ test('bundle configurations do not promote accessory-only pages as their main ca
   const match=scoreDiscoveryCandidate(config,{name:'LD Systems MAUI 11 G3 SAT BAG, Gepolsterte Tragetasche'});
   assert.equal(match.accepted,false);
   assert.equal(match.reason,'accessory_mismatch');
+});
+
+
+test('component discovery accepts a matching main product and rejects accessories',()=>{
+  const component={expected:'LD Systems MAUI 11 G3',label:'MAUI 11 G3',kind:'main'};
+  assert.equal(scoreComponentCandidate(component,{name:'LD Systems MAUI 11 G3 Portables Cardioid Säulen PA System'}).accepted,true);
+  assert.equal(scoreComponentCandidate(component,{name:'LD Systems MAUI 11 G3 SAT BAG'}).reason,'component_kind_mismatch');
+});
+
+test('component discovery accepts an expected accessory but rejects a main system',()=>{
+  const component={expected:'LD Systems MAUI 11 G3 SAT BAG',label:'MAUI 11 G3 SAT BAG',kind:'accessory'};
+  assert.equal(scoreComponentCandidate(component,{name:'LD Systems MAUI 11 G3 SAT BAG Gepolsterte Tragetasche'}).accepted,true);
+  assert.equal(scoreComponentCandidate(component,{name:'LD Systems MAUI 11 G3 Portables Cardioid Säulen PA System'}).reason,'component_kind_mismatch');
+});
+
+test('component discovery enforces model numbers for ICOA recipes',()=>{
+  const component={expected:'LD Systems ICOA 12 A BT',label:'ICOA 12 A BT',kind:'main'};
+  assert.equal(scoreComponentCandidate(component,{name:'LD Systems ICOA 15 A BT'}).reason,'model_number_mismatch');
+  assert.equal(scoreComponentCandidate(component,{name:'LD Systems ICOA 12 A BT'}).accepted,true);
+});
+
+test('discovery recipe is read from configuration metadata only when component mode is valid',()=>{
+  assert.equal(discoveryRecipe({metadata:{}}),null);
+  const recipe={mode:'components',components:[{key:'main'}]};
+  assert.deepEqual(discoveryRecipe({metadata:{discovery_recipe:recipe}}),recipe);
 });

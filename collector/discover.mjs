@@ -3,7 +3,9 @@ import {
   extractCatalogCandidates,
   scoreDiscoveryCandidate,
   likelyNeedsComponents,
-  confidenceBand
+  confidenceBand,
+  scoreComponentCandidate,
+  discoveryRecipe
 } from './discovery-core.mjs';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
@@ -74,8 +76,12 @@ const sourceCache = new Map();
 const sourceErrors = new Map();
 const errors = [];
 const confidenceCounts = { high: 0, medium: 0, low: 0 };
+const componentConfidenceCounts = { high: 0, medium: 0, low: 0 };
 let candidatesFound = 0;
+let componentCandidatesFound = 0;
 let configurationsWithCandidate = 0;
+let configurationsWithComponentCoverage = 0;
+let componentRecipesComplete = 0;
 let noSource = 0;
 
 for (const config of missing) {
@@ -100,6 +106,62 @@ for (const config of missing) {
       sourceErrors.set(sourceUrl, error);
       errors.push(error);
     }
+  }
+
+  const recipe = discoveryRecipe(config);
+  if (recipe) {
+    let covered = 0;
+    for (const component of recipe.components) {
+      const rankedComponents = all
+        .map(candidate => ({ candidate, match: scoreComponentCandidate(component, candidate) }))
+        .filter(x => x.match.accepted)
+        .sort((a, b) => b.match.score - a.match.score)
+        .filter((x, i, arr) => arr.findIndex(y => y.candidate.url === x.candidate.url) === i)
+        .slice(0, 3);
+
+      if (!rankedComponents.length) continue;
+      covered++;
+
+      for (let rank = 0; rank < rankedComponents.length; rank++) {
+        const { candidate, match } = rankedComponents[rank];
+        const confidence = confidenceBand(match.score);
+        componentConfidenceCounts[confidence]++;
+        await rest('discovery_component_candidates?on_conflict=configuration_id,shop_id,component_key,candidate_url', {
+          method: 'POST',
+          prefer: 'resolution=merge-duplicates,return=minimal',
+          body: [{
+            run_id: run.id,
+            configuration_id: config.id,
+            shop_id: shop.id,
+            component_key: component.key,
+            component_label: component.label,
+            component_kind: component.kind || 'main',
+            quantity: component.quantity || 1,
+            status: 'proposed',
+            candidate_name: candidate.name,
+            candidate_url: candidate.url,
+            candidate_price: candidate.price,
+            currency: 'EUR',
+            match_score: match.score,
+            source_url: candidate.sourceUrl,
+            metadata: {
+              rank: rank + 1,
+              expected: component.expected || component.label,
+              matched_tokens: match.matchedTokens || [],
+              confidence,
+              collector_version: '2.1-component'
+            },
+            discovered_at: new Date().toISOString()
+          }]
+        });
+        componentCandidatesFound++;
+      }
+    }
+
+    if (covered) configurationsWithComponentCoverage++;
+    if (covered === recipe.components.length) componentRecipesComplete++;
+    console.log(`[${config.legacy_id}] ${config.name} ... component_discovery ${covered}/${recipe.components.length} component(s)`);
+    continue;
   }
 
   const ranked = all
@@ -157,7 +219,7 @@ await rest(`discovery_runs?id=eq.${run.id}`, {
     status,
     finished_at: new Date().toISOString(),
     sources_scanned: sourceCache.size,
-    candidates_found: candidatesFound,
+    candidates_found: candidatesFound + componentCandidatesFound,
     errors_count: errors.length,
     metadata: {
       collector: '2.1',
@@ -165,6 +227,10 @@ await rest(`discovery_runs?id=eq.${run.id}`, {
       configurations_with_candidate: configurationsWithCandidate,
       configurations_without_source: noSource,
       confidence_counts: confidenceCounts,
+      component_confidence_counts: componentConfidenceCounts,
+      configurations_with_component_coverage: configurationsWithComponentCoverage,
+      component_recipes_complete: componentRecipesComplete,
+      component_candidates_found: componentCandidatesFound,
       errors
     }
   }
@@ -181,7 +247,11 @@ console.log(JSON.stringify({
   sourcesScanned: sourceCache.size,
   configurationsWithCandidate,
   candidatesFound,
+  configurationsWithComponentCoverage,
+  componentRecipesComplete,
+  componentCandidatesFound,
   noSource,
   confidence: confidenceCounts,
+  componentConfidence: componentConfidenceCounts,
   errors: errors.length
 }, null, 2));
