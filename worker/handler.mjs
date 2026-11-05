@@ -97,44 +97,6 @@ function supabaseHeaders(env){
   }
  };
 }
-function decodeBase64Url(value){
- const normalized=value.replace(/-/g,'+').replace(/_/g,'/');
- const decoded=atob(normalized.padEnd(Math.ceil(normalized.length/4)*4,'='));
- return Uint8Array.from(decoded,char=>char.charCodeAt(0));
-}
-export async function verifyManualUpdateAccess(request,env,fetcher=fetch,now=Date.now()){
- const domain=String(env.CF_ACCESS_TEAM_DOMAIN||'').replace(/^https?:\/\//,'').replace(/\/$/,'');
- const audience=env.CF_ACCESS_AUD;
- const assertion=request.headers.get('Cf-Access-Jwt-Assertion');
- if(!/^[a-z0-9.-]+$/i.test(domain)||!audience||!assertion)return false;
- const [encodedHeader,encodedClaims,encodedSignature,...extra]=assertion.split('.');
- if(!encodedHeader||!encodedClaims||!encodedSignature||extra.length)return false;
- let header,claims;
- try{
-  header=JSON.parse(new TextDecoder().decode(decodeBase64Url(encodedHeader)));
-  claims=JSON.parse(new TextDecoder().decode(decodeBase64Url(encodedClaims)));
- }catch{return false;}
- if(header.alg!=='RS256'||typeof header.kid!=='string')return false;
- const issuer=`https://${domain}`;
- if(claims.iss!==issuer||
-    !(claims.aud===audience||(Array.isArray(claims.aud)&&claims.aud.includes(audience)))||
-    !Number.isFinite(claims.exp)||claims.exp<=Math.floor(now/1000)||
-    (claims.nbf!==undefined&&(!Number.isFinite(claims.nbf)||claims.nbf>Math.floor(now/1000))))return false;
- const keysResponse=await fetcher(`${issuer}/cdn-cgi/access/certs`,{signal:AbortSignal.timeout(10000)});
- if(!keysResponse.ok)return false;
- const keySet=await keysResponse.json();
- const jwk=keySet.keys?.find(key=>key.kid===header.kid&&key.kty==='RSA'&&(!key.use||key.use==='sig')&&(!key.alg||key.alg==='RS256'));
- if(!jwk)return false;
- try{
-  const key=await crypto.subtle.importKey('jwk',jwk,{name:'RSASSA-PKCS1-v1_5',hash:'SHA-256'},false,['verify']);
-  return await crypto.subtle.verify(
-   'RSASSA-PKCS1-v1_5',
-   key,
-   decodeBase64Url(encodedSignature),
-   new TextEncoder().encode(`${encodedHeader}.${encodedClaims}`)
-  );
- }catch{return false;}
-}
 export function mapSupabaseRun(run,results=[]){
  const trigger={schedule:'scheduled',manual:'manual',api:'unknown',import:'unknown'}[run.trigger_type]||'unknown';
  const status=run.status;
@@ -197,73 +159,6 @@ async function loadSupabaseStatus(env,fetcher=fetch){
  const runs=await loadSupabaseRuns(env,fetcher,1);
  return {updatedAt:runs[0]?.finishedAt||runs[0]?.startedAt||null,run:runs[0]||null};
 }
-export async function dispatchManualPriceUpdate(request,env,fetcher=fetch){
- const url=new URL(request.url);
- let authorized=false;
- try{authorized=await verifyManualUpdateAccess(request,env,fetcher);}
- catch{return json({error:'Autorisierung derzeit nicht verfügbar'},503);}
- if(!authorized)return json({error:'Authentifizierung erforderlich'},401);
- if(request.headers.get('Origin')!==url.origin||
-    request.headers.get('X-PA-Action')!=='refresh'||
-    request.headers.get('X-PA-Trigger')!=='manual'){
-  return json({error:'Ungültige oder fremde Anfrage'},403);
- }
- if(!env.GITHUB_ACTIONS_TOKEN)return json({error:'GitHub Actions ist nicht konfiguriert'},503);
- try{
-  const {base,headers}=supabaseHeaders(env);
-  const reservationResponse=await fetcher(base+'/rest/v1/rpc/acquire_manual_collection_run',{
-   method:'POST',headers,body:'{}',signal:AbortSignal.timeout(15000)
-  });
-  if(!reservationResponse.ok)throw Error('Supabase-Reservierung HTTP '+reservationResponse.status);
-  const reservations=await reservationResponse.json();
-  const reservation=Array.isArray(reservations)?reservations[0]:reservations;
-  if(!reservation?.run_id||!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(reservation.run_id)){
-   throw Error('Supabase lieferte keine gültige Ausführungs-ID');
-  }
-  if(reservation.busy){
-   const run=mapSupabaseRun({
-    id:reservation.run_id,trigger_type:reservation.trigger_type||'manual',status:'running',started_at:reservation.started_at,
-    offers_total:0,offers_checked:0,offers_updated:0,offers_failed:0
-   });
-   return json({busy:true,updatedAt:reservation.started_at,run},409);
-  }
-  let dispatch;
-  try{
-   dispatch=await fetcher('https://api.github.com/repos/Musikhaus-Muller/Musikhaus-Mueller/actions/workflows/collect-prices.yml/dispatches',{
-    method:'POST',
-    headers:{
-     Authorization:`Bearer ${env.GITHUB_ACTIONS_TOKEN}`,
-     Accept:'application/vnd.github+json',
-     'X-GitHub-Api-Version':'2022-11-28',
-     'Content-Type':'application/json',
-     'User-Agent':'PA-Radar-Price-Update'
-    },
-    body:JSON.stringify({ref:'main',inputs:{shop:'all',collection_run_id:reservation.run_id}}),
-    signal:AbortSignal.timeout(15000)
-   });
-   if(dispatch.status!==204){
-    await fetcher(base+'/rest/v1/rpc/fail_manual_collection_run',{
-     method:'POST',headers,body:JSON.stringify({p_run_id:reservation.run_id,p_error:`GitHub Actions dispatch HTTP ${dispatch.status}`}),
-     signal:AbortSignal.timeout(15000)
-    });
-    throw Error(`GitHub Actions dispatch HTTP ${dispatch.status}`);
-   }
-  }catch(error){
-   throw error;
-  }
-  const acceptedResponse=await fetcher(base+'/rest/v1/rpc/mark_manual_collection_dispatched',{
-   method:'POST',headers,body:JSON.stringify({p_run_id:reservation.run_id}),signal:AbortSignal.timeout(15000)
-  });
-  if(!acceptedResponse.ok)throw Error(`Supabase konnte den Dispatch-Status nicht speichern (HTTP ${acceptedResponse.status})`);
-  const run=mapSupabaseRun({
-   id:reservation.run_id,trigger_type:reservation.trigger_type||'manual',status:'running',started_at:reservation.started_at,
-   offers_total:0,offers_checked:0,offers_updated:0,offers_failed:0,metadata:{lifecycle:'queued'}
-  });
-  return json({accepted:true,updatedAt:reservation.started_at,run},202);
- }catch(error){
-  return json({error:error.message},502);
- }
-}
 const toolList=[
  {name:'refresh_prices',description:'Devuelve el estado actual de la recolección. La actualización de precios se ejecuta mediante el collector programado en GitHub Actions.',inputSchema:{type:'object',properties:{},additionalProperties:false}},
  {name:'price_update_status',description:'Lee desde Supabase el estado y las incidencias de la última recolección.',inputSchema:{type:'object',properties:{},additionalProperties:false}}
@@ -289,9 +184,9 @@ export default{async fetch(request,env){
    return json({jsonrpc:'2.0',id:q.id,result});
   }
   if(path==='/api/refresh'&&request.method==='POST'){
-   return json({error:'Endpoint retirado',collector:'github-actions',message:'Use el disparador de actualización manual.'},410);
+   return json({error:'Endpoint retirado',collector:'github-actions',message:'Las actualizaciones manuales se ejecutan únicamente desde GitHub Actions.'},410);
   }
-  if(path==='/api/updates/manual'&&request.method==='POST')return await dispatchManualPriceUpdate(request,env);
+  if(path==='/api/updates/manual'&&request.method==='POST')return json({error:'Endpoint retirado',collector:'github-actions',message:'Las actualizaciones manuales están disponibles solo para administradores mediante GitHub Actions.'},410);
   if(path==='/api/catalog'){
    const rows=await requireSupabaseCatalog(env);
    return json({source:'supabase',rows});

@@ -53,26 +53,18 @@ async function loadCatalog(){
 loadCatalog();
 
 const updateButton=$('refresh'),updateStatus=$('update-status');
-function showUpdate(s,accepted=false){const r=s.run;if(!r){updateStatus.textContent=s.busy?'Ein anderer Lauf arbeitet gerade.':'Noch keine Ausführung registriert. Mit „Preise aktualisieren“ starten.';return;}const labels={running:'Läuft',success:'Erfolgreich',partial:'Teilweise erfolgreich',failed:'Fehlgeschlagen'};const phases={reserved:'Reserviert',queued:'Von GitHub angenommen, wartet auf Start',running:'Collector läuft',success:'Collector abgeschlossen',partial:'Collector teilweise abgeschlossen',failed:'Fehlgeschlagen'};const trigger={scheduled:'Programmiert',manual:'Manuell'}[r.trigger]||'unbekannt';const shops=(r.shops||[]).map(x=>`${SHOPS[x.shop]||x.shop}: ${labels[x.status]||x.status} (${x.confirmed}/${x.total})`).join(' · ');const issues=new Map();for(const i of r.issues||[]){const label=(SHOPS[i.shop]||i.shop)+': '+i.message;issues.set(label,(issues.get(label)||0)+1);}updateStatus.textContent=`${accepted?'Manuelle Aktualisierung gestartet · ':''}${labels[r.status]||r.status}${phases[r.phase]?' · '+phases[r.phase]:''} · ${trigger} · ${r.processed}/${r.total} Angebote · ${r.confirmed} bestätigt · ${r.failed} fehlgeschlagen · ${timestamp(r.finishedAt||r.startedAt)}`+(r.reason?' · '+r.reason:'')+(shops?' · '+shops:'')+(issues.size?' · '+[...issues].map(([label,count])=>`${label} (${count})`).join('; ')+'. Der letzte gültige Preis bleibt bei Fehlern erhalten.':'');}
+function showUpdate(s,accepted=false){const r=s.run;if(!r){updateStatus.textContent=s.busy?'Ein anderer Lauf arbeitet gerade.':'Noch keine Ausführung registriert. Preisprüfungen laufen täglich oder werden administrativ über GitHub Actions gestartet.';return;}const labels={running:'Läuft',success:'Erfolgreich',partial:'Teilweise erfolgreich',failed:'Fehlgeschlagen'};const phases={reserved:'Reserviert',queued:'Von GitHub angenommen, wartet auf Start',running:'Collector läuft',success:'Collector abgeschlossen',partial:'Collector teilweise abgeschlossen',failed:'Fehlgeschlagen'};const trigger={scheduled:'Programmiert',manual:'Manuell'}[r.trigger]||'unbekannt';const shops=(r.shops||[]).map(x=>`${SHOPS[x.shop]||x.shop}: ${labels[x.status]||x.status} (${x.confirmed}/${x.total})`).join(' · ');const issues=new Map();for(const i of r.issues||[]){const label=(SHOPS[i.shop]||i.shop)+': '+i.message;issues.set(label,(issues.get(label)||0)+1);}updateStatus.textContent=`${accepted?'Manuelle Aktualisierung gestartet · ':''}${labels[r.status]||r.status}${phases[r.phase]?' · '+phases[r.phase]:''} · ${trigger} · ${r.processed}/${r.total} Angebote · ${r.confirmed} bestätigt · ${r.failed} fehlgeschlagen · ${timestamp(r.finishedAt||r.startedAt)}`+(r.reason?' · '+r.reason:'')+(shops?' · '+shops:'')+(issues.size?' · '+[...issues].map(([label,count])=>`${label} (${count})`).join('; ')+'. Der letzte gültige Preis bleibt bei Fehlern erhalten.':'');}
 
 async function status(){try{const r=await fetch('/api/status',{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!r.ok)throw Error('HTTP '+r.status);const current=await r.json();showUpdate(current);return current;}catch{updateStatus.textContent='Aktualisierungsdienst derzeit nicht erreichbar. Gespeicherte Preise bleiben sichtbar.';return null;}}
-async function monitorRun(runId){for(let attempt=0;attempt<184;attempt++){await new Promise(resolve=>setTimeout(resolve,15000));try{const response=await fetch('/api/status',{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!response.ok)continue;const current=await response.json();if(current.run?.id!==runId)continue;showUpdate(current);if(current.run.status!=='running'){await Promise.all([loadCatalog(),loadHistory()]);showUpdate(current);return;}}catch{}}updateStatus.textContent='La actualización sigue sin confirmación final. Los precios válidos permanecen visibles; consulte el protocolo de ejecuciones.';}
 updateButton.addEventListener('click',async()=>{
  updateButton.disabled=true;
+ updateStatus.textContent='Gespeicherte Preise werden aus Supabase neu geladen …';
  try{
-  updateStatus.textContent='Manuelle Preisaktualisierung wird sicher gestartet …';
-  const response=await fetch('/api/updates/manual',{method:'POST',headers:{'X-PA-Action':'refresh','X-PA-Trigger':'manual'},signal:AbortSignal.timeout(20000)});
-  const s=await response.json();
-  if(!response.ok&&response.status!==409)throw Error(s.error||'Aktualisierung fehlgeschlagen');
-  showUpdate(s,Boolean(s.accepted));
+  const payload=await loadCatalog();
   await loadHistory();
-  if(s.run?.status==='running')void monitorRun(s.run.id);
-  else if(s.accepted)await Promise.all([loadCatalog(),loadHistory()]);
- }catch(e){
   const current=await status();
-  await loadHistory();
-  if(current?.run?.status==='running')void monitorRun(current.run.id);
-  else updateStatus.textContent='Aktualisierung nicht abgeschlossen: '+e.message+'. Letzte Preise bleiben erhalten.';
+  if(payload.source!=='supabase')updateStatus.textContent='Supabase derzeit nicht erreichbar. Gespeicherter Snapshot bleibt sichtbar.';
+  else if(!current?.run)updateStatus.textContent='Preisdaten neu geladen. Preisprüfungen laufen täglich oder administrativ über GitHub Actions.';
  }finally{
   updateButton.disabled=false;
  }
