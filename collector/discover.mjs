@@ -211,7 +211,8 @@ for (const config of missing) {
   console.log(`[${config.legacy_id}] ${config.name} ... ${ranked.length} candidate(s), best=${ranked[0].match.score} (${confidenceBand(ranked[0].match.score)})`);
 }
 
-const status = errors.length ? (candidatesFound ? 'partial' : 'failed') : 'success';
+const totalProposals = candidatesFound + componentCandidatesFound;
+const status = errors.length ? (totalProposals ? 'partial' : 'failed') : 'success';
 await rest(`discovery_runs?id=eq.${run.id}`, {
   method: 'PATCH',
   prefer: 'return=minimal',
