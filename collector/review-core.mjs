@@ -29,3 +29,47 @@ export function formatCandidate(candidate, rank) {
     requiresComponents: Boolean(candidate.metadata?.likely_requires_components)
   };
 }
+
+
+export function componentReviewSignal(recipeComponents, candidateGroups) {
+  const components = Array.isArray(recipeComponents) ? recipeComponents : [];
+  if (!components.length) return { signal: 'no_recipe', covered: 0, total: 0 };
+
+  let covered = 0;
+  let weak = false;
+  let ambiguous = false;
+
+  for (const component of components) {
+    const list = [...(candidateGroups.get(component.key) || [])]
+      .sort((a,b)=>Number(b.match_score)-Number(a.match_score));
+    if (!list.length) continue;
+    covered++;
+    const top = Number(list[0].match_score || 0);
+    const second = list[1] ? Number(list[1].match_score || 0) : null;
+    if (top < 0.80) weak = true;
+    if (second !== null && Math.abs(top-second) < 0.05) ambiguous = true;
+  }
+
+  if (covered < components.length) return { signal: 'incomplete_components', covered, total: components.length };
+  if (weak) return { signal: 'weak_components', covered, total: components.length };
+  if (ambiguous) return { signal: 'ambiguous_components', covered, total: components.length };
+  return { signal: 'component_ready_review', covered, total: components.length };
+}
+
+export function formatComponentCandidate(candidate, rank) {
+  if (!candidate) return null;
+  return {
+    rank,
+    id: candidate.id,
+    key: candidate.component_key,
+    label: candidate.component_label,
+    kind: candidate.component_kind,
+    quantity: Number(candidate.quantity),
+    name: candidate.candidate_name,
+    price: candidate.candidate_price === null ? null : Number(candidate.candidate_price),
+    score: Number(candidate.match_score),
+    confidence: candidate.metadata?.confidence || null,
+    url: candidate.candidate_url,
+    source: candidate.source_url
+  };
+}

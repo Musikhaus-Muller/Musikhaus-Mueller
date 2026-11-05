@@ -9,6 +9,7 @@ test('review discovery workflow is read-only', async()=>{
   ]);
   assert.match(wf,/Review discovery candidates/);
   assert.match(runner,/Read-only review report/);
+  assert.match(runner,/discovery_component_candidates/);
   assert.doesNotMatch(runner,/method:\s*['"](?:POST|PATCH|DELETE)/);
   assert.doesNotMatch(runner,/offers\?/);
 });
