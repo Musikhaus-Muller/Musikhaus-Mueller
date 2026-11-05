@@ -119,7 +119,10 @@ for(const row of componentRows){
   for(const component of row.components){
     const t1=component.top1;
     console.log(`  [${component.key}] qty=${component.quantity} ${component.label} | ${t1 ? `top1=${t1.score} ${t1.price ?? 'no-price'} EUR` : 'no_candidate'}`);
-    if(t1) console.log(`    #1 ${t1.id} | ${t1.name} | ${t1.url}`);
+    if(t1) {
+      console.log(`    #1 ${t1.id} | ${t1.name} | ${t1.url}`);
+      if(t1.price===null) console.log(`       price_error=${t1.priceError || 'unknown'} | price_source=${t1.priceSource || 'none'}`);
+    }
     if(component.top2) console.log(`    #2 ${component.top2.id} | ${component.top2.score} | ${component.top2.name} | ${component.top2.url}`);
   }
 }
@@ -128,6 +131,7 @@ for(const row of rows){
   const t2=row.top2;
   console.log(`[${row.legacyId}] ${row.configuration} ... ${row.signal} | top1=${t1.score} ${t1.price ?? 'no-price'} EUR | margin=${row.margin ?? 'n/a'}`);
   console.log(`  #1 ${t1.id} | ${t1.name} | ${t1.url}`);
+  if(t1.price===null) console.log(`     price_error=${t1.priceError || 'unknown'} | price_source=${t1.priceSource || 'none'}`);
   if(t2) console.log(`  #2 ${t2.id} | ${t2.score} | ${t2.name} | ${t2.url}`);
 }
 console.log(JSON.stringify({
