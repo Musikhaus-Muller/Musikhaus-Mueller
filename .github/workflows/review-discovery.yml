@@ -1,0 +1,33 @@
+name: Review discovery candidates
+
+on:
+  workflow_dispatch:
+    inputs:
+      shop:
+        description: Shop whose latest discovery run should be reviewed
+        required: true
+        default: prolighting
+        type: choice
+        options:
+          - prolighting
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: collector
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Review latest candidates
+        run: |
+          SHOP="${{ inputs.shop }}"
+          echo "shop=${SHOP:-prolighting}"
+          node review-discovery.mjs "--shop=${SHOP:-prolighting}"
