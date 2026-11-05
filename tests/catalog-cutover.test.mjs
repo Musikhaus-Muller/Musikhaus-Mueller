@@ -15,7 +15,8 @@ test('R2 is fully removed from the Worker runtime', async () => {
   assert.doesNotMatch(src, /BUCKET/);
   assert.doesNotMatch(src, /price-snapshot-v1\.json/);
   assert.doesNotMatch(src, /export async function refresh/);
-  assert.match(src, /dispatchManualPriceUpdate/);
-  assert.match(src, /actions\/workflows\/collect-prices\.yml\/dispatches/);
+  assert.doesNotMatch(src, /dispatchManualPriceUpdate/);
+  assert.doesNotMatch(src, /actions\/workflows\/collect-prices\.yml\/dispatches/);
+  assert.doesNotMatch(src, /CF_ACCESS_|Cf-Access-Jwt-Assertion|GITHUB_ACTIONS_TOKEN/);
   assert.match(src, /Endpoint retirado/);
 });
