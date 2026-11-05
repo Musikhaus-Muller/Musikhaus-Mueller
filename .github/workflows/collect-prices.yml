@@ -24,11 +24,32 @@ on:
     - cron: '15 7 * * *'
 
 concurrency:
-  group: price-collector
+  group: price-update-pipeline
   cancel-in-progress: false
 
 jobs:
+  discover:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: collector
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+      DISCOVERY_TRIGGER: schedule
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Discover missing PRO LIGHTING offers
+        run: node discover.mjs --shop=prolighting
+
   collect:
+    needs: discover
+    if: always()
     runs-on: ubuntu-latest
     timeout-minutes: 45
     defaults:

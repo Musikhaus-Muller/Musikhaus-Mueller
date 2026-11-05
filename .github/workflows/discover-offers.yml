@@ -14,11 +14,8 @@ on:
         description: Optional maximum number of missing configurations
         required: false
         type: string
-  schedule:
-    - cron: '30 6 * * 0'
-
 concurrency:
-  group: offer-discovery
+  group: price-update-pipeline
   cancel-in-progress: false
 
 jobs:
