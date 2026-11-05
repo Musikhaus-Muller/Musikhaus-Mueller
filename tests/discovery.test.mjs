@@ -203,3 +203,34 @@ test('component discovery distinguishes padded PC covers from weatherproof WPC c
     true
   );
 });
+
+
+test('component discovery distinguishes complete MAUI systems from extra subwoofers',()=>{
+  const main={expected:'LD Systems MAUI 28 G3 schwarz',label:'MAUI 28 G3',kind:'main'};
+  const sub={expected:'LD Systems MAUI 28 G3 SUB schwarz',label:'MAUI 28 G3 SUB',kind:'main'};
+
+  assert.equal(
+    scoreComponentCandidate(main,{name:'LD Systems MAUI 28 G3 SUB Aktiver Subwoofer'}).reason,
+    'structural_subtype_mismatch'
+  );
+  assert.equal(
+    scoreComponentCandidate(sub,{name:'LD Systems MAUI 28 G3 Kompaktes Cardioid Säulen PA System'}).reason,
+    'structural_subtype_mismatch'
+  );
+  assert.equal(
+    scoreComponentCandidate(main,{name:'LD Systems MAUI 28 G3 Kompaktes Cardioid Säulen PA System'}).accepted,
+    true
+  );
+  assert.equal(
+    scoreComponentCandidate(sub,{name:'LD Systems MAUI 28 G3 SUB Aktiver Subwoofer'}).accepted,
+    true
+  );
+});
+
+test('component discovery rejects MIX variant when Mueller recipe expects standard system',()=>{
+  const main={expected:'LD Systems MAUI 28 G3 schwarz',label:'MAUI 28 G3',kind:'main'};
+  assert.equal(
+    scoreComponentCandidate(main,{name:'LD Systems MAUI 28 G3 MIX Kompaktes Cardioid Säulen PA System Schwarz'}).reason,
+    'structural_subtype_mismatch'
+  );
+});

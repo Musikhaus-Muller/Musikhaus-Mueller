@@ -84,6 +84,13 @@ function isBundleProduct(value) {
   return /\b(stereo bundle|bundle|bundle set|2x|2 x)\b/.test(n);
 }
 
+function structuralSubtype(value) {
+  const n = normalize(value);
+  if (/\b(sub|subwoofer)\b/.test(n)) return 'subwoofer';
+  if (/\bmix\b/.test(n)) return 'mixer_system';
+  return 'system';
+}
+
 function expectsStandaloneMainProduct(config) {
   return !likelyNeedsComponents(config);
 }
@@ -240,6 +247,14 @@ export function scoreComponentCandidate(component, candidate) {
 
   if (!expectedAccessory && isBundleProduct(candidateName) && !isBundleProduct(expectedName)) {
     return { score: 0, accepted: false, reason: 'bundle_component_mismatch' };
+  }
+
+  if (!expectedAccessory) {
+    const expectedSubtype = structuralSubtype(expectedName);
+    const candidateSubtype = structuralSubtype(candidateName);
+    if (expectedSubtype !== candidateSubtype) {
+      return { score: 0, accepted: false, reason: 'structural_subtype_mismatch' };
+    }
   }
 
   if (expectedAccessory) {
