@@ -33,13 +33,15 @@ if(!shop) throw new Error(`Shop not found: ${shopSlug}`);
 const [run]=await rest(`discovery_runs?select=id,status,started_at,finished_at,candidates_found,metadata&shop_id=eq.${shop.id}&order=started_at.desc&limit=1`);
 if(!run) throw new Error(`No discovery run found for ${shopSlug}`);
 
-const [configs,candidates,componentCandidates]=await Promise.all([
+const [configs,candidates,componentCandidates,existingOffers]=await Promise.all([
   rest('configurations?select=id,legacy_id,brand,family,name,subtitle,metadata&active=eq.true'),
   rest(`discovery_candidates?select=id,run_id,configuration_id,candidate_name,candidate_url,candidate_price,match_score,source_url,metadata,status,discovered_at&run_id=eq.${run.id}&status=eq.proposed&order=match_score.desc`),
-  rest(`discovery_component_candidates?select=id,run_id,configuration_id,component_key,component_label,component_kind,quantity,candidate_name,candidate_url,candidate_price,match_score,source_url,metadata,status,discovered_at&run_id=eq.${run.id}&status=eq.proposed&order=match_score.desc`)
+  rest(`discovery_component_candidates?select=id,run_id,configuration_id,component_key,component_label,component_kind,quantity,candidate_name,candidate_url,candidate_price,match_score,source_url,metadata,status,discovered_at&run_id=eq.${run.id}&status=eq.proposed&order=match_score.desc`),
+  rest(`offers?select=configuration_id&shop_id=eq.${shop.id}&active=eq.true`)
 ]);
 
 const configById=new Map(configs.map(c=>[c.id,c]));
+const existingOfferIds=new Set(existingOffers.map(x=>x.configuration_id));
 const grouped=new Map();
 for(const c of candidates){
   if(!grouped.has(c.configuration_id)) grouped.set(c.configuration_id,[]);
@@ -59,12 +61,14 @@ for(const c of componentCandidates){
   byKey.get(c.component_key).push(c);
 }
 
-for(const [configurationId,byKey] of componentGroupedByConfig){
-  const config=configById.get(configurationId);
-  if(!config) continue;
-  const recipe=config.metadata?.discovery_recipe?.components || [];
+for(const config of configs){
+  const recipe=config.metadata?.discovery_recipe?.components;
+  if(!Array.isArray(recipe) || existingOfferIds.has(config.id)) continue;
+
+  const byKey=componentGroupedByConfig.get(config.id) || new Map();
   const review=componentReviewSignal(recipe,byKey);
   componentCounts[review.signal]=(componentCounts[review.signal]||0)+1;
+
   const components=recipe.map(component=>{
     const list=[...(byKey.get(component.key)||[])].sort((a,b)=>Number(b.match_score)-Number(a.match_score));
     return {
@@ -76,6 +80,7 @@ for(const [configurationId,byKey] of componentGroupedByConfig){
       top2:formatComponentCandidate(list[1],2)
     };
   });
+
   componentRows.push({
     legacyId:config.legacy_id,
     configuration:config.name,

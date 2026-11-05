@@ -51,7 +51,7 @@ function modelNumbers(value) {
 
 function accessoryKind(value) {
   const n = normalize(value);
-  if (/\b(sat bag|sub bag|sub pc|wpc|bag|tasche|tragetasche|schutzhuelle|schutzhulle|wetterschutzhuelle|cover|rollbrett|roll board|caster board|cb|pc|easymount|traversenhalterung|halterung|xlr|kabel|cable|stativ|stative|speaker stand|distanzstange|powercon|power twist)\b/.test(n)) {
+  if (/\b(sat bag|sub bag|sub pc|wpc|bag|tasche|tragetasche|schutzhuelle|schutzhulle|wetterschutzhuelle|cover|rollbrett|roll board|caster board|casterboard|cb|pc|easymount|traversenhalterung|halterung|xlr|kabel|cable|stativ|stative|speaker stand|distanzstange|powercon|power twist)\b/.test(n)) {
     return 'accessory';
   }
   return null;
@@ -61,8 +61,10 @@ function accessorySubtype(value) {
   const n = normalize(value);
   if (/\b(sat bag|saulen.*bag|tragetasche.*saulen)\b/.test(n)) return 'sat_bag';
   if (/\b(sub bag|sub pc|subwooferhulle|subwoofer.*schutzhuelle)\b/.test(n)) return 'sub_cover';
-  if (/\b(cb|rollbrett|roll board|caster board)\b/.test(n)) return 'rollboard';
-  if (/\b(wpc|pc|wetterschutzhuelle|cover|schutzhuelle|schutzhulle|hulle)\b/.test(n)) return 'cover';
+  if (/\b(cb|rollbrett|roll board|caster board|casterboard)\b/.test(n)) return 'rollboard';
+  if (/\b(wpc|wetterschutzhuelle)\b/.test(n)) return 'weather_cover';
+  if (/\bpc\b/.test(n)) return 'padded_cover';
+  if (/\b(cover|schutzhuelle|schutzhulle|hulle)\b/.test(n)) return 'cover';
   if (/\b(stativ|stative|speaker stand|distanzstange)\b/.test(n)) return 'stand';
   if (/\b(xlr|powercon|power twist|kabel|cable)\b/.test(n)) return 'cable';
   if (/\b(easymount|traversenhalterung|halterung)\b/.test(n)) return 'mount';

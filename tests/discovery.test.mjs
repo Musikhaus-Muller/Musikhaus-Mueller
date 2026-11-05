@@ -174,3 +174,28 @@ test('component discovery treats PC as cover subtype and rejects mounts for cove
     true
   );
 });
+
+
+test('component discovery recognizes casterboard as rollboard subtype',()=>{
+  const roll={expected:'ICOA PRO SUB 21 Casterboard',label:'Casterboard',kind:'accessory'};
+  assert.equal(
+    scoreComponentCandidate(roll,{name:'LD Systems ICOA PRO SUB 21 PC Gepolsterte Schutzhülle'}).reason,
+    'accessory_subtype_mismatch'
+  );
+  assert.equal(
+    scoreComponentCandidate(roll,{name:'LD Systems ICOA PRO SUB 21 CB Rollbrett'}).accepted,
+    true
+  );
+});
+
+test('component discovery distinguishes padded PC covers from weatherproof WPC covers',()=>{
+  const cover={expected:'ICOA 15 PC',label:'ICOA 15 PC',kind:'accessory'};
+  assert.equal(
+    scoreComponentCandidate(cover,{name:'LD Systems ICOA 15 WPC Wetterschutzhülle'}).reason,
+    'accessory_subtype_mismatch'
+  );
+  assert.equal(
+    scoreComponentCandidate(cover,{name:'LD Systems ICOA 15 PC Gepolsterte Schutzhülle'}).accepted,
+    true
+  );
+});
