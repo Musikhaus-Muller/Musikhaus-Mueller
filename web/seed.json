@@ -2603,7 +2603,7 @@
             "name": "Gravity SP 2332 B",
             "url": "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
             "quantity": 2,
-            "unitPrice": 23.90
+            "unitPrice": 23.9
           },
           {
             "name": "ah Cables 3 STAR MMF 0300 XLR 3 m",
@@ -2724,7 +2724,7 @@
             "name": "LD Systems ICOA 15 A BT",
             "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-15-a-bt-15-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
             "quantity": 2,
-            "unitPrice": 467.90
+            "unitPrice": 467.9
           },
           {
             "name": "LD Systems ICOA SUB 18 A",
@@ -2736,7 +2736,7 @@
             "name": "Gravity SP 2332 B",
             "url": "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
             "quantity": 2,
-            "unitPrice": 23.90
+            "unitPrice": 23.9
           },
           {
             "name": "ah Cables 3 STAR MMF 0300 XLR 3 m",
@@ -2854,7 +2854,7 @@
             "name": "LD Systems ICOA 15 A BT",
             "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-15-a-bt-15-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
             "quantity": 2,
-            "unitPrice": 467.90
+            "unitPrice": 467.9
           },
           {
             "name": "LD Systems ICOA SUB 18 A",
@@ -3084,13 +3084,13 @@
             "name": "Gravity SP 2332 B",
             "url": "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
             "quantity": 2,
-            "unitPrice": 23.90
+            "unitPrice": 23.9
           },
           {
             "name": "Cordial PEAK CPM 3 FM-FLEX Neutrik XLR 3 m",
             "url": "https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-3-fm-flex-3-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html",
             "quantity": 2,
-            "unitPrice": 20.90
+            "unitPrice": 20.9
           }
         ]
       }
@@ -3206,6 +3206,21 @@
         "calculation": "2 × 1049 € = 2098 €",
         "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-schwarz.html",
         "lastAttempt": "2026-11-04"
+      },
+      "hotsound": {
+        "name": "DAP Frigga Stereo schwarz",
+        "price": 2290,
+        "url": "https://www.hotsound-store.com/dap-frigga-stereo-aktives-stereo-saeulen-pa-system-schwarz-14921",
+        "contents": "2 × DAP Frigga schwarz.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "HotSound offizielle öffentliche Stereo-Produktseite verifiziert · 06.11.2026",
+        "note": "Direktes HotSound-Stereo-Set in der schwarzen Referenzkonfiguration.",
+        "source": "https://www.hotsound-store.com/dap-frigga-stereo-aktives-stereo-saeulen-pa-system-schwarz-14921",
+        "sourceName": "DAP Frigga Stereo schwarz",
+        "lastAttempt": "2026-11-06",
+        "classification": "exact_price"
       }
     }
   },
@@ -3423,6 +3438,48 @@
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/dap-tragetasche-fuer-frigga-top-schwarz-codura.html",
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/dap-transporthuelle-fuer-frigga-sub-schwarz-codura.html"
         ]
+      },
+      "hotsound": {
+        "name": "HotSound Warenkorb · FRIGGA Stereo weiß + Taschen",
+        "price": 3166,
+        "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+        "contents": "2 × DAP Frigga weiß; 2 × Tasche für Frigga Tops; 2 × Transport Cover für Frigga Sub.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "HotSound offizielle öffentliche Produktseiten verifiziert · 06.11.2026",
+        "calculation": "2 × 1.349 € + 2 × 129 € + 2 × 105 € = 3.166 €",
+        "note": "Vollständiger verifizierter HotSound-Komponentenpreis für Stereo weiß inklusive Taschen/Hüllen.",
+        "source": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+        "sourceName": "DAP Frigga weiß + Transportzubehör",
+        "lastAttempt": "2026-11-06",
+        "classification": "complete_component_calc",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+          "https://www.hotsound-store.com/dap-bag-fuer-frigga-tops-13260",
+          "https://www.hotsound-store.com/dap-transport-cover-fuer-frigga-sub-13259"
+        ],
+        "componentDetails": [
+          {
+            "name": "DAP Frigga weiß",
+            "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+            "quantity": 2,
+            "unitPrice": 1349
+          },
+          {
+            "name": "DAP Bag für Frigga Tops",
+            "url": "https://www.hotsound-store.com/dap-bag-fuer-frigga-tops-13260",
+            "quantity": 2,
+            "unitPrice": 129
+          },
+          {
+            "name": "DAP Transport Cover für Frigga Sub",
+            "url": "https://www.hotsound-store.com/dap-transport-cover-fuer-frigga-sub-13259",
+            "quantity": 2,
+            "unitPrice": 105
+          }
+        ]
       }
     }
   },
@@ -3487,6 +3544,48 @@
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/dap-tragetasche-fuer-frigga-top-schwarz-codura.html",
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/dap-transporthuelle-fuer-frigga-sub-schwarz-codura.html"
         ]
+      },
+      "hotsound": {
+        "name": "HotSound Warenkorb · FRIGGA Schwarz + Taschen",
+        "price": 1379,
+        "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-schwarz-13257",
+        "contents": "1 × DAP Frigga schwarz; 1 × Tasche für Frigga Tops; 1 × Transport Cover für Frigga Sub.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "HotSound offizielle öffentliche Produktseiten verifiziert · 06.11.2026",
+        "calculation": "1.145 € + 129 € + 105 € = 1.379 €",
+        "note": "Vollständiger verifizierter HotSound-Komponentenpreis für ein schwarzes Frigga-System inklusive Taschen/Hüllen.",
+        "source": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-schwarz-13257",
+        "sourceName": "DAP Frigga schwarz + Transportzubehör",
+        "lastAttempt": "2026-11-06",
+        "classification": "complete_component_calc",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-schwarz-13257",
+          "https://www.hotsound-store.com/dap-bag-fuer-frigga-tops-13260",
+          "https://www.hotsound-store.com/dap-transport-cover-fuer-frigga-sub-13259"
+        ],
+        "componentDetails": [
+          {
+            "name": "DAP Frigga schwarz",
+            "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-schwarz-13257",
+            "quantity": 1,
+            "unitPrice": 1145
+          },
+          {
+            "name": "DAP Bag für Frigga Tops",
+            "url": "https://www.hotsound-store.com/dap-bag-fuer-frigga-tops-13260",
+            "quantity": 1,
+            "unitPrice": 129
+          },
+          {
+            "name": "DAP Transport Cover für Frigga Sub",
+            "url": "https://www.hotsound-store.com/dap-transport-cover-fuer-frigga-sub-13259",
+            "quantity": 1,
+            "unitPrice": 105
+          }
+        ]
       }
     }
   },
@@ -3550,6 +3649,48 @@
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-weiss.html",
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/dap-tragetasche-fuer-frigga-top-schwarz-codura.html",
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/dap-transporthuelle-fuer-frigga-sub-schwarz-codura.html"
+        ]
+      },
+      "hotsound": {
+        "name": "HotSound Warenkorb · FRIGGA Weiß + Taschen",
+        "price": 1583,
+        "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+        "contents": "1 × DAP Frigga weiß; 1 × Tasche für Frigga Tops; 1 × Transport Cover für Frigga Sub.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "HotSound offizielle öffentliche Produktseiten verifiziert · 06.11.2026",
+        "calculation": "1.349 € + 129 € + 105 € = 1.583 €",
+        "note": "Vollständiger verifizierter HotSound-Komponentenpreis für ein weißes Frigga-System inklusive Taschen/Hüllen.",
+        "source": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+        "sourceName": "DAP Frigga weiß + Transportzubehör",
+        "lastAttempt": "2026-11-06",
+        "classification": "complete_component_calc",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+          "https://www.hotsound-store.com/dap-bag-fuer-frigga-tops-13260",
+          "https://www.hotsound-store.com/dap-transport-cover-fuer-frigga-sub-13259"
+        ],
+        "componentDetails": [
+          {
+            "name": "DAP Frigga weiß",
+            "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+            "quantity": 1,
+            "unitPrice": 1349
+          },
+          {
+            "name": "DAP Bag für Frigga Tops",
+            "url": "https://www.hotsound-store.com/dap-bag-fuer-frigga-tops-13260",
+            "quantity": 1,
+            "unitPrice": 129
+          },
+          {
+            "name": "DAP Transport Cover für Frigga Sub",
+            "url": "https://www.hotsound-store.com/dap-transport-cover-fuer-frigga-sub-13259",
+            "quantity": 1,
+            "unitPrice": 105
+          }
         ]
       }
     }
