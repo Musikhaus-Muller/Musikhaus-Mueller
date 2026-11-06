@@ -27,6 +27,12 @@ test('catalog parser keeps Kirstein model matching strict across nearby DAVE var
   assert.equal(parseCatalogProductPrice(html,'LD Systems Dave 18 G4X Set').price,1722);
 });
 
+test('catalog parser does not cross-match nearby MAUI model numbers',()=>{
+  const html='<div>LD Systems MAUI 11 G3 Schwarz</div><div>929,00 €</div><div>Sofort lieferbar</div><div>LD Systems MAUI 28 G3 Schwarz</div><div>1.309,00 €</div><div>Sofort lieferbar</div>';
+  assert.equal(parseCatalogProductPrice(html,'LD Systems MAUI 11 G3 Schwarz').price,929);
+  assert.equal(parseCatalogProductPrice(html,'LD Systems MAUI 28 G3 Schwarz').price,1309);
+});
+
 test('catalog parser extracts white MAUI sale price and ignores UVP',()=>{
   const html='<div>LD Systems MAUI 28 G3 W, Kompaktes Cardioid Säulen PA System, Weiß</div><div>UVP: 1.559,90 €</div><div>1.329,00 €</div><div>Ab ZentralLager lieferbar</div>';
   const out=parseCatalogProductPrice(html,'LD Systems MAUI 28 G3 W Kompaktes Cardioid Saeulen PA System Weiss');

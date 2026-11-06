@@ -66,10 +66,22 @@ export function parseCatalogProductPrice(html, expected) {
   }
   if(best<0) throw new Error('Catalog product not found');
 
+  const modelTokens=required.filter(t=>/\d/.test(t));
   const colorTokens=required.filter(t=>['schwarz','black','weiss','white'].includes(t));
   let anchor=best;
-  if(colorTokens.length){
+
+  if(modelTokens.length){
     for(let i=best;i<Math.min(lines.length,best+4);i++){
+      const words=new Set(normalize(lines[i]).split(' '));
+      if(modelTokens.every(t=>words.has(t))){
+        anchor=i;
+        break;
+      }
+    }
+  }
+
+  if(colorTokens.length){
+    for(let i=anchor;i<Math.min(lines.length,anchor+4);i++){
       const words=new Set(normalize(lines[i]).split(' '));
       if(colorTokens.some(t=>words.has(t))){
         anchor=i;
