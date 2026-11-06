@@ -2,6 +2,7 @@ import { chromium } from 'playwright';
 import { parsePrice } from '../worker/handler.mjs';
 import { strategyFor } from './strategies.mjs';
 import { aggregateComponentResults, expectedNameFromUrl } from './components.mjs';
+import { applyOfferMultiplier, classifyError, multiplierFor } from './pricing.mjs';
 import { publicCatalogSourceFor, parseCatalogProductPrice, catalogDiagnostic } from './catalog-sources.mjs';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
@@ -33,20 +34,6 @@ async function rest(path, { method = 'GET', body, prefer } = {}) {
   const text = await res.text();
   if (!res.ok) throw new Error(`${method} ${path}: ${res.status} ${text}`);
   return text ? JSON.parse(text) : null;
-}
-
-function classifyError(error) {
-  const msg = String(error?.message || error);
-  if (/captcha|cf-chl|just a moment|zugriffsschutz/i.test(msg)) return 'captcha';
-  if (/HTTP (403|429)/i.test(msg)) return 'blocked';
-  if (/timeout|zeitüberschreitung/i.test(msg)) return 'network_error';
-  if (/eindeutiger EUR|price|preis/i.test(msg)) return 'parse_error';
-  return 'network_error';
-}
-
-function multiplierFor(offer) {
-  const m = String(offer.calculation || '').match(/^\s*(\d+)\s*[×x]/);
-  return m ? Number(m[1]) : 1;
 }
 
 async function recordComponentObservation({ component, runId, result }) {
@@ -127,7 +114,7 @@ async function catalogAttemptTarget(offer, shopSlug) {
       method: 'catalog',
       status: 'success',
       httpStatus: res.status,
-      price: Math.round(parsed.price * multiplier * 100) / 100,
+      price: applyOfferMultiplier(parsed.price, multiplier),
       available: parsed.available,
       evidence: `Official shop catalog fallback: ${sourceUrl}`
     };
@@ -171,7 +158,7 @@ async function httpAttemptTarget(offer) {
       method: 'http',
       status: 'success',
       httpStatus: res.status,
-      price: Math.round(parsed.price * multiplier * 100) / 100,
+      price: applyOfferMultiplier(parsed.price, multiplier),
       available: parsed.available,
       evidence: 'Direct HTTP fetch with product-name validation'
     };
@@ -252,7 +239,7 @@ async function browserAttempt(offer) {
         method: 'browser',
         status: 'success',
         httpStatus: response?.status(),
-        price: Math.round(parsed.price * multiplier * 100) / 100,
+        price: applyOfferMultiplier(parsed.price, multiplier),
         available: parsed.available,
         evidence: resolvedUrl === offer.product_url
           ? 'Chromium page render with product-name validation'
