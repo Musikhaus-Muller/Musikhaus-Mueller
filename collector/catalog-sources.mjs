@@ -26,7 +26,7 @@ const significantTokens=expected=>normalize(expected.replace(/^\s*\d+\s*[×x]\s*
   .split(' ')
   .filter(t=>t.length>1 && !['ld','systems','system','set','bundle','kompaktes','portables','aktives','aktive','pa'].includes(t));
 
-export function publicCatalogSourceFor(shopSlug, expected) {
+export function publicCatalogSourceFor(shopSlug, expected, productUrl = '') {
   const n=normalize(expected);
   if (shopSlug === 'prolighting') {
     if (n.includes('maui 28 g3') && (n.includes('weiss') || n.includes('white'))) {
@@ -37,7 +37,45 @@ export function publicCatalogSourceFor(shopSlug, expected) {
     }
     return null;
   }
+  if (shopSlug === 'musicstore') {
+    const sku=String(productUrl||'').match(/\/art-([A-Z0-9-]+)/i)?.[1]||'';
+    if (sku && n.includes('ld systems')) {
+      return 'https://www.musicstore.de/de_DE/EUR/brands/ld-systems';
+    }
+  }
   return null;
+}
+
+export function parseMusicStoreSkuPrice(html, productUrl, expected = '') {
+  const sku=String(productUrl||'').match(/\/art-([A-Z0-9-]+)/i)?.[1];
+  if(!sku) throw new Error('Music Store SKU missing from product URL');
+
+  const text=decode(html);
+  const lines=text.split(/\n+/).map(x=>x.trim()).filter(Boolean);
+  const skuIndex=lines.findIndex(line=>line.toUpperCase().includes(sku.toUpperCase()));
+  if(skuIndex<0) throw new Error('Music Store SKU not found in official catalog');
+
+  const nextSkuOffset=lines.slice(skuIndex+1).findIndex(line=>/\b(?:PAH|ACC)\d+[A-Z0-9-]*\b/i.test(line));
+  const blockEnd=nextSkuOffset>=0?skuIndex+1+nextSkuOffset:Math.min(lines.length,skuIndex+12);
+  const block=lines.slice(skuIndex,blockEnd);
+  const expectedTokens=significantTokens(expected).filter(t=>!['warenkorb'].includes(t));
+  const productText=normalize(block.slice(0,6).join(' '));
+  const productWords=new Set(productText.split(' '));
+  const required=expectedTokens.filter(t=>/\d/.test(t)||['schwarz','black','weiss','white','mix','pro'].includes(t));
+  if(required.some(t=>!productWords.has(t))) throw new Error('Music Store SKU product mismatch');
+
+  for(const line of block){
+    if(/uvp|retoure|finanzieren|monat/i.test(line)) continue;
+    const matches=[...line.matchAll(/\b\d{1,3}(?:\.\d{3})*,\d{2}\s*(?:€|EUR)(?![A-Za-z0-9_])/gi)];
+    for(const m of matches){
+      const price=priceNumber(m[0]);
+      if(Number.isFinite(price)&&price>0){
+        const availability=/sofort lieferbar|lager|store verfugbar|store verfügbar/i.test(block.join(' '))?true:undefined;
+        return {price,available:availability,sku};
+      }
+    }
+  }
+  throw new Error('Music Store SKU price not found in official catalog');
 }
 
 export function parseCatalogProductPrice(html, expected) {

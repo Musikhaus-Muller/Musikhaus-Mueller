@@ -24,8 +24,9 @@ test('Thomann keeps an explicit public discovery source', () => {
 });
 
 
-test('Music Store preserves the last valid price after access blocks', () => {
+test('Music Store uses exact-SKU official catalog fallback and no browser retry', () => {
   const musicstore = strategyFor('musicstore');
-  assert.equal(musicstore.mode, 'http-preserve-on-block');
+  assert.equal(musicstore.mode, 'http-with-sku-catalog');
   assert.equal(musicstore.browserFallback, false);
+  assert.equal(musicstore.publicSource.type, 'sku-catalog');
 });
