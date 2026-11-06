@@ -1,6 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
+import { applyOfferMultiplier, classifyError, multiplierFor } from '../collector/pricing.mjs';
 
 const src=await fs.readFile('dist/server/index.js','utf8');
 const {default:worker,parsePrice}=await import('data:text/javascript;base64,'+Buffer.from(src).toString('base64'));
@@ -13,6 +14,11 @@ test('precio EUR único y producto correcto',()=>{
  assert.throws(()=>parsePrice(html('MAUI 11 G3',929,'USD'),'MAUI 11 G3','www.kirstein.de'));
  assert.throws(()=>parsePrice(html('MAUI 11 G3')+html('MAUI 11 G3',999),'MAUI 11 G3','www.kirstein.de'));
  assert.throws(()=>parsePrice('Just a moment','MAUI','www.kirstein.de'));
+});
+
+test('PRO LIGHTING MAUI 28 G3 black system price remains valid for r11',()=>{
+ const htmlFixture='<h1>LD Systems MAUI 28 G3, Kompaktes Cardioid Säulen PA System</h1><div id="artd-buybox"><meta itemprop="price" content="1289.00"><meta itemprop="priceValidUntil" content="2027-11-06"></div><li>Farbe: Schwarz</li>';
+ assert.equal(parsePrice(htmlFixture,'LD Systems MAUI 28 G3 schwarz','www.prolighting.de').price,1289);
 });
 
 test('rechaza generación y color distintos',()=>{
@@ -98,6 +104,38 @@ test('PRO LIGHTING accepts the official white set only when its exact contents a
  const htmlFixture='<div>Dieses Set besteht aus:<ul><li>LD Systems MAUI 28 G3, Kompaktes Cardioid Säulen PA System</li></ul></div><h1>LD Systems MAUI 28 G3 W + Taschenset</h1><p><strong>Set besteht aus:</strong></p><ul><li>1x LD Systems MAUI 28 G3 E, Kompaktes Cardioid Säulen PA System, Weiß (AHLDMAUI28G3W)</li><li>1x LD Systems MAUI 28 G3 SAT BAG, Gepolsterte Tragetasche</li><li>1x LD Systems MAUI 28 G3 SUB PC, Gepolsterte Schutzhülle</li></ul><div id="artd-buybox"><meta itemprop="price" content="1428.25"></div>';
  const parsed=parsePrice(htmlFixture,'LD Systems MAUI 28 G3 W + Taschenset','www.prolighting.de','1 × MAUI 28 G3 weiß; 1 × Säulentasche; 1 × Subwooferhülle.');
  assert.equal(parsed.price,1428.25);
+});
+
+test('PRO LIGHTING validates r4 composition per advertised 2x set and keeps the published bundle total',async()=>{
+ const seed=JSON.parse(await fs.readFile('web/seed.json','utf8'));
+ const r4=seed.find(configuration=>configuration.id==='r4').offers.prolighting;
+ const htmlFixture='<h1>LD Systems MAUI 28 G3 Stereo Bundle 2x Maui 28 G3 + Taschen</h1><div class="artd-configurator"><div class="h3">Dieses Set besteht aus:</div><div class="artd-configurator-content"><div class="artd-configurator-element"><div class="artd-configurator-element-selection-title selection-title">LD Systems MAUI 28 G3, Kompaktes Cardioid Säulen PA System</div></div><div class="artd-configurator-element"><div class="artd-configurator-element-selection-title selection-title">LD Systems MAUI 28 G3 SAT BAG, Gepolsterte Tragetasche</div></div><div class="artd-configurator-element"><div class="artd-configurator-element-selection-title selection-title">LD Systems MAUI 28 G3 SUB PC, Gepolsterte Schutzhülle</div></div></div></div><p>Technische Daten: Farbe: Schwarz</p><div id="artd-buybox"><meta itemprop="price" content="2841.50"></div>';
+ const parsed=parsePrice(htmlFixture,r4.name,'www.prolighting.de',r4.contents);
+ assert.equal(parsed.price,2841.5);
+ assert.equal(multiplierFor({calculation:null}),1);
+ assert.equal(applyOfferMultiplier(parsed.price,multiplierFor({calculation:null})),2841.5);
+});
+
+test('PRO LIGHTING validates a unit price before applying an explicit offer multiplier',()=>{
+ const htmlFixture='<h1>LD Systems MAUI 28 G3 Stereo Bundle 2x Maui 28 G3 + Taschen</h1><div class="artd-configurator"><div class="h3">Dieses Set besteht aus:</div><div class="artd-configurator-content"><div class="artd-configurator-element"><div class="artd-configurator-element-selection-title selection-title">LD Systems MAUI 28 G3, Kompaktes Cardioid Säulen PA System</div></div><div class="artd-configurator-element"><div class="artd-configurator-element-selection-title selection-title">LD Systems MAUI 28 G3 SAT BAG, Gepolsterte Tragetasche</div></div><div class="artd-configurator-element"><div class="artd-configurator-element-selection-title selection-title">LD Systems MAUI 28 G3 SUB PC, Gepolsterte Schutzhülle</div></div></div></div><p>Technische Daten: Farbe: Schwarz</p><div id="artd-buybox"><meta itemprop="price" content="1420.75"></div>';
+ const parsed=parsePrice(htmlFixture,'LD Systems MAUI 28 G3 Stereo Bundle 2x Maui 28 G3 + Taschen','www.prolighting.de','2 × MAUI 28 G3 schwarz; 2 × Säulentasche; 2 × Subwooferhülle.');
+ const offer={calculation:'2 × 1.420,75 € = 2.841,50 €'};
+ assert.equal(multiplierFor(offer),2);
+ assert.equal(applyOfferMultiplier(parsed.price,multiplierFor(offer)),2841.5);
+});
+
+test('PRO LIGHTING rejects incomplete or white r4 stereo set composition',()=>{
+ const incomplete='<h1>LD Systems MAUI 28 G3 Stereo Bundle 2x Maui 28 G3 + Taschen</h1><p>Set besteht aus:</p><ul><li>LD Systems MAUI 28 G3, Kompaktes Cardioid Säulen PA System</li><li>LD Systems MAUI 28 G3 SAT BAG, Gepolsterte Tragetasche</li></ul><p>Farbe: Schwarz</p><div id="artd-buybox"><meta itemprop="price" content="2841.50"></div>';
+ const wrongColor='<h1>LD Systems MAUI 28 G3 Stereo Bundle 2x Maui 28 G3 + Taschen</h1><p>Set besteht aus:</p><ul><li>LD Systems MAUI 28 G3, Kompaktes Cardioid Säulen PA System, Weiß</li><li>LD Systems MAUI 28 G3 SAT BAG, Gepolsterte Tragetasche</li><li>LD Systems MAUI 28 G3 SUB PC, Gepolsterte Schutzhülle</li></ul><p>Farbe: Weiß</p><div id="artd-buybox"><meta itemprop="price" content="2841.50"></div>';
+ const contents='2 × MAUI 28 G3 schwarz; 2 × Säulentasche; 2 × Subwooferhülle.';
+ assert.throws(()=>parsePrice(incomplete,'LD Systems MAUI 28 G3 Stereo Bundle 2x Maui 28 G3 + Taschen','www.prolighting.de',contents),/sub_cover/);
+ assert.throws(()=>parsePrice(wrongColor,'LD Systems MAUI 28 G3 Stereo Bundle 2x Maui 28 G3 + Taschen','www.prolighting.de',contents),/black MAUI 28 G3 system/);
+});
+
+test('PRO LIGHTING composition validation errors are parse errors, not network errors',()=>{
+ assert.equal(classifyError(new Error('Official bundle contents confirm 1 system components per unit; expected 1 per unit')),'parse_error');
+ assert.equal(classifyError(new Error('Official page does not expose a readable set composition')),'parse_error');
+ assert.equal(classifyError(new Error('Bundle composition contains an unclassified component')),'parse_error');
 });
 
 test('PRO LIGHTING rejects the white official set and base-system page for the black bundle',async()=>{

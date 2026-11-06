@@ -21,12 +21,33 @@ function validateProlightingMaui28G3Bundle(html,expected,contents){
   throw Error('Bundle composition does not specify the MAUI 28 G3 system, SAT BAG, and SUB PC');
  }
  const headings=[...html.matchAll(/set\s+besteht\s+aus/gi)];
- const heading=headings.at(-1)?.index??-1;
- const listStart=heading>=0?html.indexOf('<ul',heading):-1;
+ const lastHeading=headings.at(-1)?.index??-1;
+ const candidateListStart=lastHeading>=0?html.indexOf('<ul',lastHeading):-1;
+ const listStart=candidateListStart>=lastHeading&&candidateListStart-lastHeading<=12000?candidateListStart:-1;
  const listEnd=listStart>=0?html.indexOf('</ul>',listStart):-1;
- if(listStart<0||listEnd<0)throw Error('Official page does not expose a readable set composition');
- const setList=html.slice(listStart,listEnd+5);
- const lines=[...setList.matchAll(/<li\b[^>]*>([\s\S]*?)<\/li>/gi)].map(match=>plain(match[1]));
+ let setList='';
+ let lines=[];
+ let compositionEnd=-1;
+ if(listStart>=0&&listEnd>=0){
+  setList=html.slice(listStart,listEnd+5);
+  compositionEnd=listEnd+5;
+  lines=[...setList.matchAll(/<li\b[^>]*>([\s\S]*?)<\/li>/gi)].map(match=>plain(match[1]));
+ }else{
+  const configurators=[...html.matchAll(/<div\b[^>]*class=["']([^"']*)["'][^>]*>/gi)]
+   .filter(match=>match[1].split(/\s+/).includes('artd-configurator'));
+  const start=configurators.at(-1)?.index??-1;
+  if(start>=0){
+   let depth=0;
+   for(const tag of html.matchAll(/<\/?div\b[^>]*>/gi)){
+    if(tag.index<start)continue;
+    depth+=tag[0].startsWith('</')?-1:1;
+    if(depth===0){compositionEnd=tag.index+tag[0].length;break}
+   }
+   if(compositionEnd>start)setList=html.slice(start,compositionEnd);
+   lines=[...setList.matchAll(/<div\b[^>]*class=["'][^"']*\bartd-configurator-element-selection-title\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/gi)].map(match=>plain(match[1]));
+  }
+ }
+ if(!lines.length)throw Error('Official page does not expose a readable set composition');
  const quantityOf=line=>Number(line.match(/^\s*(\d+)\s*[×x]\s*/)?.[1]||1);
  const isSystemLine=line=>{
   const name=normalize(line);
@@ -41,17 +62,22 @@ function validateProlightingMaui28G3Bundle(html,expected,contents){
   });
   return matches.reduce((total,line)=>total+quantityOf(line),0);
  };
+ const productMultiplier=Number(normalizedExpected.match(/\b(\d+)\s*x\s*maui 28 g3\b/)?.[1]||1);
+ if(!Number.isSafeInteger(productMultiplier)||productMultiplier<=0)throw Error('Bundle title has an invalid system quantity');
  for(const kind of requiredKinds){
   const expectedQuantity=expectedPieces.filter(piece=>piece.kind===kind).reduce((total,piece)=>total+piece.quantity,0);
   const foundQuantity=actualQuantity(kind);
-  if(foundQuantity!==expectedQuantity){
-   throw Error(`Official bundle contents confirm ${foundQuantity} ${kind} components; expected ${expectedQuantity}`);
+  if(foundQuantity*productMultiplier!==expectedQuantity){
+   throw Error(`Official bundle contents confirm ${foundQuantity} ${kind} components per unit; expected ${expectedQuantity/productMultiplier} per unit`);
   }
  }
  const expectedSystem=expectedPieces.find(piece=>piece.kind==='system');
  if(/schwarz|black/.test(expectedSystem.name)){
   const systemLines=lines.filter(isSystemLine);
-  if(systemLines.some(line=>/\b(?:weiss|white)\b/.test(normalize(line)))||!systemLines.some(line=>/\b(?:schwarz|black)\b/.test(normalize(line)))){
+  const accessoryDetails=html.indexOf('LD Systems MAUI 28 G3 SUB PC',compositionEnd);
+  const setProductDetails=plain(html.slice(compositionEnd,accessoryDetails>compositionEnd?accessoryDetails:undefined));
+  const systemColor=setProductDetails.match(/\bFarbe\s*:\s*(Schwarz|Weiß|Weiss|Black|White)\b/i)?.[1]||'';
+  if(systemLines.some(line=>/\b(?:weiss|white)\b/.test(normalize(line)))||(!systemLines.some(line=>/\b(?:schwarz|black)\b/.test(normalize(line)))&&!['schwarz','black'].includes(normalize(systemColor)))){
    throw Error('Official bundle contents do not confirm the required black MAUI 28 G3 system');
   }
  }

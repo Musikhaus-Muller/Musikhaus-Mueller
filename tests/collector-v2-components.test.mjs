@@ -55,4 +55,5 @@ test('collector v2 gives component targets the same public catalog fallback path
   assert.match(src, /recordComponentObservation\(\{ component, runId: run\.id, result \}\)/);
   assert.match(src, /shop_product_name,product_url,contents,calculation/);
   assert.match(src, /parsePrice\(html, offer\.shop_product_name \|\| '', new URL\(offer\.product_url\)\.hostname, offer\.contents \|\| ''\)/);
+  assert.match(src, /const parsed = parsePrice[\s\S]{0,250}const multiplier = multiplierFor\(offer\)[\s\S]{0,250}price: applyOfferMultiplier\(parsed\.price, multiplier\)/);
 });
