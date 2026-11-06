@@ -55,6 +55,33 @@ test('PRO LIGHTING acepta itemprop price aunque content aparezca antes',()=>{
  assert.equal(parsed.price,1439);
 });
 
+test('PRO LIGHTING ignora itemprop price cero y usa el precio comercial positivo',()=>{
+ const htmlFixture='<h1 itemprop="name">LD Systems MAUI 28 G3, Kompaktes Cardioid Säulen PA System</h1><div id="artd-buybox"><span content="0.00" itemprop="price">0,00 €</span><span class="price"><span content="1289.00" itemprop="price">1.289,00 €</span></span><meta itemprop="priceValidUntil" content="2027-11-06"></div><li>Farbe: Schwarz</li>';
+ const parsed=parsePrice(htmlFixture,'LD Systems MAUI 28 G3 schwarz','www.prolighting.de');
+ assert.equal(parsed.price,1289);
+});
+
+test('PRO LIGHTING ignora varios placeholders cero antes del precio del producto',()=>{
+ const htmlFixture='<h1 itemprop="name">LD Systems MAUI 28 G2</h1><div id="artd-buybox"><span content="0.00" itemprop="price">0,00 €</span><span content="0,00" itemprop="price">0,00 €</span><span content="919.00" itemprop="price">919,00 €</span><meta itemprop="priceValidUntil" content="2027-11-06"></div><li>Farbe: schwarz</li>';
+ const parsed=parsePrice(htmlFixture,'LD Systems MAUI 28 G2 schwarz','www.prolighting.de');
+ assert.equal(parsed.price,919);
+});
+
+test('PRO LIGHTING rechaza varios precios positivos distintos en el mismo producto',()=>{
+ const htmlFixture='<h1 itemprop="name">LD Systems MAUI 28 G3</h1><div id="artd-buybox"><span content="0.00" itemprop="price">0,00 €</span><span content="1289.00" itemprop="price">1.289,00 €</span><span content="1399.00" itemprop="price">1.399,00 €</span><meta itemprop="priceValidUntil" content="2027-11-06"></div><li>Farbe: Schwarz</li>';
+ assert.throws(()=>parsePrice(htmlFixture,'LD Systems MAUI 28 G3 schwarz','www.prolighting.de'));
+});
+
+test('PRO LIGHTING rechaza el precio positivo de un producto de color equivocado',()=>{
+ const htmlFixture='<h1 itemprop="name">LD Systems MAUI 28 G3 W, Kompaktes Cardioid Säulen PA System, Weiß</h1><div id="artd-buybox"><span content="0.00" itemprop="price">0,00 €</span><span content="999.00" itemprop="price">999,00 €</span><meta itemprop="priceValidUntil" content="2027-11-06"></div><li>Farbe: Weiß</li>';
+ assert.throws(()=>parsePrice(htmlFixture,'LD Systems MAUI 28 G3 schwarz','www.prolighting.de'));
+});
+
+test('PRO LIGHTING no acepta UVP ni financiación como precio comercial',()=>{
+ const htmlFixture='<h1 itemprop="name">LD Systems MAUI 28 G3, Kompaktes Cardioid Säulen PA System</h1><div id="artd-buybox"><span content="0.00" itemprop="price">0,00 €</span><div>Finanzierung ab 25,99 EUR / Monat</div><div>UVP: 1.559,90 €</div><div>inkl. MwSt.</div></div><li>Farbe: Schwarz</li>';
+ assert.throws(()=>parsePrice(htmlFixture,'LD Systems MAUI 28 G3 schwarz','www.prolighting.de'));
+});
+
 test('PRO LIGHTING usa el precio visible inmediatamente anterior a inkl MwSt',()=>{
  const htmlFixture='<h1>DAP Frigga - Aktive Einzelsäule PA-System - Weiß</h1><div>Finanzierung ab 19,67 EUR / Monat</div><div>UVP: 1.605,31 €</div><div>1.089,00 €</div><div>inkl. MwSt.</div>';
  const parsed=parsePrice(htmlFixture,'DAP Frigga Aktive Einzelsäule PA-System Weiss','www.prolighting.de');
