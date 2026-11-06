@@ -10,6 +10,11 @@ test('Supabase production audit is GET-only and workflow is manual', async()=>{
   assert.doesNotMatch(workflow,/schedule:/);
   assert.match(workflow,/permissions:\s*\n\s*contents: read/);
   assert.match(script,/fetch\(base\+'\/rest\/v1\/'\+path,\{headers/);
+  assert.match(script,/async function getAll\(/);
+  assert.match(script,/limit='\+pageSize\+'\&offset='\+offset/);
+  assert.match(script,/getAll\('price_observations/);
+  assert.match(script,/getAll\('component_price_observations/);
+  assert.match(script,/getAll\('collection_results/);
   assert.doesNotMatch(script,/method\s*:\s*['"](?:POST|PUT|PATCH|DELETE)['"]/i);
   assert.doesNotMatch(script,/\.rpc\(|\/rpc\//i);
   assert.doesNotMatch(script,/insert\s+into|update\s+public\.|delete\s+from/i);
