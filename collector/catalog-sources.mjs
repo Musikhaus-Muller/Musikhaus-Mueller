@@ -27,13 +27,19 @@ const significantTokens=expected=>normalize(expected.replace(/^\s*\d+\s*[×x]\s*
   .filter(t=>t.length>1 && !['ld','systems','system','set','bundle','kompaktes','portables','aktives','aktive','pa'].includes(t));
 
 export function publicCatalogSourceFor(shopSlug, expected) {
-  if (shopSlug !== 'prolighting') return null;
   const n=normalize(expected);
-  if (n.includes('maui 28 g3') && (n.includes('weiss') || n.includes('white'))) {
-    return 'https://www.prolighting.de/de/kategorie/3528';
+  if (shopSlug === 'prolighting') {
+    if (n.includes('maui 28 g3') && (n.includes('weiss') || n.includes('white'))) {
+      return 'https://www.prolighting.de/de/kategorie/3528';
+    }
+    if (n.includes('frigga') && (n.includes('weiss') || n.includes('white'))) {
+      return 'https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-weiss.html?fscs=1';
+    }
+    return null;
   }
-  if (n.includes('frigga') && (n.includes('weiss') || n.includes('white'))) {
-    return 'https://www.prolighting.de/de/tontechnik/lautsprecherboxen/audio-komplettsets/dap-frigga-aktive-einzelsaeule-pa-system-weiss.html?fscs=1';
+  if (shopSlug === 'kirstein') {
+    if (n.includes('maui')) return 'https://www.kirstein.de/Saeulensysteme/';
+    if (n.includes('dave')) return 'https://www.kirstein.de/PA-Komplettanlagen/';
   }
   return null;
 }

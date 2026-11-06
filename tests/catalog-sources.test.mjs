@@ -8,6 +8,25 @@ test('PRO LIGHTING maps white MAUI and Frigga to official public catalog sources
   assert.equal(publicCatalogSourceFor('prolighting','DAP Frigga schwarz'),null);
 });
 
+test('Kirstein maps MAUI and DAVE products to official public category pages',()=>{
+  assert.equal(publicCatalogSourceFor('kirstein','2 × LD Systems MAUI 28 G3 Schwarz'),'https://www.kirstein.de/Saeulensysteme/');
+  assert.equal(publicCatalogSourceFor('kirstein','LD Systems Dave 15 G4X Set'),'https://www.kirstein.de/PA-Komplettanlagen/');
+  assert.equal(publicCatalogSourceFor('kirstein','Wharfedale Pro WLA-210XP'),null);
+});
+
+test('catalog parser extracts Kirstein DAVE price from official category HTML',()=>{
+  const html='<div>LD Systems Dave 15 G4X Set</div><div>Aktive 2.1 PA</div><div>1.371,00 €</div><div>Versandkostenfrei inkl. MwSt.</div><div>Sofort lieferbar</div>';
+  const out=parseCatalogProductPrice(html,'LD Systems Dave 15 G4X Set');
+  assert.equal(out.price,1371);
+  assert.equal(out.available,true);
+});
+
+test('catalog parser keeps Kirstein model matching strict across nearby DAVE variants',()=>{
+  const html='<div>LD Systems Dave 15 G4X Set</div><div>1.371,00 €</div><div>Sofort lieferbar</div><div>LD Systems Dave 18 G4X Set</div><div>1.722,00 €</div><div>Sofort lieferbar</div>';
+  assert.equal(parseCatalogProductPrice(html,'LD Systems Dave 15 G4X Set').price,1371);
+  assert.equal(parseCatalogProductPrice(html,'LD Systems Dave 18 G4X Set').price,1722);
+});
+
 test('catalog parser extracts white MAUI sale price and ignores UVP',()=>{
   const html='<div>LD Systems MAUI 28 G3 W, Kompaktes Cardioid Säulen PA System, Weiß</div><div>UVP: 1.559,90 €</div><div>1.329,00 €</div><div>Ab ZentralLager lieferbar</div>';
   const out=parseCatalogProductPrice(html,'LD Systems MAUI 28 G3 W Kompaktes Cardioid Saeulen PA System Weiss');
