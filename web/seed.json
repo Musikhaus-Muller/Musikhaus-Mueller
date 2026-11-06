@@ -637,6 +637,34 @@
         "components": [
           "https://www.thomann.de/de/ld_systems_maui_28_g3.htm"
         ]
+      },
+      "hotsound": {
+        "name": "HotSound Warenkorb · MAUI 28 G3 Stereo",
+        "price": 2590,
+        "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+        "contents": "2 × MAUI 28 G3 schwarz.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "HotSound offizielle öffentliche Produktseite verifiziert · 06.11.2026",
+        "calculation": "2 × 1.295 € = 2.590 €",
+        "note": "Vollständiger verifizierter HotSound-Komponentenpreis aus zwei identischen MAUI 28 G3 Systemen.",
+        "source": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+        "sourceName": "LD Systems MAUI 28 G3",
+        "lastAttempt": "2026-11-06",
+        "classification": "complete_component_calc",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 28 G3",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+            "quantity": 2,
+            "unitPrice": 1295
+          }
+        ]
       }
     }
   },
@@ -1174,6 +1202,41 @@
         "note": "Direktes Müller Power Bundle in schwarzer Referenzkonfiguration.",
         "source": "https://www.musikhaus-mueller.de/ld-systems-maui-11-g3-power-bundle-set-schwarz/",
         "lastAttempt": "2026-11-04"
+      },
+      "hotsound": {
+        "name": "HotSound Warenkorb · MAUI 11 G3 Power Bundle",
+        "price": 3328,
+        "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+        "contents": "2 × MAUI 11 G3 schwarz; 2 × MAUI 11 G3 SUB.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "HotSound offizielle öffentliche Produktseiten verifiziert · 06.11.2026",
+        "calculation": "2 × 919 € + 2 × 745 € = 3.328 €",
+        "note": "Vollständiger Power-Bundle-Komponentenpreis; SUB bezeichnet den zusätzlichen aktiven Subwoofer, nicht SUB PC.",
+        "source": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+        "sourceName": "LD Systems MAUI 11 G3 + MAUI 11 G3 SUB",
+        "lastAttempt": "2026-11-06",
+        "classification": "complete_component_calc",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+          "https://www.hotsound-store.com/ld-systems-maui-11-g3-sub-11682"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 11 G3",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+            "quantity": 2,
+            "unitPrice": 919
+          },
+          {
+            "name": "LD Systems MAUI 11 G3 SUB",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-sub-11682",
+            "quantity": 2,
+            "unitPrice": 745
+          }
+        ]
       }
     }
   },
@@ -1281,6 +1344,41 @@
             "url": "https://www.prolighting.de/en/accessories/cable-connectors/audio-cable/xlr-xlr/ah-cables-3-star-mmf-0300-mikrofonkabel-adam-hall-r-xlr-female-x-xlr-male-3-m.html",
             "quantity": 2,
             "unitPrice": 6.72
+          }
+        ]
+      },
+      "hotsound": {
+        "name": "HotSound Warenkorb · MAUI 28 G3 Power Bundle",
+        "price": 4468,
+        "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+        "contents": "2 × MAUI 28 G3 schwarz; 2 × MAUI 28 G3 SUB.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "HotSound offizielle öffentliche Produktseiten verifiziert · 06.11.2026",
+        "calculation": "2 × 1.295 € + 2 × 939 € = 4.468 €",
+        "note": "Vollständiger Power-Bundle-Komponentenpreis; der zusätzliche SUB ist der aktive MAUI 28 G3 SUB, nicht SUB PC.",
+        "source": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+        "sourceName": "LD Systems MAUI 28 G3 + MAUI 28 G3 SUB",
+        "lastAttempt": "2026-11-06",
+        "classification": "complete_component_calc",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+          "https://www.hotsound-store.com/ld-systems-maui-28-g3-sub-11684"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 28 G3",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+            "quantity": 2,
+            "unitPrice": 1295
+          },
+          {
+            "name": "LD Systems MAUI 28 G3 SUB",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-sub-11684",
+            "quantity": 2,
+            "unitPrice": 939
           }
         ]
       }
