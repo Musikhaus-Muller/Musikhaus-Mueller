@@ -16,6 +16,17 @@ async function get(path){
   return text?JSON.parse(text):[];
 }
 
+async function getAll(path,{pageSize=1000}={}){
+  const rows=[];
+  for(let offset=0;;offset+=pageSize){
+    const join=path.includes('?')?'&':'?';
+    const page=await get(path+join+'limit='+pageSize+'&offset='+offset);
+    rows.push(...page);
+    if(page.length<pageSize) break;
+  }
+  return rows;
+}
+
 const HOTSOUND_BAD_RUN='26b5de17-c258-4503-997f-a51831f37a44';
 
 const [shops,configs,offers,components,prices,componentPrices,runs,results,current]=await Promise.all([
@@ -23,10 +34,10 @@ const [shops,configs,offers,components,prices,componentPrices,runs,results,curre
   get('configurations?select=id,legacy_id,name,active'),
   get('offers?select=id,configuration_id,shop_id,shop_product_name,active'),
   get('offer_components?select=id,offer_id,active'),
-  get('price_observations?select=id,offer_id,run_id,price,status,verified,source_method,observed_at,created_at'),
-  get('component_price_observations?select=id,offer_component_id,run_id,price,status,verified,observed_at,created_at'),
+  getAll('price_observations?select=id,offer_id,run_id,price,status,verified,source_method,observed_at,created_at'),
+  getAll('component_price_observations?select=id,offer_component_id,run_id,price,status,verified,observed_at,created_at'),
   get('collection_runs?select=id,trigger_type,status,started_at,finished_at,offers_total,offers_checked,offers_updated,offers_failed,metadata&order=started_at.desc&limit=50'),
-  get('collection_results?select=id,run_id,offer_id,status,price,source_method,http_status,created_at'),
+  getAll('collection_results?select=id,run_id,offer_id,status,price,source_method,http_status,created_at'),
   get('current_offer_status?select=offer_id,price,price_observed_at,last_attempt_status,last_attempt_at')
 ]);
 
@@ -192,7 +203,7 @@ const countsByShop=activeShops.map(shop=>({
 
 const report={
   generated_at:new Date().toISOString(),
-  mode:'READ_ONLY_GET_ONLY',
+  mode:'READ_ONLY_GET_ONLY_PAGINATED',
   counts:{
     active_shops:activeShops.length,
     active_configurations:activeConfigs.length,
