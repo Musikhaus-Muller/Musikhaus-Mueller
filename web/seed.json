@@ -969,6 +969,20 @@
         "components": [
           "https://www.thomann.de/de/ld_systems_maui_44_g2.htm"
         ]
+      },
+      "hotsound": {
+        "name": "LD Systems MAUI 44 G2 SET2",
+        "price": 3998,
+        "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
+        "contents": "2 × MAUI 44 G2 schwarz.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "HotSound offizielle SET2-Produktseite bestätigt zwei MAUI 44 G2 · 06.11.2026",
+        "note": "Direktes Stereo-Set; die Produktbeschreibung bestätigt zwei MAUI 44 G2 Systeme.",
+        "source": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
+        "lastAttempt": "2026-11-06",
+        "classification": "exact_price"
       }
     }
   },
@@ -1034,6 +1048,54 @@
           "https://www.thomann.de/de/ld_systems_maui_44_g2_sat_bag.htm",
           "https://www.thomann.de/de/ld_systems_wheelboard_f._maui_44_g2.htm"
         ]
+      },
+      "hotsound": {
+        "name": "HotSound Warenkorb · MAUI 44 G2 Stereo Touring",
+        "price": 4544,
+        "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
+        "contents": "2 × MAUI 44 G2 SET2-Systeme; 2 × MAUI 44 G2 SUB PC; 2 × MAUI 44 G2 SAT BAG; 2 × MAUI 44 G2 CB Rollbrett.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "HotSound offizielle Produktseiten für SET2 und MAUI 44 G2 Zubehör verifiziert · 06.11.2026",
+        "calculation": "3.998 € + 2 × 59 € + 2 × 95 € + 2 × 119 € = 4.544 €",
+        "note": "SET2 enthält zwei MAUI 44 G2 Systeme; zusätzliche Komponenten sind die exakten G2 SUB PC, SAT BAG und CB Rollbretter.",
+        "source": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
+        "lastAttempt": "2026-11-06",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
+          "https://www.hotsound-store.com/ld-systems-maui-44-g2-sub-pc-12144",
+          "https://www.hotsound-store.com/ld-systems-maui-44-g2-sat-bag-12145",
+          "https://www.hotsound-store.com/ld-systems-maui-44-g2-cb-12143"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 44 G2 SET2 (2 Systeme)",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
+            "quantity": 1,
+            "unitPrice": 3998
+          },
+          {
+            "name": "LD Systems MAUI 44 G2 SUB PC",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-sub-pc-12144",
+            "quantity": 2,
+            "unitPrice": 59
+          },
+          {
+            "name": "LD Systems MAUI 44 G2 SAT BAG",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-sat-bag-12145",
+            "quantity": 2,
+            "unitPrice": 95
+          },
+          {
+            "name": "LD Systems MAUI 44 G2 CB Rollbrett",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-cb-12143",
+            "quantity": 2,
+            "unitPrice": 119
+          }
+        ],
+        "classification": "complete_component_calc"
       }
     }
   },
@@ -1340,6 +1402,47 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2-Sat-Bag/art-PAH0018753-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2-Sub-PC/art-PAH0018754-000"
         ]
+      },
+      "hotsound": {
+        "name": "HotSound Warenkorb · MAUI 11 G2 Bundle",
+        "price": 839,
+        "url": "https://www.hotsound-store.com/ld-systems-maui-11-g2-316",
+        "contents": "1 × MAUI 11 G2; 1 × MAUI 11 G2 SAT BAG; 1 × MAUI 11 G2 SUB PC.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "HotSound offizielle páginas de producto MAUI 11 G2 y accesorios verificados · 06.11.2026",
+        "calculation": "729 € + 65 € + 45 € = 839 €",
+        "note": "Carrito completo con SAT BAG y SUB PC de la generación G2.",
+        "source": "https://www.hotsound-store.com/ld-systems-maui-11-g2-316",
+        "lastAttempt": "2026-11-06",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.hotsound-store.com/ld-systems-maui-11-g2-316",
+          "https://www.hotsound-store.com/ld-systems-maui-11-g2-sat-bag-317",
+          "https://www.hotsound-store.com/ld-systems-maui-11-g2-sub-pc-318"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 11 G2",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-11-g2-316",
+            "quantity": 1,
+            "unitPrice": 729
+          },
+          {
+            "name": "LD Systems MAUI 11 G2 SAT BAG",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-11-g2-sat-bag-317",
+            "quantity": 1,
+            "unitPrice": 65
+          },
+          {
+            "name": "LD Systems MAUI 11 G2 SUB PC",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-11-g2-sub-pc-318",
+            "quantity": 1,
+            "unitPrice": 45
+          }
+        ],
+        "classification": "complete_component_calc"
       }
     }
   },
@@ -1442,6 +1545,47 @@
             "unitPrice": 45
           }
         ]
+      },
+      "hotsound": {
+        "name": "HotSound Warenkorb · MAUI 28 G2 Bundle",
+        "price": 928,
+        "url": "https://www.hotsound-store.com/ld-systems-maui-28-g2-319",
+        "contents": "1 × MAUI 28 G2; 1 × MAUI 28 G2 SAT BAG; 1 × MAUI 28 G2 SUB PC.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "HotSound offizielle páginas de producto MAUI 28 G2 y accesorios verificados · 06.11.2026",
+        "calculation": "798 € + 85 € + 45 € = 928 €",
+        "note": "Carrito completo con SAT BAG y SUB PC de la generación G2.",
+        "source": "https://www.hotsound-store.com/ld-systems-maui-28-g2-319",
+        "lastAttempt": "2026-11-06",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.hotsound-store.com/ld-systems-maui-28-g2-319",
+          "https://www.hotsound-store.com/ld-systems-maui-28-g2-sat-bag-320",
+          "https://www.hotsound-store.com/ld-systems-maui-28-g2-sub-pc-321"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 28 G2",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-28-g2-319",
+            "quantity": 1,
+            "unitPrice": 798
+          },
+          {
+            "name": "LD Systems MAUI 28 G2 SAT BAG",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-28-g2-sat-bag-320",
+            "quantity": 1,
+            "unitPrice": 85
+          },
+          {
+            "name": "LD Systems MAUI 28 G2 SUB PC",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-28-g2-sub-pc-321",
+            "quantity": 1,
+            "unitPrice": 45
+          }
+        ],
+        "classification": "complete_component_calc"
       }
     }
   },
