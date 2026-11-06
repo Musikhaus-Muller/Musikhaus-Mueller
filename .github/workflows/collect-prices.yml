@@ -1,4 +1,5 @@
 name: Collect prices
+run-name: Collect prices / ${{ github.event.inputs.collection_run_id || github.run_id }}
 
 on:
   workflow_dispatch:
@@ -18,6 +19,10 @@ on:
           - musicstore
       limit:
         description: Optional maximum number of offers
+        required: false
+        type: string
+      collection_run_id:
+        description: Existing Supabase run reserved by the website
         required: false
         type: string
   schedule:
@@ -59,14 +64,19 @@ jobs:
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
       COLLECT_TRIGGER: ${{ github.event_name == 'schedule' && 'schedule' || 'manual' }}
+      COLLECT_RUN_ID: ${{ inputs.collection_run_id }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Claim website-reserved run
+        id: claim
+        run: node claim-manual-run.mjs
       - run: npm install
       - run: npx playwright install --with-deps chromium
       - name: Collect
+        id: collect
         run: |
           SHOP="${{ inputs.shop }}"
           LIMIT="${{ inputs.limit }}"
@@ -75,3 +85,10 @@ jobs:
           if [ -n "$SHOP" ] && [ "$SHOP" != "all" ]; then ARGS+=("--shop=$SHOP"); fi
           if [ -n "$LIMIT" ]; then ARGS+=("--limit=$LIMIT"); fi
           node run.mjs "${ARGS[@]}"
+      - name: Finalize failed manual run
+        if: ${{ always() && inputs.collection_run_id != '' && steps.claim.outcome == 'success' && steps.collect.outcome != 'success' }}
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+          COLLECT_RUN_ID: ${{ inputs.collection_run_id }}
+        run: node finalize-run.mjs

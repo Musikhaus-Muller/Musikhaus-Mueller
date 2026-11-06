@@ -94,11 +94,13 @@ test('JSON-LD ItemList anidado permite extraer producto de una categoría',()=>{
  assert.equal(parsed.available,true);
 });
 
-test('API refresh legacy está retirada',async()=>{
- const r=await worker.fetch(new Request('https://site/api/refresh',{method:'POST'}),{});
- assert.equal(r.status,410);
- const body=await r.json();
- assert.equal(body.collector,'github-actions');
+test('public refresh and manual dispatch endpoints stay retired',async()=>{
+ const legacy=await worker.fetch(new Request('https://site/api/refresh',{method:'POST'}),{});
+ assert.equal(legacy.status,410);
+ const manual=await worker.fetch(new Request('https://site/api/updates/manual',{method:'POST'}),{});
+ assert.equal(manual.status,410);
+ const body=await manual.json();
+ assert.match(body.message,/GitHub Actions/);
 });
 
 test('MCP conserva las dos herramientas sin depender de R2',async()=>{

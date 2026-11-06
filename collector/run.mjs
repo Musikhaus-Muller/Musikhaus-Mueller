@@ -291,16 +291,39 @@ const selected = offers
   .filter(o => o.shop && (o.metadata?.collection_disabled !== true || o.components.length > 0) && (!shopFilter || o.shop.slug === shopFilter))
   .slice(0, Number.isFinite(limit) ? limit : offers.length);
 
-const [run] = await rest('collection_runs', {
-  method: 'POST',
-  prefer: 'return=representation',
-  body: [{
-    trigger_type: process.env.COLLECT_TRIGGER || (process.env.GITHUB_ACTIONS ? 'manual' : 'manual'),
-    status: 'running',
-    offers_total: selected.length,
-    metadata: { shop: shopFilter, httpOnly, strategyVersion: 1 }
-  }]
-});
+const runMetadata = { shop: shopFilter, httpOnly, strategyVersion: 1 };
+let run;
+if (process.env.COLLECT_RUN_ID) {
+  const runId = process.env.COLLECT_RUN_ID;
+  if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(runId)) {
+    throw new Error('COLLECT_RUN_ID must be a UUID');
+  }
+  [run] = await rest(`collection_runs?id=eq.${encodeURIComponent(runId)}&status=eq.running`, {
+    method: 'PATCH',
+    prefer: 'return=representation',
+    body: {
+      offers_total: selected.length,
+      metadata: {
+        ...(run.metadata || {}),
+        ...runMetadata,
+        source: 'web',
+        lifecycle: 'running'
+      }
+    }
+  });
+  if (!run) throw new Error(`Reserved collection run not found: ${runId}`);
+} else {
+  [run] = await rest('collection_runs', {
+    method: 'POST',
+    prefer: 'return=representation',
+    body: [{
+      trigger_type: process.env.COLLECT_TRIGGER || 'manual',
+      status: 'running',
+      offers_total: selected.length,
+      metadata: runMetadata
+    }]
+  });
+}
 
 let checked = 0, updated = 0, failed = 0;
 const browserBlockedHosts = new Set();
@@ -405,7 +428,12 @@ try {
       finished_at: new Date().toISOString(),
       offers_checked: checked,
       offers_updated: updated,
-      offers_failed: failed
+      offers_failed: failed,
+      metadata: {
+        ...(run.metadata || runMetadata),
+        lifecycle: status === 'success' ? 'success' : status === 'partial' ? 'partial' : 'failed',
+        collector_finished_at: new Date().toISOString()
+      }
     }
   });
   console.log(JSON.stringify({ runId: run.id, status, checked, updated, failed }, null, 2));

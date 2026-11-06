@@ -66,8 +66,12 @@ Supabase es la única fuente persistente del catálogo, precios, estado e histor
 
 - `/api/catalog`, `/data.json` y `/data.js`: catálogo desde Supabase.
 - `/api/status` y `/api/runs`: ejecuciones desde Supabase.
-- `/api/refresh`: retirado; la recolección se ejecuta mediante el collector/GitHub Actions.
+- `POST /api/updates/manual`: retirado. La web pública no puede disparar GitHub Actions.
 - MCP: consulta estado en Supabase; no mantiene persistencia propia.
+
+La actualización diaria sigue ejecutándose a las 07:15 UTC. Las actualizaciones manuales se lanzan únicamente desde GitHub Actions (`Collect prices` → `Run workflow`) por usuarios con permisos sobre el repositorio. El Worker no necesita Cloudflare Access, `CF_ACCESS_*` ni `GITHUB_ACTIONS_TOKEN`; solo necesita acceso servidor a Supabase para catálogo, estado e historial.
+
+El botón público `Preise neu laden` únicamente vuelve a leer catálogo, estado e historial desde Supabase. No inicia una recolección.
 
 `web/seed.json` queda como fixture/referencia de desarrollo y para pruebas de paridad, no como fuente de producción.
 

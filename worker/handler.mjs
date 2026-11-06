@@ -99,7 +99,7 @@ function supabaseHeaders(env){
 }
 export function mapSupabaseRun(run,results=[]){
  const trigger={schedule:'scheduled',manual:'manual',api:'unknown',import:'unknown'}[run.trigger_type]||'unknown';
- const status={running:'running',success:'complete',partial:'partial',failed:'partial'}[run.status]||run.status;
+ const status=run.status;
  const mappedResults=results.map(x=>({
   shop:x.offer?.shop?.slug||'unknown',
   url:x.offer?.product_url||'',
@@ -110,10 +110,22 @@ export function mapSupabaseRun(run,results=[]){
   changes:[]
  }));
  const issues=mappedResults.filter(x=>x.status==='error').map(x=>({shop:x.shop,url:x.url,message:x.message}));
+ const shops=[...mappedResults.reduce((groups,result)=>{
+  const group=groups.get(result.shop)||{shop:result.shop,total:0,confirmed:0,failed:0};
+  group.total++;
+  if(result.status==='confirmed')group.confirmed++;else group.failed++;
+  groups.set(result.shop,group);
+  return groups;
+ },new Map()).values()].map(shop=>({
+  ...shop,
+  status:shop.failed===0?'success':shop.confirmed>0?'partial':'failed'
+ }));
  return {
   id:run.id,
   trigger,
   status,
+  phase:run.metadata?.lifecycle||null,
+  reason:run.metadata?.error||run.metadata?.finalized_reason||null,
   startedAt:run.started_at,
   finishedAt:run.finished_at,
   processed:run.offers_checked||0,
@@ -121,13 +133,14 @@ export function mapSupabaseRun(run,results=[]){
   confirmed:run.offers_updated||0,
   failed:run.offers_failed||0,
   changed:0,
+  shops,
   issues,
   results:mappedResults
  };
 }
 async function loadSupabaseRuns(env,fetcher=fetch,limit=30){
  const {base,headers}=supabaseHeaders(env);
- const runsRes=await fetcher(base+`/rest/v1/collection_runs?select=id,trigger_type,status,started_at,finished_at,offers_total,offers_checked,offers_updated,offers_failed&order=started_at.desc&limit=${limit}`,{headers,signal:AbortSignal.timeout(15000)});
+ const runsRes=await fetcher(base+`/rest/v1/collection_runs?select=id,trigger_type,status,started_at,finished_at,offers_total,offers_checked,offers_updated,offers_failed,metadata&order=started_at.desc&limit=${limit}`,{headers,signal:AbortSignal.timeout(15000)});
  if(!runsRes.ok)throw Error('Supabase-Runs HTTP '+runsRes.status);
  const runs=await runsRes.json();
  if(!runs.length)return [];
@@ -144,7 +157,7 @@ async function loadSupabaseRuns(env,fetcher=fetch,limit=30){
 }
 async function loadSupabaseStatus(env,fetcher=fetch){
  const runs=await loadSupabaseRuns(env,fetcher,1);
- return {updatedAt:runs[0]?.finishedAt||null,run:runs[0]||null};
+ return {updatedAt:runs[0]?.finishedAt||runs[0]?.startedAt||null,run:runs[0]||null};
 }
 const toolList=[
  {name:'refresh_prices',description:'Devuelve el estado actual de la recolección. La actualización de precios se ejecuta mediante el collector programado en GitHub Actions.',inputSchema:{type:'object',properties:{},additionalProperties:false}},
@@ -171,8 +184,9 @@ export default{async fetch(request,env){
    return json({jsonrpc:'2.0',id:q.id,result});
   }
   if(path==='/api/refresh'&&request.method==='POST'){
-   return json({error:'Endpoint retirado',collector:'github-actions',message:'La actualización de precios se ejecuta mediante el collector programado.'},410);
+   return json({error:'Endpoint retirado',collector:'github-actions',message:'Las actualizaciones manuales se ejecutan únicamente desde GitHub Actions.'},410);
   }
+  if(path==='/api/updates/manual'&&request.method==='POST')return json({error:'Endpoint retirado',collector:'github-actions',message:'Las actualizaciones manuales están disponibles solo para administradores mediante GitHub Actions.'},410);
   if(path==='/api/catalog'){
    const rows=await requireSupabaseCatalog(env);
    return json({source:'supabase',rows});
