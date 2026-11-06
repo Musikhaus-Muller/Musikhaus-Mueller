@@ -18,7 +18,12 @@ export function classifyError(error) {
   const message = String(error?.message || error);
   if (/captcha|cf-chl|just a moment|zugriffsschutz/i.test(message)) return 'captcha';
   if (/HTTP (403|429)/i.test(message)) return 'blocked';
+  if (/HTTP (404|410)/i.test(message)) return 'not_found';
   if (/timeout|zeitüberschreitung/i.test(message)) return 'network_error';
   if (/eindeutiger EUR|price|preis|bundle contents|bundle composition|set composition|components; expected|black MAUI|unclassified component|unrecognized quantity|invalid quantity|official page does not expose/i.test(message)) return 'parse_error';
   return 'network_error';
+}
+
+export function classifyHttpStatus(status) {
+  return classifyError(new Error(`HTTP ${Number(status)}`));
 }
