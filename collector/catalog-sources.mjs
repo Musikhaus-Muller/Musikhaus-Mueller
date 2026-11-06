@@ -37,6 +37,17 @@ export function publicCatalogSourceFor(shopSlug, expected) {
     }
     return null;
   }
+  if (shopSlug === 'hotsound') {
+    if (n.includes('ld systems') || n.includes('maui') || n.includes('stinger') || n.includes('icoa')) {
+      return 'https://www.hotsound-store.com/ld-systems/';
+    }
+    if (n.includes('dap') || n.includes('frigga')) {
+      return 'https://www.hotsound-store.com/dap/';
+    }
+    if (n.includes('wharfedale') || n.includes('delta') || n.includes('wla')) {
+      return 'https://www.hotsound-store.com/wharfedale-pro/';
+    }
+  }
   return null;
 }
 

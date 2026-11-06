@@ -8,6 +8,19 @@ test('PRO LIGHTING maps white MAUI and Frigga to official public catalog sources
   assert.equal(publicCatalogSourceFor('prolighting','DAP Frigga schwarz'),null);
 });
 
+test('Hot Sound maps LD Systems, DAP and Wharfedale to official brand catalog pages',()=>{
+  assert.equal(publicCatalogSourceFor('hotsound','LD Systems MAUI 28 G3'),'https://www.hotsound-store.com/ld-systems/');
+  assert.equal(publicCatalogSourceFor('hotsound','DAP Frigga Stereo schwarz'),'https://www.hotsound-store.com/dap/');
+  assert.equal(publicCatalogSourceFor('hotsound','Wharfedale Pro WLA-210XP'),'https://www.hotsound-store.com/wharfedale-pro/');
+  assert.equal(publicCatalogSourceFor('hotsound','RCF ART 932-A'),null);
+});
+
+test('catalog parser extracts Hot Sound brand-page product price with strict model matching',()=>{
+  const html='<div>LD Systems MAUI 11 G3</div><div>919,00 €</div><div>Lieferbar</div><div>LD Systems MAUI 28 G3</div><div>1.289,00 €</div><div>Lieferbar</div>';
+  assert.equal(parseCatalogProductPrice(html,'LD Systems MAUI 11 G3').price,919);
+  assert.equal(parseCatalogProductPrice(html,'LD Systems MAUI 28 G3').price,1289);
+});
+
 test('catalog parser extracts white MAUI sale price and ignores UVP',()=>{
   const html='<div>LD Systems MAUI 28 G3 W, Kompaktes Cardioid Säulen PA System, Weiß</div><div>UVP: 1.559,90 €</div><div>1.329,00 €</div><div>Ab ZentralLager lieferbar</div>';
   const out=parseCatalogProductPrice(html,'LD Systems MAUI 28 G3 W Kompaktes Cardioid Saeulen PA System Weiss');
