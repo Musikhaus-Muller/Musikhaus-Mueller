@@ -25,6 +25,6 @@ test('five browser-verified Thomann rows are normalized without rewriting histor
   for(const id of ['r11','r12','r14','r19','r29']) assert.match(sql,new RegExp("'"+id+"'"));
   for(const price of ['4419','7269','999','3305','7759']) assert.match(sql,new RegExp('\\b'+price+'\\b'));
   assert.match(sql,/'browser_audit'/);
-  assert.match(sql,/verified,\n\s*true/);
+  assert.match(sql,/['"]browser_audit['"][\s\S]*?\n\s*true,/);
   assert.doesNotMatch(sql,/update\s+public\.price_observations\s+set/i);
 });
