@@ -1,0 +1,30 @@
+name: Audit Supabase production (read-only)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run GET-only production audit
+        run: node scripts/audit-supabase-readonly.mjs
+      - name: Upload aggregated audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: supabase-production-readonly-audit
+          path: |
+            reports/supabase-production-readonly-audit.md
+            reports/supabase-production-readonly-audit.json
+          retention-days: 7
