@@ -27,3 +27,16 @@ test('frontend lists Music Store as sixth shop',async()=>{
  assert.match(html,/Alle 6 Händler/);
  assert.match(html,/Müller \+ Music Store/);
 });
+
+test('a not_found attempt keeps the last successful Thomann price visible',()=>{
+ const [row]=mod.toFrontendRows([{
+  legacy_id:'r12',brand:'LD Systems',family:'MAUI',configuration_name:'MAUI 44 G2 Power Bundle',subtitle:'',
+  shop_slug:'thomann',shop_product_name:'LD Systems Maui 44 G2 Power Bundle',product_url:'https://www.thomann.de/de/ld_systems_maui_44_g2_power_bundle.htm',
+  contents:'2 × MAUI 44 G2 Komplettsystem; 2 × zusätzliche Subwoofer.',match_type:'exact',source_url:'https://www.thomann.de/de/ld_systems_maui_44_g2_power_bundle.htm',
+  price:'7269.00',availability:'available',price_source_method:'http',price_observed_at:'2026-10-17T00:00:00Z',
+  last_attempt_status:'not_found',last_attempt_method:'http',last_attempt_http_status:404,last_attempt_error:'HTTP 404',last_attempt_at:'2026-11-06T11:00:00Z'
+ }]);
+ assert.equal(row.offers.thomann.price,7269);
+ assert.equal(row.offers.thomann.verifiedToday,false);
+ assert.match(row.offers.thomann.fetchStatus,/not_found.*HTTP 404/);
+});

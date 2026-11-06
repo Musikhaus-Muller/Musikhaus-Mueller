@@ -2,7 +2,7 @@ import { chromium } from 'playwright';
 import { parsePrice } from '../worker/handler.mjs';
 import { strategyFor } from './strategies.mjs';
 import { aggregateComponentResults, expectedNameFromUrl } from './components.mjs';
-import { applyOfferMultiplier, classifyError, multiplierFor } from './pricing.mjs';
+import { applyOfferMultiplier, classifyError, classifyHttpStatus, multiplierFor } from './pricing.mjs';
 import { publicCatalogSourceFor, parseCatalogProductPrice, catalogDiagnostic } from './catalog-sources.mjs';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
@@ -99,11 +99,8 @@ async function catalogAttemptTarget(offer, shopSlug) {
   } catch (e) {
     return { method: 'catalog', status: 'network_error', error: e.message };
   }
-  if (res.status === 403 || res.status === 429) {
-    return { method: 'catalog', status: 'blocked', httpStatus: res.status, error: `HTTP ${res.status}` };
-  }
   if (!res.ok) {
-    return { method: 'catalog', status: 'network_error', httpStatus: res.status, error: `HTTP ${res.status}` };
+    return { method: 'catalog', status: classifyHttpStatus(res.status), httpStatus: res.status, error: `HTTP ${res.status}` };
   }
 
   const html = await res.text();
@@ -144,11 +141,8 @@ async function httpAttemptTarget(offer) {
   } catch (e) {
     return { method: 'http', status: 'network_error', error: e.message };
   }
-  if (res.status === 403 || res.status === 429) {
-    return { method: 'http', status: 'blocked', httpStatus: res.status, error: `HTTP ${res.status}` };
-  }
   if (!res.ok) {
-    return { method: 'http', status: 'network_error', httpStatus: res.status, error: `HTTP ${res.status}` };
+    return { method: 'http', status: classifyHttpStatus(res.status), httpStatus: res.status, error: `HTTP ${res.status}` };
   }
   const html = await res.text();
   try {

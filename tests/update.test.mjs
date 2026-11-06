@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import { applyOfferMultiplier, classifyError, multiplierFor } from '../collector/pricing.mjs';
+import { applyOfferMultiplier, classifyError, classifyHttpStatus, multiplierFor } from '../collector/pricing.mjs';
 
 const src=await fs.readFile('dist/server/index.js','utf8');
 const {default:worker,parsePrice}=await import('data:text/javascript;base64,'+Buffer.from(src).toString('base64'));
@@ -136,6 +136,17 @@ test('PRO LIGHTING composition validation errors are parse errors, not network e
  assert.equal(classifyError(new Error('Official bundle contents confirm 1 system components per unit; expected 1 per unit')),'parse_error');
  assert.equal(classifyError(new Error('Official page does not expose a readable set composition')),'parse_error');
  assert.equal(classifyError(new Error('Bundle composition contains an unclassified component')),'parse_error');
+});
+
+test('HTTP status classification distinguishes missing Thomann pages from transient failures',()=>{
+ assert.equal(classifyHttpStatus(404),'not_found');
+ assert.equal(classifyHttpStatus(410),'not_found');
+ assert.equal(classifyError(new Error('HTTP 404')),'not_found');
+ assert.equal(classifyHttpStatus(429),'blocked');
+ assert.equal(classifyHttpStatus(403),'blocked');
+ assert.equal(classifyHttpStatus(503),'network_error');
+ assert.equal(classifyError(new Error('ETIMEDOUT')),'network_error');
+ assert.equal(classifyError(new Error('CAPTCHA / access challenge detected')),'captcha');
 });
 
 test('PRO LIGHTING rejects the white official set and base-system page for the black bundle',async()=>{
