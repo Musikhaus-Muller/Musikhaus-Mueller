@@ -10,6 +10,14 @@ test('collector strategies avoid browser retries for known blocked shops', () =>
   assert.equal(strategyFor('musicstore').browserFallback, false);
 });
 
+test('Kirstein retries the same official page once with a static compatible profile before preserving', () => {
+  const kirstein = strategyFor('kirstein');
+  assert.equal(kirstein.mode, 'http-with-compatible-retry');
+  assert.equal(kirstein.compatibleHttpRetry, true);
+  assert.equal(kirstein.browserFallback, false);
+  assert.equal(kirstein.publicSource, null);
+});
+
 test('PRO LIGHTING uses official public catalog fallback without browser retry', () => {
   const prolighting = strategyFor('prolighting');
   assert.equal(prolighting.mode, 'http-with-public-catalog');

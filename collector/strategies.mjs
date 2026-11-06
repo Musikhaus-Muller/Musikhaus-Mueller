@@ -20,9 +20,10 @@ export const SHOP_STRATEGIES = {
     }
   },
   kirstein: {
-    mode: 'http-preserve-on-block',
+    mode: 'http-with-compatible-retry',
     browserFallback: false,
-    publicSource: null
+    publicSource: null,
+    compatibleHttpRetry: true
   },
   hotsound: {
     mode: 'http-preserve-on-block',
