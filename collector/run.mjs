@@ -4,6 +4,7 @@ import { strategyFor } from './strategies.mjs';
 import { aggregateComponentResults, expectedNameFromUrl } from './components.mjs';
 import { applyOfferMultiplier, classifyError, classifyHttpStatus, multiplierFor } from './pricing.mjs';
 import { publicCatalogSourceFor, parseCatalogProductPrice, catalogDiagnostic } from './catalog-sources.mjs';
+import { deriveRunHealth } from './result-health.mjs';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -306,13 +307,14 @@ if (process.env.COLLECT_RUN_ID) {
   });
 }
 
-let checked = 0, updated = 0, failed = 0;
+const results = [];
 const browserBlockedHosts = new Set();
+let fatalError = null;
 try {
   for (const offer of selected) {
     const shop = offer.shop;
     const strategy = strategyFor(shop.slug);
-    process.stdout.write(`[${checked + 1}/${selected.length}] ${shop.name} · ${offer.configuration?.name || offer.id} ... `);
+    process.stdout.write(`[${results.length + 1}/${selected.length}] ${shop.name} · ${offer.configuration?.name || offer.id} ... `);
 
     let final;
     if (offer.components.length > 0) {
@@ -389,33 +391,58 @@ try {
       }]
     });
 
-    checked++;
+    results.push({ status: final.status });
     if (final.status === 'success') {
-      updated++;
       console.log(`OK ${final.price} EUR (${final.method})`);
     } else {
-      failed++;
-      console.log(`${final.status}: ${final.error}`);
+      console.log(`${final.status}: ${final.error}; previous valid price preserved`);
     }
   }
+} catch (error) {
+  fatalError = error;
+  throw error;
 } finally {
-  if (browser) await browser.close();
-  const status = failed === 0 ? 'success' : updated > 0 ? 'partial' : 'failed';
+  let closeError = null;
+  if (browser) {
+    try {
+      await browser.close();
+    } catch (error) {
+      closeError = error;
+      if (!fatalError) fatalError = error;
+    }
+  }
+  const health = deriveRunHealth(results, { fatalError });
+  const { status, checked, updated, preserved, hardFailed } = health;
+  const finishedAt = new Date().toISOString();
   await rest(`collection_runs?id=eq.${run.id}`, {
     method: 'PATCH',
     prefer: 'return=minimal',
     body: {
       status,
-      finished_at: new Date().toISOString(),
+      finished_at: finishedAt,
       offers_checked: checked,
       offers_updated: updated,
-      offers_failed: failed,
+      offers_failed: hardFailed,
       metadata: {
         ...(run.metadata || runMetadata),
-        lifecycle: status === 'success' ? 'success' : status === 'partial' ? 'partial' : 'failed',
-        collector_finished_at: new Date().toISOString()
+        lifecycle: status,
+        health_status: health.healthStatus,
+        result_counts: health.resultCounts,
+        ...(fatalError ? { error: String(fatalError.message || fatalError) } : {}),
+        collector_finished_at: finishedAt
       }
     }
   });
-  console.log(JSON.stringify({ runId: run.id, status, checked, updated, failed }, null, 2));
+  console.log(`Run ${run.id}: ${status} · ${updated} updated · ${preserved} preserved · ${hardFailed} hard failures`);
+  console.log(JSON.stringify({
+    runId: run.id,
+    status,
+    health_status: health.healthStatus,
+    checked,
+    updated,
+    preserved,
+    hardFailed,
+    result_counts: health.resultCounts
+  }, null, 2));
+  if (closeError && closeError === fatalError) throw closeError;
 }

@@ -3,8 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import { applyOfferMultiplier, classifyError, classifyHttpStatus, multiplierFor } from '../collector/pricing.mjs';
 
-const src=await fs.readFile('dist/server/index.js','utf8');
-const {default:worker,parsePrice}=await import('data:text/javascript;base64,'+Buffer.from(src).toString('base64'));
+const {default:worker,parsePrice}=await import('../dist/server/index.js');
 
 const html=(name,price=929,currency='EUR')=>`<script type="application/ld+json">${JSON.stringify({'@type':'Product',name,offers:{price,priceCurrency:currency}})}</script>`;
 
