@@ -100,14 +100,17 @@ with proposed(
     )
 ),
 upserted_offers as (
-  insert into public.offers
+  insert into public.offers as existing_offer
     (configuration_id,shop_id,shop_product_name,product_url,contents,match_type,
      calculation,note,source_url,source_name,evidence,active,metadata)
   select
     c.id,s.id,p.product_name,p.product_url,p.contents,'exact',p.calculation,
     'Complete component cart; every required component and public unit price was verified.',
     p.product_url,p.product_name,
-    'PRO LIGHTING official public product pages verified · 2026-11-06',
+    case when p.legacy_id='r11'
+      then 'PRO LIGHTING official pages verified · 2026-11-06; black MAUI 28 G3 SUB page exposes itemprop price EUR 939.00.'
+      else 'PRO LIGHTING official public product pages verified · 2026-11-06'
+    end,
     true,
     jsonb_build_object(
       'collection_disabled',true,
@@ -128,12 +131,12 @@ upserted_offers as (
     source_name=excluded.source_name,
     evidence=excluded.evidence,
     active=true,
-    metadata=excluded.metadata,
+    metadata=coalesce(existing_offer.metadata,'{}'::jsonb) || excluded.metadata,
     updated_at=now()
   returning id,configuration_id
 ),
 component_rows as (
-  insert into public.offer_components
+  insert into public.offer_components as existing_component
     (offer_id,position,label,quantity,product_url,expected_product_name,metadata)
   select
     o.id,x.ordinality::integer,x.value->>'name',(x.value->>'quantity')::numeric,
@@ -148,7 +151,7 @@ component_rows as (
     quantity=excluded.quantity,
     product_url=excluded.product_url,
     expected_product_name=excluded.expected_product_name,
-    metadata=excluded.metadata,
+    metadata=coalesce(existing_component.metadata,'{}'::jsonb) || excluded.metadata,
     active=true,
     updated_at=now()
   returning id,offer_id,position
@@ -175,7 +178,7 @@ component_observations as (
     )
   returning id
 )
-insert into public.price_observations
+insert into public.price_observations as existing_observation
   (offer_id,price,currency,status,source_method,verified,raw_product_name,evidence,observed_at,metadata)
 select
   o.id,p.price,'EUR','success','component_calc',true,p.product_name,
@@ -190,6 +193,6 @@ on conflict (offer_id,source_method,observed_at) do update set
   verified=true,
   raw_product_name=excluded.raw_product_name,
   evidence=excluded.evidence,
-  metadata=excluded.metadata;
+  metadata=coalesce(existing_observation.metadata,'{}'::jsonb) || excluded.metadata;
 
 commit;

@@ -271,6 +271,14 @@
         "collectionDisabled": true,
         "components": [
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-g3/ld-systems-maui-11-g3-taschenset.html"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 11 G3 + Taschenset",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-g3/ld-systems-maui-11-g3-taschenset.html",
+            "quantity": 2,
+            "unitPrice": 1048
+          }
         ]
       }
     }
@@ -1182,9 +1190,9 @@
         "match": "exact",
         "verifiedToday": true,
         "priceDate": "2026-11-06",
-        "evidence": "PRO LIGHTING Produktseiten öffentlich verifiziert · 06.11.2026",
+        "evidence": "Offizielle PRO LIGHTING Produktseiten verifiziert · 06.11.2026; MAUI 28 G3 SUB schwarz zeigt itemprop-Preis 939,00 €.",
         "calculation": "2 × 1.289 € + 2 × 939 € + 2 × 6,72 € = 4.469,44 €",
-        "note": "Systeme, Zusatzsubwoofer und 3-m-Audio-XLR-Kabel stimmen mit der Referenz überein.",
+        "note": "Die offizielle SUB-Seite weist MAUI 28 G3 SUB, Farbe Schwarz und 939,00 € aus; Systeme und 3-m-Audio-XLR-Kabel stimmen ebenfalls mit der Referenz überein.",
         "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g3-kompaktes-cardioid-saeulen-pa-system.html",
         "lastAttempt": "2026-11-06",
         "collectionDisabled": true,
@@ -1192,6 +1200,26 @@
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g3-kompaktes-cardioid-saeulen-pa-system.html",
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g3-sub-aktiver-12-subwoofer-fuer-maui-28-g3.html",
           "https://www.prolighting.de/en/accessories/cable-connectors/audio-cable/xlr-xlr/ah-cables-3-star-mmf-0300-mikrofonkabel-adam-hall-r-xlr-female-x-xlr-male-3-m.html"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 28 G3 schwarz",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g3-kompaktes-cardioid-saeulen-pa-system.html",
+            "quantity": 2,
+            "unitPrice": 1289
+          },
+          {
+            "name": "LD Systems MAUI 28 G3 SUB schwarz",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g3-sub-aktiver-12-subwoofer-fuer-maui-28-g3.html",
+            "quantity": 2,
+            "unitPrice": 939
+          },
+          {
+            "name": "ah Cables 3 STAR MMF 0300 XLR 3 m",
+            "url": "https://www.prolighting.de/en/accessories/cable-connectors/audio-cable/xlr-xlr/ah-cables-3-star-mmf-0300-mikrofonkabel-adam-hall-r-xlr-female-x-xlr-male-3-m.html",
+            "quantity": 2,
+            "unitPrice": 6.72
+          }
         ]
       }
     }
@@ -1393,6 +1421,26 @@
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g2.html",
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-maui-28-g2-sat-bag-gepolsterte-tragetasche-fuer-maui-28-g2-saeule.html",
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-maui-28-g2-sub-pc-gepolsterte-schutzhuelle-fuer-maui-28-g2-subwoofer.html"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 28 G2 schwarz",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g2.html",
+            "quantity": 1,
+            "unitPrice": 919
+          },
+          {
+            "name": "LD Systems MAUI 28 G2 SAT BAG",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-maui-28-g2-sat-bag-gepolsterte-tragetasche-fuer-maui-28-g2-saeule.html",
+            "quantity": 1,
+            "unitPrice": 85
+          },
+          {
+            "name": "LD Systems MAUI 28 G2 SUB PC",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-maui-28-g2-sub-pc-gepolsterte-schutzhuelle-fuer-maui-28-g2-subwoofer.html",
+            "quantity": 1,
+            "unitPrice": 45
+          }
         ]
       }
     }
@@ -2295,6 +2343,32 @@
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-sub-18-a-aktiver-18-bassreflex-pa-subwoofer.html",
           "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
           "https://www.prolighting.de/en/accessories/cable-connectors/audio-cable/xlr-xlr/ah-cables-3-star-mmf-0300-mikrofonkabel-adam-hall-r-xlr-female-x-xlr-male-3-m.html"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems ICOA 12 A BT",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-12-a-bt-12-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
+            "quantity": 2,
+            "unitPrice": 399
+          },
+          {
+            "name": "LD Systems ICOA SUB 18 A",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-sub-18-a-aktiver-18-bassreflex-pa-subwoofer.html",
+            "quantity": 2,
+            "unitPrice": 839
+          },
+          {
+            "name": "Gravity SP 2332 B",
+            "url": "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
+            "quantity": 2,
+            "unitPrice": 23.90
+          },
+          {
+            "name": "ah Cables 3 STAR MMF 0300 XLR 3 m",
+            "url": "https://www.prolighting.de/en/accessories/cable-connectors/audio-cable/xlr-xlr/ah-cables-3-star-mmf-0300-mikrofonkabel-adam-hall-r-xlr-female-x-xlr-male-3-m.html",
+            "quantity": 2,
+            "unitPrice": 6.72
+          }
         ]
       }
     }
@@ -2402,6 +2476,32 @@
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-sub-18-a-aktiver-18-bassreflex-pa-subwoofer.html",
           "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
           "https://www.prolighting.de/en/accessories/cable-connectors/audio-cable/xlr-xlr/ah-cables-3-star-mmf-0300-mikrofonkabel-adam-hall-r-xlr-female-x-xlr-male-3-m.html"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems ICOA 15 A BT",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-15-a-bt-15-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
+            "quantity": 2,
+            "unitPrice": 467.90
+          },
+          {
+            "name": "LD Systems ICOA SUB 18 A",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-sub-18-a-aktiver-18-bassreflex-pa-subwoofer.html",
+            "quantity": 2,
+            "unitPrice": 839
+          },
+          {
+            "name": "Gravity SP 2332 B",
+            "url": "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
+            "quantity": 2,
+            "unitPrice": 23.90
+          },
+          {
+            "name": "ah Cables 3 STAR MMF 0300 XLR 3 m",
+            "url": "https://www.prolighting.de/en/accessories/cable-connectors/audio-cable/xlr-xlr/ah-cables-3-star-mmf-0300-mikrofonkabel-adam-hall-r-xlr-female-x-xlr-male-3-m.html",
+            "quantity": 2,
+            "unitPrice": 6.72
+          }
         ]
       }
     }
@@ -2506,6 +2606,26 @@
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-15-a-bt-15-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-sub-18-a-aktiver-18-bassreflex-pa-subwoofer.html",
           "https://www.prolighting.de/en/accessories/cable-connectors/audio-cable/xlr-xlr/ah-cables-3-star-mmf-0300-mikrofonkabel-adam-hall-r-xlr-female-x-xlr-male-3-m.html"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems ICOA 15 A BT",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-15-a-bt-15-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
+            "quantity": 2,
+            "unitPrice": 467.90
+          },
+          {
+            "name": "LD Systems ICOA SUB 18 A",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-sub-18-a-aktiver-18-bassreflex-pa-subwoofer.html",
+            "quantity": 4,
+            "unitPrice": 839
+          },
+          {
+            "name": "ah Cables 3 STAR MMF 0300 XLR 3 m",
+            "url": "https://www.prolighting.de/en/accessories/cable-connectors/audio-cable/xlr-xlr/ah-cables-3-star-mmf-0300-mikrofonkabel-adam-hall-r-xlr-female-x-xlr-male-3-m.html",
+            "quantity": 4,
+            "unitPrice": 6.72
+          }
         ]
       }
     }
@@ -2704,6 +2824,32 @@
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-r-sub-21-a-pro-aktiver-21-hochleistungs-subwoofer.html",
           "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
           "https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-3-fm-flex-3-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems ICOA PRO 12 A",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-r-pro-12-a-12-aktiver-koaxialer-hochleistungs-pa-lautsprecher-mit-bluetooth-und-app.html",
+            "quantity": 2,
+            "unitPrice": 1089
+          },
+          {
+            "name": "LD Systems ICOA PRO SUB 21 A",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-r-sub-21-a-pro-aktiver-21-hochleistungs-subwoofer.html",
+            "quantity": 2,
+            "unitPrice": 2190
+          },
+          {
+            "name": "Gravity SP 2332 B",
+            "url": "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
+            "quantity": 2,
+            "unitPrice": 23.90
+          },
+          {
+            "name": "Cordial PEAK CPM 3 FM-FLEX Neutrik XLR 3 m",
+            "url": "https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-3-fm-flex-3-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html",
+            "quantity": 2,
+            "unitPrice": 20.90
+          }
         ]
       }
     }

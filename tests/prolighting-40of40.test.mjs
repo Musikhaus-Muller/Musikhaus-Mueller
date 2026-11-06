@@ -58,4 +58,83 @@ test('new PRO LIGHTING component calculations are persisted with component evide
   assert.match(migration,/insert into public\.component_price_observations/);
   assert.match(migration,/insert into public\.price_observations/);
   assert.match(migration,/'component_calc'/);
+  assert.ok(/jsonb_build_object\('unit_price',\(x\.value->>'unit_price'\)::numeric,'price_currency','EUR'\)/.test(migration));
+  assert.ok(/cr\.id,\(x\.value->>'unit_price'\)::numeric,'EUR','success','catalog'/.test(migration));
+});
+
+test('new PRO LIGHTING seed offers match the migration recipes and complete component calculations', async () => {
+  const seed=JSON.parse(await fs.readFile('web/seed.json','utf8'));
+  const migration=await fs.readFile('supabase/migrations/20261106100000_prolighting_verified_component_carts.sql','utf8');
+  const proposed= migration.match(/with proposed\([\s\S]*?\) as \(\s*values([\s\S]*?)\n\),\nupserted_offers/);
+  assert.ok(proposed,'migration must expose its proposed offer rows');
+
+  const rowMatches=[...proposed[1].matchAll(/\(\s*'(?<id>r\d+)',\s*'(?<name>[^']*)',\s*'(?<url>[^']*)',\s*'(?<contents>[^']*)',\s*(?<price>[\d.]+),\s*'(?<calculation>[^']*)',/g)];
+  const rows=rowMatches.map((match,index)=>{
+    const end=rowMatches[index+1]?.index ?? proposed[1].length;
+    const rowSql=proposed[1].slice(match.index,end);
+    const components=[...rowSql.matchAll(/jsonb_build_object\s*\(\s*'name'\s*,\s*'([^']*)'\s*,\s*'url'\s*,\s*'([^']*)'\s*,\s*'quantity'\s*,\s*([\d.]+)\s*,\s*'unit_price'\s*,\s*([\d.]+)\s*\)/g)]
+      .map(([,name,url,quantity,unitPrice])=>({name,url,quantity:Number(quantity),unitPrice:Number(unitPrice)}));
+    return {
+      id:match.groups.id,
+      name:match.groups.name,
+      url:match.groups.url,
+      contents:match.groups.contents,
+      price:Number(match.groups.price),
+      calculation:match.groups.calculation,
+      components
+    };
+  });
+  const newOffers=seed
+    .filter(row=>row.offers?.prolighting?.priceDate==='2026-11-06'&&row.offers.prolighting.collectionDisabled)
+    .map(row=>({id:row.id,offer:row.offers.prolighting}));
+
+  assert.equal(rows.length,newOffers.length);
+  assert.equal(rows.length,7);
+  assert.match(migration,/select\s+c\.id,s\.id,p\.product_name,p\.product_url,p\.contents,'exact',p\.calculation/);
+  assert.match(migration,/'collection_disabled',true/);
+  assert.match(migration,/'components',p\.components/);
+  assert.match(migration,/'component_calc'/);
+
+  for(const {id,offer} of newOffers){
+    const sqlRow=rows.find(row=>row.id===id);
+    assert.ok(sqlRow,`migration is missing configuration ${id}`);
+    assert.equal(sqlRow.name,offer.name,`${id} product name`);
+    assert.equal(sqlRow.url,offer.url,`${id} product URL`);
+    assert.equal(sqlRow.contents,offer.contents,`${id} recipe`);
+    assert.equal(sqlRow.price,offer.price,`${id} total`);
+    assert.equal(sqlRow.calculation,offer.calculation,`${id} calculation`);
+    assert.ok(Array.isArray(offer.componentDetails),`${id} seed component details`);
+    assert.deepEqual(offer.components,offer.componentDetails.map(component=>component.url),`${id} component URLs`);
+    assert.deepEqual(sqlRow.components,offer.componentDetails,`${id} component quantities and unit prices`);
+
+    const componentTotalCents=offer.componentDetails.reduce(
+      (total,component)=>total+Math.round(component.quantity*component.unitPrice*100),0
+    );
+    assert.equal(componentTotalCents,Math.round(offer.price*100),`${id} seed component total`);
+    assert.equal(
+      sqlRow.components.reduce((total,component)=>total+Math.round(component.quantity*component.unitPrice*100),0),
+      Math.round(sqlRow.price*100),
+      `${id} migration component total`
+    );
+    const seedClassification=offer.match==='exact'&&offer.collectionDisabled&&componentTotalCents===Math.round(offer.price*100)
+      ? 'complete_component_calc'
+      : 'incomplete_recipe';
+    const migrationClassification=/source_method,verified,raw_product_name,evidence,observed_at,metadata\)[\s\S]*?'component_calc'/.test(migration)&&
+      /select\s+c\.id,s\.id,p\.product_name,p\.product_url,p\.contents,'exact',p\.calculation/.test(migration)
+      ? 'complete_component_calc'
+      : 'incomplete_recipe';
+    assert.equal(seedClassification,'complete_component_calc',`${id} seed classification`);
+    assert.equal(migrationClassification,seedClassification,`${id} migration classification`);
+  }
+});
+
+test('offer metadata upsert merges incoming fields without dropping unrelated metadata', async () => {
+  const migration=await fs.readFile('supabase/migrations/20261106100000_prolighting_verified_component_carts.sql','utf8');
+  assert.match(migration,/metadata\s*=\s*coalesce\(existing_offer\.metadata,'\{\}'::jsonb\)\s*\|\|\s*excluded\.metadata/);
+  const existing={preserved_field:'keep',components:['old']};
+  const incoming={collection_disabled:true,components:['new']};
+  const merged={...existing,...incoming};
+  assert.equal(merged.preserved_field,'keep');
+  assert.deepEqual(merged.components,['new']);
+  assert.equal(merged.collection_disabled,true);
 });

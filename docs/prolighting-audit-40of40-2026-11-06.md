@@ -32,7 +32,7 @@ model mismatch is called out in the row notes.
 | r8 | MAUI 44 G2 Stereo | incomplete_recipe | Missing 2 × exact MAUI 44 G2 main systems; discovery found 0/1 components. |
 | r9 | MAUI 44 G2 Stereo Touring | incomplete_recipe | Missing 2 × MAUI 44 G2 systems, 2 × MAUI 44 G2 SAT BAG and 2 × MAUI 44 G2 SUB PC. The 2 × MAUI 44 G2 CB rollboards were found, but do not complete the cart. |
 | r10 | MAUI 11 G3 Power Bundle | incomplete_recipe | Missing 2 × MAUI 11 G3 systems and 2 × MAUI 11 G3 SUB additional subwoofers. The 2 × 3 m XLR cables were found. |
-| r11 | MAUI 28 G3 Power Bundle | complete_component_calc | New 4,469.44 € cart: 2 × system (1,289 €), 2 × extra SUB (939 €), 2 × audio XLR 3 m (6.72 €). |
+| r11 | MAUI 28 G3 Power Bundle | complete_component_calc | 4,469.44 € cart: 2 × black system (1,289 €), 2 × black MAUI 28 G3 SUB (939 €), 2 × audio XLR 3 m (6.72 €). The official black SUB page identifies Farbe: Schwarz and exposes itemprop price 939.00 EUR; no 979.90 € price was present on that page when rechecked. |
 | r12 | MAUI 44 G2 Power Bundle | incomplete_recipe | Missing 2 × MAUI 44 G2 systems and 2 × MAUI 44 G2 SUB additional subwoofers. The 2 × 3 m XLR cables were found. |
 | r13 | MAUI 11 G2 Bundle | incomplete_recipe | Missing 1 × exact MAUI 11 G2 system. One SAT BAG and one SUB PC were found. G2 was not substituted with G3. |
 | r14 | MAUI 28 G2 Bundle | complete_component_calc | New 1,049 € cart: MAUI 28 G2 (919 €) + G2 SAT BAG (85 €) + G2 SUB PC (45 €). |
@@ -72,7 +72,7 @@ observation, and a final `component_calc` observation. They are `collection_disa
 so the collector cannot replace a cart total with the price of its first component.
 
 - r2 — 2 × complete MAUI 11 G3 + Taschenset at 1,048 € each. The official set page states each system, SAT BAG and SUB PC are fixed contents.
-- r11 — 2 × MAUI 28 G3 at 1,289 €, 2 × MAUI 28 G3 SUB at 939 €, 2 × 3 m audio XLR at 6.72 €.
+- r11 — 2 × black MAUI 28 G3 at 1,289 €, 2 × black MAUI 28 G3 SUB at 939 €, 2 × 3 m audio XLR at 6.72 €. The official black SUB page (`itemprop="price"`) was rechecked and showed 939.00 EUR; it also identifies the color as Schwarz.
 - r14 — MAUI 28 G2 at 919 €, G2 SAT BAG at 85 €, G2 SUB PC at 45 €.
 - r24 — 2 × ICOA 12 A BT at 399 €, 2 × ICOA SUB 18 A at 839 €, 2 × Gravity SP 2332 B at 23.90 €, 2 × 3 m audio XLR at 6.72 €.
 - r25 — 2 × ICOA 15 A BT at 467.90 €, 2 × ICOA SUB 18 A at 839 €, 2 × Gravity SP 2332 B at 23.90 €, 2 × 3 m audio XLR at 6.72 €.
@@ -87,6 +87,7 @@ also not used in place of the exact SP 2332 B stand.
 ## Official source pages
 
 - [MAUI 11 G3 + Taschenset](https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-g3/ld-systems-maui-11-g3-taschenset.html)
+- [MAUI 28 G3 SUB black](https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g3-sub-aktiver-12-subwoofer-fuer-maui-28-g3.html)
 - [MAUI 28 G2](https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g2.html), [G2 SAT BAG](https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-maui-28-g2-sat-bag-gepolsterte-tragetasche-fuer-maui-28-g2-saeule.html), [G2 SUB PC](https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-maui-28-g2-sub-pc-gepolsterte-schutzhuelle-fuer-maui-28-g2-subwoofer.html)
 - [ICOA 12 A BT](https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-12-a-bt-12-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html), [ICOA 15 A BT](https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-15-a-bt-15-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html), [ICOA SUB 18 A](https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-sub-18-a-aktiver-18-bassreflex-pa-subwoofer.html)
 - [Gravity SP 2332 B](https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html), [3 m audio XLR](https://www.prolighting.de/en/accessories/cable-connectors/audio-cable/xlr-xlr/ah-cables-3-star-mmf-0300-mikrofonkabel-adam-hall-r-xlr-female-x-xlr-male-3-m.html)
