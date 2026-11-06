@@ -5,6 +5,7 @@ import { aggregateComponentResults, expectedNameFromUrl } from './components.mjs
 import { applyOfferMultiplier, classifyError, classifyHttpStatus, multiplierFor } from './pricing.mjs';
 import { publicCatalogSourceFor, parseCatalogProductPrice, catalogDiagnostic } from './catalog-sources.mjs';
 import { deriveRunHealth } from './result-health.mjs';
+import { formatResultLogMessage } from './result-log.mjs';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -395,7 +396,7 @@ try {
     if (final.status === 'success') {
       console.log(`OK ${final.price} EUR (${final.method})`);
     } else {
-      console.log(`${final.status}: ${final.error}; previous valid price preserved`);
+      console.log(`${final.status}: ${formatResultLogMessage(final, { bundle: offer.components.length > 0 })}`);
     }
   }
 } catch (error) {
