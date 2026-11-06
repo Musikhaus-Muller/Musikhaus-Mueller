@@ -254,6 +254,24 @@
         "note": "Direktes HotSound-Set mit gleicher Referenzkonfiguration.",
         "source": "https://www.hotsound-store.com/ld-systems-maui-11-g3-set-2-schwarz-11714",
         "lastAttempt": "2026-11-04"
+      },
+      "prolighting": {
+        "name": "2 × LD Systems MAUI 11 G3 + Taschenset",
+        "price": 2096,
+        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-g3/ld-systems-maui-11-g3-taschenset.html",
+        "contents": "2 × MAUI 11 G3; 2 × MAUI 11 G3 SAT BAG; 2 × MAUI 11 G3 SUB PC.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "PRO LIGHTING Setseite und Einzelpreis öffentlich verifiziert · 06.11.2026",
+        "calculation": "2 × 1.048 € = 2.096 €",
+        "note": "Dos kits oficiales completos; cada kit incluye el sistema exacto, SAT BAG y SUB PC.",
+        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-g3/ld-systems-maui-11-g3-taschenset.html",
+        "lastAttempt": "2026-11-06",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-g3/ld-systems-maui-11-g3-taschenset.html"
+        ]
       }
     }
   },
@@ -1155,6 +1173,26 @@
         "note": "Direktes Müller Power Bundle; aktueller Katalogpreis.",
         "source": "https://www.musikhaus-mueller.de/ld_systems_maui_28_g3_power_bundle_set_schwarz/",
         "lastAttempt": "2026-11-04"
+      },
+      "prolighting": {
+        "name": "PRO LIGHTING Warenkorb · MAUI 28 G3 Power Bundle",
+        "price": 4469.44,
+        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g3-kompaktes-cardioid-saeulen-pa-system.html",
+        "contents": "2 × MAUI 28 G3 schwarz; 2 × MAUI 28 G3 SUB schwarz; 2 × ah Cables 3 STAR MMF 0300 XLR, 3 m.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "PRO LIGHTING Produktseiten öffentlich verifiziert · 06.11.2026",
+        "calculation": "2 × 1.289 € + 2 × 939 € + 2 × 6,72 € = 4.469,44 €",
+        "note": "Systeme, Zusatzsubwoofer und 3-m-Audio-XLR-Kabel stimmen mit der Referenz überein.",
+        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g3-kompaktes-cardioid-saeulen-pa-system.html",
+        "lastAttempt": "2026-11-06",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g3-kompaktes-cardioid-saeulen-pa-system.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g3-sub-aktiver-12-subwoofer-fuer-maui-28-g3.html",
+          "https://www.prolighting.de/en/accessories/cable-connectors/audio-cable/xlr-xlr/ah-cables-3-star-mmf-0300-mikrofonkabel-adam-hall-r-xlr-female-x-xlr-male-3-m.html"
+        ]
       }
     }
   },
@@ -1335,6 +1373,26 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2/art-PAH0018043-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2-Sat-Bag/art-PAH0018692-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2-Sub-PC/art-PAH0018755-000"
+        ]
+      },
+      "prolighting": {
+        "name": "PRO LIGHTING Warenkorb · MAUI 28 G2 Bundle",
+        "price": 1049,
+        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g2.html",
+        "contents": "1 × MAUI 28 G2 schwarz; 1 × MAUI 28 G2 SAT BAG; 1 × MAUI 28 G2 SUB PC.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "PRO LIGHTING Produktseiten öffentlich verifiziert · 06.11.2026",
+        "calculation": "919 € + 85 € + 45 € = 1.049 €",
+        "note": "Carrito completo con bolsa de columna y funda SUB PC de la generación G2.",
+        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g2.html",
+        "lastAttempt": "2026-11-06",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-28-g2.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-maui-28-g2-sat-bag-gepolsterte-tragetasche-fuer-maui-28-g2-saeule.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-maui-28-g2-sub-pc-gepolsterte-schutzhuelle-fuer-maui-28-g2-subwoofer.html"
         ]
       }
     }
@@ -2217,6 +2275,27 @@
           "https://www.thomann.de/de/gravity_sp_2332_b_speaker_stand.htm",
           "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm"
         ]
+      },
+      "prolighting": {
+        "name": "PRO LIGHTING Warenkorb · ICOA Club Bluetooth",
+        "price": 2537.24,
+        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-12-a-bt-12-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
+        "contents": "2 × ICOA 12 A BT; 2 × ICOA SUB 18 A; 2 × Gravity SP 2332 B; 2 × ah Cables 3 STAR MMF 0300 XLR, 3 m.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "PRO LIGHTING Produktseiten öffentlich verifiziert · 06.11.2026",
+        "calculation": "2 × 399 € + 2 × 839 € + 2 × 23,90 € + 2 × 6,72 € = 2.537,24 €",
+        "note": "Todos los componentes y cantidades coinciden; el cable es XLR de audio de 3 m.",
+        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-12-a-bt-12-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
+        "lastAttempt": "2026-11-06",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-12-a-bt-12-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-sub-18-a-aktiver-18-bassreflex-pa-subwoofer.html",
+          "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
+          "https://www.prolighting.de/en/accessories/cable-connectors/audio-cable/xlr-xlr/ah-cables-3-star-mmf-0300-mikrofonkabel-adam-hall-r-xlr-female-x-xlr-male-3-m.html"
+        ]
       }
     }
   },
@@ -2303,6 +2382,27 @@
           "https://www.thomann.de/de/gravity_sp_2332_b_speaker_stand.htm",
           "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm"
         ]
+      },
+      "prolighting": {
+        "name": "PRO LIGHTING Warenkorb · ICOA Club XL Bluetooth",
+        "price": 2675.04,
+        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-15-a-bt-15-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
+        "contents": "2 × ICOA 15 A BT; 2 × ICOA SUB 18 A; 2 × Gravity SP 2332 B; 2 × ah Cables 3 STAR MMF 0300 XLR, 3 m.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "PRO LIGHTING Produktseiten öffentlich verifiziert · 06.11.2026",
+        "calculation": "2 × 467,90 € + 2 × 839 € + 2 × 23,90 € + 2 × 6,72 € = 2.675,04 €",
+        "note": "Todos los componentes y cantidades coinciden; el cable es XLR de audio de 3 m.",
+        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-15-a-bt-15-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
+        "lastAttempt": "2026-11-06",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-15-a-bt-15-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-sub-18-a-aktiver-18-bassreflex-pa-subwoofer.html",
+          "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
+          "https://www.prolighting.de/en/accessories/cable-connectors/audio-cable/xlr-xlr/ah-cables-3-star-mmf-0300-mikrofonkabel-adam-hall-r-xlr-female-x-xlr-male-3-m.html"
+        ]
       }
     }
   },
@@ -2386,6 +2486,26 @@
           "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
           "https://www.thomann.de/de/ld_systems_icoa_sub_18_a.htm",
           "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm"
+        ]
+      },
+      "prolighting": {
+        "name": "PRO LIGHTING Warenkorb · ICOA Power Bluetooth",
+        "price": 4318.68,
+        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-15-a-bt-15-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
+        "contents": "2 × ICOA 15 A BT; 4 × ICOA SUB 18 A; 4 × ah Cables 3 STAR MMF 0300 XLR, 3 m.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "PRO LIGHTING Produktseiten öffentlich verifiziert · 06.11.2026",
+        "calculation": "2 × 467,90 € + 4 × 839 € + 4 × 6,72 € = 4.318,68 €",
+        "note": "Todos los componentes y cantidades coinciden; los cuatro cables son XLR de audio de 3 m.",
+        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-15-a-bt-15-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
+        "lastAttempt": "2026-11-06",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-15-a-bt-15-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-sub-18-a-aktiver-18-bassreflex-pa-subwoofer.html",
+          "https://www.prolighting.de/en/accessories/cable-connectors/audio-cable/xlr-xlr/ah-cables-3-star-mmf-0300-mikrofonkabel-adam-hall-r-xlr-female-x-xlr-male-3-m.html"
         ]
       }
     }
@@ -2563,6 +2683,27 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-Sub-21-A/art-PAH0024128-000",
           "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002"
+        ]
+      },
+      "prolighting": {
+        "name": "PRO LIGHTING Warenkorb · ICOA PRO Club",
+        "price": 6647.6,
+        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-r-pro-12-a-12-aktiver-koaxialer-hochleistungs-pa-lautsprecher-mit-bluetooth-und-app.html",
+        "contents": "2 × ICOA PRO 12 A; 2 × ICOA PRO SUB 21 A; 2 × Gravity SP 2332 B; 2 × Cordial PEAK CPM 3 FM-FLEX Neutrik XLR, 3 m.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "PRO LIGHTING producto oficial y precios públicos verificados · 06.11.2026",
+        "calculation": "2 × 1.089 € + 2 × 2.190 € + 2 × 23,90 € + 2 × 20,90 € = 6.647,60 €",
+        "note": "Se usa cable Neutrik XLR de audio de 3 m; se excluye el cable XLR genérico del discovery.",
+        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-r-pro-12-a-12-aktiver-koaxialer-hochleistungs-pa-lautsprecher-mit-bluetooth-und-app.html",
+        "lastAttempt": "2026-11-06",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-r-pro-12-a-12-aktiver-koaxialer-hochleistungs-pa-lautsprecher-mit-bluetooth-und-app.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-r-sub-21-a-pro-aktiver-21-hochleistungs-subwoofer.html",
+          "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
+          "https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-3-fm-flex-3-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html"
         ]
       }
     }
