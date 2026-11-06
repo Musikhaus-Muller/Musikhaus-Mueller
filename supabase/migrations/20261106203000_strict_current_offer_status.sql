@@ -8,7 +8,7 @@ select
   x.price,
   'EUR',
   'success',
-  'browser_audit',
+  'browser',
   true,
   o.shop_product_name,
   'Produktseite im Browser geprüft · 03.11.2026. Preis, Modellgeneration und Lieferumfang sichtbar.',
