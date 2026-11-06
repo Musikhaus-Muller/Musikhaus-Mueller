@@ -6,6 +6,7 @@ import { applyOfferMultiplier, classifyError, classifyHttpStatus, multiplierFor 
 import { publicCatalogSourceFor, parseCatalogProductPrice, catalogDiagnostic } from './catalog-sources.mjs';
 import { deriveRunHealth } from './result-health.mjs';
 import { formatResultLogMessage } from './result-log.mjs';
+import { requestHeaders, shouldCompatibleRetry } from './request-profiles.mjs';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -92,11 +93,7 @@ async function catalogAttemptTarget(offer, shopSlug) {
     res = await fetch(sourceUrl, {
       redirect: 'follow',
       signal: AbortSignal.timeout(12000),
-      headers: {
-        Accept: 'text/html,application/xhtml+xml',
-        'Accept-Language': 'de-DE,de;q=0.9,en;q=0.6',
-        'User-Agent': 'Mozilla/5.0 (compatible; PA-Bundle-Preisvergleich/1.0; +price-monitor)'
-      }
+      headers: requestHeaders()
     });
   } catch (e) {
     return { method: 'catalog', status: 'network_error', error: e.message };
@@ -128,17 +125,13 @@ async function catalogAttemptTarget(offer, shopSlug) {
   }
 }
 
-async function httpAttemptTarget(offer) {
+async function httpAttemptTarget(offer, { compatible = false } = {}) {
   let res;
   try {
     res = await fetch(offer.product_url, {
       redirect: 'follow',
       signal: AbortSignal.timeout(12000),
-      headers: {
-        Accept: 'text/html,application/xhtml+xml',
-        'Accept-Language': 'de-DE,de;q=0.9,en;q=0.6',
-        'User-Agent': 'Mozilla/5.0 (compatible; PA-Bundle-Preisvergleich/1.0; +price-monitor)'
-      }
+      headers: requestHeaders({ compatible })
     });
   } catch (e) {
     return { method: 'http', status: 'network_error', error: e.message };
@@ -151,12 +144,14 @@ async function httpAttemptTarget(offer) {
     const parsed = parsePrice(html, offer.shop_product_name || '', new URL(offer.product_url).hostname, offer.contents || '');
     const multiplier = multiplierFor(offer);
     return {
-      method: 'http',
+      method: compatible ? 'http-compatible' : 'http',
       status: 'success',
       httpStatus: res.status,
       price: applyOfferMultiplier(parsed.price, multiplier),
       available: parsed.available,
-      evidence: 'Direct HTTP fetch with product-name validation'
+      evidence: compatible
+        ? 'Direct official product-page retry with browser-compatible static headers and product-name validation'
+        : 'Direct HTTP fetch with product-name validation'
     };
   } catch (e) {
     return { method: 'http', status: classifyError(e), httpStatus: res.status, error: e.message };
@@ -331,7 +326,19 @@ try {
         await recordComponentObservation({ component, runId: run.id, result: http });
 
         let result = http;
-        if (http.status !== 'success' && strategy.publicSource) {
+        if (shouldCompatibleRetry(strategy, http)) {
+          const compatible = await httpAttemptTarget(target, { compatible: true });
+          if (compatible.status === 'success') {
+            result = compatible;
+            await recordComponentObservation({ component, runId: run.id, result });
+          } else {
+            result = {
+              ...http,
+              error: `${http.error || http.status}; compatible=${compatible.error || compatible.status}`
+            };
+          }
+        }
+        if (result.status !== 'success' && strategy.publicSource) {
           const catalog = await catalogAttemptTarget(target, shop.slug);
           if (catalog.status === 'success') {
             result = catalog;
@@ -358,7 +365,19 @@ try {
       await recordObservation({ offer, runId: run.id, result: http });
 
       final = http;
-      if (http.status !== 'success' && strategy.publicSource) {
+      if (shouldCompatibleRetry(strategy, http)) {
+        const compatible = await httpAttemptTarget(offer, { compatible: true });
+        if (compatible.status === 'success') {
+          final = compatible;
+          await recordObservation({ offer, runId: run.id, result: final });
+        } else {
+          final = {
+            ...http,
+            error: `${http.error || http.status}; compatible=${compatible.error || compatible.status}`
+          };
+        }
+      }
+      if (final.status !== 'success' && strategy.publicSource) {
         const catalog = await catalogAttemptTarget(offer, shop.slug);
         if (catalog.status === 'success') {
           final = catalog;
