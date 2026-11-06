@@ -55,7 +55,9 @@ export function parseMusicStoreSkuPrice(html, productUrl, expected = '') {
   const skuIndex=lines.findIndex(line=>line.toUpperCase().includes(sku.toUpperCase()));
   if(skuIndex<0) throw new Error('Music Store SKU not found in official catalog');
 
-  const block=lines.slice(Math.max(0,skuIndex-3),Math.min(lines.length,skuIndex+12));
+  const nextSkuOffset=lines.slice(skuIndex+1).findIndex(line=>/\b(?:PAH|ACC)\d+[A-Z0-9-]*\b/i.test(line));
+  const blockEnd=nextSkuOffset>=0?skuIndex+1+nextSkuOffset:Math.min(lines.length,skuIndex+12);
+  const block=lines.slice(skuIndex,blockEnd);
   const expectedTokens=significantTokens(expected).filter(t=>!['warenkorb'].includes(t));
   const productText=normalize(block.slice(0,6).join(' '));
   const productWords=new Set(productText.split(' '));

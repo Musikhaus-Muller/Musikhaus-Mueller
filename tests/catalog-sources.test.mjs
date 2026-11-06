@@ -26,6 +26,12 @@ test('Music Store SKU parser anchors price to exact article number and rejects n
   assert.equal(out.sku,'PAH0024127-000');
 });
 
+test('Music Store SKU parser never reads price before the exact SKU',()=>{
+  const html='<div>LD-Systems ICOA 15 A</div><div>449,00 €</div><div>Art.-Nr.: PAH0024127-000</div><div>LD-Systems ICOA Pro 15 A</div><div>1.299,00 €</div>';
+  const out=parseMusicStoreSkuPrice(html,'https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-15-A/art-PAH0024127-000','LD Systems ICOA Pro 15 A');
+  assert.equal(out.price,1299);
+});
+
 test('Music Store SKU parser refuses a missing exact SKU even when similar products have prices',()=>{
   const html='<div>Art.-Nr.: PAH0021618-000</div><div>LD-Systems ICOA 15 A</div><div>449,00 €</div>';
   assert.throws(
