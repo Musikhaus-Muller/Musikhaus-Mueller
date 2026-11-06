@@ -309,11 +309,12 @@ if (process.env.COLLECT_RUN_ID) {
 
 const results = [];
 const browserBlockedHosts = new Set();
+let fatalError = null;
 try {
   for (const offer of selected) {
     const shop = offer.shop;
     const strategy = strategyFor(shop.slug);
-    process.stdout.write(`[${checked + 1}/${selected.length}] ${shop.name} · ${offer.configuration?.name || offer.id} ... `);
+    process.stdout.write(`[${results.length + 1}/${selected.length}] ${shop.name} · ${offer.configuration?.name || offer.id} ... `);
 
     let final;
     if (offer.components.length > 0) {
@@ -397,9 +398,20 @@ try {
       console.log(`${final.status}: ${final.error}; previous valid price preserved`);
     }
   }
+} catch (error) {
+  fatalError = error;
+  throw error;
 } finally {
-  if (browser) await browser.close();
-  const health = deriveRunHealth(results);
+  let closeError = null;
+  if (browser) {
+    try {
+      await browser.close();
+    } catch (error) {
+      closeError = error;
+      if (!fatalError) fatalError = error;
+    }
+  }
+  const health = deriveRunHealth(results, { fatalError });
   const { status, checked, updated, preserved, hardFailed } = health;
   const finishedAt = new Date().toISOString();
   await rest(`collection_runs?id=eq.${run.id}`, {
@@ -416,6 +428,7 @@ try {
         lifecycle: status,
         health_status: health.healthStatus,
         result_counts: health.resultCounts,
+        ...(fatalError ? { error: String(fatalError.message || fatalError) } : {}),
         collector_finished_at: finishedAt
       }
     }
@@ -431,4 +444,5 @@ try {
     hardFailed,
     result_counts: health.resultCounts
   }, null, 2));
+  if (closeError && closeError === fatalError) throw closeError;
 }

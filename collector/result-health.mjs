@@ -45,8 +45,12 @@ export function summarizeResultHealth(results = []) {
   return counts;
 }
 
-export function deriveRunHealth(results = []) {
+export function deriveRunHealth(results = [], { fatalError = null } = {}) {
   const counts = summarizeResultHealth(results);
+  if (fatalError !== null) {
+    counts.hardFailed++;
+    counts.unknownFailures++;
+  }
   const hasUsefulResults = counts.updated + counts.preserved > 0;
   const status = counts.hardFailed === 0
     ? 'success'

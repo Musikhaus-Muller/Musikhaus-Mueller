@@ -56,6 +56,22 @@ test('historical results override inflated offers_failed without rewriting the r
  assert.equal(mapped.status,'success');
 });
 
+test('mapper exposes preserved health while keeping active runs running',()=>{
+ const completed=mod.mapSupabaseRun({
+  id:'preserved-run',trigger_type:'schedule',status:'success',
+  metadata:{health_status:'success_with_preserved'}
+ },[result('blocked','mueller','A')]);
+ assert.equal(completed.status,'success');
+ assert.equal(completed.healthStatus,'success_with_preserved');
+
+ const running=mod.mapSupabaseRun({
+  id:'active-run',trigger_type:'schedule',status:'running',
+  metadata:{health_status:'success_with_preserved'}
+ },[]);
+ assert.equal(running.status,'running');
+ assert.equal(running.healthStatus,'success_with_preserved');
+});
+
 test('runs without result rows retain their stored status and counters',()=>{
  const mapped=mod.mapSupabaseRun({
   id:'run-failed',trigger_type:'manual',status:'failed',
@@ -71,4 +87,7 @@ test('history and status endpoints use Supabase, not R2',async()=>{
  const source=await fs.readFile('worker/handler.mjs','utf8');
  assert.match(source,/if\(path==='\/api\/runs'\).*loadSupabaseRuns/);
  assert.match(source,/if\(path==='\/api\/status'\).*loadSupabaseStatus/);
+ const app=await fs.readFile('web/app.js','utf8');
+ assert.match(app,/r\.status==='running'\?'running':r\.healthStatus\|\|r\.status/);
+ assert.match(app,/success_with_preserved:'Erfolgreich \(Preise erhalten\)'/);
 });

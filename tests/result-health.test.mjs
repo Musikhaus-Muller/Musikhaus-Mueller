@@ -47,3 +47,34 @@ test('runs with only hard failures have failed health',()=>{
  assert.equal(health.status,'failed');
  assert.equal(health.healthStatus,'failed');
 });
+
+test('a normally completed run with no expected offers succeeds',()=>{
+ const health=deriveRunHealth([]);
+ assert.equal(health.checked,0);
+ assert.equal(health.status,'success');
+ assert.equal(health.healthStatus,'success');
+});
+
+test('a fatal error before any result is a hard failed run',()=>{
+ const health=deriveRunHealth([],{fatalError:new Error('collector crashed')});
+ assert.equal(health.checked,0);
+ assert.equal(health.status,'failed');
+ assert.equal(health.hardFailed,1);
+ assert.equal(health.unknownFailures,1);
+ assert.equal(health.resultCounts.hard_failed,1);
+});
+
+test('a fatal error after a useful result makes the run partial',()=>{
+ const health=deriveRunHealth([{status:'success'}],{fatalError:new Error('collector crashed')});
+ assert.equal(health.checked,1);
+ assert.equal(health.status,'partial');
+ assert.equal(health.hardFailed,1);
+ assert.equal(health.updated,1);
+});
+
+test('preserved-only normal completion remains successful with preserved health',()=>{
+ const health=deriveRunHealth([{status:'blocked'},{status:'captcha'}]);
+ assert.equal(health.status,'success');
+ assert.equal(health.healthStatus,'success_with_preserved');
+ assert.equal(health.hardFailed,0);
+});
