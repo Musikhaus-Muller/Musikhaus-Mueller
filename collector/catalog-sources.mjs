@@ -37,10 +37,6 @@ export function publicCatalogSourceFor(shopSlug, expected) {
     }
     return null;
   }
-  if (shopSlug === 'kirstein') {
-    if (n.includes('maui')) return 'https://www.kirstein.de/Saeulensysteme/';
-    if (n.includes('dave')) return 'https://www.kirstein.de/PA-Komplettanlagen/';
-  }
   return null;
 }
 
