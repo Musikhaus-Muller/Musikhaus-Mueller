@@ -3,7 +3,7 @@ import { parsePrice } from '../worker/handler.mjs';
 import { strategyFor } from './strategies.mjs';
 import { aggregateComponentResults, expectedNameFromUrl } from './components.mjs';
 import { applyOfferMultiplier, classifyError, classifyHttpStatus, multiplierFor } from './pricing.mjs';
-import { publicCatalogSourceFor, parseCatalogProductPrice, parseMusicStoreSkuPrice, catalogDiagnostic } from './catalog-sources.mjs';
+import { publicCatalogSourceFor, parseCatalogProductPrice, catalogDiagnostic } from './catalog-sources.mjs';
 import { deriveRunHealth } from './result-health.mjs';
 import { formatResultLogMessage } from './result-log.mjs';
 
@@ -84,7 +84,7 @@ async function recordObservation({ offer, runId, result }) {
 }
 
 async function catalogAttemptTarget(offer, shopSlug) {
-  const sourceUrl = publicCatalogSourceFor(shopSlug, offer.shop_product_name || '', offer.product_url || '');
+  const sourceUrl = publicCatalogSourceFor(shopSlug, offer.shop_product_name || '');
   if (!sourceUrl) return { method: 'catalog', status: 'skipped', error: 'No public catalog source configured' };
 
   let res;
@@ -107,9 +107,7 @@ async function catalogAttemptTarget(offer, shopSlug) {
 
   const html = await res.text();
   try {
-    const parsed = shopSlug === 'musicstore'
-      ? parseMusicStoreSkuPrice(html, offer.product_url || '', offer.shop_product_name || '')
-      : parseCatalogProductPrice(html, offer.shop_product_name || '');
+    const parsed = parseCatalogProductPrice(html, offer.shop_product_name || '');
     const multiplier = multiplierFor(offer);
     return {
       method: 'catalog',
