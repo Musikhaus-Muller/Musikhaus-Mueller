@@ -20,9 +20,11 @@ export const SHOP_STRATEGIES = {
     }
   },
   kirstein: {
-    mode: 'http-preserve-on-block',
+    mode: 'http-with-public-catalog',
     browserFallback: false,
-    publicSource: null
+    publicSource: {
+      type: 'catalog-map'
+    }
   },
   hotsound: {
     mode: 'http-preserve-on-block',
