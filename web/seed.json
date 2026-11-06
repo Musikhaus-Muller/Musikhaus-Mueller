@@ -3979,6 +3979,21 @@
         "fetchStatus": "Direktabruf erfolgreich",
         "sourceName": "Wharfedale Pro WLA-210XP Line Array Base Bundle Set AMP",
         "match": "exact"
+      },
+      "hotsound": {
+        "name": "Wharfedale Pro WLA-210XP Line Array Set Amped Set 1",
+        "price": 15290,
+        "url": "https://www.hotsound-store.com/wharfedale-pro-wla-210xp-line-array-set-amped-set-1-19042",
+        "contents": "8 × WLA-210XP; 2 × WLA-210X Flug-/Stackingrahmen; 2 × DP-4100F MK2 Endstufe.",
+        "match": "exact",
+        "verifiedToday": true,
+        "priceDate": "2026-11-06",
+        "evidence": "HotSound offizielle öffentliche Amped-Set-Produktseite verifiziert · 06.11.2026",
+        "note": "Direktes HotSound-Amped-Set entspricht der Referenz inklusive 2 × DP-4100F MK2.",
+        "source": "https://www.hotsound-store.com/wharfedale-pro-wla-210xp-line-array-set-amped-set-1-19042",
+        "sourceName": "Wharfedale Pro WLA-210XP Line Array Set Amped Set 1",
+        "lastAttempt": "2026-11-06",
+        "classification": "exact_price"
       }
     }
   }
