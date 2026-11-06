@@ -25,9 +25,11 @@ export const SHOP_STRATEGIES = {
     publicSource: null
   },
   hotsound: {
-    mode: 'http-preserve-on-block',
+    mode: 'http-with-public-catalog',
     browserFallback: false,
-    publicSource: null
+    publicSource: {
+      type: 'catalog-map'
+    }
   },
   musicstore: {
     mode: 'http-preserve-on-block',
