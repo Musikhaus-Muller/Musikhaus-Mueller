@@ -165,7 +165,7 @@ async function httpAttemptTarget(offer) {
   }
   const html = await res.text();
   try {
-    const parsed = parsePrice(html, offer.shop_product_name || '', new URL(offer.product_url).hostname);
+    const parsed = parsePrice(html, offer.shop_product_name || '', new URL(offer.product_url).hostname, offer.contents || '');
     const multiplier = multiplierFor(offer);
     return {
       method: 'http',
@@ -232,7 +232,7 @@ async function browserAttempt(offer) {
       let parsed;
       let resolvedUrl = page.url();
       try {
-        parsed = parsePrice(html, offer.shop_product_name || '', new URL(resolvedUrl).hostname);
+        parsed = parsePrice(html, offer.shop_product_name || '', new URL(resolvedUrl).hostname, offer.contents || '');
       } catch (initialError) {
         const productUrl = await resolveHotSoundProductPage(page, offer);
         if (!productUrl) throw initialError;
@@ -244,7 +244,7 @@ async function browserAttempt(offer) {
           throw new Error('Zugriffsschutz / CAPTCHA');
         }
         resolvedUrl = page.url();
-        parsed = parsePrice(html, offer.shop_product_name || '', new URL(resolvedUrl).hostname);
+        parsed = parsePrice(html, offer.shop_product_name || '', new URL(resolvedUrl).hostname, offer.contents || '');
       }
       const multiplier = multiplierFor(offer);
       await context.close();
@@ -270,7 +270,7 @@ async function browserAttempt(offer) {
 const [shops, configurations, offers, offerComponents] = await Promise.all([
   rest('shops?select=id,slug,name,collector_type&enabled=eq.true'),
   rest('configurations?select=id,legacy_id,name&active=eq.true'),
-  rest('offers?select=id,configuration_id,shop_id,shop_product_name,product_url,calculation,metadata&active=eq.true&product_url=not.is.null'),
+  rest('offers?select=id,configuration_id,shop_id,shop_product_name,product_url,contents,calculation,metadata&active=eq.true&product_url=not.is.null'),
   rest('offer_components?select=id,offer_id,position,label,quantity,product_url,expected_product_name,metadata&active=eq.true&order=offer_id.asc,position.asc')
 ]);
 

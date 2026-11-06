@@ -2,8 +2,63 @@ const json=(x,status=200)=>new Response(JSON.stringify(x),{status,headers:{'cont
 const normalize=s=>String(s).toLowerCase().replace(/ß/g,'ss').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/&[^;]+;/g,' ').replace(/[^a-z0-9]+/g,' ').trim();
 const plain=s=>s.replace(/&nbsp;|&#160;/gi,' ').replace(/&euro;|&#8364;|&#x20ac;/gi,'€').replace(/&szlig;|&#0*223;|&#x0*df;/gi,'ß').replace(/&amp;/gi,'&').replace(/<\/(?:div|p|li|h\d)\s*>/gi,'\n').replace(/<[^>]*>/g,' ').replace(/[ \t]+/g,' ').replace(/\n\s+/g,'\n').trim();
 const priceNumber=x=>{if(typeof x==='number')return x;if(typeof x!=='string')return NaN;return Number(x.includes(',')?x.replace(/\./g,'').replace(',','.'):x)};
-export function parsePrice(html,expected,host){
+function validateProlightingMaui28G3Bundle(html,expected,contents){
+ const normalizedExpected=normalize(expected);
+ if(!/maui 28 g3/.test(normalizedExpected)||!/\btaschen/.test(normalizedExpected))return;
+ if(!contents)throw Error('Bundle composition unavailable; cannot verify complete MAUI 28 G3 cart');
+ const expectedPieces=String(contents).split(/[;.\n]+/).map(value=>value.trim()).filter(Boolean).map(value=>{
+  const match=value.match(/^(\d+)\s*[×x]\s*(.+)$/);
+  if(!match)throw Error('Bundle composition has an unrecognized quantity');
+  const quantity=Number(match[1]);
+  if(!Number.isSafeInteger(quantity)||quantity<=0)throw Error('Bundle composition has an invalid quantity');
+  const name=normalize(match[2]);
+  const kind=/maui 28 g3/.test(name)?'system':/sat bag|saulentasche|column bag/.test(name)?'sat_bag':/sub pc|subwooferhulle|sub cover/.test(name)?'sub_cover':null;
+  if(!kind)throw Error(`Bundle composition contains an unclassified component: ${match[2]}`);
+  return {quantity,kind,name};
+ });
+ const requiredKinds=['system','sat_bag','sub_cover'];
+ if(requiredKinds.some(kind=>!expectedPieces.some(piece=>piece.kind===kind))){
+  throw Error('Bundle composition does not specify the MAUI 28 G3 system, SAT BAG, and SUB PC');
+ }
+ const headings=[...html.matchAll(/set\s+besteht\s+aus/gi)];
+ const heading=headings.at(-1)?.index??-1;
+ const listStart=heading>=0?html.indexOf('<ul',heading):-1;
+ const listEnd=listStart>=0?html.indexOf('</ul>',listStart):-1;
+ if(listStart<0||listEnd<0)throw Error('Official page does not expose a readable set composition');
+ const setList=html.slice(listStart,listEnd+5);
+ const lines=[...setList.matchAll(/<li\b[^>]*>([\s\S]*?)<\/li>/gi)].map(match=>plain(match[1]));
+ const quantityOf=line=>Number(line.match(/^\s*(\d+)\s*[×x]\s*/)?.[1]||1);
+ const isSystemLine=line=>{
+  const name=normalize(line);
+  return name.includes('maui')&&name.includes('28')&&name.includes('g3')&&!/sat bag|sub pc|saulentasche|subwooferhulle/.test(name);
+ };
+ const actualQuantity=(kind)=>{
+  const matches=lines.filter(line=>{
+   const name=normalize(line);
+   if(kind==='system')return isSystemLine(line);
+   if(kind==='sat_bag')return /sat bag|saulentasche|column bag/.test(name);
+   return /sub pc|subwooferhulle|sub cover/.test(name);
+  });
+  return matches.reduce((total,line)=>total+quantityOf(line),0);
+ };
+ for(const kind of requiredKinds){
+  const expectedQuantity=expectedPieces.filter(piece=>piece.kind===kind).reduce((total,piece)=>total+piece.quantity,0);
+  const foundQuantity=actualQuantity(kind);
+  if(foundQuantity!==expectedQuantity){
+   throw Error(`Official bundle contents confirm ${foundQuantity} ${kind} components; expected ${expectedQuantity}`);
+  }
+ }
+ const expectedSystem=expectedPieces.find(piece=>piece.kind==='system');
+ if(/schwarz|black/.test(expectedSystem.name)){
+  const systemLines=lines.filter(isSystemLine);
+  if(systemLines.some(line=>/\b(?:weiss|white)\b/.test(normalize(line)))||!systemLines.some(line=>/\b(?:schwarz|black)\b/.test(normalize(line)))){
+   throw Error('Official bundle contents do not confirm the required black MAUI 28 G3 system');
+  }
+ }
+}
+export function parsePrice(html,expected,host,expectedContents){
  if(/cf-mitigated|cf-chl-|just a moment|captcha/i.test(html))throw Error('Zugriffsschutz / CAPTCHA');
+ if(host==='www.prolighting.de')validateProlightingMaui28G3Bundle(html,expected,expectedContents);
  const h1=plain(html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]||'');
  const tokens=normalize(expected.replace(/^2\s*[×x]\s*/, '')).split(' ').filter(t=>!['ld','systems','set','bundle','2','x'].includes(t));
  const matches=name=>{const n=normalize(name);const words=n.split(' ');const required=tokens.filter(t=>/\d/.test(t)||['schwarz','black','weiss','white'].includes(t));return tokens.length>0&&required.every(t=>words.includes(t))&&tokens.filter(t=>words.includes(t)).length/tokens.length>=.65};
@@ -32,14 +87,6 @@ export function parsePrice(html,expected,host){
  for(const m of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)){try{walk(JSON.parse(m[1]))}catch{}}
  let offers=[];
  for(const p of candidates)for(const o of [].concat(p.offers||[])){const price=priceNumber(o.price);if(o.priceCurrency==='EUR'&&Number.isFinite(price)&&price>0)offers.push({price,available:/^(?:https?:\/\/schema.org\/)?(?:InStock|PreOrder|BackOrder)\/?$/.test(o.availability)?true:/^(?:https?:\/\/schema.org\/)?(?:OutOfStock|SoldOut|Discontinued)\/?$/.test(o.availability)?false:undefined});}
- if(!offers.length&&host==='www.prolighting.de'){
-  for(const m of html.matchAll(/item_name\s*:\s*['"]([^'"]+)['"][\s\S]{0,1800}?\bprice\s*:\s*([0-9]+(?:\.[0-9]+)?)/gi)){
-   if(!matches(m[1]))continue;
-   const net=priceNumber(m[2]);
-   const gross=Math.round(net*1.19*100)/100;
-   if(Number.isFinite(gross)&&gross>0){offers.push({price:gross});break}
-  }
- }
  if(!offers.length&&host==='www.prolighting.de'&&productPageMatches()){
   const buybox=html.match(/<div\b(?=[^>]*\bid=["']artd-buybox["'])[^>]*>/i);
   const offerStart=buybox?.index??html.search(/<h1\b/i);
@@ -65,6 +112,14 @@ export function parsePrice(html,expected,host){
    if(money.length)price=priceNumber(money.at(-1)[0].replace(/\s*(?:€|EUR)\s*$/i,''));
   }
   if(Number.isFinite(price)&&price>0)offers.push({price,available:/nicht verf[uü]gbar|nicht lieferbar/i.test(after.slice(0,18000))?false:undefined});
+ }
+ if(!offers.length&&host==='www.prolighting.de'){
+  for(const m of html.matchAll(/item_name\s*:\s*['"]([^'"]+)['"][\s\S]{0,1800}?\bprice\s*:\s*([0-9]+(?:\.[0-9]+)?)/gi)){
+   if(!matches(m[1]))continue;
+   const net=priceNumber(m[2]);
+   const gross=Math.round(net*1.19*100)/100;
+   if(Number.isFinite(gross)&&gross>0){offers.push({price:gross});break}
+  }
  }
  const unique=[...new Set(offers.map(o=>o.price))];if(unique.length!==1||!Number.isFinite(unique[0])||unique[0]<=0)throw Error('Kein eindeutiger EUR-Produktpreis');
  return offers[0];

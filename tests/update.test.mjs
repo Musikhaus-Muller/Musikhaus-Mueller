@@ -88,6 +88,27 @@ test('PRO LIGHTING usa el precio visible inmediatamente anterior a inkl MwSt',()
  assert.equal(parsed.price,1089);
 });
 
+test('PRO LIGHTING prefers the gross itemprop price over ecommerce net price',()=>{
+ const htmlFixture='<h1>LD Systems MAUI 28 G2 SUB PC, Gepolsterte Schutzhülle für MAUI 28 G2 Subwoofer, Schwarz</h1><div id="artd-buybox"><meta itemprop="price" content="45.00"><meta itemprop="priceValidUntil" content="2027-11-06"></div><script>items:[{item_name: \'LD Systems MAUI 28 G2 SUB PC, Gepolsterte Schutzhülle für MAUI 28 G2 Subwoofer, Schwarz\', price: 37.82}]</script>';
+ const parsed=parsePrice(htmlFixture,'LD Systems MAUI 28 G2 SUB PC schwarz','www.prolighting.de');
+ assert.equal(parsed.price,45);
+});
+
+test('PRO LIGHTING accepts the official white set only when its exact contents are expected',()=>{
+ const htmlFixture='<div>Dieses Set besteht aus:<ul><li>LD Systems MAUI 28 G3, Kompaktes Cardioid Säulen PA System</li></ul></div><h1>LD Systems MAUI 28 G3 W + Taschenset</h1><p><strong>Set besteht aus:</strong></p><ul><li>1x LD Systems MAUI 28 G3 E, Kompaktes Cardioid Säulen PA System, Weiß (AHLDMAUI28G3W)</li><li>1x LD Systems MAUI 28 G3 SAT BAG, Gepolsterte Tragetasche</li><li>1x LD Systems MAUI 28 G3 SUB PC, Gepolsterte Schutzhülle</li></ul><div id="artd-buybox"><meta itemprop="price" content="1428.25"></div>';
+ const parsed=parsePrice(htmlFixture,'LD Systems MAUI 28 G3 W + Taschenset','www.prolighting.de','1 × MAUI 28 G3 weiß; 1 × Säulentasche; 1 × Subwooferhülle.');
+ assert.equal(parsed.price,1428.25);
+});
+
+test('PRO LIGHTING rejects the white official set and base-system page for the black bundle',async()=>{
+ const seed=JSON.parse(await fs.readFile('web/seed.json','utf8'));
+ const r3=seed.find(configuration=>configuration.id==='r3').offers.prolighting;
+ const officialWhiteSet='<div>Dieses Set besteht aus:<ul><li>LD Systems MAUI 28 G3, Kompaktes Cardioid Säulen PA System</li></ul></div><h1>LD Systems MAUI 28 G3 W + Taschenset</h1><p><strong>Set besteht aus:</strong></p><ul><li>1x LD Systems MAUI 28 G3 E, Kompaktes Cardioid Säulen PA System, Weiß (AHLDMAUI28G3W)</li><li>1x LD Systems MAUI 28 G3 SAT BAG, Gepolsterte Tragetasche</li><li>1x LD Systems MAUI 28 G3 SUB PC, Gepolsterte Schutzhülle</li></ul><div id="artd-buybox"><meta itemprop="price" content="1428.25"></div>';
+ const baseSystemOnly='<h1>LD Systems MAUI 28 G3, Kompaktes Cardioid Säulen PA System</h1><div id="artd-buybox"><meta itemprop="price" content="1289.00"></div><li>Farbe: Schwarz</li>';
+ assert.throws(()=>parsePrice(officialWhiteSet,r3.name,'www.prolighting.de',r3.contents),/black MAUI 28 G3 system/);
+ assert.throws(()=>parsePrice(baseSystemOnly,r3.name,'www.prolighting.de',r3.contents),/set composition/);
+});
+
 test('PRO LIGHTING visible-price fallback ignores financing and UVP',()=>{
  const htmlFixture='<h1>LD Systems MAUI 28 G3 W, Kompaktes Cardioid Säulen PA System, Weiß</h1><div>Finanzierung ab 25,99 EUR / Monat</div><div>UVP: 1.559,90 €</div><span>1.439,00 €</span><div>inkl. MwSt.</div>';
  const parsed=parsePrice(htmlFixture,'LD Systems MAUI 28 G3 W Kompaktes Cardioid Saeulen PA System Weiss','www.prolighting.de');
