@@ -30,11 +30,9 @@ export const SHOP_STRATEGIES = {
     publicSource: null
   },
   musicstore: {
-    mode: 'http-with-sku-catalog',
+    mode: 'http-preserve-on-block',
     browserFallback: false,
-    publicSource: {
-      type: 'sku-catalog'
-    }
+    publicSource: null
   }
 };
 
