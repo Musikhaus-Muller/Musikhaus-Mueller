@@ -26,6 +26,17 @@ test('component calculator multiplies quantities and sums the bundle', () => {
   assert.equal(result.available,true);
 });
 
+test('component calculator sums EUR amounts in integer cents', () => {
+  const result=aggregateComponentResults([
+    {component:{quantity:1,label:'MAUI 28 G2',product_url:'https://x.test/system'},result:{status:'success',price:919}},
+    {component:{quantity:1,label:'SAT BAG G2',product_url:'https://x.test/bag'},result:{status:'success',price:85}},
+    {component:{quantity:1,label:'SUB PC G2',product_url:'https://x.test/cover'},result:{status:'success',price:45}}
+  ]);
+  assert.equal(result.status,'success');
+  assert.equal(result.price,1049);
+  assert.match(result.evidence,/1049\.00 EUR$/);
+});
+
 test('component calculator refuses partial bundles and preserves previous aggregate upstream', () => {
   const result=aggregateComponentResults([
     {component:{quantity:2,label:'Top',product_url:'https://x.test/top'},result:{status:'success',price:429}},
@@ -42,4 +53,6 @@ test('collector v2 gives component targets the same public catalog fallback path
   assert.match(src, /const target = \{/);
   assert.match(src, /catalogAttemptTarget\(target, shop\.slug\)/);
   assert.match(src, /recordComponentObservation\(\{ component, runId: run\.id, result \}\)/);
+  assert.match(src, /shop_product_name,product_url,contents,calculation/);
+  assert.match(src, /parsePrice\(html, offer\.shop_product_name \|\| '', new URL\(offer\.product_url\)\.hostname, offer\.contents \|\| ''\)/);
 });
