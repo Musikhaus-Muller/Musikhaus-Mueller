@@ -4,6 +4,7 @@ import { strategyFor } from './strategies.mjs';
 import { aggregateComponentResults, expectedNameFromUrl } from './components.mjs';
 import { applyOfferMultiplier, classifyError, classifyHttpStatus, multiplierFor } from './pricing.mjs';
 import { publicCatalogSourceFor, parseCatalogProductPrice, catalogDiagnostic } from './catalog-sources.mjs';
+import { deriveRunHealth } from './result-health.mjs';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -306,7 +307,7 @@ if (process.env.COLLECT_RUN_ID) {
   });
 }
 
-let checked = 0, updated = 0, failed = 0;
+const results = [];
 const browserBlockedHosts = new Set();
 try {
   for (const offer of selected) {
@@ -389,33 +390,45 @@ try {
       }]
     });
 
-    checked++;
+    results.push({ status: final.status });
     if (final.status === 'success') {
-      updated++;
       console.log(`OK ${final.price} EUR (${final.method})`);
     } else {
-      failed++;
-      console.log(`${final.status}: ${final.error}`);
+      console.log(`${final.status}: ${final.error}; previous valid price preserved`);
     }
   }
 } finally {
   if (browser) await browser.close();
-  const status = failed === 0 ? 'success' : updated > 0 ? 'partial' : 'failed';
+  const health = deriveRunHealth(results);
+  const { status, checked, updated, preserved, hardFailed } = health;
+  const finishedAt = new Date().toISOString();
   await rest(`collection_runs?id=eq.${run.id}`, {
     method: 'PATCH',
     prefer: 'return=minimal',
     body: {
       status,
-      finished_at: new Date().toISOString(),
+      finished_at: finishedAt,
       offers_checked: checked,
       offers_updated: updated,
-      offers_failed: failed,
+      offers_failed: hardFailed,
       metadata: {
         ...(run.metadata || runMetadata),
-        lifecycle: status === 'success' ? 'success' : status === 'partial' ? 'partial' : 'failed',
-        collector_finished_at: new Date().toISOString()
+        lifecycle: status,
+        health_status: health.healthStatus,
+        result_counts: health.resultCounts,
+        collector_finished_at: finishedAt
       }
     }
   });
-  console.log(JSON.stringify({ runId: run.id, status, checked, updated, failed }, null, 2));
+  console.log(`Run ${run.id}: ${status} · ${updated} updated · ${preserved} preserved · ${hardFailed} hard failures`);
+  console.log(JSON.stringify({
+    runId: run.id,
+    status,
+    health_status: health.healthStatus,
+    checked,
+    updated,
+    preserved,
+    hardFailed,
+    result_counts: health.resultCounts
+  }, null, 2));
 }

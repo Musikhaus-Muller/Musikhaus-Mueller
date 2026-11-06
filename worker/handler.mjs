@@ -1,3 +1,5 @@
+import { classifyResultHealth, deriveRunHealth } from '../collector/result-health.mjs';
+
 const json=(x,status=200)=>new Response(JSON.stringify(x),{status,headers:{'content-type':'application/json','cache-control':'no-store'}});
 const normalize=s=>String(s).toLowerCase().replace(/ß/g,'ss').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/&[^;]+;/g,' ').replace(/[^a-z0-9]+/g,' ').trim();
 const plain=s=>s.replace(/&nbsp;|&#160;/gi,' ').replace(/&euro;|&#8364;|&#x20ac;/gi,'€').replace(/&szlig;|&#0*223;|&#x0*df;/gi,'ß').replace(/&amp;/gi,'&').replace(/<\/(?:div|p|li|h\d)\s*>/gi,'\n').replace(/<[^>]*>/g,' ').replace(/[ \t]+/g,' ').replace(/\n\s+/g,'\n').trim();
@@ -156,6 +158,7 @@ export function toFrontendRows(items){
   if(!rows.has(x.legacy_id))rows.set(x.legacy_id,{id:x.legacy_id,brand:x.brand,family:x.family,name:x.configuration_name,sub:x.subtitle||'',note:x.configuration_note||'',offers:{}});
   const row=rows.get(x.legacy_id);
   const observed=x.price_observed_at||null,lastAttempt=x.last_attempt_at||null;
+  const observedTimestamp=observed?Date.parse(observed):NaN;
   const offer={
    name:x.shop_product_name||x.source_name||'',
    price:x.price===null||x.price===undefined?null:Number(x.price),
@@ -168,6 +171,8 @@ export function toFrontendRows(items){
    sourceName:x.source_name||x.shop_product_name||'',
    evidence:x.evidence||'',
    priceDate:observed?observed.slice(0,10):null,
+   priceObservedAt:observed,
+   priceAgeDays:Number.isFinite(observedTimestamp)?Math.max(0,Math.floor((Date.now()-observedTimestamp)/86400000)):null,
    checkedAt:observed,
    lastAttempt:lastAttempt?lastAttempt.slice(0,10):null,
    lastAttemptAt:lastAttempt,
@@ -210,26 +215,53 @@ function supabaseHeaders(env){
 }
 export function mapSupabaseRun(run,results=[]){
  const trigger={schedule:'scheduled',manual:'manual',api:'unknown',import:'unknown'}[run.trigger_type]||'unknown';
- const status=run.status;
+ const hasResults=results.length>0;
+ const calculated=deriveRunHealth(results);
+ const storedCounts=run.metadata?.result_counts;
+ const counts=hasResults?calculated:{
+  checked:storedCounts?.checked??run.offers_checked??0,
+  updated:storedCounts?.updated??run.offers_updated??0,
+  preserved:storedCounts?.preserved??0,
+  hardFailed:storedCounts?.hard_failed??run.offers_failed??0,
+  preservedBlocked:storedCounts?.preserved_blocked??0,
+  preservedCaptcha:storedCounts?.preserved_captcha??0,
+  preservedNotFound:storedCounts?.preserved_not_found??0,
+  preservedParseError:storedCounts?.preserved_parse_error??0,
+  networkErrors:storedCounts?.network_error??0,
+  unknownFailures:storedCounts?.unknown_failure??0,
+  status:run.status,
+  healthStatus:run.metadata?.health_status||null,
+  resultCounts:storedCounts||null
+ };
+ const status=run.status==='running'?run.status:hasResults?calculated.status:run.status;
  const mappedResults=results.map(x=>({
   shop:x.offer?.shop?.slug||'unknown',
   url:x.offer?.product_url||'',
   product:x.offer?.shop_product_name||'',
   checkedAt:x.created_at||run.finished_at||run.started_at,
-  status:x.status==='success'?'confirmed':'error',
+  status:x.status==='success'?'confirmed':classifyResultHealth(x.status)==='hard_failed'?'error':'preserved',
+  sourceStatus:x.status,
   message:x.message||x.status,
   changes:[]
  }));
- const issues=mappedResults.filter(x=>x.status==='error').map(x=>({shop:x.shop,url:x.url,message:x.message}));
+ const issues=mappedResults.filter(x=>x.status==='error').map(x=>({shop:x.shop,url:x.url,sourceStatus:x.sourceStatus,message:x.message}));
+ const warnings=mappedResults.filter(x=>x.status==='preserved').map(x=>({shop:x.shop,url:x.url,sourceStatus:x.sourceStatus,message:x.message}));
  const shops=[...mappedResults.reduce((groups,result)=>{
-  const group=groups.get(result.shop)||{shop:result.shop,total:0,confirmed:0,failed:0};
+  const group=groups.get(result.shop)||{shop:result.shop,total:0,confirmed:0,preserved:0,failed:0,preservedBlocked:0,preservedCaptcha:0,preservedNotFound:0,preservedParseError:0};
   group.total++;
-  if(result.status==='confirmed')group.confirmed++;else group.failed++;
+  if(result.status==='confirmed')group.confirmed++;
+  else if(result.status==='preserved'){
+   group.preserved++;
+   if(result.sourceStatus==='blocked')group.preservedBlocked++;
+   else if(result.sourceStatus==='captcha')group.preservedCaptcha++;
+   else if(result.sourceStatus==='not_found')group.preservedNotFound++;
+   else if(result.sourceStatus==='parse_error')group.preservedParseError++;
+  }else group.failed++;
   groups.set(result.shop,group);
   return groups;
  },new Map()).values()].map(shop=>({
   ...shop,
-  status:shop.failed===0?'success':shop.confirmed>0?'partial':'failed'
+  status:shop.failed===0?(shop.preserved>0?'success_with_preserved':'success'):(shop.confirmed+shop.preserved>0?'partial':'failed')
  }));
  return {
   id:run.id,
@@ -239,13 +271,17 @@ export function mapSupabaseRun(run,results=[]){
   reason:run.metadata?.error||run.metadata?.finalized_reason||null,
   startedAt:run.started_at,
   finishedAt:run.finished_at,
-  processed:run.offers_checked||0,
+  processed:counts.checked,
   total:run.offers_total||0,
-  confirmed:run.offers_updated||0,
-  failed:run.offers_failed||0,
+  confirmed:counts.updated,
+  preserved:counts.preserved,
+  failed:counts.hardFailed,
+  healthStatus:counts.healthStatus||run.metadata?.health_status||null,
+  resultCounts:counts.resultCounts,
   changed:0,
   shops,
   issues,
+  warnings,
   results:mappedResults
  };
 }

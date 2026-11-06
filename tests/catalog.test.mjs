@@ -2,8 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 
-const src=await fs.readFile('dist/server/index.js','utf8');
-const mod=await import('data:text/javascript;base64,'+Buffer.from(src).toString('base64'));
+const mod=await import('../dist/server/index.js');
 
 test('Supabase frontend projection maps to the existing bundle shape',()=>{
  const rows=mod.toFrontendRows([{
@@ -17,6 +16,9 @@ test('Supabase frontend projection maps to the existing bundle shape',()=>{
  assert.equal(rows[0].offers.musicstore.price,1858);
  assert.equal(rows[0].offers.musicstore.available,true);
  assert.equal(rows[0].offers.musicstore.verifiedToday,false);
+ assert.equal(rows[0].offers.musicstore.priceObservedAt,'2026-11-04T12:00:00Z');
+ assert.equal(rows[0].offers.musicstore.lastAttemptAt,'2026-11-04T13:00:00Z');
+ assert.equal(rows[0].offers.musicstore.priceAgeDays,Math.max(0,Math.floor((Date.now()-Date.parse('2026-11-04T12:00:00Z'))/86400000)));
  assert.match(rows[0].offers.musicstore.fetchStatus,/blocked/);
 });
 
@@ -38,5 +40,19 @@ test('a not_found attempt keeps the last successful Thomann price visible',()=>{
  }]);
  assert.equal(row.offers.thomann.price,7269);
  assert.equal(row.offers.thomann.verifiedToday,false);
+ assert.equal(row.offers.thomann.priceObservedAt,'2026-10-17T00:00:00Z');
+ assert.equal(row.offers.thomann.lastAttemptAt,'2026-11-06T11:00:00Z');
  assert.match(row.offers.thomann.fetchStatus,/not_found.*HTTP 404/);
+});
+
+test('a CAPTCHA attempt preserves the last successful price and reports it as unverified',()=>{
+ const [row]=mod.toFrontendRows([{
+  legacy_id:'r13',brand:'LD Systems',family:'MAUI',configuration_name:'MAUI 11 G3',subtitle:'',
+  shop_slug:'thomann',shop_product_name:'LD Systems Maui 11 G3',product_url:'https://www.thomann.de/example',
+  price:'999.00',availability:'available',price_source_method:'http',price_observed_at:'2026-10-20T00:00:00Z',
+  last_attempt_status:'captcha',last_attempt_error:'CAPTCHA / access challenge detected',last_attempt_at:'2026-11-06T12:00:00Z'
+ }]);
+ assert.equal(row.offers.thomann.price,999);
+ assert.equal(row.offers.thomann.verifiedToday,false);
+ assert.match(row.offers.thomann.fetchStatus,/captcha/);
 });
