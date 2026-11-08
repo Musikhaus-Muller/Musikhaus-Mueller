@@ -6,20 +6,20 @@ test('PRO LIGHTING 40/40 audit reconciles all published offers', async () => {
   const seed=JSON.parse(await fs.readFile('web/seed.json','utf8'));
   assert.equal(seed.length,40);
   const offers=seed.filter(r=>r.offers?.prolighting);
-  assert.equal(offers.length,22);
+  assert.equal(offers.length,26);
 
   const expected=new Map([
     ['r1',1858],['r3',1289],['r4',2841.5],['r5',2578],['r6',2658],['r7',3098],
     ['r19',3369],['r20',4479],['r21',7349],
     ['r2',2096],['r11',4469.44],['r14',1049],['r24',2537.24],['r25',2675.04],
-    ['r26',4318.68],['r28',6647.6],
+    ['r26',4318.68],['r28',6647.6],['r9',4935.80],['r10',3389.80],['r12',7377.80],['r13',839],
     ['r30',2098],['r31',2178],['r32',2529.6],['r33',2609.6],['r34',1264.8],['r35',1304.8]
   ]);
   for(const [id,price] of expected){
     const offer=seed.find(r=>r.id===id)?.offers?.prolighting;
     assert(offer,`missing PRO LIGHTING offer for ${id}`);
     assert.equal(offer.price,price);
-    assert.equal(offer.priceDate,['r2','r11','r14','r24','r25','r26','r28'].includes(id)?'2026-11-06':'2026-11-04');
+    assert.equal(offer.priceDate,['r2','r11','r14','r24','r25','r26','r28'].includes(id)?'2026-11-06':['r9','r10','r12','r13'].includes(id)?'2026-11-08':'2026-11-04');
     assert.equal(offer.verifiedToday,true);
   }
   for(const id of ['r19','r20','r21']) assert.equal(seed.find(r=>r.id===id).offers.prolighting.available,false);
