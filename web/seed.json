@@ -1128,7 +1128,7 @@
       "prolighting": {
         "name": "PRO LIGHTING Warenkorb · MAUI 44 G2 Stereo Touring",
         "price": 4935.8,
-        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-44.html?sort=1",
+        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-r-44-g2-professionelles-saeulen-pa-system.html",
         "contents": "2 × MAUI 44 G2 schwarz; 2 × MAUI 44 G2 SUB PC; 2 × MAUI 44 G2 SAT BAG; 2 × MAUI 44 G2 CB.",
         "match": "exact",
         "verifiedToday": true,
@@ -1136,41 +1136,51 @@
         "evidence": "PRO LIGHTING official public product pages verified · 08.11.2026",
         "calculation": "2 × 2.179 € + 2 × 64,90 € + 2 × 99 € + 2 × 125 € = 4.935,80 €",
         "note": "Complete verified component cart; no substitutions.",
-        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-44.html?sort=1",
+        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-r-44-g2-professionelles-saeulen-pa-system.html",
         "lastAttempt": "2026-11-08",
         "collectionDisabled": true,
         "classification": "complete_component_calc",
         "availability": true,
         "components": [
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-r-44-g2-professionelles-saeulen-pa-system.html",
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-44.html?sort=1",
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-44.html?sort=1",
-          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-44.html?sort=1",
-          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-44.html?sort=1"
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-maui-44-g2-cb-rollbrett-fuer-maui-44-g2.html"
         ],
         "componentDetails": [
           {
             "name": "LD Systems MAUI 44 G2 schwarz",
-            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-44.html?sort=1",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-r-44-g2-professionelles-saeulen-pa-system.html",
             "quantity": 2,
-            "unitPrice": 2179
+            "unitPrice": 2179,
+            "sku": "AHLDMAUI44G2",
+            "availability": "in_stock"
           },
           {
             "name": "LD Systems MAUI 44 G2 SUB PC",
             "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-44.html?sort=1",
             "quantity": 2,
-            "unitPrice": 64.9
+            "unitPrice": 64.9,
+            "sku": "AHLDM44G2SUBPC",
+            "availability": "in_stock",
+            "sourceIdentity": "family_page_sku_price"
           },
           {
             "name": "LD Systems MAUI 44 G2 SAT BAG",
             "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-44.html?sort=1",
             "quantity": 2,
-            "unitPrice": 99
+            "unitPrice": 99,
+            "sku": "AHLDM44G2SATBAG",
+            "availability": "in_stock",
+            "sourceIdentity": "family_page_sku_price"
           },
           {
             "name": "LD Systems MAUI 44 G2 CB",
-            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-44.html?sort=1",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-maui-44-g2-cb-rollbrett-fuer-maui-44-g2.html",
             "quantity": 2,
-            "unitPrice": 125
+            "unitPrice": 125,
+            "sku": "AHLDM44G2CB",
+            "availability": "in_stock"
           }
         ]
       }
@@ -1290,7 +1300,7 @@
       "prolighting": {
         "name": "PRO LIGHTING Warenkorb · MAUI 11 G3 Power Bundle",
         "price": 3389.8,
-        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-g3.html?view=classic",
+        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-11-g3-portables-cardioid-saeulen-pa-system.html",
         "contents": "2 × MAUI 11 G3 schwarz; 2 × MAUI 11 G3 SUB schwarz; 2 × Cordial PEAK CPM 3 FM-FLEX audio XLR, 3 m.",
         "match": "exact",
         "verifiedToday": true,
@@ -1298,34 +1308,40 @@
         "evidence": "PRO LIGHTING official public product pages verified · 08.11.2026",
         "calculation": "2 × 929 € + 2 × 745 € + 2 × 20,90 € = 3.389,80 €",
         "note": "Complete verified component cart; no substitutions.",
-        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-g3.html?view=classic",
+        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-11-g3-portables-cardioid-saeulen-pa-system.html",
         "lastAttempt": "2026-11-08",
         "collectionDisabled": true,
         "classification": "complete_component_calc",
         "availability": true,
         "components": [
-          "https://www.prolighting.de/de/kategorie/3529",
-          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-g3.html?view=classic",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-11-g3-portables-cardioid-saeulen-pa-system.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-11-g3-sub-aktiver-2-x-8-subwoofer-fuer-maui-11-g3.html",
           "https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-3-fm-flex-3-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html"
         ],
         "componentDetails": [
           {
             "name": "LD Systems MAUI 11 G3 schwarz",
-            "url": "https://www.prolighting.de/de/kategorie/3529",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-11-g3-portables-cardioid-saeulen-pa-system.html",
             "quantity": 2,
-            "unitPrice": 929
+            "unitPrice": 929,
+            "sku": "AHLDMAUI11G3",
+            "availability": "in_stock"
           },
           {
             "name": "LD Systems MAUI 11 G3 SUB schwarz",
-            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-g3.html?view=classic",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-11-g3-sub-aktiver-2-x-8-subwoofer-fuer-maui-11-g3.html",
             "quantity": 2,
-            "unitPrice": 745
+            "unitPrice": 745,
+            "sku": "AHLDM11G3SUB",
+            "availability": "in_stock"
           },
           {
             "name": "Cordial PEAK CPM 3 FM-FLEX audio XLR 3 m",
             "url": "https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-3-fm-flex-3-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html",
             "quantity": 2,
-            "unitPrice": 20.9
+            "unitPrice": 20.9,
+            "sku": "CPM03FMFX",
+            "availability": "in_stock"
           }
         ]
       }
@@ -1531,7 +1547,7 @@
       "prolighting": {
         "name": "PRO LIGHTING Warenkorb · MAUI 44 G2 Power Bundle",
         "price": 7377.8,
-        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-44.html?sort=1",
+        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-r-44-g2-professionelles-saeulen-pa-system.html",
         "contents": "2 × MAUI 44 G2 schwarz; 2 × MAUI 44 G2 SUB schwarz; 2 × Cordial PEAK CPM 3 FM-FLEX audio XLR, 3 m.",
         "match": "exact",
         "verifiedToday": true,
@@ -1539,35 +1555,43 @@
         "evidence": "PRO LIGHTING official public product pages verified · 08.11.2026",
         "calculation": "2 × 2.179 € + 2 × 1.489 € + 2 × 20,90 € = 7.377,80 €",
         "note": "Complete verified component cart; no substitutions.",
-        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-44.html?sort=1",
+        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-r-44-g2-professionelles-saeulen-pa-system.html",
         "lastAttempt": "2026-11-08",
         "collectionDisabled": true,
         "classification": "complete_component_calc",
         "availability": false,
         "availableFrom": "2027-01-05",
         "components": [
-          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-44.html?sort=1",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-r-44-g2-professionelles-saeulen-pa-system.html",
           "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-44.html?sort=1",
           "https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-3-fm-flex-3-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html"
         ],
         "componentDetails": [
           {
             "name": "LD Systems MAUI 44 G2 schwarz",
-            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-44.html?sort=1",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-r-44-g2-professionelles-saeulen-pa-system.html",
             "quantity": 2,
-            "unitPrice": 2179
+            "unitPrice": 2179,
+            "sku": "AHLDMAUI44G2",
+            "availability": "in_stock"
           },
           {
             "name": "LD Systems MAUI 44 G2 SUB schwarz",
             "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serien/ld-systems-maui-44.html?sort=1",
             "quantity": 2,
-            "unitPrice": 1489
+            "unitPrice": 1489,
+            "sku": "AHLDMAUI44G2SUB",
+            "availability": "future_stock",
+            "availableFrom": "2027-01-05",
+            "sourceIdentity": "family_page_sku_price"
           },
           {
             "name": "Cordial PEAK CPM 3 FM-FLEX audio XLR 3 m",
             "url": "https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-3-fm-flex-3-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html",
             "quantity": 2,
-            "unitPrice": 20.9
+            "unitPrice": 20.9,
+            "sku": "CPM03FMFX",
+            "availability": "in_stock"
           }
         ]
       }
@@ -1679,7 +1703,7 @@
       "prolighting": {
         "name": "PRO LIGHTING Warenkorb · MAUI 11 G2 Bundle",
         "price": 839,
-        "url": "https://www.prolighting.de/de/kategorie/3529",
+        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-11-g2.html",
         "contents": "1 × MAUI 11 G2 schwarz; 1 × MAUI 11 G2 SAT BAG; 1 × MAUI 11 G2 SUB PC.",
         "match": "exact",
         "verifiedToday": true,
@@ -1687,34 +1711,40 @@
         "evidence": "PRO LIGHTING official public product pages verified · 08.11.2026",
         "calculation": "729 € + 65 € + 45 € = 839 €",
         "note": "Complete verified component cart; no substitutions.",
-        "source": "https://www.prolighting.de/de/kategorie/3529",
+        "source": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-11-g2.html",
         "lastAttempt": "2026-11-08",
         "collectionDisabled": true,
         "classification": "complete_component_calc",
         "availability": true,
         "components": [
-          "https://www.prolighting.de/de/kategorie/3529",
-          "https://www.prolighting.de/de/kategorie/3529",
-          "https://www.prolighting.de/de/kategorie/3529"
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-11-g2.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-maui-11-sat-bag.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-maui-11-g2-sub-bag.html"
         ],
         "componentDetails": [
           {
             "name": "LD Systems MAUI 11 G2 schwarz",
-            "url": "https://www.prolighting.de/de/kategorie/3529",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-maui-serie/ld-systems-maui-11-g2.html",
             "quantity": 1,
-            "unitPrice": 729
+            "unitPrice": 729,
+            "sku": "AHLDMAUI11G2",
+            "availability": "in_stock"
           },
           {
             "name": "LD Systems MAUI 11 G2 SAT BAG",
-            "url": "https://www.prolighting.de/de/kategorie/3529",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-maui-11-sat-bag.html",
             "quantity": 1,
-            "unitPrice": 65
+            "unitPrice": 65,
+            "sku": "AHLDM11G2SATBAG",
+            "availability": "in_stock"
           },
           {
             "name": "LD Systems MAUI 11 G2 SUB PC",
-            "url": "https://www.prolighting.de/de/kategorie/3529",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-maui-11-g2-sub-bag.html",
             "quantity": 1,
-            "unitPrice": 45
+            "unitPrice": 45,
+            "sku": "AHLDM11G2SUBPC",
+            "availability": "in_stock"
           }
         ]
       }
@@ -2779,7 +2809,7 @@
             "name": "Gravity SP 2332 B",
             "url": "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
             "quantity": 2,
-            "unitPrice": 23.9
+            "unitPrice": 23.90
           },
           {
             "name": "ah Cables 3 STAR MMF 0300 XLR 3 m",
@@ -2900,7 +2930,7 @@
             "name": "LD Systems ICOA 15 A BT",
             "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-15-a-bt-15-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
             "quantity": 2,
-            "unitPrice": 467.9
+            "unitPrice": 467.90
           },
           {
             "name": "LD Systems ICOA SUB 18 A",
@@ -2912,7 +2942,7 @@
             "name": "Gravity SP 2332 B",
             "url": "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
             "quantity": 2,
-            "unitPrice": 23.9
+            "unitPrice": 23.90
           },
           {
             "name": "ah Cables 3 STAR MMF 0300 XLR 3 m",
@@ -3030,7 +3060,7 @@
             "name": "LD Systems ICOA 15 A BT",
             "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-15-a-bt-15-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
             "quantity": 2,
-            "unitPrice": 467.9
+            "unitPrice": 467.90
           },
           {
             "name": "LD Systems ICOA SUB 18 A",
@@ -3260,13 +3290,13 @@
             "name": "Gravity SP 2332 B",
             "url": "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
             "quantity": 2,
-            "unitPrice": 23.9
+            "unitPrice": 23.90
           },
           {
             "name": "Cordial PEAK CPM 3 FM-FLEX Neutrik XLR 3 m",
             "url": "https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-3-fm-flex-3-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html",
             "quantity": 2,
-            "unitPrice": 20.9
+            "unitPrice": 20.90
           }
         ]
       }

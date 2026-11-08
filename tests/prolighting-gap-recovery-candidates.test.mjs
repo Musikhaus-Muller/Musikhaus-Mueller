@@ -18,6 +18,16 @@ test('Gap Recovery PRO LIGHTING candidates are exact, complete, and priced from 
     assert.equal(offer.priceDate,'2026-11-08');
     assert.equal(offer.components.length,offer.componentDetails.length);
     assert.equal(offer.componentDetails.reduce((sum,x)=>sum+x.quantity*x.unitPrice,0),offer.price);
+    for(const component of offer.componentDetails){
+      assert.ok(component.sku,`${id}: missing official SKU for ${component.name}`);
+      assert.match(component.url,/^https:\/\/www\.prolighting\.de\//);
+      assert.doesNotMatch(component.url,/\/de\/kategorie\//);
+      if(component.sourceIdentity==='family_page_sku_price'){
+        assert.match(component.url,/ld-systems-maui-44\.html/);
+      }else{
+        assert.doesNotMatch(component.url,/ld-systems-maui-(?:serien|serie)\/.+\.html\?/);
+      }
+    }
   }
   const r9=seed.find(row=>row.id==='r9').offers.prolighting;
   assert.deepEqual(r9.componentDetails.map(x=>x.name),[
@@ -29,6 +39,8 @@ test('Gap Recovery PRO LIGHTING candidates are exact, complete, and priced from 
   const r12=seed.find(row=>row.id==='r12').offers.prolighting;
   assert.equal(r12.availability,false);
   assert.equal(r12.availableFrom,'2027-01-05');
+  const r12Sub=r12.componentDetails.find(x=>x.name==='LD Systems MAUI 44 G2 SUB schwarz');
+  assert.deepEqual({sku:r12Sub.sku,availability:r12Sub.availability,availableFrom:r12Sub.availableFrom,sourceIdentity:r12Sub.sourceIdentity},{sku:'AHLDMAUI44G2SUB',availability:'future_stock',availableFrom:'2027-01-05',sourceIdentity:'family_page_sku_price'});
 });
 
 test('Gap Recovery migration keeps component evidence and merges existing metadata idempotently', async () => {
@@ -40,6 +52,9 @@ test('Gap Recovery migration keeps component evidence and merges existing metada
   assert.match(sql,/insert into public\.component_price_observations/);
   assert.match(sql,/'component_calc'/);
   assert.match(sql,/'future_stock'/);
+  assert.match(sql,/'sku',x\.value->>'sku'/);
+  assert.match(sql,/'source_identity',x\.value->>'source_identity'/);
+  assert.doesNotMatch(sql,/\/de\/kategorie\//);
   assert.match(sql,/MAUI 44 G2 SUB PC/);
   assert.doesNotMatch(sql,/WPC/);
   assert.doesNotMatch(sql,/DMX/);
