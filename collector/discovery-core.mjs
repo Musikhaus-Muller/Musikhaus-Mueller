@@ -133,6 +133,21 @@ function icoaStructuralVariant(value) {
   };
 }
 
+function namedVariants(value) {
+  const n=normalize(value);
+  return {
+    pro:/\bpro\b/.test(n),
+    bt:/\bbt\b/.test(n),
+    mix:/\bmix\b/.test(n)
+  };
+}
+
+function hasSameSku(expected, candidate) {
+  const wanted=String(expected?.sku || expected?.expected_sku || '').trim().toLowerCase();
+  const got=String(candidate?.sku || candidate?.source_identity?.sku || '').trim().toLowerCase();
+  return !wanted || (Boolean(got) && wanted===got);
+}
+
 function expectsStandaloneMainProduct(config) {
   return !likelyNeedsComponents(config);
 }
@@ -229,6 +244,8 @@ export function scoreDiscoveryCandidate(config, candidate) {
   const expected = [config.brand, config.family, config.name, config.subtitle].filter(Boolean).join(' ');
   const candidateName = candidate.name || '';
 
+  if (!hasSameSku(config,candidate)) return { score: 0, accepted: false, reason: 'sku_mismatch' };
+
   if (accessoryKind(candidateName)) {
     return { score: 0, accepted: false, reason: 'accessory_mismatch' };
   }
@@ -252,6 +269,12 @@ export function scoreDiscoveryCandidate(config, candidate) {
   const candidateNums = new Set(modelNumbers(candidateName));
   if (requiredNumbers.some(n => !candidateNums.has(n))) {
     return { score: 0, accepted: false, reason: 'model_number_mismatch' };
+  }
+
+  const expectedVariants=namedVariants(expected);
+  const candidateVariants=namedVariants(candidateName);
+  if (Object.keys(expectedVariants).some(key=>expectedVariants[key]!==candidateVariants[key])) {
+    return { score: 0, accepted: false, reason: 'model_variant_mismatch' };
   }
 
   const wanted = tokens([config.brand, config.family, config.name].filter(Boolean).join(' '));
@@ -290,6 +313,8 @@ export function scoreComponentCandidate(component, candidate) {
   const candidateName = candidate?.name || '';
   const expectedAccessory = component?.kind === 'accessory';
   const candidateAccessory = Boolean(accessoryKind(candidateName));
+
+  if (!hasSameSku(component,candidate)) return { score: 0, accepted: false, reason: 'sku_mismatch' };
 
   if (expectedAccessory !== candidateAccessory) {
     return { score: 0, accepted: false, reason: 'component_kind_mismatch' };
@@ -360,6 +385,12 @@ export function scoreComponentCandidate(component, candidate) {
   const candidateGen = generationOf(candidateName);
   if (expectedGen && candidateGen !== expectedGen) {
     return { score: 0, accepted: false, reason: 'generation_mismatch' };
+  }
+
+  const expectedVariants=namedVariants(expectedName);
+  const candidateVariants=namedVariants(candidateName);
+  if (Object.keys(expectedVariants).some(key=>expectedVariants[key]!==candidateVariants[key])) {
+    return { score: 0, accepted: false, reason: 'model_variant_mismatch' };
   }
 
   const expectedColor = colorOf(expectedName);
