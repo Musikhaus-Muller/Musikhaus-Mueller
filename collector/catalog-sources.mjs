@@ -26,6 +26,13 @@ const significantTokens=expected=>normalize(expected.replace(/^\s*\d+\s*[×x]\s*
   .split(' ')
   .filter(t=>t.length>1 && !['ld','systems','system','set','bundle','kompaktes','portables','aktives','aktive','pa'].includes(t));
 
+const productBoundary=(line,required)=>{
+  const words=new Set(normalize(line).split(' '));
+  const namesProduct=/\b(ld systems|dap|gravity|cordial)\b/i.test(line);
+  const hasDifferentRequiredModel=required.some(token=>/\d/.test(token)&&!words.has(token));
+  return namesProduct&&hasDifferentRequiredModel;
+};
+
 export function publicCatalogSourceFor(shopSlug, expected) {
   const n=normalize(expected);
   if (shopSlug === 'prolighting') {
@@ -90,6 +97,7 @@ export function parseCatalogProductPrice(html, expected) {
 
   for(let i=0;i<searchLines.length;i++){
     const line=searchLines[i];
+    if(i>0&&productBoundary(line,required)) break;
     if(/finanzierung|monat/i.test(line)) continue;
     const candidates=[...line.matchAll(/\b\d{1,3}(?:\.\d{3})*,\d{2}\s*(?:€|EUR)(?![A-Za-z0-9_])/gi)];
     const filtered=candidates.filter(m=>!/uvp|retail price/i.test(line.slice(Math.max(0,m.index-20),m.index)));
