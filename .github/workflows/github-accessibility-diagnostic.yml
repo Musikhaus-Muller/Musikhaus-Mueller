@@ -1,0 +1,53 @@
+name: GitHub accessibility diagnostic
+
+on:
+  workflow_dispatch:
+    inputs:
+      shop:
+        description: Shop to inspect without writing data
+        required: true
+        default: all
+        type: choice
+        options:
+          - kirstein
+          - hotsound
+          - musicstore
+          - thomann
+          - all
+      limit:
+        description: Optional maximum number of exact published URLs per shop
+        required: false
+        default: '100'
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run read-only accessibility diagnostic
+        env:
+          SHOP: ${{ inputs.shop }}
+          LIMIT: ${{ inputs.limit }}
+          COLLECT_EXECUTION_ENV: github
+        run: |
+          set -euo pipefail
+          if [ "$SHOP" = "all" ]; then
+            for SHOP_NAME in kirstein hotsound musicstore thomann; do
+              node collector/run.mjs --shop="$SHOP_NAME" --diagnostic-only --limit="$LIMIT" > "diagnostic-$SHOP_NAME.json"
+            done
+          else
+            node collector/run.mjs --shop="$SHOP" --diagnostic-only --limit="$LIMIT" > "diagnostic-$SHOP.json"
+          fi
+      - name: Upload diagnostic JSON
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-accessibility-diagnostic-${{ inputs.shop }}
+          path: diagnostic-*.json
+          if-no-files-found: error
