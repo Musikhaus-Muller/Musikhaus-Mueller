@@ -17,22 +17,26 @@ export const SHOP_STRATEGIES = {
     publicSource: {
       type: 'sitemap',
       url: 'https://www.thomann.de/sitemap.xml'
-    }
+    },
+    diagnosticSources: ['https://www.thomann.de/sitemap.xml']
   },
   kirstein: {
     mode: 'http-preserve-on-block',
     browserFallback: false,
-    publicSource: null
+    publicSource: null,
+    diagnosticSources: ['https://www.kirstein.de/sitemap.xml']
   },
   hotsound: {
     mode: 'http-preserve-on-block',
     browserFallback: false,
-    publicSource: null
+    publicSource: null,
+    diagnosticSources: []
   },
   musicstore: {
     mode: 'http-preserve-on-block',
     browserFallback: false,
-    publicSource: null
+    publicSource: null,
+    diagnosticSources: ['https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1']
   }
 };
 

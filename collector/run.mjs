@@ -1,4 +1,3 @@
-import { chromium } from 'playwright';
 import { parsePrice } from '../worker/handler.mjs';
 import { strategyFor } from './strategies.mjs';
 import { aggregateComponentResults, expectedNameFromUrl } from './components.mjs';
@@ -7,12 +6,6 @@ import { publicCatalogSourceFor, parseCatalogProductPrice, catalogDiagnostic } f
 import { deriveRunHealth } from './result-health.mjs';
 import { formatResultLogMessage } from './result-log.mjs';
 
-const SUPABASE_URL = process.env.SUPABASE_URL;
-const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
-if (!SUPABASE_URL || !SUPABASE_KEY) {
-  throw new Error('SUPABASE_URL and SUPABASE_SECRET_KEY are required');
-}
-
 const args = Object.fromEntries(process.argv.slice(2).map(v => {
   const [k, ...rest] = v.replace(/^--/, '').split('=');
   return [k, rest.length ? rest.join('=') : true];
@@ -20,6 +13,63 @@ const args = Object.fromEntries(process.argv.slice(2).map(v => {
 const shopFilter = args.shop && args.shop !== true ? String(args.shop) : null;
 const limit = args.limit && args.limit !== true ? Number(args.limit) : Infinity;
 const httpOnly = args['http-only'] === true;
+const diagnosticOnly = args['diagnostic-only'] === true;
+const executionEnvironment = process.env.COLLECT_EXECUTION_ENV || 'github';
+if (!['github', 'local', 'self_hosted'].includes(executionEnvironment)) {
+  throw new Error('COLLECT_EXECUTION_ENV must be github, local, or self_hosted');
+}
+
+async function diagnosticFetch(url) {
+  try {
+    const response = await fetch(url, {
+      redirect: 'follow',
+      signal: AbortSignal.timeout(15000),
+      headers: {
+        Accept: 'text/html,application/xhtml+xml,application/xml',
+        'Accept-Language': 'de-DE,de;q=0.9,en;q=0.6',
+        'User-Agent': 'PA-Bundle-Comparator/2.1 safe diagnostic'
+      }
+    });
+    return { url, status: response.status, finalUrl: response.url, ok: response.ok };
+  } catch (error) {
+    return { url, status: null, ok: false, error: String(error.message || error) };
+  }
+}
+
+async function runDiagnosticOnly() {
+  const { default: seed } = await import('../web/seed.json', { with: { type: 'json' } });
+  const shops = shopFilter ? [shopFilter] : ['musicstore', 'kirstein', 'hotsound', 'thomann'];
+  const report = [];
+  for (const slug of shops) {
+    const strategy = strategyFor(slug);
+    const directUrls = [...new Set(seed.flatMap(configuration => {
+      const offer = configuration.offers?.[slug];
+      return offer ? [offer.url, ...(offer.components || [])] : [];
+    }).filter(url => /^https:\/\//.test(url)))].slice(0, Number.isFinite(limit) ? limit : Infinity);
+    const direct = await Promise.all(directUrls.map(diagnosticFetch));
+    const alternate = await Promise.all((strategy.diagnosticSources || []).map(diagnosticFetch));
+    report.push({
+      shop: slug,
+      execution_environment: executionEnvironment,
+      strategy: strategy.mode,
+      direct,
+      alternate,
+      writes: false
+    });
+  }
+  console.log(JSON.stringify({ mode: 'diagnostic_only', writes: false, report }, null, 2));
+}
+
+if (diagnosticOnly) {
+  await runDiagnosticOnly();
+  process.exit(0);
+}
+
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
+if (!SUPABASE_URL || !SUPABASE_KEY) {
+  throw new Error('SUPABASE_URL and SUPABASE_SECRET_KEY are required');
+}
 
 const headers = {
   apikey: SUPABASE_KEY,
@@ -164,6 +214,7 @@ async function httpAttemptTarget(offer) {
 }
 
 let browser;
+let chromium;
 
 async function resolveHotSoundProductPage(page, offer) {
   if (new URL(page.url()).hostname !== 'www.hotsound-store.com') return null;
@@ -197,6 +248,7 @@ async function resolveHotSoundProductPage(page, offer) {
 
 async function browserAttempt(offer) {
   try {
+    chromium ||= (await import('playwright')).chromium;
     browser ||= await chromium.launch({ headless: true });
     const context = await browser.newContext({
       locale: 'de-DE',
@@ -274,7 +326,7 @@ const selected = offers
   .filter(o => o.shop && (o.metadata?.collection_disabled !== true || o.components.length > 0) && (!shopFilter || o.shop.slug === shopFilter))
   .slice(0, Number.isFinite(limit) ? limit : offers.length);
 
-const runMetadata = { shop: shopFilter, httpOnly, strategyVersion: 1 };
+const runMetadata = { shop: shopFilter, httpOnly, strategyVersion: 1, execution_environment: executionEnvironment };
 let run;
 if (process.env.COLLECT_RUN_ID) {
   const runId = process.env.COLLECT_RUN_ID;
