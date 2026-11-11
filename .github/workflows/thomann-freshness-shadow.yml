@@ -1,0 +1,28 @@
+name: Thomann freshness shadow
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  shadow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run Thomann read-only shadow
+        run: |
+          mkdir -p reports
+          node collector/thomann-shadow.mjs --execution-environment=github > reports/thomann-shadow.json
+          cat reports/thomann-shadow.json
+      - name: Upload shadow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: thomann-freshness-shadow
+          path: reports/thomann-shadow.json
+          if-no-files-found: error
