@@ -94,7 +94,7 @@ test('ambiguous price is rejected',async()=>{
 test('zero or invalid price is rejected',async()=>{
   const out=await evaluateMusicStoreOffer(row(),{
     fetchImpl:async url=>response(catalog('PAH0024126-000','LD Systems ICOA Pro 12 A'),200,url),
-    parseImpl:()=>({articleNumber:'PAH0024126-000',price:0,sourceMethod:'fixture'})
+    parseImpl:()=>({articleNumber:'PAH0024126-000',name:'LD Systems ICOA Pro 12 A',price:0,sourceMethod:'fixture'})
   });
   assert.equal(out.decision,'invalid_price');
   assert.equal(out.total_price,null);
