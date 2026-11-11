@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { parsePrice } from '../worker/handler.mjs';
-import { applyOfferMultiplier, classifyHttpStatus, multiplierFor } from './pricing.mjs';
+import { applyOfferMultiplier, classifyError, classifyHttpStatus, multiplierFor } from './pricing.mjs';
 
 const USER_AGENT='PA-Bundle-Comparator/2.1 Thomann freshness shadow';
 const TIMEOUT_MS=15000;
@@ -89,8 +89,10 @@ export async function evaluateThomannTarget(target,{
   try{
     parsed=parsePriceImpl(page.html,target.expectedName,new URL(target.url).hostname,target.contents || '');
   }catch(error){
+    const classified=classifyError(error);
+    const decision=(classified==='captcha'||classified==='blocked')?'blocked':likelyIdentityMismatch(page.html,target.expectedName)?'identity_mismatch':'parse_error';
     return {
-      decision:likelyIdentityMismatch(page.html,target.expectedName)?'identity_mismatch':'parse_error',
+      decision,
       http_status:page.status,
       identity_valid:false,
       price_valid:false,

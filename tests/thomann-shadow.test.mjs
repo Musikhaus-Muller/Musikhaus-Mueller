@@ -187,3 +187,15 @@ test('invalid explicit component quantity rejects only that cart instead of abor
   assert.equal(out.decision,'parse_error');
   assert.match(out.error,/Invalid component quantity/);
 });
+
+
+test('HTTP 200 protection page is classified as blocked, not parser failure',async()=>{
+  const out=await evaluateThomannOffer(row(),{
+    fetchImpl:async()=>okResponse('<html><title>Just a moment</title><h1>LD Systems Maui 11 G3</h1></html>'),
+    parsePriceImpl:()=>{throw new Error('Zugriffsschutz / CAPTCHA');}
+  });
+  assert.equal(out.decision,'blocked');
+  assert.equal(out.http_status,200);
+  assert.equal(out.total_price,null);
+  assert.equal(out.price_valid,false);
+});
