@@ -1,0 +1,28 @@
+name: Music Store exact Art.-Nr. shadow
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  shadow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run Music Store read-only shadow
+        run: |
+          mkdir -p reports
+          node collector/musicstore-shadow.mjs --execution-environment=github > reports/musicstore-shadow.json
+          cat reports/musicstore-shadow.json
+      - name: Upload shadow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: musicstore-exact-article-shadow
+          path: reports/musicstore-shadow.json
+          if-no-files-found: error
