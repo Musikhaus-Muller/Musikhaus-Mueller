@@ -176,7 +176,7 @@ export async function writeKirsteinProduction({
           currency: 'EUR',
           availability: null,
           status: row.status,
-          source_method: 'kirstein_jsonld_exact_sku_self_hosted',
+          source_method: 'catalog',
           http_status: shadowReport.results.find(result => result.reference === row.reference)?.http_status ?? null,
           verified,
           raw_product_name: offer.shop_product_name,
@@ -189,7 +189,8 @@ export async function writeKirsteinProduction({
             expected_sku: row.expected_sku,
             quantity: row.quantity,
             unit_price: row.unit_price,
-            guarded_manual_write: true
+            guarded_manual_write: true,
+            collector_method: 'kirstein_jsonld_exact_sku_self_hosted'
           }
         }]
       });
@@ -202,7 +203,7 @@ export async function writeKirsteinProduction({
           offer_id: offer.id,
           status: row.status,
           price: verified ? row.total_price : null,
-          source_method: 'kirstein_jsonld_exact_sku_self_hosted',
+          source_method: 'catalog',
           http_status: shadowReport.results.find(result => result.reference === row.reference)?.http_status ?? null,
           message: evidence
         }]

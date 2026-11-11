@@ -100,3 +100,11 @@ test('Kirstein production source never updates offers and keeps plan as default 
   assert.doesNotMatch(source, /rest\(['"]offers['"],\s*\{\s*method:\s*['"](POST|PATCH|PUT|DELETE)/i);
   assert.doesNotMatch(source, /playwright|puppeteer|proxy|captcha|sitemap|search/i);
 });
+
+
+test('Kirstein production write uses schema-compatible source_method and preserves collector provenance', async () => {
+  const source=await fs.readFile('collector/kirstein-production.mjs','utf8');
+  assert.doesNotMatch(source,/source_method:\s*'kirstein_jsonld_exact_sku_self_hosted'/);
+  assert.match(source,/source_method:\s*'catalog'/);
+  assert.match(source,/collector_method:\s*'kirstein_jsonld_exact_sku_self_hosted'/);
+});
