@@ -233,3 +233,19 @@ test('ambiguous duplicate Art.-Nr. is classified as article_number_mismatch',asy
   const out=await evaluateMusicStoreOffer(row(),{fetchImpl:async url=>response(html,200,url)});
   assert.equal(out.decision,'article_number_mismatch');
 });
+
+
+test('current versioned split is five direct offers and fourteen incomplete carts',async()=>{
+  const seed=JSON.parse(await fs.readFile('web/seed.json','utf8'));
+  let calls=0;
+  const report=await buildMusicStoreShadowReport({
+    seed,
+    executionEnvironment:'local',
+    fetchImpl:async url=>{calls++;return response('',403,url);}
+  });
+  assert.equal(report.summary.total,19);
+  assert.equal(report.summary.blocked,5);
+  assert.equal(report.summary.incomplete_recipe,14);
+  assert.equal(report.summary.refreshable,0);
+  assert.equal(calls,5);
+});
