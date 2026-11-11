@@ -25,16 +25,15 @@ function headingFromHtml(html){
 function likelyIdentityMismatch(html, expectedName){
   const heading=normalize(headingFromHtml(html));
   if(!heading) return false;
-  const expected=normalize(expectedName);
+  const expected=normalize(String(expectedName || '').replace(/^\s*\d+\s*[×x]\s*/,''));
   const headingWords=new Set(heading.split(' '));
   const hardTokens=expected.split(' ').filter(token =>
     /\d/.test(token) || ['pro','bt','mix','g2','g3','g4x','black','white','schwarz','weiss'].includes(token)
   );
-  const aliases={black:'schwarz',white:'weiss'};
+  const aliases={black:['schwarz'],schwarz:['black'],white:['weiss'],weiss:['white']};
   return hardTokens.some(token => {
     if(headingWords.has(token)) return false;
-    const alias=aliases[token];
-    return alias ? !headingWords.has(alias) : true;
+    return !(aliases[token] || []).some(alias=>headingWords.has(alias));
   });
 }
 
@@ -201,11 +200,19 @@ async function evaluateComponentOffer(row,offer,options){
     }
   }
 
-  const totalCents=componentRows.reduce((sum,component)=>{
+  let totalCents=0;
+  for(const component of componentRows){
     const quantity=component.quantity;
-    if(!Number.isSafeInteger(quantity) || quantity<=0) throw new Error('Invalid component quantity');
-    return sum + Math.round(component.unit_price*100)*quantity;
-  },0);
+    if(!Number.isSafeInteger(quantity) || quantity<=0){
+      return {
+        reference:row.id,url:offer.url,expected_name:offer.name,
+        previous_price:Number(offer.price),previous_price_date:offer.priceDate || null,
+        collection_disabled:true,decision:'parse_error',identity_valid:false,price_valid:false,
+        total_price:null,error:`Invalid component quantity for ${component.name}`,components:componentRows
+      };
+    }
+    totalCents += Math.round(component.unit_price*100)*quantity;
+  }
   if(!Number.isSafeInteger(totalCents) || totalCents<=0){
     return {
       reference:row.id,url:offer.url,expected_name:offer.name,

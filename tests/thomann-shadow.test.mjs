@@ -162,3 +162,28 @@ test('duplicate offer URLs are fetched once through the shared cache',async()=>{
   assert.equal(report.summary.refreshable,2);
   assert.deepEqual(report.rows.map(x=>x.reference),['rX','rY']);
 });
+
+
+test('leading cart multiplier is not treated as an identity token when classifying parser failure',async()=>{
+  const out=await evaluateThomannOffer(row({
+    name:'2 × LD Systems Maui 11 G3 Bundle',
+    calculation:'2 × 1.029 € = 2.058 €'
+  }),{
+    fetchImpl:async()=>okResponse('<h1>LD Systems Maui 11 G3 Bundle</h1>'),
+    parsePriceImpl:()=>{throw new Error('Kein eindeutiger EUR-Produktpreis');}
+  });
+  assert.equal(out.decision,'parse_error');
+});
+
+test('invalid explicit component quantity rejects only that cart instead of aborting the report',async()=>{
+  const offer=row({
+    collectionDisabled:true,
+    componentDetails:[{name:'Component A',url:'https://www.thomann.de/de/a.htm',quantity:0}]
+  });
+  const out=await evaluateThomannOffer(offer,{
+    fetchImpl:async url=>okResponse('<h1>Component A</h1>',200,url),
+    parsePriceImpl:()=>({price:100})
+  });
+  assert.equal(out.decision,'parse_error');
+  assert.match(out.error,/Invalid component quantity/);
+});
