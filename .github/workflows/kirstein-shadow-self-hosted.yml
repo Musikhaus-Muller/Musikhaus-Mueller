@@ -1,0 +1,28 @@
+name: Kirstein shadow self-hosted
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  shadow:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run read-only Kirstein shadow collector
+        run: |
+          set -euo pipefail
+          node collector/kirstein-shadow.mjs \
+            --execution-environment=self_hosted \
+            > kirstein-shadow-self-hosted.json
+      - name: Upload shadow JSON
+        uses: actions/upload-artifact@v4
+        with:
+          name: kirstein-shadow-self-hosted
+          path: kirstein-shadow-self-hosted.json
+          if-no-files-found: error
