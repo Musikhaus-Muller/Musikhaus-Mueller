@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
 import { parsePrice } from '../worker/handler.mjs';
 import { applyOfferMultiplier, classifyHttpStatus, multiplierFor } from './pricing.mjs';
 
@@ -311,7 +312,7 @@ function argValue(name,fallback){
   return raw?raw.slice(prefix.length):fallback;
 }
 
-if(import.meta.url===`file://${process.argv[1]}`){
+if(process.argv[1] && fileURLToPath(import.meta.url)===process.argv[1]){
   const seed=JSON.parse(await fs.readFile(new URL('../web/seed.json',import.meta.url),'utf8'));
   const executionEnvironment=argValue('execution-environment',process.env.COLLECT_EXECUTION_ENV || 'local');
   const report=await buildThomannShadowReport({seed,executionEnvironment});

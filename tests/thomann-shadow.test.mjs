@@ -144,3 +144,21 @@ test('Thomann shadow source is read-only and contains no privileged or bypass in
   assert.doesNotMatch(source,/playwright|chromium|proxy|sitemap|captcha bypass|retry/i);
   assert.match(source,/writes:false/);
 });
+
+
+test('duplicate offer URLs are fetched once through the shared cache',async()=>{
+  let calls=0;
+  const shared='https://www.thomann.de/de/shared.htm';
+  const seed=[
+    row({url:shared,name:'LD Systems Maui 11 G3',collectionDisabled:false}),
+    {...row({url:shared,name:'LD Systems Maui 11 G3',collectionDisabled:false}),id:'rY'}
+  ];
+  const report=await buildThomannShadowReport({
+    seed,
+    fetchImpl:async url=>{calls++;return okResponse('<h1>LD Systems Maui 11 G3</h1>',200,url);},
+    parsePriceImpl:()=>({price:929})
+  });
+  assert.equal(calls,1);
+  assert.equal(report.summary.refreshable,2);
+  assert.deepEqual(report.rows.map(x=>x.reference),['rX','rY']);
+});
