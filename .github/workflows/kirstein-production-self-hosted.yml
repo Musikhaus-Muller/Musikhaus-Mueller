@@ -1,27 +1,13 @@
-name: Kirstein guarded self-hosted production
+name: Kirstein guarded self-hosted production plan
 
 on:
   workflow_dispatch:
-    inputs:
-      mode:
-        description: Plan is read-only. Write requires the exact confirmation below.
-        required: true
-        default: plan
-        type: choice
-        options:
-          - plan
-          - write
-      confirm:
-        description: For write mode type exactly WRITE_KIRSTEIN_9
-        required: false
-        type: string
 
 permissions:
   contents: read
 
 jobs:
   plan:
-    if: inputs.mode == 'plan'
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
@@ -36,26 +22,4 @@ jobs:
         with:
           name: kirstein-production-plan
           path: kirstein-production-plan.json
-          if-no-files-found: error
-
-  write:
-    if: inputs.mode == 'write' && inputs.confirm == 'WRITE_KIRSTEIN_9'
-    runs-on: self-hosted
-    env:
-      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-      SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
-      KIRSTEIN_WRITE_CONFIRM: ${{ inputs.confirm }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Execute guarded Kirstein write
-        run: |
-          set -euo pipefail
-          node collector/kirstein-production.mjs --mode=write > kirstein-production-write.json
-      - uses: actions/upload-artifact@v4
-        with:
-          name: kirstein-production-write
-          path: kirstein-production-write.json
           if-no-files-found: error
