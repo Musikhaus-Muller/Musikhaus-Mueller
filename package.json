@@ -9,7 +9,8 @@
     "preview": "node scripts/preview.mjs",
     "parity:supabase": "node scripts/check-supabase-parity.mjs",
     "discover:prolighting": "node collector/discover.mjs --shop=prolighting",
-    "review:discovery": "node collector/review-discovery.mjs --shop=prolighting"
+    "review:discovery": "node collector/review-discovery.mjs --shop=prolighting",
+    "diagnose:musicstore": "node scripts/musicstore-catalog-diagnostic.mjs"
   },
   "engines": {
     "node": ">=22"
