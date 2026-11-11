@@ -1,0 +1,25 @@
+name: Kirstein guarded self-hosted production plan
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build guarded Kirstein price plan
+        run: |
+          set -euo pipefail
+          node collector/kirstein-production.mjs --mode=plan --execution-environment=self_hosted > kirstein-production-plan.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kirstein-production-plan
+          path: kirstein-production-plan.json
+          if-no-files-found: error
