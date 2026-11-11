@@ -2685,6 +2685,34 @@
           "https://www.thomann.de/de/gravity_ss_5211_b_set_1.htm",
           "https://www.thomann.de/de/sommer_cable_stage_22_sghn_bk_60m.htm"
         ]
+      },
+      "prolighting": {
+        "name": "PRO LIGHTING Warenkorb · ICOA 1215 Bluetooth",
+        "price": 1536.55,
+        "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie.html",
+        "contents": "2 × ICOA 12 A BT; 1 × ICOA SUB 15 A; 1 × Adam Hall SPS 023 SET (2 trípodes + bolsa); 2 × Cordial PEAK CPM 6 FM audio XLR, 6 m.",
+        "match": "exact",
+        "classification": "complete_component_cart",
+        "verifiedToday": true,
+        "priceDate": "2026-11-09",
+        "evidence": "PRO LIGHTING fichas públicas por componente verificadas · 09.11.2026",
+        "calculation": "2 × 399 € + 620,85 € + 63,90 € + 2 × 26,90 € = 1.536,55 €",
+        "note": "Set AHSPS023SET verificado como 2 × SPS 023 + bolsa; cables de audio XLR 6 m, no DMX.",
+        "source": "https://www.prolighting.de/de/stative/boxenstaender/set-2x-boxenstaender-mit-tasche.html",
+        "lastAttempt": "2026-11-09",
+        "collectionDisabled": true,
+        "components": [
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie.html",
+          "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-sub-15-a-aktiver-15-bassreflex-pa-subwoofer.html",
+          "https://www.prolighting.de/de/stative/boxenstaender/set-2x-boxenstaender-mit-tasche.html",
+          "https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-6-fm-6-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html"
+        ],
+        "componentDetails": [
+          {"name":"LD Systems ICOA 12 A BT","url":"https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie.html","sku":"AHLDICOA12ABT","quantity":2,"unitPrice":399,"availability":"in_stock","sourceIdentity":"catalog_sku_price"},
+          {"name":"LD Systems ICOA SUB 15 A","url":"https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-sub-15-a-aktiver-15-bassreflex-pa-subwoofer.html","sku":"AHLDICOASUB15A","quantity":1,"unitPrice":620.85,"availability":"in_stock"},
+          {"name":"Adam Hall SPS 023 SET — 2 × SPS 023 + bolsa","url":"https://www.prolighting.de/de/stative/boxenstaender/set-2x-boxenstaender-mit-tasche.html","sku":"AHSPS023SET","quantity":1,"unitPrice":63.90,"availability":"in_stock","sourceIdentity":"set_contains_2x_sps023_plus_bag"},
+          {"name":"Cordial PEAK CPM 6 FM audio XLR 6 m","url":"https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-6-fm-6-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html","sku":"CPM6FM","quantity":2,"unitPrice":26.90,"availability":"in_stock"}
+        ]
       }
     }
   },
