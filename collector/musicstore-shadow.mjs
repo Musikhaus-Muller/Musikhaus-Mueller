@@ -18,6 +18,24 @@ function isOfficialMusicStoreUrl(url){
   }
 }
 
+function normal(value){
+  return String(value || '').toLowerCase().replace(/ß/g,'ss').normalize('NFD')
+    .replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
+}
+
+function strictVariantIdentity(expected,actual){
+  const wanted=new Set(normal(expected).split(' ').filter(Boolean));
+  const found=new Set(normal(actual).split(' ').filter(Boolean));
+  for(const token of ['pro','bt','mix','g2','g3','g4x']){
+    if(wanted.has(token)!==found.has(token)) return false;
+  }
+  const white=set=>set.has('white')||set.has('weiss')||set.has('w');
+  const black=set=>set.has('black')||set.has('schwarz');
+  if(white(wanted)!==white(found)) return false;
+  if(black(wanted)!==black(found)) return false;
+  return true;
+}
+
 async function fetchPage(url,{fetchImpl=fetch,cache=new Map()}={}){
   if(cache.has(url)) return cache.get(url);
   const promise=(async()=>{
@@ -50,7 +68,7 @@ function failureForHttp(page){
 
 function parserDecision(error){
   const message=safeError(error);
-  if(/Art\.-Nr\. (?:not found|is required|Ambiguous)/i.test(message)){
+  if(/Art\.-Nr\..*(?:not found|is required)|Ambiguous.*Art\.-Nr\./i.test(message)){
     return {decision:'article_number_mismatch',error:message};
   }
   if(/identity mismatch/i.test(message)){
@@ -93,6 +111,20 @@ export async function evaluateMusicStoreTarget(target,{
     return {...base,source_url:page.finalUrl,http_status:page.status,...failed};
   }
 
+  if(!isOfficialMusicStoreUrl(page.finalUrl)){
+    return {...base,source_url:page.finalUrl,http_status:page.status,decision:'identity_mismatch',error:'Redirect left official Music Store host'};
+  }
+  const redirectedArticle=articleNumberFromMusicStoreUrl(page.finalUrl);
+  if(redirectedArticle && redirectedArticle!==articleNumber){
+    return {
+      ...base,
+      source_url:page.finalUrl,
+      http_status:page.status,
+      decision:'article_number_mismatch',
+      error:`Redirected to Art.-Nr. ${redirectedArticle}; expected ${articleNumber}`
+    };
+  }
+
   let parsed;
   try{
     parsed=parseImpl(page.html,{articleNumber,expectedName:target.expectedName});
@@ -108,6 +140,17 @@ export async function evaluateMusicStoreTarget(target,{
       http_status:page.status,
       decision:'article_number_mismatch',
       error:`Parser returned ${parsed.articleNumber || 'no Art.-Nr.'}; expected ${articleNumber}`
+    };
+  }
+
+  if(!strictVariantIdentity(target.expectedName,parsed.name)){
+    return {
+      ...base,
+      source_url:page.finalUrl,
+      http_status:page.status,
+      article_number_valid:true,
+      decision:'identity_mismatch',
+      error:'Music Store strict variant identity mismatch'
     };
   }
 

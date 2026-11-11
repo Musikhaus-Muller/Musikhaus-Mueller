@@ -202,3 +202,34 @@ test('Music Store shadow source is strictly read-only and contains no bypass or 
   assert.doesNotMatch(source,/playwright|chromium|proxy|captcha bypass|retry/i);
   assert.match(source,/writes:false/);
 });
+
+
+test('white W and black variants are symmetric and cannot cross-match',async()=>{
+  const white=row({
+    name:'LD Systems MAUI 28 G3 W',
+    url:'https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-W/art-PAH0023386-000'
+  });
+  const out=await evaluateMusicStoreOffer(white,{
+    fetchImpl:async url=>response(catalog('PAH0023386-000','LD Systems MAUI 28 G3 Schwarz','1.349,00 €'),200,url)
+  });
+  assert.equal(out.decision,'identity_mismatch');
+});
+
+test('redirect to a different Art.-Nr. is rejected before parsing',async()=>{
+  const out=await evaluateMusicStoreOffer(row(),{
+    fetchImpl:async()=>response(
+      catalog('PAH0024127-000','LD Systems ICOA Pro 15 A','1.299,00 €'),
+      200,
+      'https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-15-A/art-PAH0024127-000'
+    )
+  });
+  assert.equal(out.decision,'article_number_mismatch');
+  assert.match(out.error,/Redirected to Art.-Nr/);
+});
+
+test('ambiguous duplicate Art.-Nr. is classified as article_number_mismatch',async()=>{
+  const html=catalog('PAH0024126-000','LD Systems ICOA Pro 12 A')+
+    catalog('PAH0024126-000','LD Systems ICOA Pro 12 A');
+  const out=await evaluateMusicStoreOffer(row(),{fetchImpl:async url=>response(html,200,url)});
+  assert.equal(out.decision,'article_number_mismatch');
+});
