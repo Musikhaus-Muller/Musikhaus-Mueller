@@ -240,6 +240,23 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-SAT-BAG/art-PAH0023393-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-SUB-PC/art-PAH0023394-000"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 11 G3 Schwarz",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems MAUI 11 G3 SAT BAG",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-SAT-BAG/art-PAH0023393-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems MAUI 11 G3 SUB PC",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-SUB-PC/art-PAH0023394-000",
+            "quantity": 2
+          }
         ]
       },
       "hotsound": {
@@ -384,6 +401,23 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SAT-BAG/art-PAH0023423-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SUB-PC/art-PAH0023395-000"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 28 G3 Schwarz",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
+            "quantity": 1
+          },
+          {
+            "name": "LD Systems MAUI 28 G3 SAT BAG",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SAT-BAG/art-PAH0023423-000",
+            "quantity": 1
+          },
+          {
+            "name": "LD Systems MAUI 28 G3 SUB PC",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SUB-PC/art-PAH0023395-000",
+            "quantity": 1
+          }
         ]
       },
       "prolighting": {
@@ -518,6 +552,23 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SAT-BAG/art-PAH0023423-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SUB-PC/art-PAH0023395-000"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 28 G3 Schwarz",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems MAUI 28 G3 SAT BAG",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SAT-BAG/art-PAH0023423-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems MAUI 28 G3 SUB PC",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SUB-PC/art-PAH0023395-000",
+            "quantity": 2
+          }
         ]
       },
       "hotsound": {
@@ -1247,7 +1298,9 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3/art-PAH0023387-000",
           "MUSIC STORE Mikrokabel Standard 1,5 m · Art.-Nr. ACC0001159-001"
-        ]
+        ],
+        "componentDetailsStatus": "incomplete_versioned_evidence",
+        "componentDetailsIssue": "ACC0001159-001 is versioned by Art.-Nr. and name only; no exact official Music Store URL is versioned in the repository."
       },
       "mueller": {
         "name": "LD Systems MAUI 11 G3 Power Bundle Set schwarz",
@@ -1657,6 +1710,23 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2/art-PAH0018045-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2-Sat-Bag/art-PAH0018753-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2-Sub-PC/art-PAH0018754-000"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 11 G2",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2/art-PAH0018045-000",
+            "quantity": 1
+          },
+          {
+            "name": "LD Systems MAUI 11 G2 Sat Bag",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2-Sat-Bag/art-PAH0018753-000",
+            "quantity": 1
+          },
+          {
+            "name": "LD Systems MAUI 11 G2 Sub PC",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2-Sub-PC/art-PAH0018754-000",
+            "quantity": 1
+          }
         ]
       },
       "hotsound": {
@@ -1808,6 +1878,23 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2/art-PAH0018043-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2-Sat-Bag/art-PAH0018692-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2-Sub-PC/art-PAH0018755-000"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 28 G2",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2/art-PAH0018043-000",
+            "quantity": 1
+          },
+          {
+            "name": "LD Systems MAUI 28 G2 Sat Bag",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2-Sat-Bag/art-PAH0018692-000",
+            "quantity": 1
+          },
+          {
+            "name": "LD Systems MAUI 28 G2 Sub PC",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2-Sub-PC/art-PAH0018755-000",
+            "quantity": 1
+          }
         ]
       },
       "prolighting": {
@@ -1995,6 +2082,18 @@
         "components": [
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-12-G4X/art-PAH0023214-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Box-3-Set-Kabel-10m-PASSIV/art-PAH343"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems DAVE 12 G4X",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-12-G4X/art-PAH0023214-000",
+            "quantity": 1
+          },
+          {
+            "name": "MUSIC STORE Box 3 Set Kabel 10m PASSIV",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Box-3-Set-Kabel-10m-PASSIV/art-PAH343",
+            "quantity": 1
+          }
         ]
       }
     }
@@ -2101,6 +2200,18 @@
         "components": [
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-15-G4X/art-PAH0023215-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Box-3-Set-Kabel-10m-PASSIV/art-PAH343"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems DAVE 15 G4X",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-15-G4X/art-PAH0023215-000",
+            "quantity": 1
+          },
+          {
+            "name": "MUSIC STORE Box 3 Set Kabel 10m PASSIV",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Box-3-Set-Kabel-10m-PASSIV/art-PAH343",
+            "quantity": 1
+          }
         ]
       }
     }
@@ -2207,6 +2318,18 @@
         "components": [
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-18-G4X/art-PAH0023216-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Box-3-Set-Kabel-10m-PASSIV/art-PAH343"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems DAVE 18 G4X",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-18-G4X/art-PAH0023216-000",
+            "quantity": 1
+          },
+          {
+            "name": "MUSIC STORE Box 3 Set Kabel 10m PASSIV",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Box-3-Set-Kabel-10m-PASSIV/art-PAH343",
+            "quantity": 1
+          }
         ]
       }
     }
@@ -2663,6 +2786,28 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-15-A/art-PAH0022032-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Lautsprecherstative-Bundle/art-PAH431",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-6-m/art-ACC0001265-000"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems ICOA 12 A BT",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems ICOA SUB 15 A",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-15-A/art-PAH0022032-000",
+            "quantity": 1
+          },
+          {
+            "name": "MUSIC STORE Lautsprecherstative Bundle",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Lautsprecherstative-Bundle/art-PAH431",
+            "quantity": 1
+          },
+          {
+            "name": "MUSIC STORE Mikrokabel Standard 6 m",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-6-m/art-ACC0001265-000",
+            "quantity": 2
+          }
         ]
       },
       "thomann": {
@@ -2708,10 +2853,40 @@
           "https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-6-fm-6-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html"
         ],
         "componentDetails": [
-          {"name":"LD Systems ICOA 12 A BT","url":"https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie.html","sku":"AHLDICOA12ABT","quantity":2,"unitPrice":399,"availability":"in_stock","sourceIdentity":"catalog_sku_price"},
-          {"name":"LD Systems ICOA SUB 15 A","url":"https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-sub-15-a-aktiver-15-bassreflex-pa-subwoofer.html","sku":"AHLDICOASUB15A","quantity":1,"unitPrice":620.85,"availability":"in_stock"},
-          {"name":"Adam Hall SPS 023 SET — 2 × SPS 023 + bolsa","url":"https://www.prolighting.de/de/stative/boxenstaender/set-2x-boxenstaender-mit-tasche.html","sku":"AHSPS023SET","quantity":1,"unitPrice":63.90,"availability":"in_stock","sourceIdentity":"set_contains_2x_sps023_plus_bag"},
-          {"name":"Cordial PEAK CPM 6 FM audio XLR 6 m","url":"https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-6-fm-6-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html","sku":"CPM6FM","quantity":2,"unitPrice":26.90,"availability":"in_stock"}
+          {
+            "name": "LD Systems ICOA 12 A BT",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie.html",
+            "sku": "AHLDICOA12ABT",
+            "quantity": 2,
+            "unitPrice": 399,
+            "availability": "in_stock",
+            "sourceIdentity": "catalog_sku_price"
+          },
+          {
+            "name": "LD Systems ICOA SUB 15 A",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-sub-15-a-aktiver-15-bassreflex-pa-subwoofer.html",
+            "sku": "AHLDICOASUB15A",
+            "quantity": 1,
+            "unitPrice": 620.85,
+            "availability": "in_stock"
+          },
+          {
+            "name": "Adam Hall SPS 023 SET — 2 × SPS 023 + bolsa",
+            "url": "https://www.prolighting.de/de/stative/boxenstaender/set-2x-boxenstaender-mit-tasche.html",
+            "sku": "AHSPS023SET",
+            "quantity": 1,
+            "unitPrice": 63.9,
+            "availability": "in_stock",
+            "sourceIdentity": "set_contains_2x_sps023_plus_bag"
+          },
+          {
+            "name": "Cordial PEAK CPM 6 FM audio XLR 6 m",
+            "url": "https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-6-fm-6-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html",
+            "sku": "CPM6FM",
+            "quantity": 2,
+            "unitPrice": 26.9,
+            "availability": "in_stock"
+          }
         ]
       }
     }
@@ -2777,6 +2952,28 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
           "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems ICOA 12 A BT",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems ICOA SUB 18 A",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
+            "quantity": 2
+          },
+          {
+            "name": "Gravity SP 2332 B",
+            "url": "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
+            "quantity": 2
+          },
+          {
+            "name": "MUSIC STORE Mikrokabel Standard 3 m",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002",
+            "quantity": 2
+          }
         ]
       },
       "thomann": {
@@ -2837,7 +3034,7 @@
             "name": "Gravity SP 2332 B",
             "url": "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
             "quantity": 2,
-            "unitPrice": 23.90
+            "unitPrice": 23.9
           },
           {
             "name": "ah Cables 3 STAR MMF 0300 XLR 3 m",
@@ -2910,6 +3107,28 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
           "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems ICOA 15 A BT",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-15-A-BT/art-PAH0021619-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems ICOA SUB 18 A",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
+            "quantity": 2
+          },
+          {
+            "name": "Gravity SP 2332 B",
+            "url": "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
+            "quantity": 2
+          },
+          {
+            "name": "MUSIC STORE Mikrokabel Standard 3 m",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002",
+            "quantity": 2
+          }
         ]
       },
       "thomann": {
@@ -2958,7 +3177,7 @@
             "name": "LD Systems ICOA 15 A BT",
             "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-15-a-bt-15-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
             "quantity": 2,
-            "unitPrice": 467.90
+            "unitPrice": 467.9
           },
           {
             "name": "LD Systems ICOA SUB 18 A",
@@ -2970,7 +3189,7 @@
             "name": "Gravity SP 2332 B",
             "url": "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
             "quantity": 2,
-            "unitPrice": 23.90
+            "unitPrice": 23.9
           },
           {
             "name": "ah Cables 3 STAR MMF 0300 XLR 3 m",
@@ -3042,6 +3261,23 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-15-A-BT/art-PAH0021619-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems ICOA 15 A BT",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-15-A-BT/art-PAH0021619-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems ICOA SUB 18 A",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
+            "quantity": 4
+          },
+          {
+            "name": "MUSIC STORE Mikrokabel Standard 3 m",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002",
+            "quantity": 4
+          }
         ]
       },
       "thomann": {
@@ -3088,7 +3324,7 @@
             "name": "LD Systems ICOA 15 A BT",
             "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-15-a-bt-15-aktiver-koaxialer-pa-lautsprecher-mit-bluetooth.html",
             "quantity": 2,
-            "unitPrice": 467.90
+            "unitPrice": 467.9
           },
           {
             "name": "LD Systems ICOA SUB 18 A",
@@ -3197,13 +3433,67 @@
           "https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-mikrofonkabel-fair-line-5m-xlr-xlr-mit-neutrik-rean-stecker.html"
         ],
         "componentDetails": [
-          {"name":"LD Systems ICOA PRO 12 A","url":"https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-pro-serie.html?sort=1&view=list","sku":"AHLDICOA12APRO","quantity":2,"unitPrice":1089,"availability":"in_stock","sourceIdentity":"family_page_sku_price"},
-          {"name":"LD Systems ICOA SUB 21 A PRO","url":"https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-pro-serie.html?sort=1&view=list","sku":"AHLDICOASUB21APRO","quantity":1,"unitPrice":2289,"availability":"in_stock","sourceIdentity":"family_page_sku_price"},
-          {"name":"LD Systems ICOA 12 PC — funda acolchada para ICOA PRO 12","url":"https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-icoa-12-pc-gepolsterte-schutzhuelle-fuer-icoa-12.html","sku":"AHLDICOA12PC","quantity":2,"unitPrice":40.90,"availability":"in_stock","sourceIdentity":"manufacturer_compatible_with_icoa_pro_12"},
-          {"name":"LD Systems ICOA PRO SUB 21 PC","url":"https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-pro-serie/ld-systems-icoa-r-pro-sub-21-pc-gepolsterte-schutzhuelle-fuer-icoa-r-pro-sub-21-a.html","sku":"AHLDICOASUB21PROPC","quantity":1,"unitPrice":104.95,"availability":"in_stock"},
-          {"name":"LD Systems ICOA PRO SUB 21 CB","url":"https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-pro-serie.html?sort=1&view=list","sku":"AHLDICOASUB21PROCB","quantity":1,"unitPrice":194.90,"availability":"in_stock","sourceIdentity":"family_page_sku_price"},
-          {"name":"Gravity SS 5212 B SET 1 — 2 × SP 5212 B + BG SS 2 B","url":"https://www.prolighting.de/de/stative/boxenstaender/gravity-ss-5212-b-set-1-boxenstaender-set-2-boxenstaender-stahl-mit-tasche.html","sku":"AHGSS5212BSET1","quantity":1,"unitPrice":129.90,"availability":"in_stock","sourceIdentity":"set_contains_2x_sp5212b_plus_bgss2b"},
-          {"name":"Cordial FAIR LINE audio XLR 5 m","url":"https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-mikrofonkabel-fair-line-5m-xlr-xlr-mit-neutrik-rean-stecker.html","sku":"CCM5FM","quantity":2,"unitPrice":12.29,"availability":"in_stock"}
+          {
+            "name": "LD Systems ICOA PRO 12 A",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-pro-serie.html?sort=1&view=list",
+            "sku": "AHLDICOA12APRO",
+            "quantity": 2,
+            "unitPrice": 1089,
+            "availability": "in_stock",
+            "sourceIdentity": "family_page_sku_price"
+          },
+          {
+            "name": "LD Systems ICOA SUB 21 A PRO",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-pro-serie.html?sort=1&view=list",
+            "sku": "AHLDICOASUB21APRO",
+            "quantity": 1,
+            "unitPrice": 2289,
+            "availability": "in_stock",
+            "sourceIdentity": "family_page_sku_price"
+          },
+          {
+            "name": "LD Systems ICOA 12 PC — funda acolchada para ICOA PRO 12",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-icoa-12-pc-gepolsterte-schutzhuelle-fuer-icoa-12.html",
+            "sku": "AHLDICOA12PC",
+            "quantity": 2,
+            "unitPrice": 40.9,
+            "availability": "in_stock",
+            "sourceIdentity": "manufacturer_compatible_with_icoa_pro_12"
+          },
+          {
+            "name": "LD Systems ICOA PRO SUB 21 PC",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-pro-serie/ld-systems-icoa-r-pro-sub-21-pc-gepolsterte-schutzhuelle-fuer-icoa-r-pro-sub-21-a.html",
+            "sku": "AHLDICOASUB21PROPC",
+            "quantity": 1,
+            "unitPrice": 104.95,
+            "availability": "in_stock"
+          },
+          {
+            "name": "LD Systems ICOA PRO SUB 21 CB",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-pro-serie.html?sort=1&view=list",
+            "sku": "AHLDICOASUB21PROCB",
+            "quantity": 1,
+            "unitPrice": 194.9,
+            "availability": "in_stock",
+            "sourceIdentity": "family_page_sku_price"
+          },
+          {
+            "name": "Gravity SS 5212 B SET 1 — 2 × SP 5212 B + BG SS 2 B",
+            "url": "https://www.prolighting.de/de/stative/boxenstaender/gravity-ss-5212-b-set-1-boxenstaender-set-2-boxenstaender-stahl-mit-tasche.html",
+            "sku": "AHGSS5212BSET1",
+            "quantity": 1,
+            "unitPrice": 129.9,
+            "availability": "in_stock",
+            "sourceIdentity": "set_contains_2x_sp5212b_plus_bgss2b"
+          },
+          {
+            "name": "Cordial FAIR LINE audio XLR 5 m",
+            "url": "https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-mikrofonkabel-fair-line-5m-xlr-xlr-mit-neutrik-rean-stecker.html",
+            "sku": "CCM5FM",
+            "quantity": 2,
+            "unitPrice": 12.29,
+            "availability": "in_stock"
+          }
         ]
       }
     }
@@ -3313,6 +3603,28 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-Sub-21-A/art-PAH0024128-000",
           "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems ICOA Pro 12 A",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-12-A/art-PAH0024126-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems ICOA Pro Sub 21 A",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-Sub-21-A/art-PAH0024128-000",
+            "quantity": 2
+          },
+          {
+            "name": "Gravity SP 2332 B",
+            "url": "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
+            "quantity": 2
+          },
+          {
+            "name": "MUSIC STORE Mikrokabel Standard 3 m",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002",
+            "quantity": 2
+          }
         ]
       },
       "prolighting": {
@@ -3352,13 +3664,13 @@
             "name": "Gravity SP 2332 B",
             "url": "https://www.prolighting.de/en/stands/distance-rod/distance-rod-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
             "quantity": 2,
-            "unitPrice": 23.90
+            "unitPrice": 23.9
           },
           {
             "name": "Cordial PEAK CPM 3 FM-FLEX Neutrik XLR 3 m",
             "url": "https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-3-fm-flex-3-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html",
             "quantity": 2,
-            "unitPrice": 20.90
+            "unitPrice": 20.9
           }
         ]
       }
@@ -3445,14 +3757,72 @@
           "https://www.prolighting.de/de/zubehoer/kabel-stecker/stromkabel/powerconkabel/psso-powercon-verbindungskabel-3x1-5-3m.html"
         ],
         "componentDetails": [
-          {"name":"LD Systems ICOA PRO 15 A schwarz","url":"https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-r-pro-15-a-15-aktiver-koaxialer-hochleistungs-pa-lautsprecher-mit-bluetooth-und-app.html","sku":"AHLDICOA15APRO","quantity":2,"unitPrice":1289,"availability":"future_stock","availableFrom":"2026-12-01"},
-          {"name":"LD Systems ICOA SUB 21 A PRO schwarz","url":"https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-r-sub-21-a-pro-aktiver-21-hochleistungs-subwoofer.html","sku":"AHLDICOASUB21APRO","quantity":2,"unitPrice":2289,"availability":"in_stock"},
-          {"name":"LD Systems ICOA 15 PC","url":"https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-icoa-15-pc-gepolsterte-schutzhuelle-fuer-icoa-15.html","sku":"AHLDICOA15PC","quantity":2,"unitPrice":52.90,"availability":"in_stock"},
-          {"name":"LD Systems ICOA PRO SUB 21 PC","url":"https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-pro-serie/ld-systems-icoa-r-pro-sub-21-pc-gepolsterte-schutzhuelle-fuer-icoa-r-pro-sub-21-a.html","sku":"AHLDICOASUB21PROPC","quantity":2,"unitPrice":104.95,"availability":"in_stock"},
-          {"name":"LD Systems ICOA PRO SUB 21 CB","url":"https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-pro-serie.html","sku":"AHLDICOASUB21PROCB","sourceIdentity":"family_page_sku_price","quantity":2,"unitPrice":194.90,"availability":"in_stock"},
-          {"name":"Gravity SP 2332 B","url":"https://www.prolighting.de/de/stative/distanzstange/distanzstange-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html","sku":"AHGSP2332B","quantity":2,"unitPrice":23.90,"availability":"in_stock"},
-          {"name":"Cordial PEAK CPM 3 FM-FLEX audio XLR 3 m","url":"https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-3-fm-flex-3-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html","sku":"CPM03FMFX","quantity":2,"unitPrice":20.90,"availability":"in_stock"},
-          {"name":"PSSO PowerCon Verbindungskabel 3x1,5 3 m","url":"https://www.prolighting.de/de/zubehoer/kabel-stecker/stromkabel/powerconkabel/psso-powercon-verbindungskabel-3x1-5-3m.html","sku":"3023503R","quantity":2,"unitPrice":40.90,"availability":"in_stock"}
+          {
+            "name": "LD Systems ICOA PRO 15 A schwarz",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-r-pro-15-a-15-aktiver-koaxialer-hochleistungs-pa-lautsprecher-mit-bluetooth-und-app.html",
+            "sku": "AHLDICOA15APRO",
+            "quantity": 2,
+            "unitPrice": 1289,
+            "availability": "future_stock",
+            "availableFrom": "2026-12-01"
+          },
+          {
+            "name": "LD Systems ICOA SUB 21 A PRO schwarz",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-serie/ld-systems-icoa-r-sub-21-a-pro-aktiver-21-hochleistungs-subwoofer.html",
+            "sku": "AHLDICOASUB21APRO",
+            "quantity": 2,
+            "unitPrice": 2289,
+            "availability": "in_stock"
+          },
+          {
+            "name": "LD Systems ICOA 15 PC",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxenzubehoer-und-ersatzteile/boxentaschen-cover-und-cases/ld-systems-icoa-15-pc-gepolsterte-schutzhuelle-fuer-icoa-15.html",
+            "sku": "AHLDICOA15PC",
+            "quantity": 2,
+            "unitPrice": 52.9,
+            "availability": "in_stock"
+          },
+          {
+            "name": "LD Systems ICOA PRO SUB 21 PC",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-pro-serie/ld-systems-icoa-r-pro-sub-21-pc-gepolsterte-schutzhuelle-fuer-icoa-r-pro-sub-21-a.html",
+            "sku": "AHLDICOASUB21PROPC",
+            "quantity": 2,
+            "unitPrice": 104.95,
+            "availability": "in_stock"
+          },
+          {
+            "name": "LD Systems ICOA PRO SUB 21 CB",
+            "url": "https://www.prolighting.de/de/tontechnik/lautsprecherboxen/boxen-nach-hersteller/ld-systems/ld-systems-icoa-pro-serie.html",
+            "sku": "AHLDICOASUB21PROCB",
+            "sourceIdentity": "family_page_sku_price",
+            "quantity": 2,
+            "unitPrice": 194.9,
+            "availability": "in_stock"
+          },
+          {
+            "name": "Gravity SP 2332 B",
+            "url": "https://www.prolighting.de/de/stative/distanzstange/distanzstange-35mm/gravity-sp-2332-b-verstellbares-distanzrohr-35-mm-auf-m20-1400-mmgravity-sp-2332-b-verstellbares-distanzrohr-35.html",
+            "sku": "AHGSP2332B",
+            "quantity": 2,
+            "unitPrice": 23.9,
+            "availability": "in_stock"
+          },
+          {
+            "name": "Cordial PEAK CPM 3 FM-FLEX audio XLR 3 m",
+            "url": "https://www.prolighting.de/de/zubehoer/kabel-stecker/audiokabel/xlr-xlr/cordial-peak-cpm-3-fm-flex-3-0-m-neutrik-xlr-female-schwarz-xlr-male-schwarz.html",
+            "sku": "CPM03FMFX",
+            "quantity": 2,
+            "unitPrice": 20.9,
+            "availability": "in_stock"
+          },
+          {
+            "name": "PSSO PowerCon Verbindungskabel 3x1,5 3 m",
+            "url": "https://www.prolighting.de/de/zubehoer/kabel-stecker/stromkabel/powerconkabel/psso-powercon-verbindungskabel-3x1-5-3m.html",
+            "sku": "3023503R",
+            "quantity": 2,
+            "unitPrice": 40.9,
+            "availability": "in_stock"
+          }
         ]
       }
     }
