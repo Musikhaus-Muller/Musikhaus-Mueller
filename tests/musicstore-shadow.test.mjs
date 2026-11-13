@@ -235,7 +235,7 @@ test('ambiguous duplicate Art.-Nr. is classified as article_number_mismatch',asy
 });
 
 
-test('current versioned split is five direct offers and fourteen incomplete carts',async()=>{
+test('current versioned split exposes thirteen normalized carts and preserves only r10 as incomplete',async()=>{
   const seed=JSON.parse(await fs.readFile('web/seed.json','utf8'));
   let calls=0;
   const report=await buildMusicStoreShadowReport({
@@ -244,8 +244,9 @@ test('current versioned split is five direct offers and fourteen incomplete cart
     fetchImpl:async url=>{calls++;return response('',403,url);}
   });
   assert.equal(report.summary.total,19);
-  assert.equal(report.summary.blocked,5);
-  assert.equal(report.summary.incomplete_recipe,14);
+  assert.equal(report.summary.blocked,18);
+  assert.equal(report.summary.incomplete_recipe,1);
   assert.equal(report.summary.refreshable,0);
-  assert.equal(calls,5);
+  assert.equal(calls,13);
+  assert.equal(report.rows.find(row=>row.reference==='r10')?.decision,'incomplete_recipe');
 });

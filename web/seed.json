@@ -240,6 +240,23 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-SAT-BAG/art-PAH0023393-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-SUB-PC/art-PAH0023394-000"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 11 G3 Schwarz",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems MAUI 11 G3 SAT BAG",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-SAT-BAG/art-PAH0023393-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems MAUI 11 G3 SUB PC",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-SUB-PC/art-PAH0023394-000",
+            "quantity": 2
+          }
         ]
       },
       "hotsound": {
@@ -384,6 +401,23 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SAT-BAG/art-PAH0023423-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SUB-PC/art-PAH0023395-000"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 28 G3 Schwarz",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
+            "quantity": 1
+          },
+          {
+            "name": "LD Systems MAUI 28 G3 SAT BAG",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SAT-BAG/art-PAH0023423-000",
+            "quantity": 1
+          },
+          {
+            "name": "LD Systems MAUI 28 G3 SUB PC",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SUB-PC/art-PAH0023395-000",
+            "quantity": 1
+          }
         ]
       },
       "prolighting": {
@@ -518,6 +552,23 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SAT-BAG/art-PAH0023423-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SUB-PC/art-PAH0023395-000"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 28 G3 Schwarz",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems MAUI 28 G3 SAT BAG",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SAT-BAG/art-PAH0023423-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems MAUI 28 G3 SUB PC",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-SUB-PC/art-PAH0023395-000",
+            "quantity": 2
+          }
         ]
       },
       "hotsound": {
@@ -1247,7 +1298,9 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3/art-PAH0023387-000",
           "MUSIC STORE Mikrokabel Standard 1,5 m · Art.-Nr. ACC0001159-001"
-        ]
+        ],
+        "componentDetailsStatus": "incomplete_versioned_evidence",
+        "componentDetailsIssue": "ACC0001159-001 is versioned by Art.-Nr. and name only; no exact official Music Store URL is versioned in the repository."
       },
       "mueller": {
         "name": "LD Systems MAUI 11 G3 Power Bundle Set schwarz",
@@ -1657,6 +1710,23 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2/art-PAH0018045-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2-Sat-Bag/art-PAH0018753-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2-Sub-PC/art-PAH0018754-000"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 11 G2",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2/art-PAH0018045-000",
+            "quantity": 1
+          },
+          {
+            "name": "LD Systems MAUI 11 G2 Sat Bag",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2-Sat-Bag/art-PAH0018753-000",
+            "quantity": 1
+          },
+          {
+            "name": "LD Systems MAUI 11 G2 Sub PC",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2-Sub-PC/art-PAH0018754-000",
+            "quantity": 1
+          }
         ]
       },
       "hotsound": {
@@ -1808,6 +1878,23 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2/art-PAH0018043-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2-Sat-Bag/art-PAH0018692-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2-Sub-PC/art-PAH0018755-000"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems MAUI 28 G2",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2/art-PAH0018043-000",
+            "quantity": 1
+          },
+          {
+            "name": "LD Systems MAUI 28 G2 Sat Bag",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2-Sat-Bag/art-PAH0018692-000",
+            "quantity": 1
+          },
+          {
+            "name": "LD Systems MAUI 28 G2 Sub PC",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2-Sub-PC/art-PAH0018755-000",
+            "quantity": 1
+          }
         ]
       },
       "prolighting": {
@@ -1995,6 +2082,18 @@
         "components": [
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-12-G4X/art-PAH0023214-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Box-3-Set-Kabel-10m-PASSIV/art-PAH343"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems DAVE 12 G4X",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-12-G4X/art-PAH0023214-000",
+            "quantity": 1
+          },
+          {
+            "name": "MUSIC STORE Box 3 Set Kabel 10m PASSIV",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Box-3-Set-Kabel-10m-PASSIV/art-PAH343",
+            "quantity": 1
+          }
         ]
       }
     }
@@ -2101,6 +2200,18 @@
         "components": [
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-15-G4X/art-PAH0023215-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Box-3-Set-Kabel-10m-PASSIV/art-PAH343"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems DAVE 15 G4X",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-15-G4X/art-PAH0023215-000",
+            "quantity": 1
+          },
+          {
+            "name": "MUSIC STORE Box 3 Set Kabel 10m PASSIV",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Box-3-Set-Kabel-10m-PASSIV/art-PAH343",
+            "quantity": 1
+          }
         ]
       }
     }
@@ -2207,6 +2318,18 @@
         "components": [
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-18-G4X/art-PAH0023216-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Box-3-Set-Kabel-10m-PASSIV/art-PAH343"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems DAVE 18 G4X",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-18-G4X/art-PAH0023216-000",
+            "quantity": 1
+          },
+          {
+            "name": "MUSIC STORE Box 3 Set Kabel 10m PASSIV",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Box-3-Set-Kabel-10m-PASSIV/art-PAH343",
+            "quantity": 1
+          }
         ]
       }
     }
@@ -2663,6 +2786,28 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-15-A/art-PAH0022032-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Lautsprecherstative-Bundle/art-PAH431",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-6-m/art-ACC0001265-000"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems ICOA 12 A BT",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems ICOA SUB 15 A",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-15-A/art-PAH0022032-000",
+            "quantity": 1
+          },
+          {
+            "name": "MUSIC STORE Lautsprecherstative Bundle",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Lautsprecherstative-Bundle/art-PAH431",
+            "quantity": 1
+          },
+          {
+            "name": "MUSIC STORE Mikrokabel Standard 6 m",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-6-m/art-ACC0001265-000",
+            "quantity": 2
+          }
         ]
       },
       "thomann": {
@@ -2777,6 +2922,28 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
           "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems ICOA 12 A BT",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems ICOA SUB 18 A",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
+            "quantity": 2
+          },
+          {
+            "name": "Gravity SP 2332 B",
+            "url": "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
+            "quantity": 2
+          },
+          {
+            "name": "MUSIC STORE Mikrokabel Standard 3 m",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002",
+            "quantity": 2
+          }
         ]
       },
       "thomann": {
@@ -2910,6 +3077,28 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
           "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems ICOA 15 A BT",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-15-A-BT/art-PAH0021619-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems ICOA SUB 18 A",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
+            "quantity": 2
+          },
+          {
+            "name": "Gravity SP 2332 B",
+            "url": "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
+            "quantity": 2
+          },
+          {
+            "name": "MUSIC STORE Mikrokabel Standard 3 m",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002",
+            "quantity": 2
+          }
         ]
       },
       "thomann": {
@@ -3042,6 +3231,23 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-15-A-BT/art-PAH0021619-000",
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems ICOA 15 A BT",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-15-A-BT/art-PAH0021619-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems ICOA SUB 18 A",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-SUB-18-A/art-PAH0022033-000",
+            "quantity": 4
+          },
+          {
+            "name": "MUSIC STORE Mikrokabel Standard 3 m",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002",
+            "quantity": 4
+          }
         ]
       },
       "thomann": {
@@ -3313,6 +3519,28 @@
           "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-Sub-21-A/art-PAH0024128-000",
           "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
           "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002"
+        ],
+        "componentDetails": [
+          {
+            "name": "LD Systems ICOA Pro 12 A",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-12-A/art-PAH0024126-000",
+            "quantity": 2
+          },
+          {
+            "name": "LD Systems ICOA Pro Sub 21 A",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-Sub-21-A/art-PAH0024128-000",
+            "quantity": 2
+          },
+          {
+            "name": "Gravity SP 2332 B",
+            "url": "https://www.musicstore.de/de_DE/EUR/Gravity-SP-2332-B/art-PAH0018485-000",
+            "quantity": 2
+          },
+          {
+            "name": "MUSIC STORE Mikrokabel Standard 3 m",
+            "url": "https://www.musicstore.de/de_DE/EUR/MUSIC-STORE-Mikrokabel-Standard-3-m/art-ACC0001159-002",
+            "quantity": 2
+          }
         ]
       },
       "prolighting": {
