@@ -1,0 +1,613 @@
+{
+  "shop": "hotsound",
+  "writes": false,
+  "observed_at": "2026-11-13T11:11:35.861Z",
+  "rows": [
+    {
+      "reference": "r1",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+      "expected_name": "2 × LD Systems MAUI 11 G3",
+      "previous_price": 1858,
+      "previous_price_date": "2026-11-04",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r2",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-set-2-schwarz-11714",
+      "expected_name": "LD Systems Maui 11 G3 SET 2 schwarz",
+      "previous_price": 2047,
+      "previous_price_date": "2026-11-04",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r4",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-set-2-schwarz-11711",
+      "expected_name": "LD Systems Maui 28 G3 SET 2 schwarz",
+      "previous_price": 2839,
+      "previous_price_date": "2026-11-04",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r5",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+      "expected_name": "HotSound Warenkorb · MAUI 28 G3 Stereo",
+      "previous_price": 2590,
+      "previous_price_date": "2026-11-06",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r6",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-w-weiss-11672",
+      "expected_name": "2 × LD Systems MAUI 28 G3 W weiß",
+      "previous_price": 2878,
+      "previous_price_date": "2026-11-04",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r7",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-mix-schwarz-13382",
+      "expected_name": "2 × LD Systems MAUI 28 G3 MIX schwarz",
+      "previous_price": 3098,
+      "previous_price_date": "2026-11-04",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r8",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
+      "expected_name": "LD Systems MAUI 44 G2 SET2",
+      "previous_price": 3998,
+      "previous_price_date": "2026-11-06",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r9",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
+      "expected_name": "HotSound Warenkorb · MAUI 44 G2 Stereo Touring",
+      "previous_price": 4544,
+      "previous_price_date": "2026-11-06",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r10",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+      "expected_name": "HotSound Warenkorb · MAUI 11 G3 Power Bundle",
+      "previous_price": 3328,
+      "previous_price_date": "2026-11-06",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r11",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+      "expected_name": "HotSound Warenkorb · MAUI 28 G3 Power Bundle",
+      "previous_price": 4468,
+      "previous_price_date": "2026-11-06",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r13",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/ld-systems-maui-11-g2-316",
+      "expected_name": "HotSound Warenkorb · MAUI 11 G2 Bundle",
+      "previous_price": 839,
+      "previous_price_date": "2026-11-06",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r14",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/ld-systems-maui-28-g2-319",
+      "expected_name": "HotSound Warenkorb · MAUI 28 G2 Bundle",
+      "previous_price": 928,
+      "previous_price_date": "2026-11-06",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r19",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/ld-systems-stinger-g3-event-set-a-aktivsystem-9635",
+      "expected_name": "LD Systems STINGER G3 EVENT SET A Aktivsystem",
+      "previous_price": 3219,
+      "previous_price_date": "2026-11-04",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r20",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/ld-systems-stinger-g3-power-set-a-aktivsystem-9639",
+      "expected_name": "LD Systems STINGER G3 POWER SET A Aktivsystem",
+      "previous_price": 4169,
+      "previous_price_date": "2026-11-04",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r21",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/ld-systems-stinger-g3-impact-set-a-aktivsystem-9637",
+      "expected_name": "LD Systems STINGER G3 IMPACT SET A Aktivsystem",
+      "previous_price": 6899,
+      "previous_price_date": "2026-11-04",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r28",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/ld-systems-icoa-pro-12a-club-pa-set-16057",
+      "expected_name": "LD Systems ICOA PRO 12A Club PA Set",
+      "previous_price": 6599,
+      "previous_price_date": "2026-11-04",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r30",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/dap-frigga-stereo-aktives-stereo-saeulen-pa-system-schwarz-14921",
+      "expected_name": "DAP Frigga Stereo schwarz",
+      "previous_price": 2290,
+      "previous_price_date": "2026-11-06",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r31",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+      "expected_name": "2 × DAP Frigga weiß",
+      "previous_price": 2698,
+      "previous_price_date": "2026-11-04",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r32",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/dap-frigga-stereo-premium-set-aktives-stereo-saeulen-pa-system-schwarz-14923",
+      "expected_name": "DAP Frigga Stereo Premium Set schwarz",
+      "previous_price": 2848,
+      "previous_price_date": "2026-11-04",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r33",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+      "expected_name": "HotSound Warenkorb · FRIGGA Stereo weiß + Taschen",
+      "previous_price": 3166,
+      "previous_price_date": "2026-11-06",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r34",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-schwarz-13257",
+      "expected_name": "HotSound Warenkorb · FRIGGA Schwarz + Taschen",
+      "previous_price": 1379,
+      "previous_price_date": "2026-11-06",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r35",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+      "expected_name": "HotSound Warenkorb · FRIGGA Weiß + Taschen",
+      "previous_price": 1583,
+      "previous_price_date": "2026-11-06",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r36",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/wharfedale-pro-delta-x218b-tough-tone-passiv-pa-subwoofer-4873",
+      "expected_name": "2 × Wharfedale Pro Delta X218B",
+      "previous_price": 1698,
+      "previous_price_date": "2026-11-04",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r37",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
+      "expected_name": "2 × Wharfedale Pro Delta F18B",
+      "previous_price": 1796,
+      "previous_price_date": "2026-11-04",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r38",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
+      "expected_name": "4 × Wharfedale Pro Delta F18B",
+      "previous_price": 3592,
+      "previous_price_date": "2026-11-04",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r39",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/wharfedale-pro-wla-210xp-line-array-set-set-1-19041",
+      "expected_name": "Wharfedale Pro WLA-210XP Line Array Set 1",
+      "previous_price": 11690,
+      "previous_price_date": "2026-11-04",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    },
+    {
+      "reference": "r40",
+      "shop": "hotsound",
+      "url": "https://www.hotsound-store.com/wharfedale-pro-wla-210xp-line-array-set-amped-set-1-19042",
+      "expected_name": "Wharfedale Pro WLA-210XP Line Array Set Amped Set 1",
+      "previous_price": 15290,
+      "previous_price_date": "2026-11-06",
+      "sources_tested": [
+        {
+          "method": "official_product_html",
+          "type": "official_structured_product_data",
+          "http_status": 200,
+          "protected_content": true
+        }
+      ],
+      "selected_source": null,
+      "observed_unit_price": null,
+      "observed_total_price": null,
+      "auto_refresh_eligible": false,
+      "proposal_only": false,
+      "decision": "blocked"
+    }
+  ],
+  "summary": {
+    "active": 27,
+    "evaluated": 27,
+    "refreshable": 0,
+    "proposal_only": 0,
+    "blocked": 27,
+    "rate_limited": 0,
+    "not_found": 0,
+    "invalid_identity": 0,
+    "unresolved": 0,
+    "coverage_pct": 0
+  }
+}

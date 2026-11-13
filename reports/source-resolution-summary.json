@@ -1,0 +1,48 @@
+{
+  "writes": false,
+  "observed_at": "2026-11-13T11:11:50.435Z",
+  "shops": {
+    "thomann": {
+      "active": 29,
+      "evaluated": 29,
+      "refreshable": 0,
+      "proposal_only": 0,
+      "blocked": 17,
+      "rate_limited": 1,
+      "not_found": 4,
+      "invalid_identity": 0,
+      "unresolved": 8,
+      "coverage_pct": 0
+    },
+    "musicstore": {
+      "active": 19,
+      "evaluated": 19,
+      "refreshable": 0,
+      "proposal_only": 0,
+      "blocked": 18,
+      "rate_limited": 0,
+      "not_found": 0,
+      "invalid_identity": 0,
+      "unresolved": 1,
+      "coverage_pct": 0
+    },
+    "hotsound": {
+      "active": 27,
+      "evaluated": 27,
+      "refreshable": 0,
+      "proposal_only": 0,
+      "blocked": 27,
+      "rate_limited": 0,
+      "not_found": 0,
+      "invalid_identity": 0,
+      "unresolved": 0,
+      "coverage_pct": 0
+    }
+  },
+  "global": {
+    "total_evaluated": 75,
+    "total_refreshable": 0,
+    "total_proposal_only": 0,
+    "total_preserve_only": 75
+  }
+}
