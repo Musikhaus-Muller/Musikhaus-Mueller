@@ -1,0 +1,2287 @@
+{
+  "shop": "thomann",
+  "scope": "browser_canary",
+  "writes": false,
+  "observed_at": "2026-11-13T12:06:27.817Z",
+  "rows": [
+    {
+      "reference": "r1",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_stereo_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_11_g3_stereo_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 11 G3 Stereo Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Maui 11 G3 Stereo Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 183900,
+          "source": "visible_price",
+          "raw": "1.839 €"
+        },
+        {
+          "cents": 6700,
+          "source": "visible_price",
+          "raw": "67 €"
+        },
+        {
+          "cents": 5200,
+          "source": "visible_price",
+          "raw": "52 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 151900,
+          "source": "visible_price",
+          "raw": "1.519 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.798 €\n            \n        \n\n                    \n            -16%"
+        },
+        {
+          "cents": 151900,
+          "source": "visible_price",
+          "raw": "1.519 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.798 €\n            \n        \n\n                    \n            -16%"
+        },
+        {
+          "cents": 151900,
+          "source": "visible_price",
+          "raw": "1.519 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.798 €\n            \n        \n\n                    \n            -16%"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.798 €"
+        },
+        {
+          "cents": 217900,
+          "source": "visible_price",
+          "raw": "2.179 €"
+        },
+        {
+          "cents": 217900,
+          "source": "visible_price",
+          "raw": "2.179 €"
+        },
+        {
+          "cents": 217900,
+          "source": "visible_price",
+          "raw": "2.179 €"
+        },
+        {
+          "cents": 169900,
+          "source": "visible_price",
+          "raw": "1.699 €"
+        },
+        {
+          "cents": 169900,
+          "source": "visible_price",
+          "raw": "1.699 €"
+        },
+        {
+          "cents": 169900,
+          "source": "visible_price",
+          "raw": "1.699 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 11900,
+          "source": "visible_price",
+          "raw": "119 €"
+        },
+        {
+          "cents": 11900,
+          "source": "visible_price",
+          "raw": "119 €"
+        },
+        {
+          "cents": 11900,
+          "source": "visible_price",
+          "raw": "119 €"
+        },
+        {
+          "cents": 79800,
+          "source": "visible_price",
+          "raw": "798 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 79800,
+          "source": "visible_price",
+          "raw": "798 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 79800,
+          "source": "visible_price",
+          "raw": "798 €"
+        },
+        {
+          "cents": 91900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 91900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                919 €"
+        },
+        {
+          "cents": 2090,
+          "source": "visible_price",
+          "raw": "20,90 €"
+        },
+        {
+          "cents": 183900,
+          "source": "visible_price",
+          "raw": "1.839 €"
+        },
+        {
+          "cents": 197500,
+          "source": "visible_price",
+          "raw": "1.975 €"
+        },
+        {
+          "cents": 174900,
+          "source": "visible_price",
+          "raw": "1.749 €"
+        },
+        {
+          "cents": 164900,
+          "source": "visible_price",
+          "raw": "1.649 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
+        },
+        {
+          "cents": 164900,
+          "source": "visible_price",
+          "raw": "1.649 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
+        },
+        {
+          "cents": 164900,
+          "source": "visible_price",
+          "raw": "1.649 €"
+        },
+        {
+          "cents": 215900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
+        },
+        {
+          "cents": 215900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                2.159 €"
+        },
+        {
+          "cents": 189800,
+          "source": "visible_price",
+          "raw": "1.898 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "1.798 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "1.798 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "1.798 €"
+        },
+        {
+          "cents": 190500,
+          "source": "visible_price",
+          "raw": "1.905 €"
+        },
+        {
+          "cents": 190500,
+          "source": "visible_price",
+          "raw": "1.905 €"
+        },
+        {
+          "cents": 190500,
+          "source": "visible_price",
+          "raw": "1.905 €"
+        },
+        {
+          "cents": 188800,
+          "source": "visible_price",
+          "raw": "1.888 €"
+        },
+        {
+          "cents": 188800,
+          "source": "visible_price",
+          "raw": "1.888 €"
+        },
+        {
+          "cents": 188800,
+          "source": "visible_price",
+          "raw": "1.888 €"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 169800,
+          "source": "visible_price",
+          "raw": "1.698 €"
+        },
+        {
+          "cents": 165900,
+          "source": "visible_price",
+          "raw": "1.659 €"
+        },
+        {
+          "cents": 165900,
+          "source": "visible_price",
+          "raw": "1.659 €"
+        },
+        {
+          "cents": 165900,
+          "source": "visible_price",
+          "raw": "1.659 €"
+        },
+        {
+          "cents": 208900,
+          "source": "visible_price",
+          "raw": "2.089 €"
+        },
+        {
+          "cents": 223900,
+          "source": "visible_price",
+          "raw": "2.239 €"
+        },
+        {
+          "cents": 160900,
+          "source": "visible_price",
+          "raw": "1.609 €"
+        },
+        {
+          "cents": 160900,
+          "source": "visible_price",
+          "raw": "1.609 €"
+        },
+        {
+          "cents": 160900,
+          "source": "visible_price",
+          "raw": "1.609 €"
+        },
+        {
+          "cents": 174900,
+          "source": "visible_price",
+          "raw": "1.749 €"
+        },
+        {
+          "cents": 206900,
+          "source": "visible_price",
+          "raw": "2.069 €"
+        },
+        {
+          "cents": 222200,
+          "source": "visible_price",
+          "raw": "2.222 €"
+        },
+        {
+          "cents": 222200,
+          "source": "visible_price",
+          "raw": "2.222 €"
+        },
+        {
+          "cents": 222200,
+          "source": "visible_price",
+          "raw": "2.222 €"
+        },
+        {
+          "cents": 219900,
+          "source": "visible_price",
+          "raw": "2.199 €"
+        },
+        {
+          "cents": 183900,
+          "source": "visible_price",
+          "raw": "1.839 €"
+        },
+        {
+          "cents": 6700,
+          "source": "visible_price",
+          "raw": "67 €"
+        },
+        {
+          "cents": 5200,
+          "source": "visible_price",
+          "raw": "52 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 151900,
+          "source": "visible_price",
+          "raw": "1.519 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.798 €\n            \n        \n\n                    \n            -16%"
+        },
+        {
+          "cents": 151900,
+          "source": "visible_price",
+          "raw": "1.519 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.798 €\n            \n        \n\n                    \n            -16%"
+        },
+        {
+          "cents": 151900,
+          "source": "visible_price",
+          "raw": "1.519 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.798 €\n            \n        \n\n                    \n            -16%"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.798 €"
+        },
+        {
+          "cents": 217900,
+          "source": "visible_price",
+          "raw": "2.179 €"
+        },
+        {
+          "cents": 217900,
+          "source": "visible_price",
+          "raw": "2.179 €"
+        },
+        {
+          "cents": 217900,
+          "source": "visible_price",
+          "raw": "2.179 €"
+        },
+        {
+          "cents": 169900,
+          "source": "visible_price",
+          "raw": "1.699 €"
+        },
+        {
+          "cents": 169900,
+          "source": "visible_price",
+          "raw": "1.699 €"
+        },
+        {
+          "cents": 169900,
+          "source": "visible_price",
+          "raw": "1.699 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 11900,
+          "source": "visible_price",
+          "raw": "119 €"
+        },
+        {
+          "cents": 11900,
+          "source": "visible_price",
+          "raw": "119 €"
+        },
+        {
+          "cents": 11900,
+          "source": "visible_price",
+          "raw": "119 €"
+        },
+        {
+          "cents": 79800,
+          "source": "visible_price",
+          "raw": "798 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 79800,
+          "source": "visible_price",
+          "raw": "798 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 79800,
+          "source": "visible_price",
+          "raw": "798 €"
+        },
+        {
+          "cents": 91900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 91900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                919 €"
+        },
+        {
+          "cents": 2090,
+          "source": "visible_price",
+          "raw": "20,90 €"
+        },
+        {
+          "cents": 183900,
+          "source": "visible_price",
+          "raw": "1.839 €"
+        },
+        {
+          "cents": 197500,
+          "source": "visible_price",
+          "raw": "1.975 €"
+        },
+        {
+          "cents": 174900,
+          "source": "visible_price",
+          "raw": "1.749 €"
+        },
+        {
+          "cents": 164900,
+          "source": "visible_price",
+          "raw": "1.649 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
+        },
+        {
+          "cents": 164900,
+          "source": "visible_price",
+          "raw": "1.649 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
+        },
+        {
+          "cents": 164900,
+          "source": "visible_price",
+          "raw": "1.649 €"
+        },
+        {
+          "cents": 215900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
+        },
+        {
+          "cents": 215900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                2.159 €"
+        },
+        {
+          "cents": 189800,
+          "source": "visible_price",
+          "raw": "1.898 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "1.798 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "1.798 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "1.798 €"
+        },
+        {
+          "cents": 190500,
+          "source": "visible_price",
+          "raw": "1.905 €"
+        },
+        {
+          "cents": 190500,
+          "source": "visible_price",
+          "raw": "1.905 €"
+        },
+        {
+          "cents": 190500,
+          "source": "visible_price",
+          "raw": "1.905 €"
+        },
+        {
+          "cents": 188800,
+          "source": "visible_price",
+          "raw": "1.888 €"
+        },
+        {
+          "cents": 188800,
+          "source": "visible_price",
+          "raw": "1.888 €"
+        },
+        {
+          "cents": 188800,
+          "source": "visible_price",
+          "raw": "1.888 €"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 169800,
+          "source": "visible_price",
+          "raw": "1.698 €"
+        },
+        {
+          "cents": 165900,
+          "source": "visible_price",
+          "raw": "1.659 €"
+        },
+        {
+          "cents": 165900,
+          "source": "visible_price",
+          "raw": "1.659 €"
+        },
+        {
+          "cents": 165900,
+          "source": "visible_price",
+          "raw": "1.659 €"
+        },
+        {
+          "cents": 208900,
+          "source": "visible_price",
+          "raw": "2.089 €"
+        },
+        {
+          "cents": 223900,
+          "source": "visible_price",
+          "raw": "2.239 €"
+        },
+        {
+          "cents": 160900,
+          "source": "visible_price",
+          "raw": "1.609 €"
+        },
+        {
+          "cents": 160900,
+          "source": "visible_price",
+          "raw": "1.609 €"
+        },
+        {
+          "cents": 160900,
+          "source": "visible_price",
+          "raw": "1.609 €"
+        },
+        {
+          "cents": 174900,
+          "source": "visible_price",
+          "raw": "1.749 €"
+        },
+        {
+          "cents": 206900,
+          "source": "visible_price",
+          "raw": "2.069 €"
+        },
+        {
+          "cents": 222200,
+          "source": "visible_price",
+          "raw": "2.222 €"
+        },
+        {
+          "cents": 222200,
+          "source": "visible_price",
+          "raw": "2.222 €"
+        },
+        {
+          "cents": 222200,
+          "source": "visible_price",
+          "raw": "2.222 €"
+        },
+        {
+          "cents": 219900,
+          "source": "visible_price",
+          "raw": "2.199 €"
+        }
+      ],
+      "observed_price": null,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "decision": "invalid_price",
+      "error": "Multiple commercial EUR prices in one extraction tier",
+      "previous_price": 1839
+    },
+    {
+      "reference": "r6",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_white_stereo_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_white_stereo_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 28 G3 White Stereo Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Maui 28 G3 White Stereo Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 266900,
+          "source": "visible_price",
+          "raw": "2.669 €"
+        },
+        {
+          "cents": 8500,
+          "source": "visible_price",
+          "raw": "85 €"
+        },
+        {
+          "cents": 5500,
+          "source": "visible_price",
+          "raw": "55 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                105 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                105 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 10500,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                105 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 10500,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                105 €"
+        },
+        {
+          "cents": 22900,
+          "source": "visible_price",
+          "raw": "229 €"
+        },
+        {
+          "cents": 22900,
+          "source": "visible_price",
+          "raw": "229 €"
+        },
+        {
+          "cents": 22900,
+          "source": "visible_price",
+          "raw": "229 €"
+        },
+        {
+          "cents": 30900,
+          "source": "visible_price",
+          "raw": "309 €"
+        },
+        {
+          "cents": 30900,
+          "source": "visible_price",
+          "raw": "309 €"
+        },
+        {
+          "cents": 30900,
+          "source": "visible_price",
+          "raw": "309 €"
+        },
+        {
+          "cents": 252900,
+          "source": "visible_price",
+          "raw": "2.529 €"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                3.098 €"
+        },
+        {
+          "cents": 255900,
+          "source": "visible_price",
+          "raw": "2.559 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 288500,
+          "source": "visible_price",
+          "raw": "2.885 €"
+        },
+        {
+          "cents": 288500,
+          "source": "visible_price",
+          "raw": "2.885 €"
+        },
+        {
+          "cents": 288500,
+          "source": "visible_price",
+          "raw": "2.885 €"
+        },
+        {
+          "cents": 269800,
+          "source": "visible_price",
+          "raw": "2.698 €"
+        },
+        {
+          "cents": 282500,
+          "source": "visible_price",
+          "raw": "2.825 €"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "3.098 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 307900,
+          "source": "visible_price",
+          "raw": "3.079 €"
+        },
+        {
+          "cents": 223900,
+          "source": "visible_price",
+          "raw": "2.239 €"
+        },
+        {
+          "cents": 222200,
+          "source": "visible_price",
+          "raw": "2.222 €"
+        },
+        {
+          "cents": 222200,
+          "source": "visible_price",
+          "raw": "2.222 €"
+        },
+        {
+          "cents": 222200,
+          "source": "visible_price",
+          "raw": "2.222 €"
+        },
+        {
+          "cents": 274500,
+          "source": "visible_price",
+          "raw": "2.745 €"
+        },
+        {
+          "cents": 197500,
+          "source": "visible_price",
+          "raw": "1.975 €"
+        },
+        {
+          "cents": 261500,
+          "source": "visible_price",
+          "raw": "2.615 €"
+        },
+        {
+          "cents": 261500,
+          "source": "visible_price",
+          "raw": "2.615 €"
+        },
+        {
+          "cents": 261500,
+          "source": "visible_price",
+          "raw": "2.615 €"
+        },
+        {
+          "cents": 272900,
+          "source": "visible_price",
+          "raw": "2.729 €"
+        },
+        {
+          "cents": 272900,
+          "source": "visible_price",
+          "raw": "2.729 €"
+        },
+        {
+          "cents": 272900,
+          "source": "visible_price",
+          "raw": "2.729 €"
+        },
+        {
+          "cents": 219900,
+          "source": "visible_price",
+          "raw": "2.199 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 324900,
+          "source": "visible_price",
+          "raw": "3.249 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 266900,
+          "source": "visible_price",
+          "raw": "2.669 €"
+        },
+        {
+          "cents": 8500,
+          "source": "visible_price",
+          "raw": "85 €"
+        },
+        {
+          "cents": 5500,
+          "source": "visible_price",
+          "raw": "55 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                105 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                105 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 10500,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                105 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 10500,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                105 €"
+        },
+        {
+          "cents": 22900,
+          "source": "visible_price",
+          "raw": "229 €"
+        },
+        {
+          "cents": 22900,
+          "source": "visible_price",
+          "raw": "229 €"
+        },
+        {
+          "cents": 22900,
+          "source": "visible_price",
+          "raw": "229 €"
+        },
+        {
+          "cents": 30900,
+          "source": "visible_price",
+          "raw": "309 €"
+        },
+        {
+          "cents": 30900,
+          "source": "visible_price",
+          "raw": "309 €"
+        },
+        {
+          "cents": 30900,
+          "source": "visible_price",
+          "raw": "309 €"
+        },
+        {
+          "cents": 252900,
+          "source": "visible_price",
+          "raw": "2.529 €"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                3.098 €"
+        },
+        {
+          "cents": 255900,
+          "source": "visible_price",
+          "raw": "2.559 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 288500,
+          "source": "visible_price",
+          "raw": "2.885 €"
+        },
+        {
+          "cents": 288500,
+          "source": "visible_price",
+          "raw": "2.885 €"
+        },
+        {
+          "cents": 288500,
+          "source": "visible_price",
+          "raw": "2.885 €"
+        },
+        {
+          "cents": 269800,
+          "source": "visible_price",
+          "raw": "2.698 €"
+        },
+        {
+          "cents": 282500,
+          "source": "visible_price",
+          "raw": "2.825 €"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "3.098 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 307900,
+          "source": "visible_price",
+          "raw": "3.079 €"
+        },
+        {
+          "cents": 223900,
+          "source": "visible_price",
+          "raw": "2.239 €"
+        },
+        {
+          "cents": 222200,
+          "source": "visible_price",
+          "raw": "2.222 €"
+        },
+        {
+          "cents": 222200,
+          "source": "visible_price",
+          "raw": "2.222 €"
+        },
+        {
+          "cents": 222200,
+          "source": "visible_price",
+          "raw": "2.222 €"
+        },
+        {
+          "cents": 274500,
+          "source": "visible_price",
+          "raw": "2.745 €"
+        },
+        {
+          "cents": 197500,
+          "source": "visible_price",
+          "raw": "1.975 €"
+        },
+        {
+          "cents": 261500,
+          "source": "visible_price",
+          "raw": "2.615 €"
+        },
+        {
+          "cents": 261500,
+          "source": "visible_price",
+          "raw": "2.615 €"
+        },
+        {
+          "cents": 261500,
+          "source": "visible_price",
+          "raw": "2.615 €"
+        },
+        {
+          "cents": 272900,
+          "source": "visible_price",
+          "raw": "2.729 €"
+        },
+        {
+          "cents": 272900,
+          "source": "visible_price",
+          "raw": "2.729 €"
+        },
+        {
+          "cents": 272900,
+          "source": "visible_price",
+          "raw": "2.729 €"
+        },
+        {
+          "cents": 219900,
+          "source": "visible_price",
+          "raw": "2.199 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 324900,
+          "source": "visible_price",
+          "raw": "3.249 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        }
+      ],
+      "observed_price": null,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "decision": "invalid_price",
+      "error": "Multiple commercial EUR prices in one extraction tier",
+      "previous_price": 2669
+    },
+    {
+      "reference": "r7",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_mix_syslink_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_mix_syslink_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 28 G3 MIX SysLink Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Maui 28 G3 MIX SysLink Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 307900,
+          "source": "visible_price",
+          "raw": "3.079 €"
+        },
+        {
+          "cents": 8500,
+          "source": "visible_price",
+          "raw": "85 €"
+        },
+        {
+          "cents": 22900,
+          "source": "visible_price",
+          "raw": "229 €"
+        },
+        {
+          "cents": 22900,
+          "source": "visible_price",
+          "raw": "229 €"
+        },
+        {
+          "cents": 22900,
+          "source": "visible_price",
+          "raw": "229 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                105 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                105 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 10500,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                105 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 10500,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                105 €"
+        },
+        {
+          "cents": 5500,
+          "source": "visible_price",
+          "raw": "55 €"
+        },
+        {
+          "cents": 30900,
+          "source": "visible_price",
+          "raw": "309 €"
+        },
+        {
+          "cents": 30900,
+          "source": "visible_price",
+          "raw": "309 €"
+        },
+        {
+          "cents": 30900,
+          "source": "visible_price",
+          "raw": "309 €"
+        },
+        {
+          "cents": 154900,
+          "source": "visible_price",
+          "raw": "1.549 €"
+        },
+        {
+          "cents": 1700,
+          "source": "visible_price",
+          "raw": "17 €"
+        },
+        {
+          "cents": 1700,
+          "source": "visible_price",
+          "raw": "17 €"
+        },
+        {
+          "cents": 1700,
+          "source": "visible_price",
+          "raw": "17 €"
+        },
+        {
+          "cents": 307900,
+          "source": "visible_price",
+          "raw": "3.079 €"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "3.098 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                3.098 €"
+        },
+        {
+          "cents": 288500,
+          "source": "visible_price",
+          "raw": "2.885 €"
+        },
+        {
+          "cents": 288500,
+          "source": "visible_price",
+          "raw": "2.885 €"
+        },
+        {
+          "cents": 288500,
+          "source": "visible_price",
+          "raw": "2.885 €"
+        },
+        {
+          "cents": 282500,
+          "source": "visible_price",
+          "raw": "2.825 €"
+        },
+        {
+          "cents": 324900,
+          "source": "visible_price",
+          "raw": "3.249 €"
+        },
+        {
+          "cents": 346500,
+          "source": "visible_price",
+          "raw": "3.465 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 344900,
+          "source": "visible_price",
+          "raw": "3.449 €"
+        },
+        {
+          "cents": 269800,
+          "source": "visible_price",
+          "raw": "2.698 €"
+        },
+        {
+          "cents": 255900,
+          "source": "visible_price",
+          "raw": "2.559 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 297900,
+          "source": "visible_price",
+          "raw": "2.979 €"
+        },
+        {
+          "cents": 294900,
+          "source": "visible_price",
+          "raw": "2.949 €"
+        },
+        {
+          "cents": 223900,
+          "source": "visible_price",
+          "raw": "2.239 €"
+        },
+        {
+          "cents": 292900,
+          "source": "visible_price",
+          "raw": "2.929 €"
+        },
+        {
+          "cents": 292200,
+          "source": "visible_price",
+          "raw": "2.922 €"
+        },
+        {
+          "cents": 274500,
+          "source": "visible_price",
+          "raw": "2.745 €"
+        },
+        {
+          "cents": 307900,
+          "source": "visible_price",
+          "raw": "3.079 €"
+        },
+        {
+          "cents": 8500,
+          "source": "visible_price",
+          "raw": "85 €"
+        },
+        {
+          "cents": 22900,
+          "source": "visible_price",
+          "raw": "229 €"
+        },
+        {
+          "cents": 22900,
+          "source": "visible_price",
+          "raw": "229 €"
+        },
+        {
+          "cents": 22900,
+          "source": "visible_price",
+          "raw": "229 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                105 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                105 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 10500,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                105 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 10500,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                105 €"
+        },
+        {
+          "cents": 5500,
+          "source": "visible_price",
+          "raw": "55 €"
+        },
+        {
+          "cents": 30900,
+          "source": "visible_price",
+          "raw": "309 €"
+        },
+        {
+          "cents": 30900,
+          "source": "visible_price",
+          "raw": "309 €"
+        },
+        {
+          "cents": 30900,
+          "source": "visible_price",
+          "raw": "309 €"
+        },
+        {
+          "cents": 154900,
+          "source": "visible_price",
+          "raw": "1.549 €"
+        },
+        {
+          "cents": 1700,
+          "source": "visible_price",
+          "raw": "17 €"
+        },
+        {
+          "cents": 1700,
+          "source": "visible_price",
+          "raw": "17 €"
+        },
+        {
+          "cents": 1700,
+          "source": "visible_price",
+          "raw": "17 €"
+        },
+        {
+          "cents": 307900,
+          "source": "visible_price",
+          "raw": "3.079 €"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "3.098 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                3.098 €"
+        },
+        {
+          "cents": 288500,
+          "source": "visible_price",
+          "raw": "2.885 €"
+        },
+        {
+          "cents": 288500,
+          "source": "visible_price",
+          "raw": "2.885 €"
+        },
+        {
+          "cents": 288500,
+          "source": "visible_price",
+          "raw": "2.885 €"
+        },
+        {
+          "cents": 282500,
+          "source": "visible_price",
+          "raw": "2.825 €"
+        },
+        {
+          "cents": 324900,
+          "source": "visible_price",
+          "raw": "3.249 €"
+        },
+        {
+          "cents": 346500,
+          "source": "visible_price",
+          "raw": "3.465 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 344900,
+          "source": "visible_price",
+          "raw": "3.449 €"
+        },
+        {
+          "cents": 269800,
+          "source": "visible_price",
+          "raw": "2.698 €"
+        },
+        {
+          "cents": 255900,
+          "source": "visible_price",
+          "raw": "2.559 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 297900,
+          "source": "visible_price",
+          "raw": "2.979 €"
+        },
+        {
+          "cents": 294900,
+          "source": "visible_price",
+          "raw": "2.949 €"
+        },
+        {
+          "cents": 223900,
+          "source": "visible_price",
+          "raw": "2.239 €"
+        },
+        {
+          "cents": 292900,
+          "source": "visible_price",
+          "raw": "2.929 €"
+        },
+        {
+          "cents": 292200,
+          "source": "visible_price",
+          "raw": "2.922 €"
+        },
+        {
+          "cents": 274500,
+          "source": "visible_price",
+          "raw": "2.745 €"
+        }
+      ],
+      "observed_price": null,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "decision": "invalid_price",
+      "error": "Multiple commercial EUR prices in one extraction tier",
+      "previous_price": 3159
+    },
+    {
+      "reference": "r10",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_power_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_11_g3_power_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 11 G3 Power Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Maui 11 G3 Power Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 330900,
+          "source": "visible_price",
+          "raw": "3.309 €"
+        },
+        {
+          "cents": 6700,
+          "source": "visible_price",
+          "raw": "67 €"
+        },
+        {
+          "cents": 5200,
+          "source": "visible_price",
+          "raw": "52 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 319500,
+          "source": "visible_price",
+          "raw": "3.195 €"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "3.098 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                3.098 €"
+        },
+        {
+          "cents": 344900,
+          "source": "visible_price",
+          "raw": "3.449 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 324900,
+          "source": "visible_price",
+          "raw": "3.249 €"
+        },
+        {
+          "cents": 434500,
+          "source": "visible_price",
+          "raw": "4.345 €"
+        },
+        {
+          "cents": 255900,
+          "source": "visible_price",
+          "raw": "2.559 €"
+        },
+        {
+          "cents": 439900,
+          "source": "visible_price",
+          "raw": "4.399 €"
+        },
+        {
+          "cents": 439900,
+          "source": "visible_price",
+          "raw": "4.399 €"
+        },
+        {
+          "cents": 439900,
+          "source": "visible_price",
+          "raw": "4.399 €"
+        },
+        {
+          "cents": 439800,
+          "source": "visible_price",
+          "raw": "4.398 €"
+        },
+        {
+          "cents": 424900,
+          "source": "visible_price",
+          "raw": "4.249 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                4.498 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 424900,
+          "source": "visible_price",
+          "raw": "4.249 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                4.498 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 424900,
+          "source": "visible_price",
+          "raw": "4.249 €"
+        },
+        {
+          "cents": 449800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                4.498 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 449800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                4.498 €"
+        },
+        {
+          "cents": 297900,
+          "source": "visible_price",
+          "raw": "2.979 €"
+        },
+        {
+          "cents": 469000,
+          "source": "visible_price",
+          "raw": "4.690 €"
+        },
+        {
+          "cents": 469000,
+          "source": "visible_price",
+          "raw": "4.690 €"
+        },
+        {
+          "cents": 469000,
+          "source": "visible_price",
+          "raw": "4.690 €"
+        },
+        {
+          "cents": 319800,
+          "source": "visible_price",
+          "raw": "3.198 €"
+        },
+        {
+          "cents": 319800,
+          "source": "visible_price",
+          "raw": "3.198 €"
+        },
+        {
+          "cents": 319800,
+          "source": "visible_price",
+          "raw": "3.198 €"
+        },
+        {
+          "cents": 294900,
+          "source": "visible_price",
+          "raw": "2.949 €"
+        },
+        {
+          "cents": 323500,
+          "source": "visible_price",
+          "raw": "3.235 €"
+        },
+        {
+          "cents": 223900,
+          "source": "visible_price",
+          "raw": "2.239 €"
+        },
+        {
+          "cents": 396900,
+          "source": "visible_price",
+          "raw": "3.969 €"
+        },
+        {
+          "cents": 362500,
+          "source": "visible_price",
+          "raw": "3.625 €"
+        },
+        {
+          "cents": 330900,
+          "source": "visible_price",
+          "raw": "3.309 €"
+        },
+        {
+          "cents": 6700,
+          "source": "visible_price",
+          "raw": "67 €"
+        },
+        {
+          "cents": 5200,
+          "source": "visible_price",
+          "raw": "52 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 319500,
+          "source": "visible_price",
+          "raw": "3.195 €"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "3.098 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                3.098 €"
+        },
+        {
+          "cents": 344900,
+          "source": "visible_price",
+          "raw": "3.449 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 324900,
+          "source": "visible_price",
+          "raw": "3.249 €"
+        },
+        {
+          "cents": 434500,
+          "source": "visible_price",
+          "raw": "4.345 €"
+        },
+        {
+          "cents": 255900,
+          "source": "visible_price",
+          "raw": "2.559 €"
+        },
+        {
+          "cents": 439900,
+          "source": "visible_price",
+          "raw": "4.399 €"
+        },
+        {
+          "cents": 439900,
+          "source": "visible_price",
+          "raw": "4.399 €"
+        },
+        {
+          "cents": 439900,
+          "source": "visible_price",
+          "raw": "4.399 €"
+        },
+        {
+          "cents": 439800,
+          "source": "visible_price",
+          "raw": "4.398 €"
+        },
+        {
+          "cents": 424900,
+          "source": "visible_price",
+          "raw": "4.249 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                4.498 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 424900,
+          "source": "visible_price",
+          "raw": "4.249 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                4.498 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 424900,
+          "source": "visible_price",
+          "raw": "4.249 €"
+        },
+        {
+          "cents": 449800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                4.498 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 449800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                4.498 €"
+        },
+        {
+          "cents": 297900,
+          "source": "visible_price",
+          "raw": "2.979 €"
+        },
+        {
+          "cents": 469000,
+          "source": "visible_price",
+          "raw": "4.690 €"
+        },
+        {
+          "cents": 469000,
+          "source": "visible_price",
+          "raw": "4.690 €"
+        },
+        {
+          "cents": 469000,
+          "source": "visible_price",
+          "raw": "4.690 €"
+        },
+        {
+          "cents": 319800,
+          "source": "visible_price",
+          "raw": "3.198 €"
+        },
+        {
+          "cents": 319800,
+          "source": "visible_price",
+          "raw": "3.198 €"
+        },
+        {
+          "cents": 319800,
+          "source": "visible_price",
+          "raw": "3.198 €"
+        },
+        {
+          "cents": 294900,
+          "source": "visible_price",
+          "raw": "2.949 €"
+        },
+        {
+          "cents": 323500,
+          "source": "visible_price",
+          "raw": "3.235 €"
+        },
+        {
+          "cents": 223900,
+          "source": "visible_price",
+          "raw": "2.239 €"
+        },
+        {
+          "cents": 396900,
+          "source": "visible_price",
+          "raw": "3.969 €"
+        },
+        {
+          "cents": 362500,
+          "source": "visible_price",
+          "raw": "3.625 €"
+        }
+      ],
+      "observed_price": null,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "decision": "invalid_price",
+      "error": "Multiple commercial EUR prices in one extraction tier",
+      "previous_price": 3309
+    },
+    {
+      "reference": "r2",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_11_g3_bundle.htm",
+      "http_status": 404,
+      "page_title": "LD Systems Maui 11 G3 Bundle – Musikhaus Thomann",
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "not_found",
+      "previous_price": 2058
+    },
+    {
+      "reference": "r5",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
+      "previous_price": 2578,
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "incomplete_recipe",
+      "error": "collectionDisabled offer has no explicit componentDetails"
+    }
+  ],
+  "summary": {
+    "tested": 6,
+    "rendered": 4,
+    "exact_identities": 4,
+    "prices_recovered": 0,
+    "blocked": 0,
+    "not_found": 1,
+    "writes": false,
+    "mode": "headed"
+  }
+}

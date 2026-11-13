@@ -1,0 +1,142 @@
+{
+  "shop": "musicstore",
+  "scope": "browser_canary",
+  "writes": false,
+  "observed_at": "2026-11-13T12:07:09.656Z",
+  "rows": [
+    {
+      "reference": "r1",
+      "shop": "Music Store",
+      "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
+      "final_url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
+      "http_status": 403,
+      "page_title": "Nur einen Moment…",
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": true,
+      "decision": "blocked",
+      "previous_price": 1858
+    },
+    {
+      "reference": "r6",
+      "shop": "Music Store",
+      "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-W/art-PAH0023386-000",
+      "final_url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-W/art-PAH0023386-000",
+      "http_status": 403,
+      "page_title": "Nur einen Moment…",
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": true,
+      "decision": "blocked",
+      "previous_price": 2698
+    },
+    {
+      "reference": "r7",
+      "shop": "Music Store",
+      "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-MIX-Schwarz/art-PAH0023713-000",
+      "final_url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-MIX-Schwarz/art-PAH0023713-000",
+      "http_status": 403,
+      "page_title": "Nur einen Moment…",
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": true,
+      "decision": "blocked",
+      "previous_price": 3098
+    },
+    {
+      "reference": "r8",
+      "shop": "Music Store",
+      "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-44-G2/art-PAH0021585-000",
+      "final_url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-44-G2/art-PAH0021585-000",
+      "http_status": 403,
+      "page_title": "Nur einen Moment…",
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": true,
+      "decision": "blocked",
+      "previous_price": 4358
+    },
+    {
+      "reference": "r23",
+      "shop": "Music Store",
+      "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000",
+      "final_url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000",
+      "previous_price": 1687.8,
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": true,
+      "decision": "blocked",
+      "components": [
+        {
+          "reference": "r23",
+          "shop": "Music Store",
+          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000",
+          "final_url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000",
+          "http_status": 403,
+          "page_title": "Nur einen Moment…",
+          "product_identity": {},
+          "price_candidates": [],
+          "observed_price": null,
+          "identity_valid": false,
+          "challenge_detected": true,
+          "decision": "blocked",
+          "name": "LD Systems ICOA 12 A BT",
+          "quantity": 2
+        }
+      ],
+      "error": "Required component unavailable: LD Systems ICOA 12 A BT"
+    },
+    {
+      "reference": "r28",
+      "shop": "Music Store",
+      "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-12-A/art-PAH0024126-000",
+      "final_url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-12-A/art-PAH0024126-000",
+      "previous_price": 6627.8,
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": true,
+      "decision": "blocked",
+      "components": [
+        {
+          "reference": "r28",
+          "shop": "Music Store",
+          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-12-A/art-PAH0024126-000",
+          "final_url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-12-A/art-PAH0024126-000",
+          "http_status": 403,
+          "page_title": "Nur einen Moment…",
+          "product_identity": {},
+          "price_candidates": [],
+          "observed_price": null,
+          "identity_valid": false,
+          "challenge_detected": true,
+          "decision": "blocked",
+          "name": "LD Systems ICOA Pro 12 A",
+          "quantity": 2
+        }
+      ],
+      "error": "Required component unavailable: LD Systems ICOA Pro 12 A"
+    }
+  ],
+  "summary": {
+    "tested": 6,
+    "rendered": 0,
+    "exact_identities": 0,
+    "prices_recovered": 0,
+    "blocked": 6,
+    "not_found": 0,
+    "writes": false,
+    "mode": "headed"
+  }
+}

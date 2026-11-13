@@ -1,0 +1,202 @@
+{
+  "shop": "hotsound",
+  "scope": "browser_canary",
+  "writes": false,
+  "observed_at": "2026-11-13T12:07:36.029Z",
+  "rows": [
+    {
+      "reference": "r2",
+      "shop": "Hot Sound",
+      "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-set-2-schwarz-11714",
+      "final_url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-set-2-schwarz-11714",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 11 G3 SET 2 schwarz | HotSound-Store",
+      "product_identity": {
+        "name": "LD Systems Maui 11 G3 SET 2 schwarz",
+        "sku": "HSSETMAUI11G3SET2",
+        "brand": "LD Systems",
+        "prices": [
+          {
+            "cents": 185800,
+            "source": "json_ld",
+            "raw": "1858"
+          }
+        ]
+      },
+      "price_candidates": [
+        {
+          "cents": 185800,
+          "source": "json_ld",
+          "raw": "1858"
+        }
+      ],
+      "observed_price": 1858,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "decision": "refreshable",
+      "unit_price": 1858,
+      "multiplier": 1,
+      "previous_price": 2047
+    },
+    {
+      "reference": "r4",
+      "shop": "Hot Sound",
+      "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-set-2-schwarz-11711",
+      "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-set-2-schwarz-11711",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 28 G3 SET 2 schwarz | HotSound-Store",
+      "product_identity": {
+        "name": "LD Systems Maui 28 G3 SET 2 schwarz",
+        "sku": "HSSETMAUI28G3SET2",
+        "brand": "LD Systems",
+        "prices": [
+          {
+            "cents": 257800,
+            "source": "json_ld",
+            "raw": "2578"
+          }
+        ]
+      },
+      "price_candidates": [
+        {
+          "cents": 257800,
+          "source": "json_ld",
+          "raw": "2578"
+        }
+      ],
+      "observed_price": 2578,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "decision": "refreshable",
+      "unit_price": 2578,
+      "multiplier": 1,
+      "previous_price": 2839
+    },
+    {
+      "reference": "r7",
+      "shop": "Hot Sound",
+      "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-mix-schwarz-13382",
+      "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-mix-schwarz-13382",
+      "previous_price": 3098,
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "incomplete_recipe",
+      "error": "collectionDisabled offer has no explicit componentDetails"
+    },
+    {
+      "reference": "r19",
+      "shop": "Hot Sound",
+      "url": "https://www.hotsound-store.com/ld-systems-stinger-g3-event-set-a-aktivsystem-9635",
+      "final_url": "https://www.hotsound-store.com/ld-systems-stinger-g3-event-set-a-aktivsystem-9635",
+      "http_status": 200,
+      "page_title": "LD Systems STINGER G3 EVENT SET A Aktivsystem | HotSound-Store",
+      "product_identity": {
+        "name": "LD Systems STINGER G3 EVENT SET A Aktivsystem",
+        "sku": "AHLDEBSETEVENTA",
+        "brand": "LD Systems",
+        "prices": [
+          {
+            "cents": 321900,
+            "source": "json_ld",
+            "raw": "3219"
+          }
+        ]
+      },
+      "price_candidates": [
+        {
+          "cents": 321900,
+          "source": "json_ld",
+          "raw": "3219"
+        }
+      ],
+      "observed_price": 3219,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "decision": "refreshable",
+      "unit_price": 3219,
+      "multiplier": 1,
+      "previous_price": 3219
+    },
+    {
+      "reference": "r28",
+      "shop": "Hot Sound",
+      "url": "https://www.hotsound-store.com/ld-systems-icoa-pro-12a-club-pa-set-16057",
+      "final_url": "https://www.hotsound-store.com/ld-systems-icoa-pro-12a-club-pa-set-16057",
+      "http_status": 200,
+      "page_title": "LD Systems ICOA PRO 12A Club PA Set | HotSound-Store",
+      "product_identity": {
+        "name": "LD Systems ICOA PRO 12A Club PA Set",
+        "sku": "AHLDICOA12PROCLUB",
+        "brand": "LD Systems",
+        "prices": [
+          {
+            "cents": 659900,
+            "source": "json_ld",
+            "raw": "6599"
+          }
+        ]
+      },
+      "price_candidates": [
+        {
+          "cents": 659900,
+          "source": "json_ld",
+          "raw": "6599"
+        }
+      ],
+      "observed_price": 6599,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "decision": "refreshable",
+      "unit_price": 6599,
+      "multiplier": 1,
+      "previous_price": 6599
+    },
+    {
+      "reference": "r30",
+      "shop": "Hot Sound",
+      "url": "https://www.hotsound-store.com/dap-frigga-stereo-aktives-stereo-saeulen-pa-system-schwarz-14921",
+      "final_url": "https://www.hotsound-store.com/dap-frigga-stereo-aktives-stereo-saeulen-pa-system-schwarz-14921",
+      "http_status": 200,
+      "page_title": "DAP Frigga Stereo - Aktives Stereo Säulen-PA-System schwarz | HotSound-Store",
+      "product_identity": {
+        "name": "DAP Frigga Stereo - Aktives Stereo Säulen-PA-System schwarz",
+        "sku": "HSSETFRIGGASTEREOSW",
+        "brand": "DAP",
+        "prices": [
+          {
+            "cents": 229000,
+            "source": "json_ld",
+            "raw": "2290"
+          }
+        ]
+      },
+      "price_candidates": [
+        {
+          "cents": 229000,
+          "source": "json_ld",
+          "raw": "2290"
+        }
+      ],
+      "observed_price": 2290,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "decision": "refreshable",
+      "unit_price": 2290,
+      "multiplier": 1,
+      "previous_price": 2290
+    }
+  ],
+  "summary": {
+    "tested": 6,
+    "rendered": 5,
+    "exact_identities": 5,
+    "prices_recovered": 5,
+    "blocked": 0,
+    "not_found": 0,
+    "writes": false,
+    "mode": "headed"
+  }
+}
