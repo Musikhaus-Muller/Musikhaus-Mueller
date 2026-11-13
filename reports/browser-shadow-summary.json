@@ -1,0 +1,37 @@
+{
+  "writes": false,
+  "shops": {
+    "thomann": {
+      "tested": 6,
+      "rendered": 4,
+      "exact_identities": 4,
+      "prices_recovered": 0,
+      "blocked": 0,
+      "not_found": 1,
+      "writes": false,
+      "mode": "headed"
+    },
+    "musicstore": {
+      "tested": 6,
+      "rendered": 0,
+      "exact_identities": 0,
+      "prices_recovered": 0,
+      "blocked": 6,
+      "not_found": 0,
+      "writes": false,
+      "mode": "headed"
+    },
+    "hotsound": {
+      "tested": 6,
+      "rendered": 5,
+      "exact_identities": 5,
+      "prices_recovered": 5,
+      "blocked": 0,
+      "not_found": 0,
+      "writes": false,
+      "mode": "headed"
+    }
+  },
+  "total_tested": 18,
+  "prices_recovered": 5
+}
