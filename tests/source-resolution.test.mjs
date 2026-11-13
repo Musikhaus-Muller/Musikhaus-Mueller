@@ -51,6 +51,14 @@ test('blocked primary may use valid secondary, but invalid secondary preserves p
   assert.equal(result.preservePrevious, true);
 });
 
+test('blocked product HTML plus valid official catalog is refreshable, while C1 is proposal-only', () => {
+  const catalog = candidate('official_catalog', { source: { type: 'official_catalog', method: 'brand_catalog', url: 'https://shop.example/catalog' } });
+  assert.equal(resolvePrice({ expectedIdentity: expected, candidates: [{ status: 'blocked', source: { type: 'official_structured_product_data', method: 'product_html', url: 'https://shop.example/product' } }, catalog] }).autoRefreshEligible, true);
+  const external = candidate('external_price_aggregator', { source: { type: 'external_price_aggregator', method: 'retailer_listing', url: 'https://aggregator.example/listing' } });
+  const selected = resolvePrice({ expectedIdentity: expected, candidates: [{ status: 'blocked', source: { type: 'official_catalog', method: 'catalog', url: 'https://shop.example/catalog' } }, external] });
+  assert.equal(selected.proposalOnly, true);
+});
+
 test('read-only probe records provenance without a write path', async () => {
   const output = await probeMusicStoreSources({ reference: 'r28', expectedIdentity: expected, sources: [{ type: 'official_catalog', method: 'catalog', url: 'https://shop.example/catalog', parse: () => ({ shop: 'Music Store', sku: 'PAH1', name: expected.name, price: 1089, currency: 'EUR' }) }], fetcher: async () => new Response('catalog', { status: 200 }) });
   assert.equal(output.selected_source, 'catalog');

@@ -1,7 +1,7 @@
 {
   "shop": "musicstore",
   "writes": false,
-  "observed_at": "2026-11-13T11:11:25.860Z",
+  "observed_at": "2026-11-13T11:34:07.308Z",
   "rows": [
     {
       "reference": "r1",
@@ -27,10 +27,63 @@
       "expected_sku": "PAH0023383-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -81,10 +134,63 @@
       "expected_sku": "PAH0023383-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -135,10 +241,63 @@
       "expected_sku": "PAH0023384-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -189,10 +348,63 @@
       "expected_sku": "PAH0023384-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -225,10 +437,63 @@
       "expected_sku": "PAH0023384-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-Schwarz/art-PAH0023384-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -261,10 +526,63 @@
       "expected_sku": "PAH0023386-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-W/art-PAH0023386-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-W/art-PAH0023386-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -297,10 +615,63 @@
       "expected_sku": "PAH0023713-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-MIX-Schwarz/art-PAH0023713-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-28-G3-MIX-Schwarz/art-PAH0023713-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -333,10 +704,63 @@
       "expected_sku": "PAH0021585-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-44-G2/art-PAH0021585-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-44-G2/art-PAH0021585-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -369,10 +793,63 @@
       "expected_sku": "PAH0023383-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000",
-          "http_status": null
+          "status": "incomplete_recipe",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-MAUI-11-G3-Schwarz/art-PAH0023383-000"
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -423,10 +900,63 @@
       "expected_sku": "PAH0018045-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2/art-PAH0018045-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-11-G2/art-PAH0018045-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -477,10 +1007,63 @@
       "expected_sku": "PAH0018043-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2/art-PAH0018043-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-Maui-28-G2/art-PAH0018043-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -531,10 +1114,63 @@
       "expected_sku": "PAH0023214-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-12-G4X/art-PAH0023214-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-12-G4X/art-PAH0023214-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -585,10 +1221,63 @@
       "expected_sku": "PAH0023215-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-15-G4X/art-PAH0023215-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-15-G4X/art-PAH0023215-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -639,10 +1328,63 @@
       "expected_sku": "PAH0023216-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-18-G4X/art-PAH0023216-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-DAVE-18-G4X/art-PAH0023216-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -693,10 +1435,63 @@
       "expected_sku": "PAH0021617-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -747,10 +1542,63 @@
       "expected_sku": "PAH0021617-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-12-A-BT/art-PAH0021617-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -801,10 +1649,63 @@
       "expected_sku": "PAH0021619-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-15-A-BT/art-PAH0021619-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-15-A-BT/art-PAH0021619-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -855,10 +1756,63 @@
       "expected_sku": "PAH0021619-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-15-A-BT/art-PAH0021619-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-15-A-BT/art-PAH0021619-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -909,10 +1863,63 @@
       "expected_sku": "PAH0024126-000",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-12-A/art-PAH0024126-000",
-          "http_status": 403
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.musicstore.de/de_DE/EUR/LD-Systems-ICOA-Pro-12-A/art-PAH0024126-000"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "blocked",
+          "reason": "blocked",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.musicstore.de/de_DE/EUR/brands/ld-systems/1",
+            "method": "brand_catalog"
+          },
+          "httpStatus": 403
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "article_search",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -932,6 +1939,15 @@
     "not_found": 0,
     "invalid_identity": 0,
     "unresolved": 1,
-    "coverage_pct": 0
+    "coverage_pct": 0,
+    "sources_attempted": 38,
+    "official_sources_attempted": 38,
+    "external_sources_attempted": 0,
+    "references_with_2plus_sources": 19,
+    "references_with_alternative_source": 0,
+    "direct_html_success": 0,
+    "alternative_official_success": 0,
+    "external_proposal_success": 0,
+    "preserve_only_after_all_sources": 19
   }
 }

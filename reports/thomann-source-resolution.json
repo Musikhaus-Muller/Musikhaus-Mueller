@@ -1,7 +1,7 @@
 {
   "shop": "thomann",
   "writes": false,
-  "observed_at": "2026-11-13T11:11:24.709Z",
+  "observed_at": "2026-11-13T11:34:06.056Z",
   "rows": [
     {
       "reference": "r1",
@@ -24,10 +24,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_stereo_bundle.htm",
-          "http_status": 200
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_stereo_bundle.htm"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -57,10 +109,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_bundle.htm",
-          "http_status": 404
+          "status": "not_found",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_bundle.htm"
+          },
+          "httpStatus": 404
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -90,10 +194,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm",
-          "http_status": 404
+          "status": "not_found",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm"
+          },
+          "httpStatus": 404
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -123,10 +279,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm",
-          "http_status": 404
+          "status": "not_found",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm"
+          },
+          "httpStatus": 404
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -156,10 +364,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
-          "http_status": null
+          "status": "parse_error",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm"
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -189,10 +449,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_white_stereo_bundle.htm",
-          "http_status": 200
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_white_stereo_bundle.htm"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -222,10 +534,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_mix_syslink_bundle.htm",
-          "http_status": 429
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_mix_syslink_bundle.htm"
+          },
+          "httpStatus": 429
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -255,10 +619,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
-          "http_status": null
+          "status": "parse_error",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm"
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -288,10 +704,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
-          "http_status": null
+          "status": "parse_error",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm"
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -321,10 +789,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_power_bundle.htm",
-          "http_status": 200
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_power_bundle.htm"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -354,10 +874,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_power_bundle.htm",
-          "http_status": 200
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_power_bundle.htm"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -387,10 +959,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_maui_44_g2_power_bundle.htm",
-          "http_status": 404
+          "status": "not_found",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_maui_44_g2_power_bundle.htm"
+          },
+          "httpStatus": 404
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -420,10 +1044,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_maui_11_g2_bundle.htm",
-          "http_status": 200
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_maui_11_g2_bundle.htm"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -453,10 +1129,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_maui_28_g2_bundle.htm",
-          "http_status": 200
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_maui_28_g2_bundle.htm"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -486,10 +1214,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_dave_12_g4x_stand_bundle.htm",
-          "http_status": 200
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_dave_12_g4x_stand_bundle.htm"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -508,21 +1288,73 @@
       "previous_price_date": "2026-11-03",
       "collection_disabled": false,
       "decision": "blocked",
-      "http_status": 200,
+      "http_status": 429,
       "identity_valid": false,
       "price_valid": false,
       "unit_price": null,
       "total_price": null,
       "multiplier": 1,
-      "error": "Zugriffsschutz / CAPTCHA",
+      "error": "HTTP 429",
       "shop": "thomann",
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_dave_15_g4x_stand_bundle.htm",
-          "http_status": 200
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_dave_15_g4x_stand_bundle.htm"
+          },
+          "httpStatus": 429
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -552,10 +1384,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_dave_18_g4x_stand_bundle.htm",
-          "http_status": 200
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_dave_18_g4x_stand_bundle.htm"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -585,10 +1469,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_dave_10_g4x_install_bundle.htm",
-          "http_status": 200
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_dave_10_g4x_install_bundle.htm"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -618,10 +1554,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_stinger_10_sub15_power_bundle.htm",
-          "http_status": 200
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_stinger_10_sub15_power_bundle.htm"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -651,10 +1639,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_stinger_12_sub18_power_bundle.htm",
-          "http_status": 200
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_stinger_12_sub18_power_bundle.htm"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -684,10 +1724,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_stinger_high_power_bundle.htm",
-          "http_status": 200
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_stinger_high_power_bundle.htm"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -706,21 +1798,73 @@
       "previous_price_date": "2026-11-04",
       "collection_disabled": false,
       "decision": "blocked",
-      "http_status": 200,
+      "http_status": 429,
       "identity_valid": false,
       "price_valid": false,
       "unit_price": null,
       "total_price": null,
       "multiplier": 1,
-      "error": "Zugriffsschutz / CAPTCHA",
+      "error": "HTTP 429",
       "shop": "thomann",
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_stinger_8_sub15_basic_bundle.htm",
-          "http_status": 200
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_stinger_8_sub15_basic_bundle.htm"
+          },
+          "httpStatus": 429
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -750,10 +1894,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
-          "http_status": null
+          "status": "parse_error",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm"
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -783,10 +1979,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
-          "http_status": null
+          "status": "parse_error",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm"
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -816,10 +2064,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
-          "http_status": null
+          "status": "parse_error",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm"
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -849,10 +2149,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
-          "http_status": null
+          "status": "parse_error",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm"
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -882,10 +2234,62 @@
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_icoa_pro_12_a.htm",
-          "http_status": null
+          "status": "parse_error",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_icoa_pro_12_a.htm"
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -904,21 +2308,73 @@
       "previous_price_date": "2026-11-03",
       "collection_disabled": false,
       "decision": "blocked",
-      "http_status": 200,
+      "http_status": 429,
       "identity_valid": false,
       "price_valid": false,
       "unit_price": null,
       "total_price": null,
       "multiplier": 1,
-      "error": "Zugriffsschutz / CAPTCHA",
+      "error": "HTTP 429",
       "shop": "thomann",
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_icoa_pro_12a_21a_power_set.htm",
-          "http_status": 200
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_icoa_pro_12a_21a_power_set.htm"
+          },
+          "httpStatus": 429
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -937,21 +2393,73 @@
       "previous_price_date": "2026-10-17",
       "collection_disabled": false,
       "decision": "blocked",
-      "http_status": 200,
+      "http_status": 429,
       "identity_valid": false,
       "price_valid": false,
       "unit_price": null,
       "total_price": null,
       "multiplier": 1,
-      "error": "Zugriffsschutz / CAPTCHA",
+      "error": "HTTP 429",
       "shop": "thomann",
       "expected_sku": null,
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "url": "https://www.thomann.de/de/ld_systems_icoa_pro_15a_21a_power_set.htm",
-          "http_status": 200
+          "status": "blocked",
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.thomann.de/de/ld_systems_icoa_pro_15a_21a_power_set.htm"
+          },
+          "httpStatus": 429
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.thomann.de/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -967,10 +2475,19 @@
     "refreshable": 0,
     "proposal_only": 0,
     "blocked": 17,
-    "rate_limited": 1,
+    "rate_limited": 5,
     "not_found": 4,
     "invalid_identity": 0,
     "unresolved": 8,
-    "coverage_pct": 0
+    "coverage_pct": 0,
+    "sources_attempted": 58,
+    "official_sources_attempted": 58,
+    "external_sources_attempted": 0,
+    "references_with_2plus_sources": 29,
+    "references_with_alternative_source": 0,
+    "direct_html_success": 0,
+    "alternative_official_success": 0,
+    "external_proposal_success": 0,
+    "preserve_only_after_all_sources": 29
   }
 }

@@ -1,7 +1,7 @@
 {
   "shop": "hotsound",
   "writes": false,
-  "observed_at": "2026-11-13T11:11:35.861Z",
+  "observed_at": "2026-11-13T11:34:11.083Z",
   "rows": [
     {
       "reference": "r1",
@@ -12,10 +12,63 @@
       "previous_price_date": "2026-11-04",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -34,10 +87,63 @@
       "previous_price_date": "2026-11-04",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-set-2-schwarz-11714"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -56,10 +162,63 @@
       "previous_price_date": "2026-11-04",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-set-2-schwarz-11711"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -78,10 +237,63 @@
       "previous_price_date": "2026-11-06",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -100,10 +312,63 @@
       "previous_price_date": "2026-11-04",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-w-weiss-11672"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -122,10 +387,63 @@
       "previous_price_date": "2026-11-04",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-mix-schwarz-13382"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -144,10 +462,63 @@
       "previous_price_date": "2026-11-06",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -166,10 +537,63 @@
       "previous_price_date": "2026-11-06",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -188,10 +612,63 @@
       "previous_price_date": "2026-11-06",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -210,10 +687,63 @@
       "previous_price_date": "2026-11-06",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -232,10 +762,63 @@
       "previous_price_date": "2026-11-06",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-11-g2-316"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -254,10 +837,63 @@
       "previous_price_date": "2026-11-06",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/ld-systems-maui-28-g2-319"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -276,10 +912,63 @@
       "previous_price_date": "2026-11-04",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/ld-systems-stinger-g3-event-set-a-aktivsystem-9635"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -298,10 +987,63 @@
       "previous_price_date": "2026-11-04",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/ld-systems-stinger-g3-power-set-a-aktivsystem-9639"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -320,10 +1062,63 @@
       "previous_price_date": "2026-11-04",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/ld-systems-stinger-g3-impact-set-a-aktivsystem-9637"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -342,10 +1137,63 @@
       "previous_price_date": "2026-11-04",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/ld-systems-icoa-pro-12a-club-pa-set-16057"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -364,10 +1212,63 @@
       "previous_price_date": "2026-11-06",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/dap-frigga-stereo-aktives-stereo-saeulen-pa-system-schwarz-14921"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -386,10 +1287,63 @@
       "previous_price_date": "2026-11-04",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -408,10 +1362,63 @@
       "previous_price_date": "2026-11-04",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/dap-frigga-stereo-premium-set-aktives-stereo-saeulen-pa-system-schwarz-14923"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -430,10 +1437,63 @@
       "previous_price_date": "2026-11-06",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -452,10 +1512,63 @@
       "previous_price_date": "2026-11-06",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-schwarz-13257"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -474,10 +1587,63 @@
       "previous_price_date": "2026-11-06",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -496,10 +1662,63 @@
       "previous_price_date": "2026-11-04",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/wharfedale-pro-delta-x218b-tough-tone-passiv-pa-subwoofer-4873"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -518,10 +1737,63 @@
       "previous_price_date": "2026-11-04",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -540,10 +1812,63 @@
       "previous_price_date": "2026-11-04",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -562,10 +1887,63 @@
       "previous_price_date": "2026-11-04",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/wharfedale-pro-wla-210xp-line-array-set-set-1-19041"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -584,10 +1962,63 @@
       "previous_price_date": "2026-11-06",
       "sources_tested": [
         {
-          "method": "official_product_html",
-          "type": "official_structured_product_data",
-          "http_status": 200,
-          "protected_content": true
+          "source": {
+            "method": "official_product_html",
+            "type": "official_structured_product_data",
+            "url": "https://www.hotsound-store.com/wharfedale-pro-wla-210xp-line-array-set-amped-set-1-19042"
+          },
+          "httpStatus": 200,
+          "protected_content": true,
+          "status": "blocked"
+        },
+        {
+          "status": "parse_error",
+          "source": {
+            "type": "official_catalog",
+            "url": "https://www.hotsound-store.com/sitemap.xml",
+            "method": "sitemap_catalog"
+          },
+          "httpStatus": 200
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_search_endpoint",
+            "method": "public_search_endpoint",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "official_public_feed",
+            "method": "public_product_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_verified_retailer_feed",
+            "method": "retailer_attributed_sku_feed",
+            "url": null
+          },
+          "httpStatus": null
+        },
+        {
+          "status": "source_not_available",
+          "reason": "No public endpoint demonstrated for this shop",
+          "source": {
+            "type": "external_price_aggregator",
+            "method": "retailer_attributed_sku_listing",
+            "url": null
+          },
+          "httpStatus": null
         }
       ],
       "selected_source": null,
@@ -608,6 +2039,15 @@
     "not_found": 0,
     "invalid_identity": 0,
     "unresolved": 0,
-    "coverage_pct": 0
+    "coverage_pct": 0,
+    "sources_attempted": 54,
+    "official_sources_attempted": 54,
+    "external_sources_attempted": 0,
+    "references_with_2plus_sources": 27,
+    "references_with_alternative_source": 0,
+    "direct_html_success": 0,
+    "alternative_official_success": 0,
+    "external_proposal_success": 0,
+    "preserve_only_after_all_sources": 27
   }
 }

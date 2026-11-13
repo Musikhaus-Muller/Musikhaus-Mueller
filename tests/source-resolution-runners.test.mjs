@@ -9,4 +9,8 @@ test('live source-resolution runner is seed-only and has no write path to Supaba
   assert.match(source, /writes: false/);
   assert.doesNotMatch(source, /SUPABASE|\/rest\/v1|INSERT|UPDATE|POST.*supabase/i);
   assert.doesNotMatch(source, /proxy|playwright|captcha solving|retry/i);
+  assert.match(source, /probeThomannSources/);
+  assert.match(source, /probeMusicStoreSources/);
+  assert.match(source, /probeHotSoundSources/);
+  assert.match(source, /sharedOfficialSources/);
 });

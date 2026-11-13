@@ -1,6 +1,6 @@
 {
   "writes": false,
-  "observed_at": "2026-11-13T11:11:50.435Z",
+  "observed_at": "2026-11-13T11:34:11.152Z",
   "shops": {
     "thomann": {
       "active": 29,
@@ -8,11 +8,20 @@
       "refreshable": 0,
       "proposal_only": 0,
       "blocked": 17,
-      "rate_limited": 1,
+      "rate_limited": 5,
       "not_found": 4,
       "invalid_identity": 0,
       "unresolved": 8,
-      "coverage_pct": 0
+      "coverage_pct": 0,
+      "sources_attempted": 58,
+      "official_sources_attempted": 58,
+      "external_sources_attempted": 0,
+      "references_with_2plus_sources": 29,
+      "references_with_alternative_source": 0,
+      "direct_html_success": 0,
+      "alternative_official_success": 0,
+      "external_proposal_success": 0,
+      "preserve_only_after_all_sources": 29
     },
     "musicstore": {
       "active": 19,
@@ -24,7 +33,16 @@
       "not_found": 0,
       "invalid_identity": 0,
       "unresolved": 1,
-      "coverage_pct": 0
+      "coverage_pct": 0,
+      "sources_attempted": 38,
+      "official_sources_attempted": 38,
+      "external_sources_attempted": 0,
+      "references_with_2plus_sources": 19,
+      "references_with_alternative_source": 0,
+      "direct_html_success": 0,
+      "alternative_official_success": 0,
+      "external_proposal_success": 0,
+      "preserve_only_after_all_sources": 19
     },
     "hotsound": {
       "active": 27,
@@ -36,7 +54,16 @@
       "not_found": 0,
       "invalid_identity": 0,
       "unresolved": 0,
-      "coverage_pct": 0
+      "coverage_pct": 0,
+      "sources_attempted": 54,
+      "official_sources_attempted": 54,
+      "external_sources_attempted": 0,
+      "references_with_2plus_sources": 27,
+      "references_with_alternative_source": 0,
+      "direct_html_success": 0,
+      "alternative_official_success": 0,
+      "external_proposal_success": 0,
+      "preserve_only_after_all_sources": 27
     }
   },
   "global": {
