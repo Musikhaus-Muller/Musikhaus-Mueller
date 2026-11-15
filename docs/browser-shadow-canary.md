@@ -15,6 +15,15 @@ node scripts/build-browser-shadow-summary.mjs
 
 `--headed` is the initial diagnostic mode. `--headless` is available only for comparison after a shop has shown equivalent behavior in headed mode. The command requires exactly one of these modes and refuses a non-canary run.
 
+After a shop's headed canary has passed, Hot Sound and Thomann can be run explicitly as full shadows; Music Store is intentionally rejected:
+
+```sh
+node scripts/run-browser-shadow.mjs --shop=hotsound --full-shadow --headed
+node scripts/run-browser-shadow.mjs --shop=thomann --full-shadow --headed
+```
+
+Full reports are `reports/hotsound-browser-shadow-full.json` and `reports/thomann-browser-shadow-full.json`. They retain the last price only as a delta comparison; it never participates in selecting a current price. A recovered value differing by more than 20% is marked `manual_review_required` without any write.
+
 The canary opens only versioned existing offer URLs (or their existing explicit `componentDetails`), sequentially, caches a URL once, waits for normal rendering and stops issuing new navigation after repeated HTTP 429 responses. It does not use proxies, stealth, fingerprint changes, CAPTCHA solving, challenge tokens, retries or product discovery.
 
 Reports are written to `reports/{thomann,musicstore,hotsound}-browser-shadow.json` and the combined `reports/browser-shadow-summary.json`. A 200 page with a challenge is reported as `blocked`. A price is emitted only after strict existing identity validation and an unambiguous EUR commercial-price extraction; component carts are summed in integer cents only when every required component is refreshable.

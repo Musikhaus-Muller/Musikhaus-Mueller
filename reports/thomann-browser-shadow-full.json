@@ -1,0 +1,3250 @@
+{
+  "shop": "thomann",
+  "scope": "browser_full_shadow",
+  "writes": false,
+  "observed_at": "2026-11-15T21:50:42.666Z",
+  "rows": [
+    {
+      "reference": "r1",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_stereo_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_11_g3_stereo_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 11 G3 Stereo Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Maui 11 G3 Stereo Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 183900,
+          "source": "thomann_product_root",
+          "raw": "1.839 €"
+        }
+      ],
+      "observed_price": 1839,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_source": "thomann_product_root",
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "1.839 €\n        \n        \n            -16%\n            \n                                    UVP: 2.179,80 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\"",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "refreshable",
+      "unit_price": 1839,
+      "multiplier": 1,
+      "previous_price": 1839,
+      "delta": 0,
+      "delta_pct": 0,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r2",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_11_g3_bundle.htm",
+      "http_status": 404,
+      "page_title": "LD Systems Maui 11 G3 Bundle – Musikhaus Thomann",
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "not_found",
+      "previous_price": 2058,
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r3",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm",
+      "http_status": 404,
+      "page_title": "LD Systems Maui 28 G3 Bundle – Musikhaus Thomann",
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "not_found",
+      "previous_price": 1409,
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r4",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm",
+      "http_status": 404,
+      "page_title": "LD Systems Maui 28 G3 Bundle – Musikhaus Thomann",
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "not_found",
+      "previous_price": 2818,
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r5",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
+      "previous_price": 2578,
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "incomplete_recipe",
+      "error": "collectionDisabled offer has no explicit componentDetails",
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r6",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_white_stereo_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_white_stereo_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 28 G3 White Stereo Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Maui 28 G3 White Stereo Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 266900,
+          "source": "thomann_product_root",
+          "raw": "2.669 €"
+        }
+      ],
+      "observed_price": 2669,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_source": "thomann_product_root",
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "2.669 €\n        \n        \n            -14%\n            \n                                    UVP: 3.119,80 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Kurzfristig lieferbar (2–5 Tage)\n                            \n            \n                    \n                Kurzfristig lieferbar (2–5 Tage)\n                Dieses Produkt wurde bestellt und trifft in den nächsten Tagen bei uns ein.\n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "refreshable",
+      "unit_price": 2669,
+      "multiplier": 1,
+      "previous_price": 2669,
+      "delta": 0,
+      "delta_pct": 0,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r7",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_mix_syslink_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_mix_syslink_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 28 G3 MIX SysLink Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Maui 28 G3 MIX SysLink Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 307900,
+          "source": "thomann_product_root",
+          "raw": "3.079 €"
+        }
+      ],
+      "observed_price": 3079,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_source": "thomann_product_root",
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "3.079 €\n        \n        \n            -26%\n            \n                                    UVP: 4.139,80 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\"",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "refreshable",
+      "unit_price": 3079,
+      "multiplier": 1,
+      "previous_price": 3159,
+      "delta": -80,
+      "delta_pct": -2.5324469768914213,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r8",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+      "previous_price": 4358,
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "incomplete_recipe",
+      "error": "collectionDisabled offer has no explicit componentDetails",
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r9",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+      "previous_price": 4936,
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "incomplete_recipe",
+      "error": "collectionDisabled offer has no explicit componentDetails",
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r10",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_power_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_11_g3_power_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 11 G3 Power Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Maui 11 G3 Power Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 330900,
+          "source": "thomann_product_root",
+          "raw": "3.309 €"
+        }
+      ],
+      "observed_price": 3309,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_source": "thomann_product_root",
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "3.309 €\n        \n        \n            -18%\n            \n                                    UVP: 4.057,80 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\"",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "refreshable",
+      "unit_price": 3309,
+      "multiplier": 1,
+      "previous_price": 3309,
+      "delta": 0,
+      "delta_pct": 0,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r11",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_power_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_power_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 28 G3 Power Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Maui 28 G3 Power Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 441900,
+          "source": "thomann_product_root",
+          "raw": "4.419 €"
+        }
+      ],
+      "observed_price": 4419,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_source": "thomann_product_root",
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "4.419 €\n        \n        \n            -14%\n            \n                                    UVP: 5.135,80 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Kurzfristig lieferbar (2–5 Tage)\n                            \n            \n                    \n                Kurzfristig lieferbar (2–5 Tage)\n                Dieses Produkt wurde bestellt und trifft in den nächsten Tagen bei uns ein.\n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "refreshable",
+      "unit_price": 4419,
+      "multiplier": 1,
+      "previous_price": 4419,
+      "delta": 0,
+      "delta_pct": 0,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r12",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_44_g2_power_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_44_g2_power_bundle.htm",
+      "http_status": 404,
+      "page_title": "LD Systems Maui 44 G2 Power Bundle – Musikhaus Thomann",
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "not_found",
+      "previous_price": 7269,
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r13",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_11_g2_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_11_g2_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 11 G2 Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Maui 11 G2 Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 74900,
+          "source": "thomann_product_root",
+          "raw": "749 €"
+        }
+      ],
+      "observed_price": 749,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_source": "thomann_product_root",
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "749 €\n        \n        \n            -21%\n            \n                                    UVP: 949 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "refreshable",
+      "unit_price": 749,
+      "multiplier": 1,
+      "previous_price": 749,
+      "delta": 0,
+      "delta_pct": 0,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r14",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_28_g2_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g2_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 28 G2 Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Maui 28 G2 Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 89900,
+          "source": "visible_price",
+          "raw": "899 €"
+        },
+        {
+          "cents": 89900,
+          "source": "visible_price",
+          "raw": "899 €"
+        },
+        {
+          "cents": 9900,
+          "source": "visible_price",
+          "raw": "99 €"
+        },
+        {
+          "cents": 16500,
+          "source": "visible_price",
+          "raw": "165 €"
+        },
+        {
+          "cents": 4500,
+          "source": "visible_price",
+          "raw": "45 €"
+        },
+        {
+          "cents": 8500,
+          "source": "visible_price",
+          "raw": "85 €"
+        },
+        {
+          "cents": 79800,
+          "source": "visible_price",
+          "raw": "798 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 79800,
+          "source": "visible_price",
+          "raw": "798 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 79800,
+          "source": "visible_price",
+          "raw": "798 €"
+        },
+        {
+          "cents": 91900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 91900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                919 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 1100,
+          "source": "visible_price",
+          "raw": "11 €"
+        },
+        {
+          "cents": 1100,
+          "source": "visible_price",
+          "raw": "11 €"
+        },
+        {
+          "cents": 1100,
+          "source": "visible_price",
+          "raw": "11 €"
+        },
+        {
+          "cents": 450,
+          "source": "visible_price",
+          "raw": "4,50 €"
+        },
+        {
+          "cents": 450,
+          "source": "visible_price",
+          "raw": "4,50 €"
+        },
+        {
+          "cents": 450,
+          "source": "visible_price",
+          "raw": "4,50 €"
+        },
+        {
+          "cents": 590,
+          "source": "visible_price",
+          "raw": "5,90 €"
+        },
+        {
+          "cents": 590,
+          "source": "visible_price",
+          "raw": "5,90 €"
+        },
+        {
+          "cents": 590,
+          "source": "visible_price",
+          "raw": "5,90 €"
+        },
+        {
+          "cents": 2200,
+          "source": "visible_price",
+          "raw": "22 €"
+        },
+        {
+          "cents": 2200,
+          "source": "visible_price",
+          "raw": "22 €"
+        },
+        {
+          "cents": 2200,
+          "source": "visible_price",
+          "raw": "22 €"
+        },
+        {
+          "cents": 690,
+          "source": "visible_price",
+          "raw": "6,90 €"
+        },
+        {
+          "cents": 690,
+          "source": "visible_price",
+          "raw": "6,90 €"
+        },
+        {
+          "cents": 690,
+          "source": "visible_price",
+          "raw": "6,90 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 420,
+          "source": "visible_price",
+          "raw": "4,20 €"
+        },
+        {
+          "cents": 420,
+          "source": "visible_price",
+          "raw": "4,20 €"
+        },
+        {
+          "cents": 420,
+          "source": "visible_price",
+          "raw": "4,20 €"
+        },
+        {
+          "cents": 490,
+          "source": "visible_price",
+          "raw": "4,90 €"
+        },
+        {
+          "cents": 490,
+          "source": "visible_price",
+          "raw": "4,90 €"
+        },
+        {
+          "cents": 490,
+          "source": "visible_price",
+          "raw": "4,90 €"
+        },
+        {
+          "cents": 5800,
+          "source": "visible_price",
+          "raw": "58 €"
+        },
+        {
+          "cents": 810,
+          "source": "visible_price",
+          "raw": "8,10 €"
+        },
+        {
+          "cents": 810,
+          "source": "visible_price",
+          "raw": "8,10 €"
+        },
+        {
+          "cents": 810,
+          "source": "visible_price",
+          "raw": "8,10 €"
+        },
+        {
+          "cents": 11100,
+          "source": "visible_price",
+          "raw": "111 €"
+        },
+        {
+          "cents": 11100,
+          "source": "visible_price",
+          "raw": "111 €"
+        },
+        {
+          "cents": 11100,
+          "source": "visible_price",
+          "raw": "111 €"
+        },
+        {
+          "cents": 690,
+          "source": "visible_price",
+          "raw": "6,90 €"
+        },
+        {
+          "cents": 690,
+          "source": "visible_price",
+          "raw": "6,90 €"
+        },
+        {
+          "cents": 690,
+          "source": "visible_price",
+          "raw": "6,90 €"
+        },
+        {
+          "cents": 1020,
+          "source": "visible_price",
+          "raw": "10,20 €"
+        },
+        {
+          "cents": 1020,
+          "source": "visible_price",
+          "raw": "10,20 €"
+        },
+        {
+          "cents": 1020,
+          "source": "visible_price",
+          "raw": "10,20 €"
+        },
+        {
+          "cents": 390,
+          "source": "visible_price",
+          "raw": "3,90 €"
+        },
+        {
+          "cents": 390,
+          "source": "visible_price",
+          "raw": "3,90 €"
+        },
+        {
+          "cents": 390,
+          "source": "visible_price",
+          "raw": "3,90 €"
+        },
+        {
+          "cents": 11900,
+          "source": "visible_price",
+          "raw": "119 €"
+        },
+        {
+          "cents": 11900,
+          "source": "visible_price",
+          "raw": "119 €"
+        },
+        {
+          "cents": 11900,
+          "source": "visible_price",
+          "raw": "119 €"
+        },
+        {
+          "cents": 990,
+          "source": "visible_price",
+          "raw": "9,90 €"
+        },
+        {
+          "cents": 990,
+          "source": "visible_price",
+          "raw": "9,90 €"
+        },
+        {
+          "cents": 990,
+          "source": "visible_price",
+          "raw": "9,90 €"
+        },
+        {
+          "cents": 1490,
+          "source": "visible_price",
+          "raw": "14,90 €"
+        },
+        {
+          "cents": 1490,
+          "source": "visible_price",
+          "raw": "14,90 €"
+        },
+        {
+          "cents": 1490,
+          "source": "visible_price",
+          "raw": "14,90 €"
+        },
+        {
+          "cents": 499,
+          "source": "visible_price",
+          "raw": "4,99 €"
+        },
+        {
+          "cents": 499,
+          "source": "visible_price",
+          "raw": "4,99 €"
+        },
+        {
+          "cents": 499,
+          "source": "visible_price",
+          "raw": "4,99 €"
+        },
+        {
+          "cents": 89900,
+          "source": "visible_price",
+          "raw": "899 €"
+        },
+        {
+          "cents": 89900,
+          "source": "visible_price",
+          "raw": "899 €"
+        },
+        {
+          "cents": 89900,
+          "source": "visible_price",
+          "raw": "899 €"
+        },
+        {
+          "cents": 101900,
+          "source": "visible_price",
+          "raw": "1.019 €"
+        },
+        {
+          "cents": 101900,
+          "source": "visible_price",
+          "raw": "1.019 €"
+        },
+        {
+          "cents": 101900,
+          "source": "visible_price",
+          "raw": "1.019 €"
+        },
+        {
+          "cents": 75900,
+          "source": "visible_price",
+          "raw": "759 €"
+        },
+        {
+          "cents": 75900,
+          "source": "visible_price",
+          "raw": "759 €"
+        },
+        {
+          "cents": 75900,
+          "source": "visible_price",
+          "raw": "759 €"
+        },
+        {
+          "cents": 111100,
+          "source": "visible_price",
+          "raw": "1.111 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.495 €\n            \n        \n\n                    \n            -26%"
+        },
+        {
+          "cents": 111100,
+          "source": "visible_price",
+          "raw": "1.111 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.495 €\n            \n        \n\n                    \n            -26%"
+        },
+        {
+          "cents": 111100,
+          "source": "visible_price",
+          "raw": "1.111 €"
+        },
+        {
+          "cents": 149500,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.495 €\n            \n        \n\n                    \n            -26%"
+        },
+        {
+          "cents": 149500,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.495 €"
+        },
+        {
+          "cents": 104900,
+          "source": "visible_price",
+          "raw": "1.049 €"
+        },
+        {
+          "cents": 117900,
+          "source": "visible_price",
+          "raw": "1.179 €"
+        },
+        {
+          "cents": 74900,
+          "source": "visible_price",
+          "raw": "749 €"
+        },
+        {
+          "cents": 72900,
+          "source": "visible_price",
+          "raw": "729 €"
+        },
+        {
+          "cents": 69800,
+          "source": "visible_price",
+          "raw": "698 €"
+        },
+        {
+          "cents": 69800,
+          "source": "visible_price",
+          "raw": "698 €"
+        },
+        {
+          "cents": 69800,
+          "source": "visible_price",
+          "raw": "698 €"
+        },
+        {
+          "cents": 108500,
+          "source": "visible_price",
+          "raw": "1.085 €"
+        },
+        {
+          "cents": 108500,
+          "source": "visible_price",
+          "raw": "1.085 €"
+        },
+        {
+          "cents": 108500,
+          "source": "visible_price",
+          "raw": "1.085 €"
+        },
+        {
+          "cents": 61900,
+          "source": "visible_price",
+          "raw": "619 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                719 €\n            \n        \n\n                    \n            -14%"
+        },
+        {
+          "cents": 61900,
+          "source": "visible_price",
+          "raw": "619 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                719 €\n            \n        \n\n                    \n            -14%"
+        },
+        {
+          "cents": 61900,
+          "source": "visible_price",
+          "raw": "619 €"
+        },
+        {
+          "cents": 71900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                719 €\n            \n        \n\n                    \n            -14%"
+        },
+        {
+          "cents": 71900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                719 €"
+        },
+        {
+          "cents": 71900,
+          "source": "visible_price",
+          "raw": "719 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                829 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 71900,
+          "source": "visible_price",
+          "raw": "719 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                829 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 71900,
+          "source": "visible_price",
+          "raw": "719 €"
+        },
+        {
+          "cents": 82900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                829 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 82900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                829 €"
+        },
+        {
+          "cents": 54900,
+          "source": "visible_price",
+          "raw": "549 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                598 €\n            \n        \n\n                    \n            -8%"
+        },
+        {
+          "cents": 54900,
+          "source": "visible_price",
+          "raw": "549 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                598 €\n            \n        \n\n                    \n            -8%"
+        },
+        {
+          "cents": 54900,
+          "source": "visible_price",
+          "raw": "549 €"
+        },
+        {
+          "cents": 59800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                598 €\n            \n        \n\n                    \n            -8%"
+        },
+        {
+          "cents": 59800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                598 €"
+        },
+        {
+          "cents": 89900,
+          "source": "visible_price",
+          "raw": "899 €"
+        },
+        {
+          "cents": 99800,
+          "source": "visible_price",
+          "raw": "998 €"
+        },
+        {
+          "cents": 99800,
+          "source": "visible_price",
+          "raw": "998 €"
+        },
+        {
+          "cents": 99800,
+          "source": "visible_price",
+          "raw": "998 €"
+        },
+        {
+          "cents": 127500,
+          "source": "visible_price",
+          "raw": "1.275 €"
+        },
+        {
+          "cents": 127500,
+          "source": "visible_price",
+          "raw": "1.275 €"
+        },
+        {
+          "cents": 127500,
+          "source": "visible_price",
+          "raw": "1.275 €"
+        },
+        {
+          "cents": 122900,
+          "source": "visible_price",
+          "raw": "1.229 €"
+        },
+        {
+          "cents": 124900,
+          "source": "visible_price",
+          "raw": "1.249 €"
+        },
+        {
+          "cents": 115500,
+          "source": "visible_price",
+          "raw": "1.155 €"
+        },
+        {
+          "cents": 115500,
+          "source": "visible_price",
+          "raw": "1.155 €"
+        },
+        {
+          "cents": 115500,
+          "source": "visible_price",
+          "raw": "1.155 €"
+        }
+      ],
+      "observed_price": null,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "899 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .produc",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "invalid_price",
+      "error": "Main product root price missing",
+      "previous_price": 999,
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r15",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_dave_12_g4x_stand_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_dave_12_g4x_stand_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Dave 12 G4X Stand Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Dave 12 G4X Stand Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 101900,
+          "source": "visible_price",
+          "raw": "1.019 €"
+        },
+        {
+          "cents": 101900,
+          "source": "visible_price",
+          "raw": "1.019 €"
+        },
+        {
+          "cents": 94500,
+          "source": "visible_price",
+          "raw": "945 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                998 €\n            \n        \n\n                    \n            -5%"
+        },
+        {
+          "cents": 94500,
+          "source": "visible_price",
+          "raw": "945 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                998 €\n            \n        \n\n                    \n            -5%"
+        },
+        {
+          "cents": 94500,
+          "source": "visible_price",
+          "raw": "945 €"
+        },
+        {
+          "cents": 99800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                998 €\n            \n        \n\n                    \n            -5%"
+        },
+        {
+          "cents": 99800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                998 €"
+        },
+        {
+          "cents": 2100,
+          "source": "visible_price",
+          "raw": "21 €"
+        },
+        {
+          "cents": 2100,
+          "source": "visible_price",
+          "raw": "21 €"
+        },
+        {
+          "cents": 2100,
+          "source": "visible_price",
+          "raw": "21 €"
+        },
+        {
+          "cents": 4900,
+          "source": "visible_price",
+          "raw": "49 €"
+        },
+        {
+          "cents": 4900,
+          "source": "visible_price",
+          "raw": "49 €"
+        },
+        {
+          "cents": 4900,
+          "source": "visible_price",
+          "raw": "49 €"
+        },
+        {
+          "cents": 19500,
+          "source": "visible_price",
+          "raw": "195 €"
+        },
+        {
+          "cents": 19500,
+          "source": "visible_price",
+          "raw": "195 €"
+        },
+        {
+          "cents": 19500,
+          "source": "visible_price",
+          "raw": "195 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 2890,
+          "source": "visible_price",
+          "raw": "28,90 €"
+        },
+        {
+          "cents": 4900,
+          "source": "visible_price",
+          "raw": "49 €"
+        },
+        {
+          "cents": 2200,
+          "source": "visible_price",
+          "raw": "22 €"
+        },
+        {
+          "cents": 2200,
+          "source": "visible_price",
+          "raw": "22 €"
+        },
+        {
+          "cents": 2200,
+          "source": "visible_price",
+          "raw": "22 €"
+        },
+        {
+          "cents": 10500,
+          "source": "visible_price",
+          "raw": "105 €"
+        },
+        {
+          "cents": 10500,
+          "source": "visible_price",
+          "raw": "105 €"
+        },
+        {
+          "cents": 10500,
+          "source": "visible_price",
+          "raw": "105 €"
+        },
+        {
+          "cents": 101900,
+          "source": "visible_price",
+          "raw": "1.019 €"
+        },
+        {
+          "cents": 101900,
+          "source": "visible_price",
+          "raw": "1.019 €"
+        },
+        {
+          "cents": 101900,
+          "source": "visible_price",
+          "raw": "1.019 €"
+        },
+        {
+          "cents": 104900,
+          "source": "visible_price",
+          "raw": "1.049 €"
+        },
+        {
+          "cents": 108500,
+          "source": "visible_price",
+          "raw": "1.085 €"
+        },
+        {
+          "cents": 108500,
+          "source": "visible_price",
+          "raw": "1.085 €"
+        },
+        {
+          "cents": 108500,
+          "source": "visible_price",
+          "raw": "1.085 €"
+        },
+        {
+          "cents": 89800,
+          "source": "visible_price",
+          "raw": "898 €"
+        },
+        {
+          "cents": 89800,
+          "source": "visible_price",
+          "raw": "898 €"
+        },
+        {
+          "cents": 89800,
+          "source": "visible_price",
+          "raw": "898 €"
+        },
+        {
+          "cents": 85500,
+          "source": "visible_price",
+          "raw": "855 €"
+        },
+        {
+          "cents": 85500,
+          "source": "visible_price",
+          "raw": "855 €"
+        },
+        {
+          "cents": 85500,
+          "source": "visible_price",
+          "raw": "855 €"
+        },
+        {
+          "cents": 75900,
+          "source": "visible_price",
+          "raw": "759 €"
+        },
+        {
+          "cents": 75900,
+          "source": "visible_price",
+          "raw": "759 €"
+        },
+        {
+          "cents": 75900,
+          "source": "visible_price",
+          "raw": "759 €"
+        },
+        {
+          "cents": 122900,
+          "source": "visible_price",
+          "raw": "1.229 €"
+        },
+        {
+          "cents": 127500,
+          "source": "visible_price",
+          "raw": "1.275 €"
+        },
+        {
+          "cents": 127500,
+          "source": "visible_price",
+          "raw": "1.275 €"
+        },
+        {
+          "cents": 127500,
+          "source": "visible_price",
+          "raw": "1.275 €"
+        },
+        {
+          "cents": 124900,
+          "source": "visible_price",
+          "raw": "1.249 €"
+        },
+        {
+          "cents": 109800,
+          "source": "visible_price",
+          "raw": "1.098 €"
+        },
+        {
+          "cents": 99800,
+          "source": "visible_price",
+          "raw": "998 €"
+        },
+        {
+          "cents": 99800,
+          "source": "visible_price",
+          "raw": "998 €"
+        },
+        {
+          "cents": 99800,
+          "source": "visible_price",
+          "raw": "998 €"
+        },
+        {
+          "cents": 114900,
+          "source": "visible_price",
+          "raw": "1.149 €"
+        },
+        {
+          "cents": 111100,
+          "source": "visible_price",
+          "raw": "1.111 €"
+        },
+        {
+          "cents": 111100,
+          "source": "visible_price",
+          "raw": "1.111 €"
+        },
+        {
+          "cents": 111100,
+          "source": "visible_price",
+          "raw": "1.111 €"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €"
+        },
+        {
+          "cents": 174900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
+        },
+        {
+          "cents": 174900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.749 €"
+        },
+        {
+          "cents": 72900,
+          "source": "visible_price",
+          "raw": "729 €"
+        },
+        {
+          "cents": 116900,
+          "source": "visible_price",
+          "raw": "1.169 €"
+        },
+        {
+          "cents": 116900,
+          "source": "visible_price",
+          "raw": "1.169 €"
+        },
+        {
+          "cents": 116900,
+          "source": "visible_price",
+          "raw": "1.169 €"
+        },
+        {
+          "cents": 105900,
+          "source": "visible_price",
+          "raw": "1.059 €"
+        },
+        {
+          "cents": 143900,
+          "source": "visible_price",
+          "raw": "1.439 €"
+        }
+      ],
+      "observed_price": null,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "1.019 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .prod",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "invalid_price",
+      "error": "Main product root price missing",
+      "previous_price": 1069,
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r16",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_dave_15_g4x_stand_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_dave_15_g4x_stand_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Dave 15 G4X Stand Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Dave 15 G4X Stand Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 127500,
+          "source": "visible_price",
+          "raw": "1.275 €"
+        },
+        {
+          "cents": 127500,
+          "source": "visible_price",
+          "raw": "1.275 €"
+        },
+        {
+          "cents": 119900,
+          "source": "visible_price",
+          "raw": "1.199 €"
+        },
+        {
+          "cents": 2100,
+          "source": "visible_price",
+          "raw": "21 €"
+        },
+        {
+          "cents": 2100,
+          "source": "visible_price",
+          "raw": "21 €"
+        },
+        {
+          "cents": 2100,
+          "source": "visible_price",
+          "raw": "21 €"
+        },
+        {
+          "cents": 4900,
+          "source": "visible_price",
+          "raw": "49 €"
+        },
+        {
+          "cents": 4900,
+          "source": "visible_price",
+          "raw": "49 €"
+        },
+        {
+          "cents": 4900,
+          "source": "visible_price",
+          "raw": "49 €"
+        },
+        {
+          "cents": 21500,
+          "source": "visible_price",
+          "raw": "215 €"
+        },
+        {
+          "cents": 21500,
+          "source": "visible_price",
+          "raw": "215 €"
+        },
+        {
+          "cents": 21500,
+          "source": "visible_price",
+          "raw": "215 €"
+        },
+        {
+          "cents": 1100,
+          "source": "visible_price",
+          "raw": "11 €"
+        },
+        {
+          "cents": 1100,
+          "source": "visible_price",
+          "raw": "11 €"
+        },
+        {
+          "cents": 1100,
+          "source": "visible_price",
+          "raw": "11 €"
+        },
+        {
+          "cents": 6400,
+          "source": "visible_price",
+          "raw": "64 €"
+        },
+        {
+          "cents": 2200,
+          "source": "visible_price",
+          "raw": "22 €"
+        },
+        {
+          "cents": 3900,
+          "source": "visible_price",
+          "raw": "39 €"
+        },
+        {
+          "cents": 2200,
+          "source": "visible_price",
+          "raw": "22 €"
+        },
+        {
+          "cents": 2200,
+          "source": "visible_price",
+          "raw": "22 €"
+        },
+        {
+          "cents": 2200,
+          "source": "visible_price",
+          "raw": "22 €"
+        },
+        {
+          "cents": 4500,
+          "source": "visible_price",
+          "raw": "45 €"
+        },
+        {
+          "cents": 499,
+          "source": "visible_price",
+          "raw": "4,99 €"
+        },
+        {
+          "cents": 499,
+          "source": "visible_price",
+          "raw": "4,99 €"
+        },
+        {
+          "cents": 499,
+          "source": "visible_price",
+          "raw": "4,99 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 127500,
+          "source": "visible_price",
+          "raw": "1.275 €"
+        },
+        {
+          "cents": 127500,
+          "source": "visible_price",
+          "raw": "1.275 €"
+        },
+        {
+          "cents": 127500,
+          "source": "visible_price",
+          "raw": "1.275 €"
+        },
+        {
+          "cents": 124900,
+          "source": "visible_price",
+          "raw": "1.249 €"
+        },
+        {
+          "cents": 122900,
+          "source": "visible_price",
+          "raw": "1.229 €"
+        },
+        {
+          "cents": 143900,
+          "source": "visible_price",
+          "raw": "1.439 €"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €"
+        },
+        {
+          "cents": 174900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
+        },
+        {
+          "cents": 174900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.749 €"
+        },
+        {
+          "cents": 164900,
+          "source": "visible_price",
+          "raw": "1.649 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
+        },
+        {
+          "cents": 164900,
+          "source": "visible_price",
+          "raw": "1.649 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
+        },
+        {
+          "cents": 164900,
+          "source": "visible_price",
+          "raw": "1.649 €"
+        },
+        {
+          "cents": 215900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
+        },
+        {
+          "cents": 215900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                2.159 €"
+        },
+        {
+          "cents": 104900,
+          "source": "visible_price",
+          "raw": "1.049 €"
+        },
+        {
+          "cents": 101900,
+          "source": "visible_price",
+          "raw": "1.019 €"
+        },
+        {
+          "cents": 101900,
+          "source": "visible_price",
+          "raw": "1.019 €"
+        },
+        {
+          "cents": 101900,
+          "source": "visible_price",
+          "raw": "1.019 €"
+        },
+        {
+          "cents": 108500,
+          "source": "visible_price",
+          "raw": "1.085 €"
+        },
+        {
+          "cents": 108500,
+          "source": "visible_price",
+          "raw": "1.085 €"
+        },
+        {
+          "cents": 108500,
+          "source": "visible_price",
+          "raw": "1.085 €"
+        },
+        {
+          "cents": 116900,
+          "source": "visible_price",
+          "raw": "1.169 €"
+        },
+        {
+          "cents": 116900,
+          "source": "visible_price",
+          "raw": "1.169 €"
+        },
+        {
+          "cents": 116900,
+          "source": "visible_price",
+          "raw": "1.169 €"
+        },
+        {
+          "cents": 131900,
+          "source": "visible_price",
+          "raw": "1.319 €"
+        },
+        {
+          "cents": 131900,
+          "source": "visible_price",
+          "raw": "1.319 €"
+        },
+        {
+          "cents": 131900,
+          "source": "visible_price",
+          "raw": "1.319 €"
+        },
+        {
+          "cents": 114900,
+          "source": "visible_price",
+          "raw": "1.149 €"
+        },
+        {
+          "cents": 160900,
+          "source": "visible_price",
+          "raw": "1.609 €"
+        },
+        {
+          "cents": 160900,
+          "source": "visible_price",
+          "raw": "1.609 €"
+        },
+        {
+          "cents": 160900,
+          "source": "visible_price",
+          "raw": "1.609 €"
+        },
+        {
+          "cents": 155900,
+          "source": "visible_price",
+          "raw": "1.559 €"
+        },
+        {
+          "cents": 129800,
+          "source": "visible_price",
+          "raw": "1.298 €"
+        },
+        {
+          "cents": 129800,
+          "source": "visible_price",
+          "raw": "1.298 €"
+        },
+        {
+          "cents": 129800,
+          "source": "visible_price",
+          "raw": "1.298 €"
+        },
+        {
+          "cents": 197500,
+          "source": "visible_price",
+          "raw": "1.975 €"
+        },
+        {
+          "cents": 89800,
+          "source": "visible_price",
+          "raw": "898 €"
+        },
+        {
+          "cents": 89800,
+          "source": "visible_price",
+          "raw": "898 €"
+        },
+        {
+          "cents": 89800,
+          "source": "visible_price",
+          "raw": "898 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "1.798 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "1.798 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "1.798 €"
+        }
+      ],
+      "observed_price": null,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "1.275 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .prod",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "invalid_price",
+      "error": "Main product root price missing",
+      "previous_price": 1275,
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r17",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_dave_18_g4x_stand_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_dave_18_g4x_stand_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Dave 18 G4X Stand Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Dave 18 G4X Stand Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 160900,
+          "source": "visible_price",
+          "raw": "1.609 €"
+        },
+        {
+          "cents": 160900,
+          "source": "visible_price",
+          "raw": "1.609 €"
+        },
+        {
+          "cents": 6900,
+          "source": "visible_price",
+          "raw": "69 €"
+        },
+        {
+          "cents": 13600,
+          "source": "visible_price",
+          "raw": "136 €"
+        },
+        {
+          "cents": 13600,
+          "source": "visible_price",
+          "raw": "136 €"
+        },
+        {
+          "cents": 13600,
+          "source": "visible_price",
+          "raw": "136 €"
+        },
+        {
+          "cents": 3900,
+          "source": "visible_price",
+          "raw": "39 €"
+        },
+        {
+          "cents": 153900,
+          "source": "visible_price",
+          "raw": "1.539 €"
+        },
+        {
+          "cents": 2100,
+          "source": "visible_price",
+          "raw": "21 €"
+        },
+        {
+          "cents": 2100,
+          "source": "visible_price",
+          "raw": "21 €"
+        },
+        {
+          "cents": 2100,
+          "source": "visible_price",
+          "raw": "21 €"
+        },
+        {
+          "cents": 4900,
+          "source": "visible_price",
+          "raw": "49 €"
+        },
+        {
+          "cents": 4900,
+          "source": "visible_price",
+          "raw": "49 €"
+        },
+        {
+          "cents": 4900,
+          "source": "visible_price",
+          "raw": "49 €"
+        },
+        {
+          "cents": 22200,
+          "source": "visible_price",
+          "raw": "222 €"
+        },
+        {
+          "cents": 2200,
+          "source": "visible_price",
+          "raw": "22 €"
+        },
+        {
+          "cents": 151900,
+          "source": "visible_price",
+          "raw": "1.519 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.798 €\n            \n        \n\n                    \n            -16%"
+        },
+        {
+          "cents": 151900,
+          "source": "visible_price",
+          "raw": "1.519 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.798 €\n            \n        \n\n                    \n            -16%"
+        },
+        {
+          "cents": 151900,
+          "source": "visible_price",
+          "raw": "1.519 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.798 €\n            \n        \n\n                    \n            -16%"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.798 €"
+        },
+        {
+          "cents": 4500,
+          "source": "visible_price",
+          "raw": "45 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 160900,
+          "source": "visible_price",
+          "raw": "1.609 €"
+        },
+        {
+          "cents": 160900,
+          "source": "visible_price",
+          "raw": "1.609 €"
+        },
+        {
+          "cents": 160900,
+          "source": "visible_price",
+          "raw": "1.609 €"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €"
+        },
+        {
+          "cents": 174900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
+        },
+        {
+          "cents": 174900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.749 €"
+        },
+        {
+          "cents": 164900,
+          "source": "visible_price",
+          "raw": "1.649 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
+        },
+        {
+          "cents": 164900,
+          "source": "visible_price",
+          "raw": "1.649 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
+        },
+        {
+          "cents": 164900,
+          "source": "visible_price",
+          "raw": "1.649 €"
+        },
+        {
+          "cents": 215900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
+        },
+        {
+          "cents": 215900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                2.159 €"
+        },
+        {
+          "cents": 165900,
+          "source": "visible_price",
+          "raw": "1.659 €"
+        },
+        {
+          "cents": 165900,
+          "source": "visible_price",
+          "raw": "1.659 €"
+        },
+        {
+          "cents": 165900,
+          "source": "visible_price",
+          "raw": "1.659 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "1.798 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "1.798 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "1.798 €"
+        },
+        {
+          "cents": 143900,
+          "source": "visible_price",
+          "raw": "1.439 €"
+        },
+        {
+          "cents": 169800,
+          "source": "visible_price",
+          "raw": "1.698 €"
+        },
+        {
+          "cents": 155900,
+          "source": "visible_price",
+          "raw": "1.559 €"
+        },
+        {
+          "cents": 197500,
+          "source": "visible_price",
+          "raw": "1.975 €"
+        },
+        {
+          "cents": 189800,
+          "source": "visible_price",
+          "raw": "1.898 €"
+        },
+        {
+          "cents": 155900,
+          "source": "visible_price",
+          "raw": "1.559 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.675 €\n            \n        \n\n                    \n            -7%"
+        },
+        {
+          "cents": 155900,
+          "source": "visible_price",
+          "raw": "1.559 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.675 €\n            \n        \n\n                    \n            -7%"
+        },
+        {
+          "cents": 155900,
+          "source": "visible_price",
+          "raw": "1.559 €"
+        },
+        {
+          "cents": 167500,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.675 €\n            \n        \n\n                    \n            -7%"
+        },
+        {
+          "cents": 167500,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.675 €"
+        },
+        {
+          "cents": 174900,
+          "source": "visible_price",
+          "raw": "1.749 €"
+        },
+        {
+          "cents": 154900,
+          "source": "visible_price",
+          "raw": "1.549 €"
+        },
+        {
+          "cents": 150500,
+          "source": "visible_price",
+          "raw": "1.505 €"
+        },
+        {
+          "cents": 165900,
+          "source": "visible_price",
+          "raw": "1.659 €"
+        },
+        {
+          "cents": 165900,
+          "source": "visible_price",
+          "raw": "1.659 €"
+        },
+        {
+          "cents": 165900,
+          "source": "visible_price",
+          "raw": "1.659 €"
+        },
+        {
+          "cents": 150900,
+          "source": "visible_price",
+          "raw": "1.509 €"
+        },
+        {
+          "cents": 127500,
+          "source": "visible_price",
+          "raw": "1.275 €"
+        },
+        {
+          "cents": 127500,
+          "source": "visible_price",
+          "raw": "1.275 €"
+        },
+        {
+          "cents": 127500,
+          "source": "visible_price",
+          "raw": "1.275 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        }
+      ],
+      "observed_price": null,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "1.609 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .prod",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "invalid_price",
+      "error": "Main product root price missing",
+      "previous_price": 1609,
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r18",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_dave_10_g4x_install_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_dave_10_g4x_install_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Dave 10 G4X Install Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Dave 10 G4X Install Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 74800,
+          "source": "thomann_product_root",
+          "raw": "748 €"
+        }
+      ],
+      "observed_price": 748,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_source": "thomann_product_root",
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "748 €\n        \n        \n            -27%\n            \n                                    UVP: 1.020,20 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "refreshable",
+      "unit_price": 748,
+      "multiplier": 1,
+      "previous_price": 748,
+      "delta": 0,
+      "delta_pct": 0,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r19",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_stinger_10_sub15_power_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_stinger_10_sub15_power_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Stinger 10/Sub15 Power Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Stinger 10/Sub15 Power Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 330500,
+          "source": "visible_price",
+          "raw": "3.305 €"
+        },
+        {
+          "cents": 330500,
+          "source": "visible_price",
+          "raw": "3.305 €"
+        },
+        {
+          "cents": 9500,
+          "source": "visible_price",
+          "raw": "95 €"
+        },
+        {
+          "cents": 57900,
+          "source": "visible_price",
+          "raw": "579 €"
+        },
+        {
+          "cents": 57900,
+          "source": "visible_price",
+          "raw": "579 €"
+        },
+        {
+          "cents": 57900,
+          "source": "visible_price",
+          "raw": "579 €"
+        },
+        {
+          "cents": 86900,
+          "source": "visible_price",
+          "raw": "869 €"
+        },
+        {
+          "cents": 4200,
+          "source": "visible_price",
+          "raw": "42 €"
+        },
+        {
+          "cents": 4200,
+          "source": "visible_price",
+          "raw": "42 €"
+        },
+        {
+          "cents": 4200,
+          "source": "visible_price",
+          "raw": "42 €"
+        },
+        {
+          "cents": 319500,
+          "source": "visible_price",
+          "raw": "3.195 €"
+        },
+        {
+          "cents": 5500,
+          "source": "visible_price",
+          "raw": "55 €"
+        },
+        {
+          "cents": 3900,
+          "source": "visible_price",
+          "raw": "39 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 11900,
+          "source": "visible_price",
+          "raw": "119 €"
+        },
+        {
+          "cents": 11900,
+          "source": "visible_price",
+          "raw": "119 €"
+        },
+        {
+          "cents": 11900,
+          "source": "visible_price",
+          "raw": "119 €"
+        },
+        {
+          "cents": 79800,
+          "source": "visible_price",
+          "raw": "798 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 79800,
+          "source": "visible_price",
+          "raw": "798 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 79800,
+          "source": "visible_price",
+          "raw": "798 €"
+        },
+        {
+          "cents": 91900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 91900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                919 €"
+        },
+        {
+          "cents": 2090,
+          "source": "visible_price",
+          "raw": "20,90 €"
+        },
+        {
+          "cents": 1990,
+          "source": "visible_price",
+          "raw": "19,90 €"
+        },
+        {
+          "cents": 1990,
+          "source": "visible_price",
+          "raw": "19,90 €"
+        },
+        {
+          "cents": 1990,
+          "source": "visible_price",
+          "raw": "19,90 €"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "3.098 €"
+        },
+        {
+          "cents": 344900,
+          "source": "visible_price",
+          "raw": "3.449 €"
+        },
+        {
+          "cents": 346500,
+          "source": "visible_price",
+          "raw": "3.465 €"
+        },
+        {
+          "cents": 307900,
+          "source": "visible_price",
+          "raw": "3.079 €"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                3.098 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 304500,
+          "source": "visible_price",
+          "raw": "3.045 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 376500,
+          "source": "visible_price",
+          "raw": "3.765 €"
+        },
+        {
+          "cents": 279800,
+          "source": "visible_price",
+          "raw": "2.798 €"
+        },
+        {
+          "cents": 279800,
+          "source": "visible_price",
+          "raw": "2.798 €"
+        },
+        {
+          "cents": 279800,
+          "source": "visible_price",
+          "raw": "2.798 €"
+        },
+        {
+          "cents": 288500,
+          "source": "visible_price",
+          "raw": "2.885 €"
+        },
+        {
+          "cents": 288500,
+          "source": "visible_price",
+          "raw": "2.885 €"
+        },
+        {
+          "cents": 288500,
+          "source": "visible_price",
+          "raw": "2.885 €"
+        },
+        {
+          "cents": 282500,
+          "source": "visible_price",
+          "raw": "2.825 €"
+        },
+        {
+          "cents": 255900,
+          "source": "visible_price",
+          "raw": "2.559 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 324900,
+          "source": "visible_price",
+          "raw": "3.249 €"
+        },
+        {
+          "cents": 384900,
+          "source": "visible_price",
+          "raw": "3.849 €"
+        },
+        {
+          "cents": 434500,
+          "source": "visible_price",
+          "raw": "4.345 €"
+        },
+        {
+          "cents": 393900,
+          "source": "visible_price",
+          "raw": "3.939 €"
+        },
+        {
+          "cents": 269800,
+          "source": "visible_price",
+          "raw": "2.698 €"
+        },
+        {
+          "cents": 424900,
+          "source": "visible_price",
+          "raw": "4.249 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                4.498 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 424900,
+          "source": "visible_price",
+          "raw": "4.249 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                4.498 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 424900,
+          "source": "visible_price",
+          "raw": "4.249 €"
+        },
+        {
+          "cents": 449800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                4.498 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 449800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                4.498 €"
+        },
+        {
+          "cents": 294900,
+          "source": "visible_price",
+          "raw": "2.949 €"
+        }
+      ],
+      "observed_price": null,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "3.305 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .prod",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "invalid_price",
+      "error": "Main product root price missing",
+      "previous_price": 3305,
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r20",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_stinger_12_sub18_power_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_stinger_12_sub18_power_bundle.htm",
+      "http_status": 404,
+      "page_title": "LD Systems Stinger 12/Sub18 Power Bundle – Musikhaus Thomann",
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "not_found",
+      "previous_price": 3959,
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r21",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_stinger_high_power_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_stinger_high_power_bundle.htm",
+      "http_status": 404,
+      "page_title": "LD Systems Stinger High Power Bundle – Musikhaus Thomann",
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "not_found",
+      "previous_price": 6669,
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r22",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_stinger_8_sub15_basic_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_stinger_8_sub15_basic_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Stinger 8/Sub15 Basic Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Stinger 8/Sub15 Basic Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 210900,
+          "source": "visible_price",
+          "raw": "2.109 €"
+        },
+        {
+          "cents": 210900,
+          "source": "visible_price",
+          "raw": "2.109 €"
+        },
+        {
+          "cents": 217900,
+          "source": "visible_price",
+          "raw": "2.179 €"
+        },
+        {
+          "cents": 217900,
+          "source": "visible_price",
+          "raw": "2.179 €"
+        },
+        {
+          "cents": 217900,
+          "source": "visible_price",
+          "raw": "2.179 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 11500,
+          "source": "visible_price",
+          "raw": "115 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 790,
+          "source": "visible_price",
+          "raw": "7,90 €"
+        },
+        {
+          "cents": 11900,
+          "source": "visible_price",
+          "raw": "119 €"
+        },
+        {
+          "cents": 11900,
+          "source": "visible_price",
+          "raw": "119 €"
+        },
+        {
+          "cents": 11900,
+          "source": "visible_price",
+          "raw": "119 €"
+        },
+        {
+          "cents": 79800,
+          "source": "visible_price",
+          "raw": "798 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 79800,
+          "source": "visible_price",
+          "raw": "798 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 79800,
+          "source": "visible_price",
+          "raw": "798 €"
+        },
+        {
+          "cents": 91900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
+        },
+        {
+          "cents": 91900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                919 €"
+        },
+        {
+          "cents": 2090,
+          "source": "visible_price",
+          "raw": "20,90 €"
+        },
+        {
+          "cents": 197500,
+          "source": "visible_price",
+          "raw": "1.975 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 209800,
+          "source": "visible_price",
+          "raw": "2.098 €"
+        },
+        {
+          "cents": 223900,
+          "source": "visible_price",
+          "raw": "2.239 €"
+        },
+        {
+          "cents": 222200,
+          "source": "visible_price",
+          "raw": "2.222 €"
+        },
+        {
+          "cents": 222200,
+          "source": "visible_price",
+          "raw": "2.222 €"
+        },
+        {
+          "cents": 222200,
+          "source": "visible_price",
+          "raw": "2.222 €"
+        },
+        {
+          "cents": 219900,
+          "source": "visible_price",
+          "raw": "2.199 €"
+        },
+        {
+          "cents": 206900,
+          "source": "visible_price",
+          "raw": "2.069 €"
+        },
+        {
+          "cents": 189800,
+          "source": "visible_price",
+          "raw": "1.898 €"
+        },
+        {
+          "cents": 255900,
+          "source": "visible_price",
+          "raw": "2.559 €"
+        },
+        {
+          "cents": 219800,
+          "source": "visible_price",
+          "raw": "2.198 €"
+        },
+        {
+          "cents": 164900,
+          "source": "visible_price",
+          "raw": "1.649 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
+        },
+        {
+          "cents": 164900,
+          "source": "visible_price",
+          "raw": "1.649 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
+        },
+        {
+          "cents": 164900,
+          "source": "visible_price",
+          "raw": "1.649 €"
+        },
+        {
+          "cents": 215900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
+        },
+        {
+          "cents": 215900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                2.159 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 254900,
+          "source": "visible_price",
+          "raw": "2.549 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "1.798 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "1.798 €"
+        },
+        {
+          "cents": 179800,
+          "source": "visible_price",
+          "raw": "1.798 €"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
+        },
+        {
+          "cents": 157900,
+          "source": "visible_price",
+          "raw": "1.579 €"
+        },
+        {
+          "cents": 174900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
+        },
+        {
+          "cents": 174900,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                1.749 €"
+        },
+        {
+          "cents": 197500,
+          "source": "visible_price",
+          "raw": "1.975 €"
+        },
+        {
+          "cents": 197500,
+          "source": "visible_price",
+          "raw": "1.975 €"
+        },
+        {
+          "cents": 197500,
+          "source": "visible_price",
+          "raw": "1.975 €"
+        },
+        {
+          "cents": 279800,
+          "source": "visible_price",
+          "raw": "2.798 €"
+        },
+        {
+          "cents": 279800,
+          "source": "visible_price",
+          "raw": "2.798 €"
+        },
+        {
+          "cents": 279800,
+          "source": "visible_price",
+          "raw": "2.798 €"
+        },
+        {
+          "cents": 201900,
+          "source": "visible_price",
+          "raw": "2.019 €"
+        },
+        {
+          "cents": 201900,
+          "source": "visible_price",
+          "raw": "2.019 €"
+        },
+        {
+          "cents": 201900,
+          "source": "visible_price",
+          "raw": "2.019 €"
+        },
+        {
+          "cents": 190500,
+          "source": "visible_price",
+          "raw": "1.905 €"
+        },
+        {
+          "cents": 190500,
+          "source": "visible_price",
+          "raw": "1.905 €"
+        },
+        {
+          "cents": 190500,
+          "source": "visible_price",
+          "raw": "1.905 €"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 292500,
+          "source": "visible_price",
+          "raw": "2.925 €"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
+        },
+        {
+          "cents": 309800,
+          "source": "visible_price",
+          "raw": "30-Tage-Bestpreis:\n                                3.098 €"
+        }
+      ],
+      "observed_price": null,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "2.109 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .prod",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "invalid_price",
+      "error": "Main product root price missing",
+      "previous_price": 2099,
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r23",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+      "previous_price": 1753.8,
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "incomplete_recipe",
+      "error": "collectionDisabled offer has no explicit componentDetails",
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r24",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+      "previous_price": 2637,
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "incomplete_recipe",
+      "error": "collectionDisabled offer has no explicit componentDetails",
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r25",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+      "previous_price": 2717,
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "incomplete_recipe",
+      "error": "collectionDisabled offer has no explicit componentDetails",
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r26",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+      "previous_price": 4408,
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "incomplete_recipe",
+      "error": "collectionDisabled offer has no explicit componentDetails",
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r27",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_icoa_pro_12_a.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_icoa_pro_12_a.htm",
+      "previous_price": 4949,
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "incomplete_recipe",
+      "error": "collectionDisabled offer has no explicit componentDetails",
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r28",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_icoa_pro_12a_21a_power_set.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_icoa_pro_12a_21a_power_set.htm",
+      "http_status": 200,
+      "page_title": "LD Systems ICOA Pro 12A/21A Power Set – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems ICOA Pro 12A/21A Power Set",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 734500,
+          "source": "thomann_product_root",
+          "raw": "7.345 €"
+        }
+      ],
+      "observed_price": 7345,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_source": "thomann_product_root",
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "7.345 €\n        \n        \n            -15%\n            \n                                    UVP: 8.599,72 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\"",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "refreshable",
+      "unit_price": 7345,
+      "multiplier": 1,
+      "previous_price": 7345,
+      "delta": 0,
+      "delta_pct": 0,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r29",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_icoa_pro_15a_21a_power_set.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_icoa_pro_15a_21a_power_set.htm",
+      "http_status": 200,
+      "page_title": "LD Systems ICOA Pro 15A/21A Power Set – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems ICOA Pro 15A/21A Power Set",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 775900,
+          "source": "thomann_product_root",
+          "raw": "7.759 €"
+        }
+      ],
+      "observed_price": 7759,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_source": "thomann_product_root",
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "7.759 €\n        \n        \n            -14%\n            \n                                    UVP: 9.030,72 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\"",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "refreshable",
+      "unit_price": 7759,
+      "multiplier": 1,
+      "previous_price": 7759,
+      "delta": 0,
+      "delta_pct": 0,
+      "manual_review_required": false
+    }
+  ],
+  "summary": {
+    "tested": 29,
+    "rendered": 15,
+    "exact_identities": 15,
+    "prices_recovered": 9,
+    "unchanged": 8,
+    "changed": 1,
+    "manual_review_required": 0,
+    "blocked": 0,
+    "not_found": 6,
+    "writes": false,
+    "incomplete_recipe": 8,
+    "coverage_pct": 31.03448275862069,
+    "mode": "headed"
+  }
+}
