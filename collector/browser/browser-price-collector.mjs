@@ -62,7 +62,7 @@ export function selectCommercialPrice({ products = [], metaPrices = [], visibleP
   const tiers = [jsonLd, metaPrices, visiblePrices];
   for (const candidates of tiers) {
     const values = [...new Set(candidates.map(candidate => candidate.cents).filter(Boolean))];
-    if (values.length === 1) return { cents: values[0], candidates };
+    if (values.length === 1) return { cents: values[0], candidates, source: candidates[0]?.source || null };
     if (values.length > 1) return { cents: null, candidates, error: 'Multiple commercial EUR prices in one extraction tier' };
   }
   return { cents: null, candidates: [], error: 'No commercial EUR price found' };
@@ -78,7 +78,10 @@ export async function inspectRenderedPage(page) {
     const rawPrices = [...document.querySelectorAll('[itemprop="price"], meta[property="product:price:amount"], meta[itemprop="price"], [data-testid*="price" i], [class*="price" i]')]
       .map(node => ({ text: `${node.getAttribute('content') || ''} ${node.textContent || ''}`.trim(), html: node.outerHTML.slice(0, 1000) }))
       .filter(row => row.text);
-    return { title: document.title, text: text.slice(0, 100000), h1, jsonLd, skuText, rawPrices, iframeCount: document.querySelectorAll('iframe[src*="challenge" i], iframe[src*="captcha" i]').length };
+    const thomannRoot = document.querySelector('.fx-content-product__sidebar.price-and-availability, .fx-product-orderable .product-price-box');
+    const thomannPrices = thomannRoot ? [...thomannRoot.querySelectorAll('.price__primary')].map(node => node.textContent?.trim() || '').filter(Boolean) : [];
+    return { title: document.title, text: text.slice(0, 100000), h1, jsonLd, skuText, rawPrices, iframeCount: document.querySelectorAll('iframe[src*="challenge" i], iframe[src*="captcha" i]').length,
+      thomannRoot: thomannRoot ? { selector: '.fx-content-product__sidebar.price-and-availability .price__primary', text: thomannRoot.textContent.trim().slice(0, 1000), ancestry: ['.fx-content-product__sidebar.price-and-availability', '.product-price-box', '.fx-product-orderable'], prices: thomannPrices } : null };
   });
 }
 
@@ -112,7 +115,7 @@ async function loadRenderedUrl(page, url, cache, waitMs) {
   return task;
 }
 
-export async function evaluateBrowserTarget(target, { page, cache = new Map(), shop, waitMs = 1200 } = {}) {
+export async function evaluateBrowserTarget(target, { page, cache = new Map(), shop, waitMs = 1200, priceExtractor } = {}) {
     const loaded = await loadRenderedUrl(page, target.url, cache, waitMs);
     if (loaded.networkError) return { reference: target.reference, shop, url: target.url, final_url: loaded.finalUrl, http_status: loaded.httpStatus, product_identity: {}, price_candidates: [], observed_price: null, identity_valid: false, challenge_detected: false, decision: 'network_error', error: loaded.networkError };
     const rendered = loaded.rendered;
@@ -133,9 +136,9 @@ export async function evaluateBrowserTarget(target, { page, cache = new Map(), s
       const value = cents(match[1]);
       return value ? [{ cents: value, source: 'product_state', raw: match[0] }] : [];
     });
-    const price = selectCommercialPrice({ products: [product], metaPrices, visiblePrices: visibleCommercialCandidates(rendered.rawPrices) });
-    if (!price.cents) return { ...base, product_identity: product, price_candidates: [...price.candidates, ...visibleCommercialCandidates(rendered.rawPrices)], identity_valid: true, decision: 'invalid_price', error: price.error };
-    return { ...base, product_identity: product, price_candidates: price.candidates, observed_price: price.cents / 100, identity_valid: true, challenge_detected: false, decision: 'refreshable' };
+    const price = priceExtractor ? priceExtractor(rendered) : selectCommercialPrice({ products: [product], metaPrices, visiblePrices: visibleCommercialCandidates(rendered.rawPrices) });
+    if (!price.cents) return { ...base, product_identity: product, sku: product.sku || null, price_candidates: [...(price.candidates || []), ...visibleCommercialCandidates(rendered.rawPrices)], identity_valid: true, ...(price.diagnostics ? { price_diagnostics: price.diagnostics } : {}), decision: 'invalid_price', error: price.error };
+    return { ...base, product_identity: product, sku: product.sku || null, price_candidates: price.candidates, observed_price: price.cents / 100, identity_valid: true, challenge_detected: false, ...(price.source ? { price_source: price.source } : {}), ...(price.diagnostics ? { price_diagnostics: price.diagnostics } : {}), decision: 'refreshable' };
 }
 
 export async function evaluateBrowserOffer(target, options) {
@@ -154,5 +157,5 @@ export async function evaluateBrowserOffer(target, options) {
     if (result.decision !== 'refreshable') return { reference: target.reference, shop: options.shop, url: target.url, final_url: target.url, previous_price: target.previousPrice, product_identity: {}, price_candidates: [], observed_price: null, identity_valid: false, challenge_detected: result.challenge_detected, decision: result.decision === 'not_found' ? 'incomplete_recipe' : result.decision, components, error: `Required component unavailable: ${component.name}` };
   }
   const total = components.reduce((sum, component) => sum + Math.round(component.observed_price * 100) * Number(component.quantity), 0);
-  return { reference: target.reference, shop: options.shop, url: target.url, final_url: target.url, previous_price: target.previousPrice, product_identity: {}, price_candidates: [], observed_price: total / 100, identity_valid: true, challenge_detected: false, decision: 'refreshable', components };
+  return { reference: target.reference, shop: options.shop, url: target.url, final_url: target.url, previous_price: target.previousPrice, product_identity: {}, sku: null, price_candidates: [], price_source: 'component_calc', observed_price: total / 100, identity_valid: true, challenge_detected: false, decision: 'refreshable', components };
 }
