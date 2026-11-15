@@ -1150,28 +1150,24 @@
         ],
         "componentDetails": [
           {
-            "name": "LD Systems MAUI 44 G2 SET2 (2 Systeme)",
+            "name": "LD Systems MAUI 44 G2 SET2",
             "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
-            "quantity": 1,
-            "unitPrice": 3998
+            "quantity": 1
           },
           {
             "name": "LD Systems MAUI 44 G2 SUB PC",
             "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-sub-pc-12144",
-            "quantity": 2,
-            "unitPrice": 59
+            "quantity": 2
           },
           {
             "name": "LD Systems MAUI 44 G2 SAT BAG",
             "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-sat-bag-12145",
-            "quantity": 2,
-            "unitPrice": 95
+            "quantity": 2
           },
           {
             "name": "LD Systems MAUI 44 G2 CB Rollbrett",
             "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-cb-12143",
-            "quantity": 2,
-            "unitPrice": 119
+            "quantity": 2
           }
         ],
         "classification": "complete_component_calc"

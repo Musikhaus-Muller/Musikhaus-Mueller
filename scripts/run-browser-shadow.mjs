@@ -6,6 +6,7 @@ import { evaluateThomannBrowserOffer } from '../collector/browser/thomann-browse
 import { evaluateMusicStoreBrowserOffer } from '../collector/browser/musicstore-browser.mjs';
 import { evaluateHotSoundBrowserOffer } from '../collector/browser/hotsound-browser.mjs';
 import { articleNumberFromMusicStoreUrl } from '../collector/musicstore-article-catalog.mjs';
+import { VERSIONED_COMPONENT_DETAILS } from '../collector/browser/versioned-component-details.mjs';
 
 const shop = process.argv.find(arg => arg.startsWith('--shop='))?.slice(7);
 const headed = process.argv.includes('--headed');
@@ -36,7 +37,7 @@ function targetFor(row) {
     expectedName: offer.name,
     expectedSku: shop === 'musicstore' ? articleNumberFromMusicStoreUrl(offer.url) : null,
     quantity: 1,
-    componentDetails: (offer.componentDetails || []).map(normalizeComponent),
+    componentDetails: ((offer.componentDetails?.length ? offer.componentDetails : VERSIONED_COMPONENT_DETAILS[shop]?.[row.id]) || []).map(normalizeComponent),
     collectionDisabled: offer.collectionDisabled === true,
     calculation: offer.calculation || null,
     previousPrice: Number(offer.price)
