@@ -6,7 +6,7 @@ export const VERSIONED_COMPONENT_DETAILS = Object.freeze({
     r1: [detail('LD Systems MAUI 11 G3', 'https://www.hotsound-store.com/ld-systems-maui-11-g3-11673', 2)],
     r6: [detail('LD Systems MAUI 28 G3 W weiß', 'https://www.hotsound-store.com/ld-systems-maui-28-g3-w-weiss-11672', 2)],
     r7: [detail('LD Systems MAUI 28 G3 MIX schwarz', 'https://www.hotsound-store.com/ld-systems-maui-28-g3-mix-schwarz-13382', 2)],
-    r9: [detail('LD Systems MAUI 44 G2 SET2', 'https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232', 1), detail('LD Systems MAUI 44 G2 SUB PC', 'https://www.hotsound-store.com/ld-systems-maui-44-g2-sub-pc-12144', 2), detail('LD Systems MAUI 44 G2 SAT BAG', 'https://www.hotsound-store.com/ld-systems-maui-44-g2-sat-bag-12145', 2), detail('LD Systems MAUI 44 G2 CB Rollbrett', 'https://www.hotsound-store.com/ld-systems-maui-44-g2-cb-12143', 2)],
+    r9: [detail('LD Systems MAUI 44 G2 SET2', 'https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232', 1), detail('LD Systems MAUI 44 G2 SUB PC', 'https://www.hotsound-store.com/ld-systems-maui-44-g2-sub-pc-12144', 2), detail('LD Systems MAUI 44 G2 SAT BAG', 'https://www.hotsound-store.com/ld-systems-maui-44-g2-sat-bag-12145', 2), detail('LD Systems MAUI 44 G2 CB', 'https://www.hotsound-store.com/ld-systems-maui-44-g2-cb-12143', 2)],
     r31: [detail('DAP Frigga weiß', 'https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258', 2)],
     r36: [detail('Wharfedale Pro Delta X218B', 'https://www.hotsound-store.com/wharfedale-pro-delta-x218b-tough-tone-passiv-pa-subwoofer-4873', 2)],
     r37: [detail('Wharfedale Pro Delta F18B', 'https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063', 2)],

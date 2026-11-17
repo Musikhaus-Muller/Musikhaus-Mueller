@@ -2,7 +2,7 @@
   "shop": "hotsound",
   "scope": "browser_full_shadow",
   "writes": false,
-  "observed_at": "2026-11-15T21:54:24.026Z",
+  "observed_at": "2026-11-17T13:09:16.204Z",
   "rows": [
     {
       "reference": "r1",
@@ -11,14 +11,52 @@
       "final_url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
       "previous_price": 1858,
       "product_identity": {},
+      "sku": null,
       "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "price_source": "component_calc",
+      "observed_price": 1858,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "incomplete_recipe",
-      "error": "collectionDisabled offer has no explicit componentDetails",
-      "delta": null,
-      "delta_pct": null,
+      "decision": "refreshable",
+      "components": [
+        {
+          "reference": "r1",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+          "http_status": 200,
+          "page_title": "LD Systems MAUI 11 G3 | HotSound-Store",
+          "product_identity": {
+            "name": "LD Systems MAUI 11 G3",
+            "sku": "AHLDMAUI11G3",
+            "brand": "LD Systems",
+            "prices": [
+              {
+                "cents": 92900,
+                "source": "json_ld",
+                "raw": "929"
+              }
+            ]
+          },
+          "price_candidates": [
+            {
+              "cents": 92900,
+              "source": "json_ld",
+              "raw": "929"
+            }
+          ],
+          "observed_price": 929,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": "AHLDMAUI11G3",
+          "price_source": "json_ld",
+          "decision": "refreshable",
+          "name": "LD Systems MAUI 11 G3",
+          "quantity": 2
+        }
+      ],
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -73,30 +111,30 @@
         "brand": "LD Systems",
         "prices": [
           {
-            "cents": 257800,
+            "cents": 281600,
             "source": "json_ld",
-            "raw": "2578"
+            "raw": "2816"
           }
         ]
       },
       "price_candidates": [
         {
-          "cents": 257800,
+          "cents": 281600,
           "source": "json_ld",
-          "raw": "2578"
+          "raw": "2816"
         }
       ],
-      "observed_price": 2578,
+      "observed_price": 2816,
       "identity_valid": true,
       "challenge_detected": false,
       "sku": "HSSETMAUI28G3SET2",
       "price_source": "json_ld",
       "decision": "refreshable",
-      "unit_price": 2578,
+      "unit_price": 2816,
       "multiplier": 1,
       "previous_price": 2839,
-      "delta": -261,
-      "delta_pct": -9.193377949982388,
+      "delta": -23,
+      "delta_pct": -0.8101444170482565,
       "manual_review_required": false
     },
     {
@@ -161,14 +199,52 @@
       "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-w-weiss-11672",
       "previous_price": 2878,
       "product_identity": {},
+      "sku": null,
       "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "price_source": "component_calc",
+      "observed_price": 2698,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "incomplete_recipe",
-      "error": "collectionDisabled offer has no explicit componentDetails",
-      "delta": null,
-      "delta_pct": null,
+      "decision": "refreshable",
+      "components": [
+        {
+          "reference": "r6",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-w-weiss-11672",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-w-weiss-11672",
+          "http_status": 200,
+          "page_title": "LD Systems MAUI 28 G3 W weiß | HotSound-Store",
+          "product_identity": {
+            "name": "LD Systems MAUI 28 G3 W weiß",
+            "sku": "AHLDMAUI28G3W",
+            "brand": "LD Systems",
+            "prices": [
+              {
+                "cents": 134900,
+                "source": "json_ld",
+                "raw": "1349"
+              }
+            ]
+          },
+          "price_candidates": [
+            {
+              "cents": 134900,
+              "source": "json_ld",
+              "raw": "1349"
+            }
+          ],
+          "observed_price": 1349,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": "AHLDMAUI28G3W",
+          "price_source": "json_ld",
+          "decision": "refreshable",
+          "name": "LD Systems MAUI 28 G3 W weiß",
+          "quantity": 2
+        }
+      ],
+      "delta": -180,
+      "delta_pct": -6.254343293954134,
       "manual_review_required": false
     },
     {
@@ -178,14 +254,52 @@
       "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-mix-schwarz-13382",
       "previous_price": 3098,
       "product_identity": {},
+      "sku": null,
       "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "price_source": "component_calc",
+      "observed_price": 3098,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "incomplete_recipe",
-      "error": "collectionDisabled offer has no explicit componentDetails",
-      "delta": null,
-      "delta_pct": null,
+      "decision": "refreshable",
+      "components": [
+        {
+          "reference": "r7",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-mix-schwarz-13382",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-mix-schwarz-13382",
+          "http_status": 200,
+          "page_title": "LD Systems MAUI 28 G3 MIX schwarz | HotSound-Store",
+          "product_identity": {
+            "name": "LD Systems MAUI 28 G3 MIX schwarz",
+            "sku": "AHLDMAUI28G3MIX",
+            "brand": "LD Systems",
+            "prices": [
+              {
+                "cents": 154900,
+                "source": "json_ld",
+                "raw": "1549"
+              }
+            ]
+          },
+          "price_candidates": [
+            {
+              "cents": 154900,
+              "source": "json_ld",
+              "raw": "1549"
+            }
+          ],
+          "observed_price": 1549,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": "AHLDMAUI28G3MIX",
+          "price_source": "json_ld",
+          "decision": "refreshable",
+          "name": "LD Systems MAUI 28 G3 MIX schwarz",
+          "quantity": 2
+        }
+      ],
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -234,11 +348,13 @@
       "final_url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
       "previous_price": 4544,
       "product_identity": {},
+      "sku": null,
       "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "price_source": "component_calc",
+      "observed_price": 4544,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "identity_mismatch",
+      "decision": "refreshable",
       "components": [
         {
           "reference": "r9",
@@ -247,20 +363,142 @@
           "final_url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
           "http_status": 200,
           "page_title": "LD Systems MAUI 44 G2 SET2 | HotSound-Store",
-          "product_identity": {},
-          "price_candidates": [],
-          "observed_price": null,
-          "identity_valid": false,
+          "product_identity": {
+            "name": "LD Systems MAUI 44 G2 SET2",
+            "sku": "HSSETMAUI44G2SET2",
+            "brand": "LD Systems",
+            "prices": [
+              {
+                "cents": 399800,
+                "source": "json_ld",
+                "raw": "3998"
+              }
+            ]
+          },
+          "price_candidates": [
+            {
+              "cents": 399800,
+              "source": "json_ld",
+              "raw": "3998"
+            }
+          ],
+          "observed_price": 3998,
+          "identity_valid": true,
           "challenge_detected": false,
-          "decision": "identity_mismatch",
-          "error": "No unique structured product identity",
-          "name": "LD Systems MAUI 44 G2 SET2 (2 Systeme)",
+          "sku": "HSSETMAUI44G2SET2",
+          "price_source": "json_ld",
+          "decision": "refreshable",
+          "name": "LD Systems MAUI 44 G2 SET2",
           "quantity": 1
+        },
+        {
+          "reference": "r9",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-sub-pc-12144",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-sub-pc-12144",
+          "http_status": 200,
+          "page_title": "LD Systems MAUI 44 G2 SUB PC | HotSound-Store",
+          "product_identity": {
+            "name": "LD Systems MAUI 44 G2 SUB PC",
+            "sku": "AHLDM44G2SUBPC",
+            "brand": "LD Systems",
+            "prices": [
+              {
+                "cents": 5900,
+                "source": "json_ld",
+                "raw": "59"
+              }
+            ]
+          },
+          "price_candidates": [
+            {
+              "cents": 5900,
+              "source": "json_ld",
+              "raw": "59"
+            }
+          ],
+          "observed_price": 59,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": "AHLDM44G2SUBPC",
+          "price_source": "json_ld",
+          "decision": "refreshable",
+          "name": "LD Systems MAUI 44 G2 SUB PC",
+          "quantity": 2
+        },
+        {
+          "reference": "r9",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-sat-bag-12145",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-sat-bag-12145",
+          "http_status": 200,
+          "page_title": "LD Systems MAUI 44 G2 SAT BAG | HotSound-Store",
+          "product_identity": {
+            "name": "LD Systems MAUI 44 G2 SAT BAG",
+            "sku": "AHLDM44G2SATBAG",
+            "brand": "LD Systems",
+            "prices": [
+              {
+                "cents": 9500,
+                "source": "json_ld",
+                "raw": "95"
+              }
+            ]
+          },
+          "price_candidates": [
+            {
+              "cents": 9500,
+              "source": "json_ld",
+              "raw": "95"
+            }
+          ],
+          "observed_price": 95,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": "AHLDM44G2SATBAG",
+          "price_source": "json_ld",
+          "decision": "refreshable",
+          "name": "LD Systems MAUI 44 G2 SAT BAG",
+          "quantity": 2
+        },
+        {
+          "reference": "r9",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-cb-12143",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-cb-12143",
+          "http_status": 200,
+          "page_title": "LD Systems MAUI 44 G2 CB | HotSound-Store",
+          "product_identity": {
+            "name": "LD Systems MAUI 44 G2 CB",
+            "sku": "AHLDM44G2CB",
+            "brand": "LD Systems",
+            "prices": [
+              {
+                "cents": 11900,
+                "source": "json_ld",
+                "raw": "119"
+              }
+            ]
+          },
+          "price_candidates": [
+            {
+              "cents": 11900,
+              "source": "json_ld",
+              "raw": "119"
+            }
+          ],
+          "observed_price": 119,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": "AHLDM44G2CB",
+          "price_source": "json_ld",
+          "decision": "refreshable",
+          "name": "LD Systems MAUI 44 G2 CB",
+          "quantity": 2
         }
       ],
-      "error": "Required component unavailable: LD Systems MAUI 44 G2 SET2 (2 Systeme)",
-      "delta": null,
-      "delta_pct": null,
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -895,14 +1133,52 @@
       "final_url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
       "previous_price": 2698,
       "product_identity": {},
+      "sku": null,
       "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "price_source": "component_calc",
+      "observed_price": 2698,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "incomplete_recipe",
-      "error": "collectionDisabled offer has no explicit componentDetails",
-      "delta": null,
-      "delta_pct": null,
+      "decision": "refreshable",
+      "components": [
+        {
+          "reference": "r31",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+          "final_url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+          "http_status": 200,
+          "page_title": "DAP Frigga - Aktives Säulen-PA-System weiß | HotSound-Store",
+          "product_identity": {
+            "name": "DAP Frigga - Aktives Säulen-PA-System weiß",
+            "sku": "HID3881",
+            "brand": "DAP",
+            "prices": [
+              {
+                "cents": 134900,
+                "source": "json_ld",
+                "raw": "1349"
+              }
+            ]
+          },
+          "price_candidates": [
+            {
+              "cents": 134900,
+              "source": "json_ld",
+              "raw": "1349"
+            }
+          ],
+          "observed_price": 1349,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": "HID3881",
+          "price_source": "json_ld",
+          "decision": "refreshable",
+          "name": "DAP Frigga weiß",
+          "quantity": 2
+        }
+      ],
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -1326,14 +1602,52 @@
       "final_url": "https://www.hotsound-store.com/wharfedale-pro-delta-x218b-tough-tone-passiv-pa-subwoofer-4873",
       "previous_price": 1698,
       "product_identity": {},
+      "sku": null,
       "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "price_source": "component_calc",
+      "observed_price": 1698,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "incomplete_recipe",
-      "error": "collectionDisabled offer has no explicit componentDetails",
-      "delta": null,
-      "delta_pct": null,
+      "decision": "refreshable",
+      "components": [
+        {
+          "reference": "r36",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/wharfedale-pro-delta-x218b-tough-tone-passiv-pa-subwoofer-4873",
+          "final_url": "https://www.hotsound-store.com/wharfedale-pro-delta-x218b-tough-tone-passiv-pa-subwoofer-4873",
+          "http_status": 200,
+          "page_title": "Wharfedale Pro Delta X218B Tough-Tone - passiv PA Subwoofer | HotSound-Store",
+          "product_identity": {
+            "name": "Wharfedale Pro Delta X218B Tough-Tone - passiv PA Subwoofer",
+            "sku": "IADDELTAX218B",
+            "brand": "Wharfedale Pro",
+            "prices": [
+              {
+                "cents": 84900,
+                "source": "json_ld",
+                "raw": "849"
+              }
+            ]
+          },
+          "price_candidates": [
+            {
+              "cents": 84900,
+              "source": "json_ld",
+              "raw": "849"
+            }
+          ],
+          "observed_price": 849,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": "IADDELTAX218B",
+          "price_source": "json_ld",
+          "decision": "refreshable",
+          "name": "Wharfedale Pro Delta X218B",
+          "quantity": 2
+        }
+      ],
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -1343,14 +1657,52 @@
       "final_url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
       "previous_price": 1796,
       "product_identity": {},
+      "sku": null,
       "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "price_source": "component_calc",
+      "observed_price": 1796,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "incomplete_recipe",
-      "error": "collectionDisabled offer has no explicit componentDetails",
-      "delta": null,
-      "delta_pct": null,
+      "decision": "refreshable",
+      "components": [
+        {
+          "reference": "r37",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
+          "final_url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
+          "http_status": 200,
+          "page_title": "Wharfedale Pro Delta F18B - horngeladener 18\" Subwoofer passiv | HotSound-Store",
+          "product_identity": {
+            "name": "Wharfedale Pro Delta F18B - horngeladener 18\" Subwoofer passiv",
+            "sku": "IADDELTAF18B",
+            "brand": "Wharfedale Pro",
+            "prices": [
+              {
+                "cents": 89800,
+                "source": "json_ld",
+                "raw": "898"
+              }
+            ]
+          },
+          "price_candidates": [
+            {
+              "cents": 89800,
+              "source": "json_ld",
+              "raw": "898"
+            }
+          ],
+          "observed_price": 898,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": "IADDELTAF18B",
+          "price_source": "json_ld",
+          "decision": "refreshable",
+          "name": "Wharfedale Pro Delta F18B",
+          "quantity": 2
+        }
+      ],
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -1360,14 +1712,52 @@
       "final_url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
       "previous_price": 3592,
       "product_identity": {},
+      "sku": null,
       "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "price_source": "component_calc",
+      "observed_price": 3592,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "incomplete_recipe",
-      "error": "collectionDisabled offer has no explicit componentDetails",
-      "delta": null,
-      "delta_pct": null,
+      "decision": "refreshable",
+      "components": [
+        {
+          "reference": "r38",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
+          "final_url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
+          "http_status": 200,
+          "page_title": "Wharfedale Pro Delta F18B - horngeladener 18\" Subwoofer passiv | HotSound-Store",
+          "product_identity": {
+            "name": "Wharfedale Pro Delta F18B - horngeladener 18\" Subwoofer passiv",
+            "sku": "IADDELTAF18B",
+            "brand": "Wharfedale Pro",
+            "prices": [
+              {
+                "cents": 89800,
+                "source": "json_ld",
+                "raw": "898"
+              }
+            ]
+          },
+          "price_candidates": [
+            {
+              "cents": 89800,
+              "source": "json_ld",
+              "raw": "898"
+            }
+          ],
+          "observed_price": 898,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": "IADDELTAF18B",
+          "price_source": "json_ld",
+          "decision": "refreshable",
+          "name": "Wharfedale Pro Delta F18B",
+          "quantity": 4
+        }
+      ],
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -1452,16 +1842,16 @@
   "summary": {
     "tested": 27,
     "rendered": 11,
-    "exact_identities": 19,
-    "prices_recovered": 19,
-    "unchanged": 14,
-    "changed": 5,
+    "exact_identities": 27,
+    "prices_recovered": 27,
+    "unchanged": 21,
+    "changed": 6,
     "manual_review_required": 0,
     "blocked": 0,
     "not_found": 0,
     "writes": false,
-    "incomplete_recipe": 7,
-    "coverage_pct": 70.37037037037037,
+    "incomplete_recipe": 0,
+    "coverage_pct": 100,
     "mode": "headed"
   }
 }

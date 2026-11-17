@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { cents, challengeDetected, evaluateBrowserOffer, evaluateBrowserTarget, extractStructuredProduct, selectCommercialPrice } from '../collector/browser/browser-price-collector.mjs';
 import { selectThomannProductRootPrice } from '../collector/browser/thomann-browser.mjs';
+import { componentDetailsForBrowserShadow } from '../collector/browser/component-details-precedence.mjs';
 
 const product = ({ name = 'LD Systems ICOA Pro 12 A Black', sku = 'PAH0024126-000', price = '799.00' } = {}) => JSON.stringify({
   '@context': 'https://schema.org', '@type': 'Product', name, sku, brand: { name: 'LD Systems' }, offers: { '@type': 'Offer', priceCurrency: 'EUR', price }
@@ -87,4 +88,17 @@ test('Thomann rejects ambiguous or absent product-root prices, not a related pri
 
 test('full shadow marks a price delta over twenty percent for manual review', () => {
   assert.equal(Math.abs((1250 - 1000) / 1000 * 100) > 20, true);
+});
+
+test('browser-shadow binding takes precedence over existing seed componentDetails', () => {
+  const details = componentDetailsForBrowserShadow({
+    shop: 'hotsound', reference: 'r9',
+    offer: { componentDetails: [{ name: 'LD Systems MAUI 44 G2 CB Rollbrett', url: 'https://seed.example/cb', quantity: 2 }] },
+    articleNumberFromUrl: () => null
+  });
+  assert.equal(details.at(-1).name, 'LD Systems MAUI 44 G2 CB');
+  assert.equal(details.at(-1).url, 'https://www.hotsound-store.com/ld-systems-maui-44-g2-cb-12143');
+  assert.equal(details.at(-1).quantity, 2);
+  const fallback = componentDetailsForBrowserShadow({ shop: 'hotsound', reference: 'r2', offer: { componentDetails: [{ name: 'seed only', url: 'https://seed.example/item', quantity: 1 }] }, articleNumberFromUrl: () => null });
+  assert.equal(fallback[0].name, 'seed only');
 });

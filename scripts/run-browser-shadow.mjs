@@ -6,7 +6,7 @@ import { evaluateThomannBrowserOffer } from '../collector/browser/thomann-browse
 import { evaluateMusicStoreBrowserOffer } from '../collector/browser/musicstore-browser.mjs';
 import { evaluateHotSoundBrowserOffer } from '../collector/browser/hotsound-browser.mjs';
 import { articleNumberFromMusicStoreUrl } from '../collector/musicstore-article-catalog.mjs';
-import { VERSIONED_COMPONENT_DETAILS } from '../collector/browser/versioned-component-details.mjs';
+import { componentDetailsForBrowserShadow } from '../collector/browser/component-details-precedence.mjs';
 
 const shop = process.argv.find(arg => arg.startsWith('--shop='))?.slice(7);
 const headed = process.argv.includes('--headed');
@@ -29,7 +29,6 @@ const evaluator = { thomann: evaluateThomannBrowserOffer, musicstore: evaluateMu
 
 function targetFor(row) {
   const offer = row.offers[shop];
-  const normalizeComponent = component => ({ ...component, articleNumber: shop === 'musicstore' ? articleNumberFromMusicStoreUrl(component.url) : null });
   return {
     reference: row.id,
     shop: displayShop[shop],
@@ -37,7 +36,7 @@ function targetFor(row) {
     expectedName: offer.name,
     expectedSku: shop === 'musicstore' ? articleNumberFromMusicStoreUrl(offer.url) : null,
     quantity: 1,
-    componentDetails: ((offer.componentDetails?.length ? offer.componentDetails : VERSIONED_COMPONENT_DETAILS[shop]?.[row.id]) || []).map(normalizeComponent),
+    componentDetails: componentDetailsForBrowserShadow({ shop, reference: row.id, offer, articleNumberFromUrl: articleNumberFromMusicStoreUrl }),
     collectionDisabled: offer.collectionDisabled === true,
     calculation: offer.calculation || null,
     previousPrice: Number(offer.price)
