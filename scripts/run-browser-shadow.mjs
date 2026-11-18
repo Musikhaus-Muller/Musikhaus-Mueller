@@ -44,7 +44,7 @@ function targetFor(row) {
 }
 
 const selected = (fullShadow ? seed.filter(row => row?.offers?.[shop]) : canaries[shop].map(reference => seed.find(row => row.id === reference)).filter(row => row?.offers?.[shop])).map(targetFor);
-const browser = await chromium.launch({ headless });
+const browser = await chromium.launch({ headless, ...(process.env.PLAYWRIGHT_EXECUTABLE_PATH ? { executablePath: process.env.PLAYWRIGHT_EXECUTABLE_PATH } : {}) });
 const context = await browser.newContext({ locale: 'de-DE' });
 const page = await context.newPage();
 const cache = new Map();

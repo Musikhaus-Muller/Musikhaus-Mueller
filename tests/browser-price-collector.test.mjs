@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { cents, challengeDetected, evaluateBrowserOffer, evaluateBrowserTarget, extractStructuredProduct, selectCommercialPrice } from '../collector/browser/browser-price-collector.mjs';
 import { selectThomannProductRootPrice } from '../collector/browser/thomann-browser.mjs';
 import { componentDetailsForBrowserShadow } from '../collector/browser/component-details-precedence.mjs';
+import { VERSIONED_COMPONENT_DETAILS } from '../collector/browser/versioned-component-details.mjs';
 
 const product = ({ name = 'LD Systems ICOA Pro 12 A Black', sku = 'PAH0024126-000', price = '799.00' } = {}) => JSON.stringify({
   '@context': 'https://schema.org', '@type': 'Product', name, sku, brand: { name: 'LD Systems' }, offers: { '@type': 'Offer', priceCurrency: 'EUR', price }
@@ -86,6 +87,24 @@ test('Thomann rejects ambiguous or absent product-root prices, not a related pri
   assert.equal(selectThomannProductRootPrice({ thomannRoot: null }).cents, null);
 });
 
+test('Thomann DOM price selection explicitly prefers price__primary and keeps fallback cleanup narrow', async () => {
+  const source = await (await import('node:fs/promises')).readFile('collector/browser/browser-price-collector.mjs', 'utf8');
+  // A selector list does not encode priority; the primary span is deliberately
+  // queried before the wrapper that can appear first in DOM order.
+  assert.match(source, /const primaryRootPrice = thomannRoot\?\.querySelector\('\.price__primary'\);/);
+  assert.match(source, /const rootPrice = primaryRootPrice \|\| thomannRoot\?\.querySelector\('\.price\.fx-text\.fx-text--no-margin'\);/);
+  assert.doesNotMatch(source, /querySelector\('\.price__primary, \.price\.fx-text\.fx-text--no-margin'\)/);
+  assert.doesNotMatch(source, /querySelectorAll\('\.strike-price--highlight,/);
+
+  // These are the normalized extraction outcomes for the three rendered
+  // layouts: primary before its wrapper, legacy fallback, and a page with
+  // only non-commercial values. Ambiguity remains a hard rejection.
+  assert.equal(selectThomannProductRootPrice({ thomannRoot: { prices: ['1.839 €'], selector: '.price__primary', text: '1.839 € UVP: 2.179,80 €', ancestry: [] } }).cents, 183900);
+  assert.equal(selectThomannProductRootPrice({ thomannRoot: { prices: ['749 €'], selector: '.price.fx-text.fx-text--no-margin', text: '749 €', ancestry: [] } }).cents, 74900);
+  assert.equal(selectThomannProductRootPrice({ thomannRoot: { prices: [], selector: '.price.fx-text.fx-text--no-margin', text: 'UVP: 2.179 € 30-Tage-Bestpreis: 1.798 € Finanzierung', ancestry: [] } }).cents, null);
+  assert.equal(selectThomannProductRootPrice({ thomannRoot: { prices: ['1.839 €', '1.798 €'], selector: '.price.fx-text.fx-text--no-margin', text: '', ancestry: [] } }).cents, null);
+});
+
 test('full shadow marks a price delta over twenty percent for manual review', () => {
   assert.equal(Math.abs((1250 - 1000) / 1000 * 100) > 20, true);
 });
@@ -101,4 +120,22 @@ test('browser-shadow binding takes precedence over existing seed componentDetail
   assert.equal(details.at(-1).quantity, 2);
   const fallback = componentDetailsForBrowserShadow({ shop: 'hotsound', reference: 'r2', offer: { componentDetails: [{ name: 'seed only', url: 'https://seed.example/item', quantity: 1 }] }, articleNumberFromUrl: () => null });
   assert.equal(fallback[0].name, 'seed only');
+});
+
+test('Thomann shadow bindings use the current exact Wheelboard and packaged Gravity stand-set pages', () => {
+  const wheelboard = VERSIONED_COMPONENT_DETAILS.thomann.r9.at(-1);
+  assert.deepEqual(wheelboard, {
+    name: 'LD Systems Wheelboard f. Maui 44 G2',
+    url: 'https://www.thomann.de/de/ld_systems_wheelboard_f._maui_44_g2.htm',
+    quantity: 2
+  });
+  for (const reference of ['r23', 'r27']) {
+    const standSet = VERSIONED_COMPONENT_DETAILS.thomann[reference].find(component => component.name.startsWith('Gravity SS 5211'));
+    assert.deepEqual(standSet, {
+      name: 'Gravity SS 5211 B Set 1 Speaker Stand',
+      url: 'https://www.thomann.de/de/gravity_ss_5211_b_set_1_speaker_stand.htm',
+      quantity: 1
+    });
+    assert.doesNotMatch(standSet.url, /b_stock/i);
+  }
 });

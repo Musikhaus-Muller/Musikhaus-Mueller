@@ -1,0 +1,52 @@
+name: Desktop build
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'desktop/**'
+      - 'scripts/*desktop*'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'electron-builder.config.mjs'
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            command: npm run desktop:build:win
+            platform: win32
+            arch: x64
+            extension: .exe
+          - os: macos-14
+            command: npm run desktop:build:mac
+            platform: darwin
+            arch: arm64
+            extension: .dmg
+    runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run desktop:install-browser
+      - run: npm run desktop:test
+      - run: npm run desktop:smoke-browser
+      - run: ${{ matrix.command }}
+        env:
+          DESKTOP_SUPABASE_URL: https://example.supabase.co
+          DESKTOP_SUPABASE_ANON_KEY: public-build-validation-key
+      - run: node scripts/verify-desktop-installer.mjs --platform=${{ matrix.platform }} --arch=${{ matrix.arch }} --extension=${{ matrix.extension }}
+      - run: node scripts/collect-desktop-build-diagnostics.mjs
+        if: always()
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: price-updater-${{ matrix.os }}
+          path: |
+            dist/**
+            desktop-build-diagnostics/**
+          if-no-files-found: warn

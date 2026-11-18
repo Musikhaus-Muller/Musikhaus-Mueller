@@ -1,0 +1,15 @@
+import { spawn } from 'node:child_process';
+import { platformKey } from '../desktop/services/browser-runtime.mjs';
+const read = name => process.argv.find(arg => arg.startsWith(`--${name}=`))?.slice(name.length + 3);
+const platform = read('platform'), arch = read('arch') || process.arch;
+const packOnly = process.argv.includes('--pack-only');
+const target = platformKey(platform, arch);
+if (platform !== process.platform || arch !== process.arch) throw new Error(`Build ${target} on a matching ${target} runner so the bundled Chromium is native.`);
+const browserDir = `desktop/playwright-browsers/${target}`;
+const publicConfig = spawn(process.execPath, ['scripts/prepare-desktop-public-config.mjs'], { stdio: 'inherit', env: { ...process.env } });
+await new Promise((resolve, reject) => publicConfig.once('exit', code => code === 0 ? resolve() : reject(new Error('Public desktop configuration preparation failed'))));
+const check = spawn(process.execPath, ['scripts/check-desktop-browser.mjs'], { stdio: 'inherit', env: { ...process.env } });
+await new Promise((resolve, reject) => check.once('exit', code => code === 0 ? resolve() : reject(new Error('Native Chromium check failed'))));
+const args = packOnly ? ['--dir'] : platform === 'win32' ? ['--win', 'nsis', '--x64'] : ['--mac', 'dmg', `--${arch}`];
+const child = spawn(process.execPath, ['node_modules/electron-builder/cli.js', ...args, '--config', 'electron-builder.config.mjs'], { stdio: 'inherit', env: { ...process.env, DESKTOP_BROWSER_TARGET: target, DESKTOP_BROWSER_DIR: browserDir } });
+await new Promise((resolve, reject) => child.once('exit', code => code === 0 ? resolve() : reject(new Error(`electron-builder failed (${code})`))));

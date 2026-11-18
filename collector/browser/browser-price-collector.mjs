@@ -79,11 +79,18 @@ export async function inspectRenderedPage(page) {
       .map(node => ({ text: `${node.getAttribute('content') || ''} ${node.textContent || ''}`.trim(), html: node.outerHTML.slice(0, 1000) }))
       .filter(row => row.text);
     const thomannRoot = document.querySelector('.fx-content-product__sidebar.price-and-availability, .fx-product-orderable .product-price-box');
-    const rootPrice = thomannRoot?.querySelector('.price__primary, .price.fx-text.fx-text--no-margin');
+    // querySelector(selectorList) follows document order, not selector order.
+    // The primary price must therefore be selected explicitly before considering
+    // the legacy wrapper fallback.
+    const primaryRootPrice = thomannRoot?.querySelector('.price__primary');
+    const rootPrice = primaryRootPrice || thomannRoot?.querySelector('.price.fx-text.fx-text--no-margin');
     const cleanRootPrice = rootPrice?.cloneNode(true);
-    cleanRootPrice?.querySelectorAll('.strike-price--highlight, .strike-price-saving, [class*="strike-price"]').forEach(node => node.remove());
+    // Some Thomann templates wrap the current price itself in
+    // .strike-price--highlight. Only remove descendants that are unambiguously
+    // non-commercial comparison, discount, financing, or tooltip content.
+    cleanRootPrice?.querySelectorAll('.strike-price-saving, .strike-price-saving-text, .strike-price-tooltip, .js-fx-tooltip, [data-testid="pdp-uvp-price-text"], [class*="best-price" i], [data-testid*="best-price" i], [class*="financing" i]').forEach(node => node.remove());
     const thomannPrices = cleanRootPrice ? [cleanRootPrice.textContent?.trim() || ''].filter(Boolean) : [];
-    const thomannSelector = rootPrice?.matches('.price__primary') ? '.fx-content-product__sidebar.price-and-availability .price__primary' : '.fx-content-product__sidebar.price-and-availability .price.fx-text.fx-text--no-margin';
+    const thomannSelector = primaryRootPrice ? '.fx-content-product__sidebar.price-and-availability .price__primary' : '.fx-content-product__sidebar.price-and-availability .price.fx-text.fx-text--no-margin';
     return { title: document.title, text: text.slice(0, 100000), h1, jsonLd, skuText, rawPrices, iframeCount: document.querySelectorAll('iframe[src*="challenge" i], iframe[src*="captcha" i]').length,
       thomannRoot: thomannRoot ? { selector: thomannSelector, text: thomannRoot.textContent.trim().slice(0, 1000), ancestry: ['.fx-content-product__sidebar.price-and-availability', '.product-price-box', '.fx-product-orderable'], prices: thomannPrices } : null };
   });

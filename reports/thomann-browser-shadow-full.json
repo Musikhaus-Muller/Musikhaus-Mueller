@@ -2,7 +2,7 @@
   "shop": "thomann",
   "scope": "browser_full_shadow",
   "writes": false,
-  "observed_at": "2026-11-15T21:50:42.666Z",
+  "observed_at": "2026-11-17T14:07:07.103Z",
   "rows": [
     {
       "reference": "r1",
@@ -25,6 +25,7 @@
       "observed_price": 1839,
       "identity_valid": true,
       "challenge_detected": false,
+      "sku": null,
       "price_source": "thomann_product_root",
       "price_diagnostics": {
         "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
@@ -111,14 +112,60 @@
       "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
       "previous_price": 2578,
       "product_identity": {},
+      "sku": null,
       "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "price_source": "component_calc",
+      "observed_price": 2578,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "incomplete_recipe",
-      "error": "collectionDisabled offer has no explicit componentDetails",
-      "delta": null,
-      "delta_pct": null,
+      "decision": "refreshable",
+      "components": [
+        {
+          "reference": "r5",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
+          "http_status": 200,
+          "page_title": "LD Systems Maui 28 G3 – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems Maui 28 G3",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 128900,
+              "source": "thomann_product_root",
+              "raw": "1.289 €"
+            }
+          ],
+          "observed_price": 1289,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "Bis 30.11. Geschenke im Wert von 140 € zu diesem Produkt sichern!LD Systems Maui 28 G3 Sub BagGratis statt 55 €LD Systems Maui 28 G3 Sat BagGratis statt 85 €\n\ntho.bootstrapModule('prod.marketingBox', [{\"headline\":\"Bis 30.11. Geschenke im Wert von 140\\u00a0\\u20ac zu diesem Produkt sichern!\",\"headlineLevel\":{\"name\":\"H6\",\"value\":\"6\"},\"showAllLabel\":\"Mehr anzeigen\",\"hideAllLabel\":\"Weniger anzeigen\",\"tagLabel\":\"Cyber Deals\",\"tagImageSrc\":\"https:\\/\\/images.static-thomann.de\\/pics\\/images\\/special\\/cyber-deals\\/cyber-deals-oneliner_192.webp\",\"isCyberDeals\":true,\"headerImageSrc\":null,\"headerImageAlt\":null,\"giveaways\":[{\"manufacturer\":\"LD Systems\",\"model\":\"Maui 28 G3 Sub Bag\",\"imageSrc\":\"https:\\/\\/thumbs.static-thomann.de\\/thumb\\/thumb128x128\\/pics\\/prod\\/564254.webp\",\"promoText\":\"Gratis\",\"pricePreText\":\"statt\",\"price\":\"55\\u00a0\\u20ac\",\"quantity\":null,\"href\":\"ld_systems_maui_28_g3_sub_bag.htm\",\"tracking\":{\"item_id\":\"564254\",\"item_name\":\"Maui 28 G3 Sub Bag\",\"affiliation\":\"Online Store\",\"currency",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems Maui 28 G3",
+          "quantity": 2
+        }
+      ],
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -142,10 +189,11 @@
       "observed_price": 2669,
       "identity_valid": true,
       "challenge_detected": false,
+      "sku": null,
       "price_source": "thomann_product_root",
       "price_diagnostics": {
         "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
-        "container_text": "2.669 €\n        \n        \n            -14%\n            \n                                    UVP: 3.119,80 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Kurzfristig lieferbar (2–5 Tage)\n                            \n            \n                    \n                Kurzfristig lieferbar (2–5 Tage)\n                Dieses Produkt wurde bestellt und trifft in den nächsten Tagen bei uns ein.\n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod",
+        "container_text": "2.669 €\n        \n        \n            -14%\n            \n                                    UVP: 3.119,80 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                In 1-2 Wochen lieferbar\n                            \n            \n                    \n                In 1-2 Wochen lieferbar\n                Dieses Produkt trifft bald bei uns ein und kann anschließend sofort verschickt werden.\n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTra",
         "ancestry": [
           ".fx-content-product__sidebar.price-and-availability",
           ".product-price-box",
@@ -188,6 +236,7 @@
       "observed_price": 3079,
       "identity_valid": true,
       "challenge_detected": false,
+      "sku": null,
       "price_source": "thomann_product_root",
       "price_diagnostics": {
         "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
@@ -220,14 +269,60 @@
       "final_url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
       "previous_price": 4358,
       "product_identity": {},
+      "sku": null,
       "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "price_source": "component_calc",
+      "observed_price": 4358,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "incomplete_recipe",
-      "error": "collectionDisabled offer has no explicit componentDetails",
-      "delta": null,
-      "delta_pct": null,
+      "decision": "refreshable",
+      "components": [
+        {
+          "reference": "r8",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+          "http_status": 200,
+          "page_title": "LD Systems Maui 44 G2 – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems Maui 44 G2",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 217900,
+              "source": "thomann_product_root",
+              "raw": "2.179 €"
+            }
+          ],
+          "observed_price": 2179,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price.fx-text.fx-text--no-margin",
+            "container_text": "B-Stock ab 1.999 € verfügbar\n\n                            \n        \n    \n\n\n\n    \n\n\n\n    \n                \n            \n            \n            \n\n                            \n\n    \n\n        2.179 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \nth",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems Maui 44 G2",
+          "quantity": 2
+        }
+      ],
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -237,14 +332,189 @@
       "final_url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
       "previous_price": 4936,
       "product_identity": {},
+      "sku": null,
       "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "price_source": "component_calc",
+      "observed_price": 4936,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "incomplete_recipe",
-      "error": "collectionDisabled offer has no explicit componentDetails",
-      "delta": null,
-      "delta_pct": null,
+      "decision": "refreshable",
+      "components": [
+        {
+          "reference": "r9",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+          "http_status": 200,
+          "page_title": "LD Systems Maui 44 G2 – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems Maui 44 G2",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 217900,
+              "source": "thomann_product_root",
+              "raw": "2.179 €"
+            }
+          ],
+          "observed_price": 2179,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price.fx-text.fx-text--no-margin",
+            "container_text": "B-Stock ab 1.999 € verfügbar\n\n                            \n        \n    \n\n\n\n    \n\n\n\n    \n                \n            \n            \n            \n\n                            \n\n    \n\n        2.179 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \nth",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems Maui 44 G2",
+          "quantity": 2
+        },
+        {
+          "reference": "r9",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_44_g2_sub_bag.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_44_g2_sub_bag.htm",
+          "http_status": 200,
+          "page_title": "LD Systems Maui 44 G2 Sub Bag – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems Maui 44 G2 Sub Bag",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 6500,
+              "source": "thomann_product_root",
+              "raw": "65 €"
+            }
+          ],
+          "observed_price": 65,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "65 €\n        \n        \n            -29%\n            \n                                    UVP: 91,60 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems MAUI 44 G2 SUB BAG",
+          "quantity": 2
+        },
+        {
+          "reference": "r9",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_44_g2_sat_bag.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_44_g2_sat_bag.htm",
+          "http_status": 200,
+          "page_title": "LD Systems Maui 44 G2 Sat Bag – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems Maui 44 G2 Sat Bag",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 9900,
+              "source": "thomann_product_root",
+              "raw": "99 €"
+            }
+          ],
+          "observed_price": 99,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "99 €\n        \n        \n            -30%\n            \n                                    UVP: 141,60 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FOR",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems MAUI 44 G2 SAT BAG",
+          "quantity": 2
+        },
+        {
+          "reference": "r9",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_wheelboard_f._maui_44_g2.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_wheelboard_f._maui_44_g2.htm",
+          "http_status": 200,
+          "page_title": "LD Systems Wheelboard f. Maui 44 G2 – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems Wheelboard f. Maui 44 G2",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 12500,
+              "source": "thomann_product_root",
+              "raw": "125 €"
+            }
+          ],
+          "observed_price": 125,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price.fx-text.fx-text--no-margin",
+            "container_text": "125 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .produc",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems Wheelboard f. Maui 44 G2",
+          "quantity": 2
+        }
+      ],
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -268,10 +538,11 @@
       "observed_price": 3309,
       "identity_valid": true,
       "challenge_detected": false,
+      "sku": null,
       "price_source": "thomann_product_root",
       "price_diagnostics": {
         "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
-        "container_text": "3.309 €\n        \n        \n            -18%\n            \n                                    UVP: 4.057,80 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\"",
+        "container_text": "3.309 €\n        \n        \n            -18%\n            \n                                    UVP: 4.057,80 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Kurzfristig lieferbar (2–5 Tage)\n                            \n            \n                    \n                Kurzfristig lieferbar (2–5 Tage)\n                Dieses Produkt wurde bestellt und trifft in den nächsten Tagen bei uns ein.\n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod",
         "ancestry": [
           ".fx-content-product__sidebar.price-and-availability",
           ".product-price-box",
@@ -314,10 +585,11 @@
       "observed_price": 4419,
       "identity_valid": true,
       "challenge_detected": false,
+      "sku": null,
       "price_source": "thomann_product_root",
       "price_diagnostics": {
         "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
-        "container_text": "4.419 €\n        \n        \n            -14%\n            \n                                    UVP: 5.135,80 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Kurzfristig lieferbar (2–5 Tage)\n                            \n            \n                    \n                Kurzfristig lieferbar (2–5 Tage)\n                Dieses Produkt wurde bestellt und trifft in den nächsten Tagen bei uns ein.\n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod",
+        "container_text": "4.419 €\n        \n        \n            -14%\n            \n                                    UVP: 5.135,80 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                In 1-2 Wochen lieferbar\n                            \n            \n                    \n                In 1-2 Wochen lieferbar\n                Dieses Produkt trifft bald bei uns ein und kann anschließend sofort verschickt werden.\n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTra",
         "ancestry": [
           ".fx-content-product__sidebar.price-and-availability",
           ".product-price-box",
@@ -378,6 +650,7 @@
       "observed_price": 749,
       "identity_valid": true,
       "challenge_detected": false,
+      "sku": null,
       "price_source": "thomann_product_root",
       "price_diagnostics": {
         "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
@@ -417,595 +690,17 @@
       "price_candidates": [
         {
           "cents": 89900,
-          "source": "visible_price",
+          "source": "thomann_product_root",
           "raw": "899 €"
-        },
-        {
-          "cents": 89900,
-          "source": "visible_price",
-          "raw": "899 €"
-        },
-        {
-          "cents": 9900,
-          "source": "visible_price",
-          "raw": "99 €"
-        },
-        {
-          "cents": 16500,
-          "source": "visible_price",
-          "raw": "165 €"
-        },
-        {
-          "cents": 4500,
-          "source": "visible_price",
-          "raw": "45 €"
-        },
-        {
-          "cents": 8500,
-          "source": "visible_price",
-          "raw": "85 €"
-        },
-        {
-          "cents": 79800,
-          "source": "visible_price",
-          "raw": "798 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
-        },
-        {
-          "cents": 79800,
-          "source": "visible_price",
-          "raw": "798 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
-        },
-        {
-          "cents": 79800,
-          "source": "visible_price",
-          "raw": "798 €"
-        },
-        {
-          "cents": 91900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
-        },
-        {
-          "cents": 91900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                919 €"
-        },
-        {
-          "cents": 790,
-          "source": "visible_price",
-          "raw": "7,90 €"
-        },
-        {
-          "cents": 790,
-          "source": "visible_price",
-          "raw": "7,90 €"
-        },
-        {
-          "cents": 790,
-          "source": "visible_price",
-          "raw": "7,90 €"
-        },
-        {
-          "cents": 1100,
-          "source": "visible_price",
-          "raw": "11 €"
-        },
-        {
-          "cents": 1100,
-          "source": "visible_price",
-          "raw": "11 €"
-        },
-        {
-          "cents": 1100,
-          "source": "visible_price",
-          "raw": "11 €"
-        },
-        {
-          "cents": 450,
-          "source": "visible_price",
-          "raw": "4,50 €"
-        },
-        {
-          "cents": 450,
-          "source": "visible_price",
-          "raw": "4,50 €"
-        },
-        {
-          "cents": 450,
-          "source": "visible_price",
-          "raw": "4,50 €"
-        },
-        {
-          "cents": 590,
-          "source": "visible_price",
-          "raw": "5,90 €"
-        },
-        {
-          "cents": 590,
-          "source": "visible_price",
-          "raw": "5,90 €"
-        },
-        {
-          "cents": 590,
-          "source": "visible_price",
-          "raw": "5,90 €"
-        },
-        {
-          "cents": 2200,
-          "source": "visible_price",
-          "raw": "22 €"
-        },
-        {
-          "cents": 2200,
-          "source": "visible_price",
-          "raw": "22 €"
-        },
-        {
-          "cents": 2200,
-          "source": "visible_price",
-          "raw": "22 €"
-        },
-        {
-          "cents": 690,
-          "source": "visible_price",
-          "raw": "6,90 €"
-        },
-        {
-          "cents": 690,
-          "source": "visible_price",
-          "raw": "6,90 €"
-        },
-        {
-          "cents": 690,
-          "source": "visible_price",
-          "raw": "6,90 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 420,
-          "source": "visible_price",
-          "raw": "4,20 €"
-        },
-        {
-          "cents": 420,
-          "source": "visible_price",
-          "raw": "4,20 €"
-        },
-        {
-          "cents": 420,
-          "source": "visible_price",
-          "raw": "4,20 €"
-        },
-        {
-          "cents": 490,
-          "source": "visible_price",
-          "raw": "4,90 €"
-        },
-        {
-          "cents": 490,
-          "source": "visible_price",
-          "raw": "4,90 €"
-        },
-        {
-          "cents": 490,
-          "source": "visible_price",
-          "raw": "4,90 €"
-        },
-        {
-          "cents": 5800,
-          "source": "visible_price",
-          "raw": "58 €"
-        },
-        {
-          "cents": 810,
-          "source": "visible_price",
-          "raw": "8,10 €"
-        },
-        {
-          "cents": 810,
-          "source": "visible_price",
-          "raw": "8,10 €"
-        },
-        {
-          "cents": 810,
-          "source": "visible_price",
-          "raw": "8,10 €"
-        },
-        {
-          "cents": 11100,
-          "source": "visible_price",
-          "raw": "111 €"
-        },
-        {
-          "cents": 11100,
-          "source": "visible_price",
-          "raw": "111 €"
-        },
-        {
-          "cents": 11100,
-          "source": "visible_price",
-          "raw": "111 €"
-        },
-        {
-          "cents": 690,
-          "source": "visible_price",
-          "raw": "6,90 €"
-        },
-        {
-          "cents": 690,
-          "source": "visible_price",
-          "raw": "6,90 €"
-        },
-        {
-          "cents": 690,
-          "source": "visible_price",
-          "raw": "6,90 €"
-        },
-        {
-          "cents": 1020,
-          "source": "visible_price",
-          "raw": "10,20 €"
-        },
-        {
-          "cents": 1020,
-          "source": "visible_price",
-          "raw": "10,20 €"
-        },
-        {
-          "cents": 1020,
-          "source": "visible_price",
-          "raw": "10,20 €"
-        },
-        {
-          "cents": 390,
-          "source": "visible_price",
-          "raw": "3,90 €"
-        },
-        {
-          "cents": 390,
-          "source": "visible_price",
-          "raw": "3,90 €"
-        },
-        {
-          "cents": 390,
-          "source": "visible_price",
-          "raw": "3,90 €"
-        },
-        {
-          "cents": 11900,
-          "source": "visible_price",
-          "raw": "119 €"
-        },
-        {
-          "cents": 11900,
-          "source": "visible_price",
-          "raw": "119 €"
-        },
-        {
-          "cents": 11900,
-          "source": "visible_price",
-          "raw": "119 €"
-        },
-        {
-          "cents": 990,
-          "source": "visible_price",
-          "raw": "9,90 €"
-        },
-        {
-          "cents": 990,
-          "source": "visible_price",
-          "raw": "9,90 €"
-        },
-        {
-          "cents": 990,
-          "source": "visible_price",
-          "raw": "9,90 €"
-        },
-        {
-          "cents": 1490,
-          "source": "visible_price",
-          "raw": "14,90 €"
-        },
-        {
-          "cents": 1490,
-          "source": "visible_price",
-          "raw": "14,90 €"
-        },
-        {
-          "cents": 1490,
-          "source": "visible_price",
-          "raw": "14,90 €"
-        },
-        {
-          "cents": 499,
-          "source": "visible_price",
-          "raw": "4,99 €"
-        },
-        {
-          "cents": 499,
-          "source": "visible_price",
-          "raw": "4,99 €"
-        },
-        {
-          "cents": 499,
-          "source": "visible_price",
-          "raw": "4,99 €"
-        },
-        {
-          "cents": 89900,
-          "source": "visible_price",
-          "raw": "899 €"
-        },
-        {
-          "cents": 89900,
-          "source": "visible_price",
-          "raw": "899 €"
-        },
-        {
-          "cents": 89900,
-          "source": "visible_price",
-          "raw": "899 €"
-        },
-        {
-          "cents": 101900,
-          "source": "visible_price",
-          "raw": "1.019 €"
-        },
-        {
-          "cents": 101900,
-          "source": "visible_price",
-          "raw": "1.019 €"
-        },
-        {
-          "cents": 101900,
-          "source": "visible_price",
-          "raw": "1.019 €"
-        },
-        {
-          "cents": 75900,
-          "source": "visible_price",
-          "raw": "759 €"
-        },
-        {
-          "cents": 75900,
-          "source": "visible_price",
-          "raw": "759 €"
-        },
-        {
-          "cents": 75900,
-          "source": "visible_price",
-          "raw": "759 €"
-        },
-        {
-          "cents": 111100,
-          "source": "visible_price",
-          "raw": "1.111 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.495 €\n            \n        \n\n                    \n            -26%"
-        },
-        {
-          "cents": 111100,
-          "source": "visible_price",
-          "raw": "1.111 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.495 €\n            \n        \n\n                    \n            -26%"
-        },
-        {
-          "cents": 111100,
-          "source": "visible_price",
-          "raw": "1.111 €"
-        },
-        {
-          "cents": 149500,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                1.495 €\n            \n        \n\n                    \n            -26%"
-        },
-        {
-          "cents": 149500,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                1.495 €"
-        },
-        {
-          "cents": 104900,
-          "source": "visible_price",
-          "raw": "1.049 €"
-        },
-        {
-          "cents": 117900,
-          "source": "visible_price",
-          "raw": "1.179 €"
-        },
-        {
-          "cents": 74900,
-          "source": "visible_price",
-          "raw": "749 €"
-        },
-        {
-          "cents": 72900,
-          "source": "visible_price",
-          "raw": "729 €"
-        },
-        {
-          "cents": 69800,
-          "source": "visible_price",
-          "raw": "698 €"
-        },
-        {
-          "cents": 69800,
-          "source": "visible_price",
-          "raw": "698 €"
-        },
-        {
-          "cents": 69800,
-          "source": "visible_price",
-          "raw": "698 €"
-        },
-        {
-          "cents": 108500,
-          "source": "visible_price",
-          "raw": "1.085 €"
-        },
-        {
-          "cents": 108500,
-          "source": "visible_price",
-          "raw": "1.085 €"
-        },
-        {
-          "cents": 108500,
-          "source": "visible_price",
-          "raw": "1.085 €"
-        },
-        {
-          "cents": 61900,
-          "source": "visible_price",
-          "raw": "619 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                719 €\n            \n        \n\n                    \n            -14%"
-        },
-        {
-          "cents": 61900,
-          "source": "visible_price",
-          "raw": "619 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                719 €\n            \n        \n\n                    \n            -14%"
-        },
-        {
-          "cents": 61900,
-          "source": "visible_price",
-          "raw": "619 €"
-        },
-        {
-          "cents": 71900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                719 €\n            \n        \n\n                    \n            -14%"
-        },
-        {
-          "cents": 71900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                719 €"
-        },
-        {
-          "cents": 71900,
-          "source": "visible_price",
-          "raw": "719 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                829 €\n            \n        \n\n                    \n            -13%"
-        },
-        {
-          "cents": 71900,
-          "source": "visible_price",
-          "raw": "719 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                829 €\n            \n        \n\n                    \n            -13%"
-        },
-        {
-          "cents": 71900,
-          "source": "visible_price",
-          "raw": "719 €"
-        },
-        {
-          "cents": 82900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                829 €\n            \n        \n\n                    \n            -13%"
-        },
-        {
-          "cents": 82900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                829 €"
-        },
-        {
-          "cents": 54900,
-          "source": "visible_price",
-          "raw": "549 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                598 €\n            \n        \n\n                    \n            -8%"
-        },
-        {
-          "cents": 54900,
-          "source": "visible_price",
-          "raw": "549 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                598 €\n            \n        \n\n                    \n            -8%"
-        },
-        {
-          "cents": 54900,
-          "source": "visible_price",
-          "raw": "549 €"
-        },
-        {
-          "cents": 59800,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                598 €\n            \n        \n\n                    \n            -8%"
-        },
-        {
-          "cents": 59800,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                598 €"
-        },
-        {
-          "cents": 89900,
-          "source": "visible_price",
-          "raw": "899 €"
-        },
-        {
-          "cents": 99800,
-          "source": "visible_price",
-          "raw": "998 €"
-        },
-        {
-          "cents": 99800,
-          "source": "visible_price",
-          "raw": "998 €"
-        },
-        {
-          "cents": 99800,
-          "source": "visible_price",
-          "raw": "998 €"
-        },
-        {
-          "cents": 127500,
-          "source": "visible_price",
-          "raw": "1.275 €"
-        },
-        {
-          "cents": 127500,
-          "source": "visible_price",
-          "raw": "1.275 €"
-        },
-        {
-          "cents": 127500,
-          "source": "visible_price",
-          "raw": "1.275 €"
-        },
-        {
-          "cents": 122900,
-          "source": "visible_price",
-          "raw": "1.229 €"
-        },
-        {
-          "cents": 124900,
-          "source": "visible_price",
-          "raw": "1.249 €"
-        },
-        {
-          "cents": 115500,
-          "source": "visible_price",
-          "raw": "1.155 €"
-        },
-        {
-          "cents": 115500,
-          "source": "visible_price",
-          "raw": "1.155 €"
-        },
-        {
-          "cents": 115500,
-          "source": "visible_price",
-          "raw": "1.155 €"
         }
       ],
-      "observed_price": null,
+      "observed_price": 899,
       "identity_valid": true,
       "challenge_detected": false,
+      "sku": null,
+      "price_source": "thomann_product_root",
       "price_diagnostics": {
-        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "selector": ".fx-content-product__sidebar.price-and-availability .price.fx-text.fx-text--no-margin",
         "container_text": "899 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .produc",
         "ancestry": [
           ".fx-content-product__sidebar.price-and-availability",
@@ -1020,11 +715,12 @@
           "financing"
         ]
       },
-      "decision": "invalid_price",
-      "error": "Main product root price missing",
+      "decision": "refreshable",
+      "unit_price": 899,
+      "multiplier": 1,
       "previous_price": 999,
-      "delta": null,
-      "delta_pct": null,
+      "delta": -100,
+      "delta_pct": -10.01001001001001,
       "manual_review_required": false
     },
     {
@@ -1041,365 +737,17 @@
       "price_candidates": [
         {
           "cents": 101900,
-          "source": "visible_price",
+          "source": "thomann_product_root",
           "raw": "1.019 €"
-        },
-        {
-          "cents": 101900,
-          "source": "visible_price",
-          "raw": "1.019 €"
-        },
-        {
-          "cents": 94500,
-          "source": "visible_price",
-          "raw": "945 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                998 €\n            \n        \n\n                    \n            -5%"
-        },
-        {
-          "cents": 94500,
-          "source": "visible_price",
-          "raw": "945 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                998 €\n            \n        \n\n                    \n            -5%"
-        },
-        {
-          "cents": 94500,
-          "source": "visible_price",
-          "raw": "945 €"
-        },
-        {
-          "cents": 99800,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                998 €\n            \n        \n\n                    \n            -5%"
-        },
-        {
-          "cents": 99800,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                998 €"
-        },
-        {
-          "cents": 2100,
-          "source": "visible_price",
-          "raw": "21 €"
-        },
-        {
-          "cents": 2100,
-          "source": "visible_price",
-          "raw": "21 €"
-        },
-        {
-          "cents": 2100,
-          "source": "visible_price",
-          "raw": "21 €"
-        },
-        {
-          "cents": 4900,
-          "source": "visible_price",
-          "raw": "49 €"
-        },
-        {
-          "cents": 4900,
-          "source": "visible_price",
-          "raw": "49 €"
-        },
-        {
-          "cents": 4900,
-          "source": "visible_price",
-          "raw": "49 €"
-        },
-        {
-          "cents": 19500,
-          "source": "visible_price",
-          "raw": "195 €"
-        },
-        {
-          "cents": 19500,
-          "source": "visible_price",
-          "raw": "195 €"
-        },
-        {
-          "cents": 19500,
-          "source": "visible_price",
-          "raw": "195 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 790,
-          "source": "visible_price",
-          "raw": "7,90 €"
-        },
-        {
-          "cents": 790,
-          "source": "visible_price",
-          "raw": "7,90 €"
-        },
-        {
-          "cents": 790,
-          "source": "visible_price",
-          "raw": "7,90 €"
-        },
-        {
-          "cents": 2890,
-          "source": "visible_price",
-          "raw": "28,90 €"
-        },
-        {
-          "cents": 4900,
-          "source": "visible_price",
-          "raw": "49 €"
-        },
-        {
-          "cents": 2200,
-          "source": "visible_price",
-          "raw": "22 €"
-        },
-        {
-          "cents": 2200,
-          "source": "visible_price",
-          "raw": "22 €"
-        },
-        {
-          "cents": 2200,
-          "source": "visible_price",
-          "raw": "22 €"
-        },
-        {
-          "cents": 10500,
-          "source": "visible_price",
-          "raw": "105 €"
-        },
-        {
-          "cents": 10500,
-          "source": "visible_price",
-          "raw": "105 €"
-        },
-        {
-          "cents": 10500,
-          "source": "visible_price",
-          "raw": "105 €"
-        },
-        {
-          "cents": 101900,
-          "source": "visible_price",
-          "raw": "1.019 €"
-        },
-        {
-          "cents": 101900,
-          "source": "visible_price",
-          "raw": "1.019 €"
-        },
-        {
-          "cents": 101900,
-          "source": "visible_price",
-          "raw": "1.019 €"
-        },
-        {
-          "cents": 104900,
-          "source": "visible_price",
-          "raw": "1.049 €"
-        },
-        {
-          "cents": 108500,
-          "source": "visible_price",
-          "raw": "1.085 €"
-        },
-        {
-          "cents": 108500,
-          "source": "visible_price",
-          "raw": "1.085 €"
-        },
-        {
-          "cents": 108500,
-          "source": "visible_price",
-          "raw": "1.085 €"
-        },
-        {
-          "cents": 89800,
-          "source": "visible_price",
-          "raw": "898 €"
-        },
-        {
-          "cents": 89800,
-          "source": "visible_price",
-          "raw": "898 €"
-        },
-        {
-          "cents": 89800,
-          "source": "visible_price",
-          "raw": "898 €"
-        },
-        {
-          "cents": 85500,
-          "source": "visible_price",
-          "raw": "855 €"
-        },
-        {
-          "cents": 85500,
-          "source": "visible_price",
-          "raw": "855 €"
-        },
-        {
-          "cents": 85500,
-          "source": "visible_price",
-          "raw": "855 €"
-        },
-        {
-          "cents": 75900,
-          "source": "visible_price",
-          "raw": "759 €"
-        },
-        {
-          "cents": 75900,
-          "source": "visible_price",
-          "raw": "759 €"
-        },
-        {
-          "cents": 75900,
-          "source": "visible_price",
-          "raw": "759 €"
-        },
-        {
-          "cents": 122900,
-          "source": "visible_price",
-          "raw": "1.229 €"
-        },
-        {
-          "cents": 127500,
-          "source": "visible_price",
-          "raw": "1.275 €"
-        },
-        {
-          "cents": 127500,
-          "source": "visible_price",
-          "raw": "1.275 €"
-        },
-        {
-          "cents": 127500,
-          "source": "visible_price",
-          "raw": "1.275 €"
-        },
-        {
-          "cents": 124900,
-          "source": "visible_price",
-          "raw": "1.249 €"
-        },
-        {
-          "cents": 109800,
-          "source": "visible_price",
-          "raw": "1.098 €"
-        },
-        {
-          "cents": 99800,
-          "source": "visible_price",
-          "raw": "998 €"
-        },
-        {
-          "cents": 99800,
-          "source": "visible_price",
-          "raw": "998 €"
-        },
-        {
-          "cents": 99800,
-          "source": "visible_price",
-          "raw": "998 €"
-        },
-        {
-          "cents": 114900,
-          "source": "visible_price",
-          "raw": "1.149 €"
-        },
-        {
-          "cents": 111100,
-          "source": "visible_price",
-          "raw": "1.111 €"
-        },
-        {
-          "cents": 111100,
-          "source": "visible_price",
-          "raw": "1.111 €"
-        },
-        {
-          "cents": 111100,
-          "source": "visible_price",
-          "raw": "1.111 €"
-        },
-        {
-          "cents": 157900,
-          "source": "visible_price",
-          "raw": "1.579 €"
-        },
-        {
-          "cents": 157900,
-          "source": "visible_price",
-          "raw": "1.579 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
-        },
-        {
-          "cents": 157900,
-          "source": "visible_price",
-          "raw": "1.579 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
-        },
-        {
-          "cents": 157900,
-          "source": "visible_price",
-          "raw": "1.579 €"
-        },
-        {
-          "cents": 174900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
-        },
-        {
-          "cents": 174900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                1.749 €"
-        },
-        {
-          "cents": 72900,
-          "source": "visible_price",
-          "raw": "729 €"
-        },
-        {
-          "cents": 116900,
-          "source": "visible_price",
-          "raw": "1.169 €"
-        },
-        {
-          "cents": 116900,
-          "source": "visible_price",
-          "raw": "1.169 €"
-        },
-        {
-          "cents": 116900,
-          "source": "visible_price",
-          "raw": "1.169 €"
-        },
-        {
-          "cents": 105900,
-          "source": "visible_price",
-          "raw": "1.059 €"
-        },
-        {
-          "cents": 143900,
-          "source": "visible_price",
-          "raw": "1.439 €"
         }
       ],
-      "observed_price": null,
+      "observed_price": 1019,
       "identity_valid": true,
       "challenge_detected": false,
+      "sku": null,
+      "price_source": "thomann_product_root",
       "price_diagnostics": {
-        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "selector": ".fx-content-product__sidebar.price-and-availability .price.fx-text.fx-text--no-margin",
         "container_text": "1.019 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .prod",
         "ancestry": [
           ".fx-content-product__sidebar.price-and-availability",
@@ -1414,11 +762,12 @@
           "financing"
         ]
       },
-      "decision": "invalid_price",
-      "error": "Main product root price missing",
+      "decision": "refreshable",
+      "unit_price": 1019,
+      "multiplier": 1,
       "previous_price": 1069,
-      "delta": null,
-      "delta_pct": null,
+      "delta": -50,
+      "delta_pct": -4.677268475210477,
       "manual_review_required": false
     },
     {
@@ -1435,390 +784,17 @@
       "price_candidates": [
         {
           "cents": 127500,
-          "source": "visible_price",
+          "source": "thomann_product_root",
           "raw": "1.275 €"
-        },
-        {
-          "cents": 127500,
-          "source": "visible_price",
-          "raw": "1.275 €"
-        },
-        {
-          "cents": 119900,
-          "source": "visible_price",
-          "raw": "1.199 €"
-        },
-        {
-          "cents": 2100,
-          "source": "visible_price",
-          "raw": "21 €"
-        },
-        {
-          "cents": 2100,
-          "source": "visible_price",
-          "raw": "21 €"
-        },
-        {
-          "cents": 2100,
-          "source": "visible_price",
-          "raw": "21 €"
-        },
-        {
-          "cents": 4900,
-          "source": "visible_price",
-          "raw": "49 €"
-        },
-        {
-          "cents": 4900,
-          "source": "visible_price",
-          "raw": "49 €"
-        },
-        {
-          "cents": 4900,
-          "source": "visible_price",
-          "raw": "49 €"
-        },
-        {
-          "cents": 21500,
-          "source": "visible_price",
-          "raw": "215 €"
-        },
-        {
-          "cents": 21500,
-          "source": "visible_price",
-          "raw": "215 €"
-        },
-        {
-          "cents": 21500,
-          "source": "visible_price",
-          "raw": "215 €"
-        },
-        {
-          "cents": 1100,
-          "source": "visible_price",
-          "raw": "11 €"
-        },
-        {
-          "cents": 1100,
-          "source": "visible_price",
-          "raw": "11 €"
-        },
-        {
-          "cents": 1100,
-          "source": "visible_price",
-          "raw": "11 €"
-        },
-        {
-          "cents": 6400,
-          "source": "visible_price",
-          "raw": "64 €"
-        },
-        {
-          "cents": 2200,
-          "source": "visible_price",
-          "raw": "22 €"
-        },
-        {
-          "cents": 3900,
-          "source": "visible_price",
-          "raw": "39 €"
-        },
-        {
-          "cents": 2200,
-          "source": "visible_price",
-          "raw": "22 €"
-        },
-        {
-          "cents": 2200,
-          "source": "visible_price",
-          "raw": "22 €"
-        },
-        {
-          "cents": 2200,
-          "source": "visible_price",
-          "raw": "22 €"
-        },
-        {
-          "cents": 4500,
-          "source": "visible_price",
-          "raw": "45 €"
-        },
-        {
-          "cents": 499,
-          "source": "visible_price",
-          "raw": "4,99 €"
-        },
-        {
-          "cents": 499,
-          "source": "visible_price",
-          "raw": "4,99 €"
-        },
-        {
-          "cents": 499,
-          "source": "visible_price",
-          "raw": "4,99 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 790,
-          "source": "visible_price",
-          "raw": "7,90 €"
-        },
-        {
-          "cents": 790,
-          "source": "visible_price",
-          "raw": "7,90 €"
-        },
-        {
-          "cents": 790,
-          "source": "visible_price",
-          "raw": "7,90 €"
-        },
-        {
-          "cents": 127500,
-          "source": "visible_price",
-          "raw": "1.275 €"
-        },
-        {
-          "cents": 127500,
-          "source": "visible_price",
-          "raw": "1.275 €"
-        },
-        {
-          "cents": 127500,
-          "source": "visible_price",
-          "raw": "1.275 €"
-        },
-        {
-          "cents": 124900,
-          "source": "visible_price",
-          "raw": "1.249 €"
-        },
-        {
-          "cents": 122900,
-          "source": "visible_price",
-          "raw": "1.229 €"
-        },
-        {
-          "cents": 143900,
-          "source": "visible_price",
-          "raw": "1.439 €"
-        },
-        {
-          "cents": 157900,
-          "source": "visible_price",
-          "raw": "1.579 €"
-        },
-        {
-          "cents": 157900,
-          "source": "visible_price",
-          "raw": "1.579 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
-        },
-        {
-          "cents": 157900,
-          "source": "visible_price",
-          "raw": "1.579 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
-        },
-        {
-          "cents": 157900,
-          "source": "visible_price",
-          "raw": "1.579 €"
-        },
-        {
-          "cents": 174900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
-        },
-        {
-          "cents": 174900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                1.749 €"
-        },
-        {
-          "cents": 164900,
-          "source": "visible_price",
-          "raw": "1.649 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
-        },
-        {
-          "cents": 164900,
-          "source": "visible_price",
-          "raw": "1.649 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
-        },
-        {
-          "cents": 164900,
-          "source": "visible_price",
-          "raw": "1.649 €"
-        },
-        {
-          "cents": 215900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
-        },
-        {
-          "cents": 215900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                2.159 €"
-        },
-        {
-          "cents": 104900,
-          "source": "visible_price",
-          "raw": "1.049 €"
-        },
-        {
-          "cents": 101900,
-          "source": "visible_price",
-          "raw": "1.019 €"
-        },
-        {
-          "cents": 101900,
-          "source": "visible_price",
-          "raw": "1.019 €"
-        },
-        {
-          "cents": 101900,
-          "source": "visible_price",
-          "raw": "1.019 €"
-        },
-        {
-          "cents": 108500,
-          "source": "visible_price",
-          "raw": "1.085 €"
-        },
-        {
-          "cents": 108500,
-          "source": "visible_price",
-          "raw": "1.085 €"
-        },
-        {
-          "cents": 108500,
-          "source": "visible_price",
-          "raw": "1.085 €"
-        },
-        {
-          "cents": 116900,
-          "source": "visible_price",
-          "raw": "1.169 €"
-        },
-        {
-          "cents": 116900,
-          "source": "visible_price",
-          "raw": "1.169 €"
-        },
-        {
-          "cents": 116900,
-          "source": "visible_price",
-          "raw": "1.169 €"
-        },
-        {
-          "cents": 131900,
-          "source": "visible_price",
-          "raw": "1.319 €"
-        },
-        {
-          "cents": 131900,
-          "source": "visible_price",
-          "raw": "1.319 €"
-        },
-        {
-          "cents": 131900,
-          "source": "visible_price",
-          "raw": "1.319 €"
-        },
-        {
-          "cents": 114900,
-          "source": "visible_price",
-          "raw": "1.149 €"
-        },
-        {
-          "cents": 160900,
-          "source": "visible_price",
-          "raw": "1.609 €"
-        },
-        {
-          "cents": 160900,
-          "source": "visible_price",
-          "raw": "1.609 €"
-        },
-        {
-          "cents": 160900,
-          "source": "visible_price",
-          "raw": "1.609 €"
-        },
-        {
-          "cents": 155900,
-          "source": "visible_price",
-          "raw": "1.559 €"
-        },
-        {
-          "cents": 129800,
-          "source": "visible_price",
-          "raw": "1.298 €"
-        },
-        {
-          "cents": 129800,
-          "source": "visible_price",
-          "raw": "1.298 €"
-        },
-        {
-          "cents": 129800,
-          "source": "visible_price",
-          "raw": "1.298 €"
-        },
-        {
-          "cents": 197500,
-          "source": "visible_price",
-          "raw": "1.975 €"
-        },
-        {
-          "cents": 89800,
-          "source": "visible_price",
-          "raw": "898 €"
-        },
-        {
-          "cents": 89800,
-          "source": "visible_price",
-          "raw": "898 €"
-        },
-        {
-          "cents": 89800,
-          "source": "visible_price",
-          "raw": "898 €"
-        },
-        {
-          "cents": 179800,
-          "source": "visible_price",
-          "raw": "1.798 €"
-        },
-        {
-          "cents": 179800,
-          "source": "visible_price",
-          "raw": "1.798 €"
-        },
-        {
-          "cents": 179800,
-          "source": "visible_price",
-          "raw": "1.798 €"
         }
       ],
-      "observed_price": null,
+      "observed_price": 1275,
       "identity_valid": true,
       "challenge_detected": false,
+      "sku": null,
+      "price_source": "thomann_product_root",
       "price_diagnostics": {
-        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "selector": ".fx-content-product__sidebar.price-and-availability .price.fx-text.fx-text--no-margin",
         "container_text": "1.275 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .prod",
         "ancestry": [
           ".fx-content-product__sidebar.price-and-availability",
@@ -1833,11 +809,12 @@
           "financing"
         ]
       },
-      "decision": "invalid_price",
-      "error": "Main product root price missing",
+      "decision": "refreshable",
+      "unit_price": 1275,
+      "multiplier": 1,
       "previous_price": 1275,
-      "delta": null,
-      "delta_pct": null,
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -1854,350 +831,17 @@
       "price_candidates": [
         {
           "cents": 160900,
-          "source": "visible_price",
+          "source": "thomann_product_root",
           "raw": "1.609 €"
-        },
-        {
-          "cents": 160900,
-          "source": "visible_price",
-          "raw": "1.609 €"
-        },
-        {
-          "cents": 6900,
-          "source": "visible_price",
-          "raw": "69 €"
-        },
-        {
-          "cents": 13600,
-          "source": "visible_price",
-          "raw": "136 €"
-        },
-        {
-          "cents": 13600,
-          "source": "visible_price",
-          "raw": "136 €"
-        },
-        {
-          "cents": 13600,
-          "source": "visible_price",
-          "raw": "136 €"
-        },
-        {
-          "cents": 3900,
-          "source": "visible_price",
-          "raw": "39 €"
-        },
-        {
-          "cents": 153900,
-          "source": "visible_price",
-          "raw": "1.539 €"
-        },
-        {
-          "cents": 2100,
-          "source": "visible_price",
-          "raw": "21 €"
-        },
-        {
-          "cents": 2100,
-          "source": "visible_price",
-          "raw": "21 €"
-        },
-        {
-          "cents": 2100,
-          "source": "visible_price",
-          "raw": "21 €"
-        },
-        {
-          "cents": 4900,
-          "source": "visible_price",
-          "raw": "49 €"
-        },
-        {
-          "cents": 4900,
-          "source": "visible_price",
-          "raw": "49 €"
-        },
-        {
-          "cents": 4900,
-          "source": "visible_price",
-          "raw": "49 €"
-        },
-        {
-          "cents": 22200,
-          "source": "visible_price",
-          "raw": "222 €"
-        },
-        {
-          "cents": 2200,
-          "source": "visible_price",
-          "raw": "22 €"
-        },
-        {
-          "cents": 151900,
-          "source": "visible_price",
-          "raw": "1.519 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.798 €\n            \n        \n\n                    \n            -16%"
-        },
-        {
-          "cents": 151900,
-          "source": "visible_price",
-          "raw": "1.519 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.798 €\n            \n        \n\n                    \n            -16%"
-        },
-        {
-          "cents": 151900,
-          "source": "visible_price",
-          "raw": "1.519 €"
-        },
-        {
-          "cents": 179800,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                1.798 €\n            \n        \n\n                    \n            -16%"
-        },
-        {
-          "cents": 179800,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                1.798 €"
-        },
-        {
-          "cents": 4500,
-          "source": "visible_price",
-          "raw": "45 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 160900,
-          "source": "visible_price",
-          "raw": "1.609 €"
-        },
-        {
-          "cents": 160900,
-          "source": "visible_price",
-          "raw": "1.609 €"
-        },
-        {
-          "cents": 160900,
-          "source": "visible_price",
-          "raw": "1.609 €"
-        },
-        {
-          "cents": 157900,
-          "source": "visible_price",
-          "raw": "1.579 €"
-        },
-        {
-          "cents": 157900,
-          "source": "visible_price",
-          "raw": "1.579 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
-        },
-        {
-          "cents": 157900,
-          "source": "visible_price",
-          "raw": "1.579 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
-        },
-        {
-          "cents": 157900,
-          "source": "visible_price",
-          "raw": "1.579 €"
-        },
-        {
-          "cents": 174900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
-        },
-        {
-          "cents": 174900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                1.749 €"
-        },
-        {
-          "cents": 164900,
-          "source": "visible_price",
-          "raw": "1.649 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
-        },
-        {
-          "cents": 164900,
-          "source": "visible_price",
-          "raw": "1.649 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
-        },
-        {
-          "cents": 164900,
-          "source": "visible_price",
-          "raw": "1.649 €"
-        },
-        {
-          "cents": 215900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
-        },
-        {
-          "cents": 215900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                2.159 €"
-        },
-        {
-          "cents": 165900,
-          "source": "visible_price",
-          "raw": "1.659 €"
-        },
-        {
-          "cents": 165900,
-          "source": "visible_price",
-          "raw": "1.659 €"
-        },
-        {
-          "cents": 165900,
-          "source": "visible_price",
-          "raw": "1.659 €"
-        },
-        {
-          "cents": 179800,
-          "source": "visible_price",
-          "raw": "1.798 €"
-        },
-        {
-          "cents": 179800,
-          "source": "visible_price",
-          "raw": "1.798 €"
-        },
-        {
-          "cents": 179800,
-          "source": "visible_price",
-          "raw": "1.798 €"
-        },
-        {
-          "cents": 143900,
-          "source": "visible_price",
-          "raw": "1.439 €"
-        },
-        {
-          "cents": 169800,
-          "source": "visible_price",
-          "raw": "1.698 €"
-        },
-        {
-          "cents": 155900,
-          "source": "visible_price",
-          "raw": "1.559 €"
-        },
-        {
-          "cents": 197500,
-          "source": "visible_price",
-          "raw": "1.975 €"
-        },
-        {
-          "cents": 189800,
-          "source": "visible_price",
-          "raw": "1.898 €"
-        },
-        {
-          "cents": 155900,
-          "source": "visible_price",
-          "raw": "1.559 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.675 €\n            \n        \n\n                    \n            -7%"
-        },
-        {
-          "cents": 155900,
-          "source": "visible_price",
-          "raw": "1.559 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.675 €\n            \n        \n\n                    \n            -7%"
-        },
-        {
-          "cents": 155900,
-          "source": "visible_price",
-          "raw": "1.559 €"
-        },
-        {
-          "cents": 167500,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                1.675 €\n            \n        \n\n                    \n            -7%"
-        },
-        {
-          "cents": 167500,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                1.675 €"
-        },
-        {
-          "cents": 174900,
-          "source": "visible_price",
-          "raw": "1.749 €"
-        },
-        {
-          "cents": 154900,
-          "source": "visible_price",
-          "raw": "1.549 €"
-        },
-        {
-          "cents": 150500,
-          "source": "visible_price",
-          "raw": "1.505 €"
-        },
-        {
-          "cents": 165900,
-          "source": "visible_price",
-          "raw": "1.659 €"
-        },
-        {
-          "cents": 165900,
-          "source": "visible_price",
-          "raw": "1.659 €"
-        },
-        {
-          "cents": 165900,
-          "source": "visible_price",
-          "raw": "1.659 €"
-        },
-        {
-          "cents": 150900,
-          "source": "visible_price",
-          "raw": "1.509 €"
-        },
-        {
-          "cents": 127500,
-          "source": "visible_price",
-          "raw": "1.275 €"
-        },
-        {
-          "cents": 127500,
-          "source": "visible_price",
-          "raw": "1.275 €"
-        },
-        {
-          "cents": 127500,
-          "source": "visible_price",
-          "raw": "1.275 €"
-        },
-        {
-          "cents": 209800,
-          "source": "visible_price",
-          "raw": "2.098 €"
-        },
-        {
-          "cents": 209800,
-          "source": "visible_price",
-          "raw": "2.098 €"
-        },
-        {
-          "cents": 209800,
-          "source": "visible_price",
-          "raw": "2.098 €"
         }
       ],
-      "observed_price": null,
+      "observed_price": 1609,
       "identity_valid": true,
       "challenge_detected": false,
+      "sku": null,
+      "price_source": "thomann_product_root",
       "price_diagnostics": {
-        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "selector": ".fx-content-product__sidebar.price-and-availability .price.fx-text.fx-text--no-margin",
         "container_text": "1.609 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .prod",
         "ancestry": [
           ".fx-content-product__sidebar.price-and-availability",
@@ -2212,11 +856,12 @@
           "financing"
         ]
       },
-      "decision": "invalid_price",
-      "error": "Main product root price missing",
+      "decision": "refreshable",
+      "unit_price": 1609,
+      "multiplier": 1,
       "previous_price": 1609,
-      "delta": null,
-      "delta_pct": null,
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -2240,6 +885,7 @@
       "observed_price": 748,
       "identity_valid": true,
       "challenge_detected": false,
+      "sku": null,
       "price_source": "thomann_product_root",
       "price_diagnostics": {
         "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
@@ -2279,350 +925,17 @@
       "price_candidates": [
         {
           "cents": 330500,
-          "source": "visible_price",
+          "source": "thomann_product_root",
           "raw": "3.305 €"
-        },
-        {
-          "cents": 330500,
-          "source": "visible_price",
-          "raw": "3.305 €"
-        },
-        {
-          "cents": 9500,
-          "source": "visible_price",
-          "raw": "95 €"
-        },
-        {
-          "cents": 57900,
-          "source": "visible_price",
-          "raw": "579 €"
-        },
-        {
-          "cents": 57900,
-          "source": "visible_price",
-          "raw": "579 €"
-        },
-        {
-          "cents": 57900,
-          "source": "visible_price",
-          "raw": "579 €"
-        },
-        {
-          "cents": 86900,
-          "source": "visible_price",
-          "raw": "869 €"
-        },
-        {
-          "cents": 4200,
-          "source": "visible_price",
-          "raw": "42 €"
-        },
-        {
-          "cents": 4200,
-          "source": "visible_price",
-          "raw": "42 €"
-        },
-        {
-          "cents": 4200,
-          "source": "visible_price",
-          "raw": "42 €"
-        },
-        {
-          "cents": 319500,
-          "source": "visible_price",
-          "raw": "3.195 €"
-        },
-        {
-          "cents": 5500,
-          "source": "visible_price",
-          "raw": "55 €"
-        },
-        {
-          "cents": 3900,
-          "source": "visible_price",
-          "raw": "39 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 790,
-          "source": "visible_price",
-          "raw": "7,90 €"
-        },
-        {
-          "cents": 790,
-          "source": "visible_price",
-          "raw": "7,90 €"
-        },
-        {
-          "cents": 790,
-          "source": "visible_price",
-          "raw": "7,90 €"
-        },
-        {
-          "cents": 11900,
-          "source": "visible_price",
-          "raw": "119 €"
-        },
-        {
-          "cents": 11900,
-          "source": "visible_price",
-          "raw": "119 €"
-        },
-        {
-          "cents": 11900,
-          "source": "visible_price",
-          "raw": "119 €"
-        },
-        {
-          "cents": 79800,
-          "source": "visible_price",
-          "raw": "798 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
-        },
-        {
-          "cents": 79800,
-          "source": "visible_price",
-          "raw": "798 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
-        },
-        {
-          "cents": 79800,
-          "source": "visible_price",
-          "raw": "798 €"
-        },
-        {
-          "cents": 91900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
-        },
-        {
-          "cents": 91900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                919 €"
-        },
-        {
-          "cents": 2090,
-          "source": "visible_price",
-          "raw": "20,90 €"
-        },
-        {
-          "cents": 1990,
-          "source": "visible_price",
-          "raw": "19,90 €"
-        },
-        {
-          "cents": 1990,
-          "source": "visible_price",
-          "raw": "19,90 €"
-        },
-        {
-          "cents": 1990,
-          "source": "visible_price",
-          "raw": "19,90 €"
-        },
-        {
-          "cents": 309800,
-          "source": "visible_price",
-          "raw": "3.098 €"
-        },
-        {
-          "cents": 344900,
-          "source": "visible_price",
-          "raw": "3.449 €"
-        },
-        {
-          "cents": 346500,
-          "source": "visible_price",
-          "raw": "3.465 €"
-        },
-        {
-          "cents": 307900,
-          "source": "visible_price",
-          "raw": "3.079 €"
-        },
-        {
-          "cents": 292500,
-          "source": "visible_price",
-          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
-        },
-        {
-          "cents": 292500,
-          "source": "visible_price",
-          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
-        },
-        {
-          "cents": 292500,
-          "source": "visible_price",
-          "raw": "2.925 €"
-        },
-        {
-          "cents": 309800,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
-        },
-        {
-          "cents": 309800,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                3.098 €"
-        },
-        {
-          "cents": 304500,
-          "source": "visible_price",
-          "raw": "3.045 €"
-        },
-        {
-          "cents": 304500,
-          "source": "visible_price",
-          "raw": "3.045 €"
-        },
-        {
-          "cents": 304500,
-          "source": "visible_price",
-          "raw": "3.045 €"
-        },
-        {
-          "cents": 376500,
-          "source": "visible_price",
-          "raw": "3.765 €"
-        },
-        {
-          "cents": 376500,
-          "source": "visible_price",
-          "raw": "3.765 €"
-        },
-        {
-          "cents": 376500,
-          "source": "visible_price",
-          "raw": "3.765 €"
-        },
-        {
-          "cents": 279800,
-          "source": "visible_price",
-          "raw": "2.798 €"
-        },
-        {
-          "cents": 279800,
-          "source": "visible_price",
-          "raw": "2.798 €"
-        },
-        {
-          "cents": 279800,
-          "source": "visible_price",
-          "raw": "2.798 €"
-        },
-        {
-          "cents": 288500,
-          "source": "visible_price",
-          "raw": "2.885 €"
-        },
-        {
-          "cents": 288500,
-          "source": "visible_price",
-          "raw": "2.885 €"
-        },
-        {
-          "cents": 288500,
-          "source": "visible_price",
-          "raw": "2.885 €"
-        },
-        {
-          "cents": 282500,
-          "source": "visible_price",
-          "raw": "2.825 €"
-        },
-        {
-          "cents": 255900,
-          "source": "visible_price",
-          "raw": "2.559 €"
-        },
-        {
-          "cents": 254900,
-          "source": "visible_price",
-          "raw": "2.549 €"
-        },
-        {
-          "cents": 254900,
-          "source": "visible_price",
-          "raw": "2.549 €"
-        },
-        {
-          "cents": 254900,
-          "source": "visible_price",
-          "raw": "2.549 €"
-        },
-        {
-          "cents": 324900,
-          "source": "visible_price",
-          "raw": "3.249 €"
-        },
-        {
-          "cents": 384900,
-          "source": "visible_price",
-          "raw": "3.849 €"
-        },
-        {
-          "cents": 434500,
-          "source": "visible_price",
-          "raw": "4.345 €"
-        },
-        {
-          "cents": 393900,
-          "source": "visible_price",
-          "raw": "3.939 €"
-        },
-        {
-          "cents": 269800,
-          "source": "visible_price",
-          "raw": "2.698 €"
-        },
-        {
-          "cents": 424900,
-          "source": "visible_price",
-          "raw": "4.249 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                4.498 €\n            \n        \n\n                    \n            -6%"
-        },
-        {
-          "cents": 424900,
-          "source": "visible_price",
-          "raw": "4.249 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                4.498 €\n            \n        \n\n                    \n            -6%"
-        },
-        {
-          "cents": 424900,
-          "source": "visible_price",
-          "raw": "4.249 €"
-        },
-        {
-          "cents": 449800,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                4.498 €\n            \n        \n\n                    \n            -6%"
-        },
-        {
-          "cents": 449800,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                4.498 €"
-        },
-        {
-          "cents": 294900,
-          "source": "visible_price",
-          "raw": "2.949 €"
         }
       ],
-      "observed_price": null,
+      "observed_price": 3305,
       "identity_valid": true,
       "challenge_detected": false,
+      "sku": null,
+      "price_source": "thomann_product_root",
       "price_diagnostics": {
-        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "selector": ".fx-content-product__sidebar.price-and-availability .price.fx-text.fx-text--no-margin",
         "container_text": "3.305 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .prod",
         "ancestry": [
           ".fx-content-product__sidebar.price-and-availability",
@@ -2637,11 +950,12 @@
           "financing"
         ]
       },
-      "decision": "invalid_price",
-      "error": "Main product root price missing",
+      "decision": "refreshable",
+      "unit_price": 3305,
+      "multiplier": 1,
       "previous_price": 3305,
-      "delta": null,
-      "delta_pct": null,
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -2649,17 +963,46 @@
       "shop": "Thomann",
       "url": "https://www.thomann.de/de/ld_systems_stinger_12_sub18_power_bundle.htm",
       "final_url": "https://www.thomann.de/de/ld_systems_stinger_12_sub18_power_bundle.htm",
-      "http_status": 404,
+      "http_status": 200,
       "page_title": "LD Systems Stinger 12/Sub18 Power Bundle – Musikhaus Thomann",
-      "product_identity": {},
-      "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "product_identity": {
+        "name": "LD Systems Stinger 12/Sub18 Power Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 391900,
+          "source": "thomann_product_root",
+          "raw": "3.919 €"
+        }
+      ],
+      "observed_price": 3919,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "not_found",
+      "sku": null,
+      "price_source": "thomann_product_root",
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price.fx-text.fx-text--no-margin",
+        "container_text": "3.919 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .prod",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "refreshable",
+      "unit_price": 3919,
+      "multiplier": 1,
       "previous_price": 3959,
-      "delta": null,
-      "delta_pct": null,
+      "delta": -40,
+      "delta_pct": -1.0103561505430665,
       "manual_review_required": false
     },
     {
@@ -2667,17 +1010,46 @@
       "shop": "Thomann",
       "url": "https://www.thomann.de/de/ld_systems_stinger_high_power_bundle.htm",
       "final_url": "https://www.thomann.de/de/ld_systems_stinger_high_power_bundle.htm",
-      "http_status": 404,
+      "http_status": 200,
       "page_title": "LD Systems Stinger High Power Bundle – Musikhaus Thomann",
-      "product_identity": {},
-      "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "product_identity": {
+        "name": "LD Systems Stinger High Power Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 656900,
+          "source": "thomann_product_root",
+          "raw": "6.569 €"
+        }
+      ],
+      "observed_price": 6569,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "not_found",
+      "sku": null,
+      "price_source": "thomann_product_root",
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price.fx-text.fx-text--no-margin",
+        "container_text": "6.569 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .prod",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "refreshable",
+      "unit_price": 6569,
+      "multiplier": 1,
       "previous_price": 6669,
-      "delta": null,
-      "delta_pct": null,
+      "delta": -100,
+      "delta_pct": -1.49947518368571,
       "manual_review_required": false
     },
     {
@@ -2694,345 +1066,17 @@
       "price_candidates": [
         {
           "cents": 210900,
-          "source": "visible_price",
+          "source": "thomann_product_root",
           "raw": "2.109 €"
-        },
-        {
-          "cents": 210900,
-          "source": "visible_price",
-          "raw": "2.109 €"
-        },
-        {
-          "cents": 217900,
-          "source": "visible_price",
-          "raw": "2.179 €"
-        },
-        {
-          "cents": 217900,
-          "source": "visible_price",
-          "raw": "2.179 €"
-        },
-        {
-          "cents": 217900,
-          "source": "visible_price",
-          "raw": "2.179 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 11500,
-          "source": "visible_price",
-          "raw": "115 €"
-        },
-        {
-          "cents": 790,
-          "source": "visible_price",
-          "raw": "7,90 €"
-        },
-        {
-          "cents": 790,
-          "source": "visible_price",
-          "raw": "7,90 €"
-        },
-        {
-          "cents": 790,
-          "source": "visible_price",
-          "raw": "7,90 €"
-        },
-        {
-          "cents": 11900,
-          "source": "visible_price",
-          "raw": "119 €"
-        },
-        {
-          "cents": 11900,
-          "source": "visible_price",
-          "raw": "119 €"
-        },
-        {
-          "cents": 11900,
-          "source": "visible_price",
-          "raw": "119 €"
-        },
-        {
-          "cents": 79800,
-          "source": "visible_price",
-          "raw": "798 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
-        },
-        {
-          "cents": 79800,
-          "source": "visible_price",
-          "raw": "798 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
-        },
-        {
-          "cents": 79800,
-          "source": "visible_price",
-          "raw": "798 €"
-        },
-        {
-          "cents": 91900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                919 €\n            \n        \n\n                    \n            -13%"
-        },
-        {
-          "cents": 91900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                919 €"
-        },
-        {
-          "cents": 2090,
-          "source": "visible_price",
-          "raw": "20,90 €"
-        },
-        {
-          "cents": 197500,
-          "source": "visible_price",
-          "raw": "1.975 €"
-        },
-        {
-          "cents": 209800,
-          "source": "visible_price",
-          "raw": "2.098 €"
-        },
-        {
-          "cents": 209800,
-          "source": "visible_price",
-          "raw": "2.098 €"
-        },
-        {
-          "cents": 209800,
-          "source": "visible_price",
-          "raw": "2.098 €"
-        },
-        {
-          "cents": 223900,
-          "source": "visible_price",
-          "raw": "2.239 €"
-        },
-        {
-          "cents": 222200,
-          "source": "visible_price",
-          "raw": "2.222 €"
-        },
-        {
-          "cents": 222200,
-          "source": "visible_price",
-          "raw": "2.222 €"
-        },
-        {
-          "cents": 222200,
-          "source": "visible_price",
-          "raw": "2.222 €"
-        },
-        {
-          "cents": 219900,
-          "source": "visible_price",
-          "raw": "2.199 €"
-        },
-        {
-          "cents": 206900,
-          "source": "visible_price",
-          "raw": "2.069 €"
-        },
-        {
-          "cents": 189800,
-          "source": "visible_price",
-          "raw": "1.898 €"
-        },
-        {
-          "cents": 255900,
-          "source": "visible_price",
-          "raw": "2.559 €"
-        },
-        {
-          "cents": 219800,
-          "source": "visible_price",
-          "raw": "2.198 €"
-        },
-        {
-          "cents": 164900,
-          "source": "visible_price",
-          "raw": "1.649 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
-        },
-        {
-          "cents": 164900,
-          "source": "visible_price",
-          "raw": "1.649 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
-        },
-        {
-          "cents": 164900,
-          "source": "visible_price",
-          "raw": "1.649 €"
-        },
-        {
-          "cents": 215900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                2.159 €\n            \n        \n\n                    \n            -24%"
-        },
-        {
-          "cents": 215900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                2.159 €"
-        },
-        {
-          "cents": 254900,
-          "source": "visible_price",
-          "raw": "2.549 €"
-        },
-        {
-          "cents": 254900,
-          "source": "visible_price",
-          "raw": "2.549 €"
-        },
-        {
-          "cents": 254900,
-          "source": "visible_price",
-          "raw": "2.549 €"
-        },
-        {
-          "cents": 179800,
-          "source": "visible_price",
-          "raw": "1.798 €"
-        },
-        {
-          "cents": 179800,
-          "source": "visible_price",
-          "raw": "1.798 €"
-        },
-        {
-          "cents": 179800,
-          "source": "visible_price",
-          "raw": "1.798 €"
-        },
-        {
-          "cents": 157900,
-          "source": "visible_price",
-          "raw": "1.579 €"
-        },
-        {
-          "cents": 157900,
-          "source": "visible_price",
-          "raw": "1.579 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
-        },
-        {
-          "cents": 157900,
-          "source": "visible_price",
-          "raw": "1.579 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
-        },
-        {
-          "cents": 157900,
-          "source": "visible_price",
-          "raw": "1.579 €"
-        },
-        {
-          "cents": 174900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                1.749 €\n            \n        \n\n                    \n            -10%"
-        },
-        {
-          "cents": 174900,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                1.749 €"
-        },
-        {
-          "cents": 197500,
-          "source": "visible_price",
-          "raw": "1.975 €"
-        },
-        {
-          "cents": 197500,
-          "source": "visible_price",
-          "raw": "1.975 €"
-        },
-        {
-          "cents": 197500,
-          "source": "visible_price",
-          "raw": "1.975 €"
-        },
-        {
-          "cents": 279800,
-          "source": "visible_price",
-          "raw": "2.798 €"
-        },
-        {
-          "cents": 279800,
-          "source": "visible_price",
-          "raw": "2.798 €"
-        },
-        {
-          "cents": 279800,
-          "source": "visible_price",
-          "raw": "2.798 €"
-        },
-        {
-          "cents": 201900,
-          "source": "visible_price",
-          "raw": "2.019 €"
-        },
-        {
-          "cents": 201900,
-          "source": "visible_price",
-          "raw": "2.019 €"
-        },
-        {
-          "cents": 201900,
-          "source": "visible_price",
-          "raw": "2.019 €"
-        },
-        {
-          "cents": 190500,
-          "source": "visible_price",
-          "raw": "1.905 €"
-        },
-        {
-          "cents": 190500,
-          "source": "visible_price",
-          "raw": "1.905 €"
-        },
-        {
-          "cents": 190500,
-          "source": "visible_price",
-          "raw": "1.905 €"
-        },
-        {
-          "cents": 292500,
-          "source": "visible_price",
-          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
-        },
-        {
-          "cents": 292500,
-          "source": "visible_price",
-          "raw": "2.925 €\n    \n                \n        \n    \n        \n            \n                                    30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
-        },
-        {
-          "cents": 292500,
-          "source": "visible_price",
-          "raw": "2.925 €"
-        },
-        {
-          "cents": 309800,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                3.098 €\n            \n        \n\n                    \n            -6%"
-        },
-        {
-          "cents": 309800,
-          "source": "visible_price",
-          "raw": "30-Tage-Bestpreis:\n                                3.098 €"
         }
       ],
-      "observed_price": null,
+      "observed_price": 2109,
       "identity_valid": true,
       "challenge_detected": false,
+      "sku": null,
+      "price_source": "thomann_product_root",
       "price_diagnostics": {
-        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "selector": ".fx-content-product__sidebar.price-and-availability .price.fx-text.fx-text--no-margin",
         "container_text": "2.109 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .prod",
         "ancestry": [
           ".fx-content-product__sidebar.price-and-availability",
@@ -3047,11 +1091,12 @@
           "financing"
         ]
       },
-      "decision": "invalid_price",
-      "error": "Main product root price missing",
+      "decision": "refreshable",
+      "unit_price": 2109,
+      "multiplier": 1,
       "previous_price": 2099,
-      "delta": null,
-      "delta_pct": null,
+      "delta": 10,
+      "delta_pct": 0.47641734159123394,
       "manual_review_required": false
     },
     {
@@ -3061,14 +1106,189 @@
       "final_url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
       "previous_price": 1753.8,
       "product_identity": {},
+      "sku": null,
       "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "price_source": "component_calc",
+      "observed_price": 1643.8,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "incomplete_recipe",
-      "error": "collectionDisabled offer has no explicit componentDetails",
-      "delta": null,
-      "delta_pct": null,
+      "decision": "refreshable",
+      "components": [
+        {
+          "reference": "r23",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+          "http_status": 200,
+          "page_title": "LD Systems ICOA 12 A BT – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems ICOA 12 A BT",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 42900,
+              "source": "thomann_product_root",
+              "raw": "429 €"
+            }
+          ],
+          "observed_price": 429,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "429 €\n        \n        \n            -17%\n            \n                                    UVP: 518,90 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FO",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems ICOA 12 A BT",
+          "quantity": 2
+        },
+        {
+          "reference": "r23",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_sub_15_a.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_sub_15_a.htm",
+          "http_status": 200,
+          "page_title": "LD Systems ICOA SUB 15 A – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems ICOA SUB 15 A",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 61900,
+              "source": "thomann_product_root",
+              "raw": "619 €"
+            }
+          ],
+          "observed_price": 619,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "619 €\n        \n        \n            -20%\n            \n                                    UVP: 769 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems ICOA SUB 15 A",
+          "quantity": 1
+        },
+        {
+          "reference": "r23",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/gravity_ss_5211_b_set_1_speaker_stand.htm",
+          "final_url": "https://www.thomann.de/de/gravity_ss_5211_b_set_1_speaker_stand.htm",
+          "http_status": 200,
+          "page_title": "Gravity SS 5211 B Set 1 Speaker Stand – Musikhaus Thomann",
+          "product_identity": {
+            "name": "Gravity SS 5211 B Set 1 Speaker Stand",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 12900,
+              "source": "thomann_product_root",
+              "raw": "129 €"
+            }
+          ],
+          "observed_price": 129,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "129 €\n        \n        \n            -34%\n            \n                                    UVP: 195,34 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FO",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "Gravity SS 5211 B Set 1 Speaker Stand",
+          "quantity": 1
+        },
+        {
+          "reference": "r23",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/sommer_cable_stage_22_sghn_bk_60m.htm",
+          "final_url": "https://www.thomann.de/de/sommer_cable_stage_22_sghn_bk_60m.htm",
+          "http_status": 200,
+          "page_title": "Sommer Cable Stage 22 SGHN BK 6,0m – Musikhaus Thomann",
+          "product_identity": {
+            "name": "Sommer Cable Stage 22 SGHN BK 6,0m",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 1890,
+              "source": "thomann_product_root",
+              "raw": "18,90 €"
+            }
+          ],
+          "observed_price": 18.9,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "18,90 €\n        \n        \n            -42%\n            \n                                    UVP: 32,70 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"F",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "Sommer Stage 22 SGHN 6 m",
+          "quantity": 2
+        }
+      ],
+      "delta": -110,
+      "delta_pct": -6.272094879689817,
       "manual_review_required": false
     },
     {
@@ -3078,14 +1298,189 @@
       "final_url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
       "previous_price": 2637,
       "product_identity": {},
+      "sku": null,
       "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "price_source": "component_calc",
+      "observed_price": 2637,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "incomplete_recipe",
-      "error": "collectionDisabled offer has no explicit componentDetails",
-      "delta": null,
-      "delta_pct": null,
+      "decision": "refreshable",
+      "components": [
+        {
+          "reference": "r24",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+          "http_status": 200,
+          "page_title": "LD Systems ICOA 12 A BT – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems ICOA 12 A BT",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 42900,
+              "source": "thomann_product_root",
+              "raw": "429 €"
+            }
+          ],
+          "observed_price": 429,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "429 €\n        \n        \n            -17%\n            \n                                    UVP: 518,90 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FO",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems ICOA 12 A BT",
+          "quantity": 2
+        },
+        {
+          "reference": "r24",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_sub_18_a.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_sub_18_a.htm",
+          "http_status": 200,
+          "page_title": "LD Systems ICOA SUB 18 A – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems ICOA SUB 18 A",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 84500,
+              "source": "thomann_product_root",
+              "raw": "845 €"
+            }
+          ],
+          "observed_price": 845,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price.fx-text.fx-text--no-margin",
+            "container_text": "845 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .produc",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems ICOA SUB 18 A",
+          "quantity": 2
+        },
+        {
+          "reference": "r24",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/gravity_sp_2332_b_speaker_stand.htm",
+          "final_url": "https://www.thomann.de/de/gravity_sp_2332_b_speaker_stand.htm",
+          "http_status": 200,
+          "page_title": "Gravity SP 2332 B Speaker Stand – Musikhaus Thomann",
+          "product_identity": {
+            "name": "Gravity SP 2332 B Speaker Stand",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 2200,
+              "source": "thomann_product_root",
+              "raw": "22 €"
+            }
+          ],
+          "observed_price": 22,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "22 €\n        \n        \n            -32%\n            \n                                    UVP: 32,51 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "Gravity SP 2332 B",
+          "quantity": 2
+        },
+        {
+          "reference": "r24",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm",
+          "final_url": "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm",
+          "http_status": 200,
+          "page_title": "Sommer Cable Stage 22 SG0Q 3m – Musikhaus Thomann",
+          "product_identity": {
+            "name": "Sommer Cable Stage 22 SG0Q 3m",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 2250,
+              "source": "thomann_product_root",
+              "raw": "22,50 €"
+            }
+          ],
+          "observed_price": 22.5,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "22,50 €\n        \n        \n            -43%\n            \n                                    UVP: 39,50 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"F",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "Sommer Stage 22 SG0Q 3 m",
+          "quantity": 2
+        }
+      ],
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -3095,14 +1490,189 @@
       "final_url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
       "previous_price": 2717,
       "product_identity": {},
+      "sku": null,
       "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "price_source": "component_calc",
+      "observed_price": 2717,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "incomplete_recipe",
-      "error": "collectionDisabled offer has no explicit componentDetails",
-      "delta": null,
-      "delta_pct": null,
+      "decision": "refreshable",
+      "components": [
+        {
+          "reference": "r25",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+          "http_status": 200,
+          "page_title": "LD Systems ICOA 15 A BT – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems ICOA 15 A BT",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 46900,
+              "source": "thomann_product_root",
+              "raw": "469 €"
+            }
+          ],
+          "observed_price": 469,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "469 €\n        \n        \n            -21%\n            \n                                    UVP: 592,90 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FO",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems ICOA 15 A BT",
+          "quantity": 2
+        },
+        {
+          "reference": "r25",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_sub_18_a.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_sub_18_a.htm",
+          "http_status": 200,
+          "page_title": "LD Systems ICOA SUB 18 A – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems ICOA SUB 18 A",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 84500,
+              "source": "thomann_product_root",
+              "raw": "845 €"
+            }
+          ],
+          "observed_price": 845,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price.fx-text.fx-text--no-margin",
+            "container_text": "845 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .produc",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems ICOA SUB 18 A",
+          "quantity": 2
+        },
+        {
+          "reference": "r25",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/gravity_sp_2332_b_speaker_stand.htm",
+          "final_url": "https://www.thomann.de/de/gravity_sp_2332_b_speaker_stand.htm",
+          "http_status": 200,
+          "page_title": "Gravity SP 2332 B Speaker Stand – Musikhaus Thomann",
+          "product_identity": {
+            "name": "Gravity SP 2332 B Speaker Stand",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 2200,
+              "source": "thomann_product_root",
+              "raw": "22 €"
+            }
+          ],
+          "observed_price": 22,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "22 €\n        \n        \n            -32%\n            \n                                    UVP: 32,51 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "Gravity SP 2332 B",
+          "quantity": 2
+        },
+        {
+          "reference": "r25",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm",
+          "final_url": "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm",
+          "http_status": 200,
+          "page_title": "Sommer Cable Stage 22 SG0Q 3m – Musikhaus Thomann",
+          "product_identity": {
+            "name": "Sommer Cable Stage 22 SG0Q 3m",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 2250,
+              "source": "thomann_product_root",
+              "raw": "22,50 €"
+            }
+          ],
+          "observed_price": 22.5,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "22,50 €\n        \n        \n            -43%\n            \n                                    UVP: 39,50 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"F",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "Sommer Stage 22 SG0Q 3 m",
+          "quantity": 2
+        }
+      ],
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -3112,14 +1682,146 @@
       "final_url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
       "previous_price": 4408,
       "product_identity": {},
+      "sku": null,
       "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "price_source": "component_calc",
+      "observed_price": 4408,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "incomplete_recipe",
-      "error": "collectionDisabled offer has no explicit componentDetails",
-      "delta": null,
-      "delta_pct": null,
+      "decision": "refreshable",
+      "components": [
+        {
+          "reference": "r26",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+          "http_status": 200,
+          "page_title": "LD Systems ICOA 15 A BT – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems ICOA 15 A BT",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 46900,
+              "source": "thomann_product_root",
+              "raw": "469 €"
+            }
+          ],
+          "observed_price": 469,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "469 €\n        \n        \n            -21%\n            \n                                    UVP: 592,90 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FO",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems ICOA 15 A BT",
+          "quantity": 2
+        },
+        {
+          "reference": "r26",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_sub_18_a.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_sub_18_a.htm",
+          "http_status": 200,
+          "page_title": "LD Systems ICOA SUB 18 A – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems ICOA SUB 18 A",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 84500,
+              "source": "thomann_product_root",
+              "raw": "845 €"
+            }
+          ],
+          "observed_price": 845,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price.fx-text.fx-text--no-margin",
+            "container_text": "845 €\n\n            \n                    \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_CLASS_EVENTS\"], []);tho.bootstrapModule('prod.priceTracking', [], []);    \n\n            \n    \n                112345678910+\n        \n        \n                        In den Warenkorb\n        \n    \n\n    \ntho.bootstrapModule('prod.priceBox', [{\"availability\":{\"label\":\"IN_STOCK\",\"isAvailable\":true,\"quantityMaxValue\":9999}}], []);tho.bootstrapModule('prod.gtmTracking', [\".fx-content-product .produc",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems ICOA SUB 18 A",
+          "quantity": 4
+        },
+        {
+          "reference": "r26",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm",
+          "final_url": "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm",
+          "http_status": 200,
+          "page_title": "Sommer Cable Stage 22 SG0Q 3m – Musikhaus Thomann",
+          "product_identity": {
+            "name": "Sommer Cable Stage 22 SG0Q 3m",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 2250,
+              "source": "thomann_product_root",
+              "raw": "22,50 €"
+            }
+          ],
+          "observed_price": 22.5,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "22,50 €\n        \n        \n            -43%\n            \n                                    UVP: 39,50 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"F",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "Sommer Stage 22 SG0Q 3 m",
+          "quantity": 4
+        }
+      ],
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -3129,14 +1831,318 @@
       "final_url": "https://www.thomann.de/de/ld_systems_icoa_pro_12_a.htm",
       "previous_price": 4949,
       "product_identity": {},
+      "sku": null,
       "price_candidates": [],
-      "observed_price": null,
-      "identity_valid": false,
+      "price_source": "component_calc",
+      "observed_price": 4949,
+      "identity_valid": true,
       "challenge_detected": false,
-      "decision": "incomplete_recipe",
-      "error": "collectionDisabled offer has no explicit componentDetails",
-      "delta": null,
-      "delta_pct": null,
+      "decision": "refreshable",
+      "components": [
+        {
+          "reference": "r27",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_pro_12_a.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_pro_12_a.htm",
+          "http_status": 200,
+          "page_title": "LD Systems ICOA Pro 12 A – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems ICOA Pro 12 A",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 108900,
+              "source": "thomann_product_root",
+              "raw": "1.089 €"
+            }
+          ],
+          "observed_price": 1089,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "B-Stock ab 935 € verfügbar\n\n                            \n        \n    \n\n\n\n    \n\n\n\n    \n                \n            \n            \n            \n\n                            \n\n                \n    \n        \n            1.089 €\n        \n        \n            -13%\n            \n                                    UVP: 1.246,90 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofor",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems ICOA Pro 12 A",
+          "quantity": 2
+        },
+        {
+          "reference": "r27",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_sub_pro_21_a.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_sub_pro_21_a.htm",
+          "http_status": 200,
+          "page_title": "LD Systems ICOA SUB Pro 21 A – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems ICOA SUB Pro 21 A",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 219000,
+              "source": "thomann_product_root",
+              "raw": "2.190 €"
+            }
+          ],
+          "observed_price": 2190,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "2.190 €\n        \n        \n            -16%\n            \n                                    UVP: 2.599 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"F",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems ICOA SUB Pro 21 A",
+          "quantity": 1
+        },
+        {
+          "reference": "r27",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_12_cover.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_12_cover.htm",
+          "http_status": 200,
+          "page_title": "LD Systems ICOA 12 Cover – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems ICOA 12 Cover",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 6600,
+              "source": "thomann_product_root",
+              "raw": "66 €"
+            }
+          ],
+          "observed_price": 66,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "66 €\n        \n        \n            -16%\n            \n                                    30-Tage-Bestpreis: 79 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            30-Tage-Bestpreis\n            Der 30-Tage-Bestpreis ist der niedrigste Verkaufspreis der letzten 30 Tage vor der aktuellen Preisreduzierung.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                In 1-2 Wochen lieferbar\n                            \n            \n                    \n                In 1-2 Wochen lieferbar\n                Dieses Produkt trifft bald bei uns ein und kann anschließend sofort verschickt werden.\n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems ICOA 12 Cover",
+          "quantity": 2
+        },
+        {
+          "reference": "r27",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_pro_sub_21_cover.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_pro_sub_21_cover.htm",
+          "http_status": 200,
+          "page_title": "LD Systems ICOA PRO SUB 21 Cover – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems ICOA PRO SUB 21 Cover",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 8900,
+              "source": "thomann_product_root",
+              "raw": "89 €"
+            }
+          ],
+          "observed_price": 89,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "89 €\n        \n        \n            -43%\n            \n                                    UVP: 154,90 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FOR",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems ICOA PRO SUB 21 Cover",
+          "quantity": 1
+        },
+        {
+          "reference": "r27",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_pro_sub_21_casterboard.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_pro_sub_21_casterboard.htm",
+          "http_status": 200,
+          "page_title": "LD Systems ICOA PRO SUB 21 Casterboard – Musikhaus Thomann",
+          "product_identity": {
+            "name": "LD Systems ICOA PRO SUB 21 Casterboard",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 19600,
+              "source": "thomann_product_root",
+              "raw": "196 €"
+            }
+          ],
+          "observed_price": 196,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "196 €\n        \n        \n            -16%\n            \n                                    UVP: 234 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FORM_",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "LD Systems ICOA PRO SUB 21 Casterboard",
+          "quantity": 1
+        },
+        {
+          "reference": "r27",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/gravity_ss_5211_b_set_1_speaker_stand.htm",
+          "final_url": "https://www.thomann.de/de/gravity_ss_5211_b_set_1_speaker_stand.htm",
+          "http_status": 200,
+          "page_title": "Gravity SS 5211 B Set 1 Speaker Stand – Musikhaus Thomann",
+          "product_identity": {
+            "name": "Gravity SS 5211 B Set 1 Speaker Stand",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 12900,
+              "source": "thomann_product_root",
+              "raw": "129 €"
+            }
+          ],
+          "observed_price": 129,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "129 €\n        \n        \n            -34%\n            \n                                    UVP: 195,34 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"FO",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "Gravity SS 5211 B Set 1 Speaker Stand",
+          "quantity": 1
+        },
+        {
+          "reference": "r27",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/sommer_cable_stage_22_sghn_bk_50m.htm",
+          "final_url": "https://www.thomann.de/de/sommer_cable_stage_22_sghn_bk_50m.htm",
+          "http_status": 200,
+          "page_title": "Sommer Cable Stage 22 SGHN BK 5,0m – Musikhaus Thomann",
+          "product_identity": {
+            "name": "Sommer Cable Stage 22 SGHN BK 5,0m",
+            "sku": ""
+          },
+          "price_candidates": [
+            {
+              "cents": 1750,
+              "source": "thomann_product_root",
+              "raw": "17,50 €"
+            }
+          ],
+          "observed_price": 17.5,
+          "identity_valid": true,
+          "challenge_detected": false,
+          "sku": null,
+          "price_source": "thomann_product_root",
+          "price_diagnostics": {
+            "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+            "container_text": "17,50 €\n        \n        \n            -43%\n            \n                                    UVP: 30,70 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\",\"F",
+            "ancestry": [
+              ".fx-content-product__sidebar.price-and-availability",
+              ".product-price-box",
+              ".fx-product-orderable"
+            ],
+            "rejected": [
+              "related product roots",
+              "accessory roots",
+              "30-Tage-Bestpreis",
+              "UVP",
+              "financing"
+            ]
+          },
+          "decision": "refreshable",
+          "name": "Sommer Stage 22 SGHN 5 m",
+          "quantity": 2
+        }
+      ],
+      "delta": 0,
+      "delta_pct": 0,
       "manual_review_required": false
     },
     {
@@ -3160,6 +2166,7 @@
       "observed_price": 7345,
       "identity_valid": true,
       "challenge_detected": false,
+      "sku": null,
       "price_source": "thomann_product_root",
       "price_diagnostics": {
         "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
@@ -3206,6 +2213,7 @@
       "observed_price": 7759,
       "identity_valid": true,
       "challenge_detected": false,
+      "sku": null,
       "price_source": "thomann_product_root",
       "price_diagnostics": {
         "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
@@ -3234,17 +2242,17 @@
   ],
   "summary": {
     "tested": 29,
-    "rendered": 15,
-    "exact_identities": 15,
-    "prices_recovered": 9,
-    "unchanged": 8,
-    "changed": 1,
+    "rendered": 17,
+    "exact_identities": 25,
+    "prices_recovered": 25,
+    "unchanged": 18,
+    "changed": 7,
     "manual_review_required": 0,
     "blocked": 0,
-    "not_found": 6,
+    "not_found": 4,
     "writes": false,
-    "incomplete_recipe": 8,
-    "coverage_pct": 31.03448275862069,
+    "incomplete_recipe": 0,
+    "coverage_pct": 86.20689655172413,
     "mode": "headed"
   }
 }
