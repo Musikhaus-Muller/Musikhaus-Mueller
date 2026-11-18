@@ -2,6 +2,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import asar from '@electron/asar';
+import { locateChromium } from '../desktop/services/browser-runtime.mjs';
 
 const arg = name => process.argv.find(value => value.startsWith(`--${name}=`))?.slice(name.length + 3);
 
@@ -28,18 +30,53 @@ export async function files(directory, fsApi = fs) {
   return result;
 }
 
-export async function verifyDesktopInstaller({ directory = 'dist', platform, arch, extension, fsApi = fs }) {
+const normalizeAsarPath = entry => entry.replaceAll('\\', '/').replace(/^\/+/, '');
+const embeddedBrowserEntry = entry => {
+  const normalized = normalizeAsarPath(entry);
+  return /(?:^|\/)playwright-browsers(?:\/|$)/i.test(normalized)
+    || /(?:^|\/)(?:chromium|chromium_headless_shell)-\d+(?:\/|$)/i.test(normalized)
+    || /(?:^|\/)(?:chrome-win(?:32|64)?|chrome-headless-shell-win(?:32|64)?|Chromium\.app)(?:\/|$)/i.test(normalized);
+};
+
+export function inspectAsarEntries(asarPath, asarApi = asar) {
+  const entries = asarApi.listPackage(asarPath).map(normalizeAsarPath);
+  const embeddedBrowser = entries.filter(embeddedBrowserEntry);
+  if (embeddedBrowser.length) throw new Error(`Chromium must not be embedded in app.asar: ${embeddedBrowser[0]}`);
+  return entries;
+}
+
+export function inspectPublicConfig(asarPath, entries, asarApi = asar) {
+  if (entries.some(entry => /(?:^|\/)\.env(?:\.|$)/i.test(entry))) throw new Error('Environment configuration must not be packaged');
+  const configEntry = entries.find(entry => entry === 'desktop/public-config.json');
+  if (!configEntry) throw new Error('Packaged public configuration not found');
+  const config = JSON.parse(asarApi.extractFile(asarPath, configEntry).toString('utf8'));
+  const keys = Object.keys(config).sort();
+  if (keys.join(',') !== 'supabaseAnonKey,supabaseUrl') throw new Error('Packaged configuration contains unsupported fields');
+  if (!config.supabaseUrl || !config.supabaseAnonKey || /service|secret/i.test(config.supabaseAnonKey)) {
+    throw new Error('Administrative Supabase key must not be packaged');
+  }
+  return config;
+}
+
+export async function inspectExternalChromium({ asarPath, platform, arch, fsApi = fs, pathApi = path }) {
+  const resourcesPath = pathApi.dirname(asarPath);
+  const runtime = await locateChromium({ packaged: true, resourcesPath, platform, arch, fsApi, pathApi });
+  return { browserRoot: runtime.browserRoot, executablePath: runtime.executablePath };
+}
+
+export async function verifyDesktopInstaller({ directory = 'dist', platform, arch, extension, fsApi = fs, asarApi = asar, pathApi = path }) {
   const installer = await findInstaller({ directory, platform, extension, fsApi });
   const all = await files(directory, fsApi);
   const bytes = await fsApi.readFile(installer);
   const asars = all.filter(file => path.basename(file) === 'app.asar');
   if (!asars.length) throw new Error('Packaged app.asar not found');
+  const externalChromium = [];
   for (const asar of asars) {
-    const source = await fsApi.readFile(asar);
-    if (source.includes(Buffer.from('playwright-browsers'))) throw new Error('Chromium must not be embedded in app.asar');
-    if (source.includes(Buffer.from('SUPABASE_SERVICE_ROLE_KEY')) || source.includes(Buffer.from('SUPABASE_SECRET_KEY'))) throw new Error('Administrative Supabase key marker found in app.asar');
+    const entries = inspectAsarEntries(asar, asarApi);
+    inspectPublicConfig(asar, entries, asarApi);
+    externalChromium.push(await inspectExternalChromium({ asarPath: asar, platform, arch, fsApi, pathApi }));
   }
-  return { installer: path.basename(installer), bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex'), platform, arch, chromium: 'external_resource_only' };
+  return { installer: path.basename(installer), bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex'), platform, arch, chromium: 'external_resource_only', externalChromium };
 }
 
 const invokedDirectly = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
