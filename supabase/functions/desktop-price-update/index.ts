@@ -28,7 +28,7 @@ async function authenticatedUser(request: Request, url: string, anon: string) {
   const token = request.headers.get('Authorization')?.match(/^Bearer\s+(.+)$/i)?.[1];
   if (!token) return null;
   const response = await fetch(`${url}/auth/v1/user`, { headers: { apikey: anon, Authorization: `Bearer ${token}` } });
-  return response.ok ? await response.json() : null;
+  return response.ok ? { user: await response.json(), token } : null;
 }
 
 Deno.serve(async request => {
@@ -36,15 +36,14 @@ Deno.serve(async request => {
     if (request.method !== 'POST') return json({ error: 'method_not_allowed' }, 405);
     const url = Deno.env.get('SUPABASE_URL') || '';
     const anon = Deno.env.get('SUPABASE_ANON_KEY') || '';
-    const service = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '';
-    if (!url || !anon || !service) return json({ error: 'service_unavailable' }, 503);
-    const user = await authenticatedUser(request, url, anon);
-    if (!user || !allowedRoles.has(String(user.app_metadata?.role || '').toLowerCase())) return json({ error: 'unauthorized' }, 403);
+    if (!url || !anon) return json({ error: 'service_unavailable' }, 503);
+    const authenticated = await authenticatedUser(request, url, anon);
+    if (!authenticated || !allowedRoles.has(String(authenticated.user.app_metadata?.role || '').toLowerCase())) return json({ error: 'unauthorized' }, 403);
     const body: unknown = await request.json().catch(() => null);
     if (!isRecord(body) || body.action !== 'preflight' || Object.keys(body).some(key => !['action', 'write_plan'].includes(key))) return json({ error: 'unsupported_action' }, 400);
     const rows = plannedRows(body.write_plan);
     const rest = async (query: string) => {
-      const response = await fetch(`${url}/rest/v1/${query}`, { headers: { apikey: service, Authorization: `Bearer ${service}` } });
+      const response = await fetch(`${url}/rest/v1/${query}`, { headers: { apikey: anon, Authorization: `Bearer ${authenticated.token}` } });
       if (!response.ok) throw new Error('database_unavailable');
       return response.json();
     };

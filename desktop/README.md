@@ -15,7 +15,7 @@ Never provide a service-role or secret key to Electron. Authorization is based o
 
 ## Secure pilot preflight
 
-`supabase/functions/desktop-price-update` is a preflight-only pilot endpoint. It verifies the Bearer JWT and `app_metadata.role`, accepts only a closed Hot Sound/Thomann read-only plan, and resolves active configuration/shop/offer IDs. It has no apply, audit, insert, update, delete, or RPC route. The service-role key remains server-side because the preflight reads tables not exposed through the authenticated desktop RLS scope.
+`supabase/functions/desktop-price-update` is a preflight-only pilot endpoint. It verifies the Bearer JWT and `app_metadata.role`, accepts only a closed Hot Sound/Thomann read-only plan, and resolves active configuration/shop/offer IDs through the authenticated RLS scope. It has no apply, audit, insert, update, delete, RPC route, or service-role dependency.
 
 ## Local pipeline
 

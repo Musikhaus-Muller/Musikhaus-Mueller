@@ -16,6 +16,7 @@ test('desktop pilot endpoint is JWT/role-gated, preflight-only, and has no write
   assert.match(source, /body\.action !== 'preflight'/); assert.match(source, /unsupported_action/); assert.match(source, /invalid_plan/);
   assert.match(source, /writes !== false/); assert.match(source, /Object\.keys\(body\).*write_plan/);
   assert.doesNotMatch(source, /price_observations|method:\s*'POST'|insert\(|upsert\(|rpc\(|update\(|delete\(/i);
+  assert.doesNotMatch(source, /SUPABASE_SERVICE_ROLE_KEY/);
 });
 
 test('desktop pilot UI and local pipeline cannot opt into apply or audit', async () => {

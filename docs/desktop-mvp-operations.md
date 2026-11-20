@@ -33,10 +33,9 @@ Review and deploy from a trusted administrative workstation only:
 
 ```bash
 supabase functions deploy desktop-price-update --project-ref <project-ref>
-supabase secrets set SUPABASE_SERVICE_ROLE_KEY=<service-role-key> --project-ref <project-ref>
 ```
 
-The service-role key remains only in Edge Function secrets and is used only for read-only preflight queries because the authenticated desktop RLS scope does not expose all configuration/shop/offer relations. It must never be passed to Electron, placed in `desktop/public-config.json`, committed, or logged.
+The preflight-only function uses the authenticated user's JWT plus existing RLS SELECT policies; it needs no service-role secret. Administrative keys must never be passed to Electron, placed in `desktop/public-config.json`, committed, or logged.
 
 ## Controlled first client test
 
