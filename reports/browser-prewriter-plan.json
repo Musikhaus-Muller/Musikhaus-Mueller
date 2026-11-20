@@ -1,0 +1,3509 @@
+{
+  "writes": false,
+  "purpose": "pre_writer_browser_shadow_plan",
+  "anomaly_threshold_pct": 20,
+  "shops": [
+    {
+      "shop": "Hot Sound",
+      "artifact_observed_at": "2026-11-17T13:09:16.204Z",
+      "source_scope": "browser_full_shadow",
+      "source_writes": false,
+      "summary": {
+        "total": 27,
+        "eligible": 27,
+        "manual_review": 0,
+        "preserve_only": 0
+      },
+      "decision_lists": {
+        "eligible": [
+          "r1",
+          "r2",
+          "r4",
+          "r5",
+          "r6",
+          "r7",
+          "r8",
+          "r9",
+          "r10",
+          "r11",
+          "r13",
+          "r14",
+          "r19",
+          "r20",
+          "r21",
+          "r28",
+          "r30",
+          "r31",
+          "r32",
+          "r33",
+          "r34",
+          "r35",
+          "r36",
+          "r37",
+          "r38",
+          "r39",
+          "r40"
+        ],
+        "manual_review": [],
+        "preserve_only": []
+      },
+      "rows": [
+        {
+          "reference": "r1",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+          "identity": {},
+          "sku": null,
+          "observed_price": 1858,
+          "currency": "EUR",
+          "previous_price": 1858,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems MAUI 11 G3",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+              "identity": {
+                "name": "LD Systems MAUI 11 G3",
+                "sku": "AHLDMAUI11G3",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 92900,
+                    "source": "json_ld",
+                    "raw": "929"
+                  }
+                ]
+              },
+              "sku": "AHLDMAUI11G3",
+              "observed_price": 929,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 92900,
+                  "source": "json_ld",
+                  "raw": "929"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r2",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-set-2-schwarz-11714",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-set-2-schwarz-11714",
+          "identity": {
+            "name": "LD Systems Maui 11 G3 SET 2 schwarz",
+            "sku": "HSSETMAUI11G3SET2",
+            "brand": "LD Systems",
+            "prices": [
+              {
+                "cents": 185800,
+                "source": "json_ld",
+                "raw": "1858"
+              }
+            ]
+          },
+          "sku": "HSSETMAUI11G3SET2",
+          "observed_price": 1858,
+          "currency": "EUR",
+          "previous_price": 2047,
+          "delta": -189,
+          "delta_pct": -9.233023937469467,
+          "price_source": "json_ld",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r4",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-set-2-schwarz-11711",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-set-2-schwarz-11711",
+          "identity": {
+            "name": "LD Systems Maui 28 G3 SET 2 schwarz",
+            "sku": "HSSETMAUI28G3SET2",
+            "brand": "LD Systems",
+            "prices": [
+              {
+                "cents": 281600,
+                "source": "json_ld",
+                "raw": "2816"
+              }
+            ]
+          },
+          "sku": "HSSETMAUI28G3SET2",
+          "observed_price": 2816,
+          "currency": "EUR",
+          "previous_price": 2839,
+          "delta": -23,
+          "delta_pct": -0.8101444170482565,
+          "price_source": "json_ld",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r5",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+          "identity": {},
+          "sku": null,
+          "observed_price": 2578,
+          "currency": "EUR",
+          "previous_price": 2590,
+          "delta": -12,
+          "delta_pct": -0.4633204633204633,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems MAUI 28 G3",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+              "identity": {
+                "name": "LD Systems MAUI 28 G3",
+                "sku": "AHLDMAUI28G3",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 128900,
+                    "source": "json_ld",
+                    "raw": "1289"
+                  }
+                ]
+              },
+              "sku": "AHLDMAUI28G3",
+              "observed_price": 1289,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 128900,
+                  "source": "json_ld",
+                  "raw": "1289"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r6",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-w-weiss-11672",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-w-weiss-11672",
+          "identity": {},
+          "sku": null,
+          "observed_price": 2698,
+          "currency": "EUR",
+          "previous_price": 2878,
+          "delta": -180,
+          "delta_pct": -6.254343293954134,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems MAUI 28 G3 W weiß",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-w-weiss-11672",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-w-weiss-11672",
+              "identity": {
+                "name": "LD Systems MAUI 28 G3 W weiß",
+                "sku": "AHLDMAUI28G3W",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 134900,
+                    "source": "json_ld",
+                    "raw": "1349"
+                  }
+                ]
+              },
+              "sku": "AHLDMAUI28G3W",
+              "observed_price": 1349,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 134900,
+                  "source": "json_ld",
+                  "raw": "1349"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r7",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-mix-schwarz-13382",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-mix-schwarz-13382",
+          "identity": {},
+          "sku": null,
+          "observed_price": 3098,
+          "currency": "EUR",
+          "previous_price": 3098,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems MAUI 28 G3 MIX schwarz",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-mix-schwarz-13382",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-mix-schwarz-13382",
+              "identity": {
+                "name": "LD Systems MAUI 28 G3 MIX schwarz",
+                "sku": "AHLDMAUI28G3MIX",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 154900,
+                    "source": "json_ld",
+                    "raw": "1549"
+                  }
+                ]
+              },
+              "sku": "AHLDMAUI28G3MIX",
+              "observed_price": 1549,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 154900,
+                  "source": "json_ld",
+                  "raw": "1549"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r8",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
+          "identity": {
+            "name": "LD Systems MAUI 44 G2 SET2",
+            "sku": "HSSETMAUI44G2SET2",
+            "brand": "LD Systems",
+            "prices": [
+              {
+                "cents": 399800,
+                "source": "json_ld",
+                "raw": "3998"
+              }
+            ]
+          },
+          "sku": "HSSETMAUI44G2SET2",
+          "observed_price": 3998,
+          "currency": "EUR",
+          "previous_price": 3998,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "json_ld",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r9",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
+          "identity": {},
+          "sku": null,
+          "observed_price": 4544,
+          "currency": "EUR",
+          "previous_price": 4544,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems MAUI 44 G2 SET2",
+              "quantity": 1,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
+              "identity": {
+                "name": "LD Systems MAUI 44 G2 SET2",
+                "sku": "HSSETMAUI44G2SET2",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 399800,
+                    "source": "json_ld",
+                    "raw": "3998"
+                  }
+                ]
+              },
+              "sku": "HSSETMAUI44G2SET2",
+              "observed_price": 3998,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 399800,
+                  "source": "json_ld",
+                  "raw": "3998"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems MAUI 44 G2 SUB PC",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-sub-pc-12144",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-sub-pc-12144",
+              "identity": {
+                "name": "LD Systems MAUI 44 G2 SUB PC",
+                "sku": "AHLDM44G2SUBPC",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 5900,
+                    "source": "json_ld",
+                    "raw": "59"
+                  }
+                ]
+              },
+              "sku": "AHLDM44G2SUBPC",
+              "observed_price": 59,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 5900,
+                  "source": "json_ld",
+                  "raw": "59"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems MAUI 44 G2 SAT BAG",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-sat-bag-12145",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-sat-bag-12145",
+              "identity": {
+                "name": "LD Systems MAUI 44 G2 SAT BAG",
+                "sku": "AHLDM44G2SATBAG",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 9500,
+                    "source": "json_ld",
+                    "raw": "95"
+                  }
+                ]
+              },
+              "sku": "AHLDM44G2SATBAG",
+              "observed_price": 95,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 9500,
+                  "source": "json_ld",
+                  "raw": "95"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems MAUI 44 G2 CB",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-cb-12143",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-cb-12143",
+              "identity": {
+                "name": "LD Systems MAUI 44 G2 CB",
+                "sku": "AHLDM44G2CB",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 11900,
+                    "source": "json_ld",
+                    "raw": "119"
+                  }
+                ]
+              },
+              "sku": "AHLDM44G2CB",
+              "observed_price": 119,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 11900,
+                  "source": "json_ld",
+                  "raw": "119"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r10",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+          "identity": {},
+          "sku": null,
+          "observed_price": 3348,
+          "currency": "EUR",
+          "previous_price": 3328,
+          "delta": 20,
+          "delta_pct": 0.6009615384615385,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems MAUI 11 G3",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+              "identity": {
+                "name": "LD Systems MAUI 11 G3",
+                "sku": "AHLDMAUI11G3",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 92900,
+                    "source": "json_ld",
+                    "raw": "929"
+                  }
+                ]
+              },
+              "sku": "AHLDMAUI11G3",
+              "observed_price": 929,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 92900,
+                  "source": "json_ld",
+                  "raw": "929"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems MAUI 11 G3 SUB",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-sub-11682",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-sub-11682",
+              "identity": {
+                "name": "LD Systems  MAUI 11 G3 SUB",
+                "sku": "AHLDM11G3SUB",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 74500,
+                    "source": "json_ld",
+                    "raw": "745"
+                  }
+                ]
+              },
+              "sku": "AHLDM11G3SUB",
+              "observed_price": 745,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 74500,
+                  "source": "json_ld",
+                  "raw": "745"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r11",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+          "identity": {},
+          "sku": null,
+          "observed_price": 4456,
+          "currency": "EUR",
+          "previous_price": 4468,
+          "delta": -12,
+          "delta_pct": -0.26857654431512984,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems MAUI 28 G3",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+              "identity": {
+                "name": "LD Systems MAUI 28 G3",
+                "sku": "AHLDMAUI28G3",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 128900,
+                    "source": "json_ld",
+                    "raw": "1289"
+                  }
+                ]
+              },
+              "sku": "AHLDMAUI28G3",
+              "observed_price": 1289,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 128900,
+                  "source": "json_ld",
+                  "raw": "1289"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems MAUI 28 G3 SUB",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-sub-11684",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-sub-11684",
+              "identity": {
+                "name": "LD Systems MAUI 28 G3 SUB",
+                "sku": "AHLDM28G3SUB",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 93900,
+                    "source": "json_ld",
+                    "raw": "939"
+                  }
+                ]
+              },
+              "sku": "AHLDM28G3SUB",
+              "observed_price": 939,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 93900,
+                  "source": "json_ld",
+                  "raw": "939"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r13",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-11-g2-316",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-11-g2-316",
+          "identity": {},
+          "sku": null,
+          "observed_price": 839,
+          "currency": "EUR",
+          "previous_price": 839,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems MAUI 11 G2",
+              "quantity": 1,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-11-g2-316",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-11-g2-316",
+              "identity": {
+                "name": "LD Systems MAUI 11 G2",
+                "sku": "AHLDMAUI11G2",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 72900,
+                    "source": "json_ld",
+                    "raw": "729"
+                  }
+                ]
+              },
+              "sku": "AHLDMAUI11G2",
+              "observed_price": 729,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 72900,
+                  "source": "json_ld",
+                  "raw": "729"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems MAUI 11 G2 SAT BAG",
+              "quantity": 1,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-11-g2-sat-bag-317",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-11-g2-sat-bag-317",
+              "identity": {
+                "name": "LD Systems MAUI 11 G2 SAT BAG",
+                "sku": "AHLDM11G2SATBAG",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 6500,
+                    "source": "json_ld",
+                    "raw": "65"
+                  }
+                ]
+              },
+              "sku": "AHLDM11G2SATBAG",
+              "observed_price": 65,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 6500,
+                  "source": "json_ld",
+                  "raw": "65"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems MAUI 11 G2 SUB PC",
+              "quantity": 1,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-11-g2-sub-pc-318",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-11-g2-sub-pc-318",
+              "identity": {
+                "name": "LD Systems MAUI 11 G2 SUB PC",
+                "sku": "AHLDM11G2SUBPC",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 4500,
+                    "source": "json_ld",
+                    "raw": "45"
+                  }
+                ]
+              },
+              "sku": "AHLDM11G2SUBPC",
+              "observed_price": 45,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 4500,
+                  "source": "json_ld",
+                  "raw": "45"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r14",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-maui-28-g2-319",
+          "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g2-319",
+          "identity": {},
+          "sku": null,
+          "observed_price": 928,
+          "currency": "EUR",
+          "previous_price": 928,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems MAUI 28 G2",
+              "quantity": 1,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-28-g2-319",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g2-319",
+              "identity": {
+                "name": "LD Systems MAUI 28 G2",
+                "sku": "AHLDMAUI28G2",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 79800,
+                    "source": "json_ld",
+                    "raw": "798"
+                  }
+                ]
+              },
+              "sku": "AHLDMAUI28G2",
+              "observed_price": 798,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 79800,
+                  "source": "json_ld",
+                  "raw": "798"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems MAUI 28 G2 SAT BAG",
+              "quantity": 1,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-28-g2-sat-bag-320",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g2-sat-bag-320",
+              "identity": {
+                "name": "LD Systems MAUI 28 G2 SAT BAG",
+                "sku": "AHLDM28G2SATBAG",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 8500,
+                    "source": "json_ld",
+                    "raw": "85"
+                  }
+                ]
+              },
+              "sku": "AHLDM28G2SATBAG",
+              "observed_price": 85,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 8500,
+                  "source": "json_ld",
+                  "raw": "85"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems MAUI 28 G2 SUB PC",
+              "quantity": 1,
+              "url": "https://www.hotsound-store.com/ld-systems-maui-28-g2-sub-pc-321",
+              "final_url": "https://www.hotsound-store.com/ld-systems-maui-28-g2-sub-pc-321",
+              "identity": {
+                "name": "LD Systems MAUI 28 G2 SUB PC",
+                "sku": "AHLDM28G2SUBPC",
+                "brand": "LD Systems",
+                "prices": [
+                  {
+                    "cents": 4500,
+                    "source": "json_ld",
+                    "raw": "45"
+                  }
+                ]
+              },
+              "sku": "AHLDM28G2SUBPC",
+              "observed_price": 45,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 4500,
+                  "source": "json_ld",
+                  "raw": "45"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r19",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-stinger-g3-event-set-a-aktivsystem-9635",
+          "final_url": "https://www.hotsound-store.com/ld-systems-stinger-g3-event-set-a-aktivsystem-9635",
+          "identity": {
+            "name": "LD Systems STINGER G3 EVENT SET A Aktivsystem",
+            "sku": "AHLDEBSETEVENTA",
+            "brand": "LD Systems",
+            "prices": [
+              {
+                "cents": 321900,
+                "source": "json_ld",
+                "raw": "3219"
+              }
+            ]
+          },
+          "sku": "AHLDEBSETEVENTA",
+          "observed_price": 3219,
+          "currency": "EUR",
+          "previous_price": 3219,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "json_ld",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r20",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-stinger-g3-power-set-a-aktivsystem-9639",
+          "final_url": "https://www.hotsound-store.com/ld-systems-stinger-g3-power-set-a-aktivsystem-9639",
+          "identity": {
+            "name": "LD Systems STINGER G3 POWER SET A Aktivsystem",
+            "sku": "AHLDEBSETPOWERA",
+            "brand": "LD Systems",
+            "prices": [
+              {
+                "cents": 416900,
+                "source": "json_ld",
+                "raw": "4169"
+              }
+            ]
+          },
+          "sku": "AHLDEBSETPOWERA",
+          "observed_price": 4169,
+          "currency": "EUR",
+          "previous_price": 4169,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "json_ld",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r21",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-stinger-g3-impact-set-a-aktivsystem-9637",
+          "final_url": "https://www.hotsound-store.com/ld-systems-stinger-g3-impact-set-a-aktivsystem-9637",
+          "identity": {
+            "name": "LD Systems STINGER G3 IMPACT SET A Aktivsystem",
+            "sku": "AHLDEBSETIMPACTA",
+            "brand": "LD Systems",
+            "prices": [
+              {
+                "cents": 689900,
+                "source": "json_ld",
+                "raw": "6899"
+              }
+            ]
+          },
+          "sku": "AHLDEBSETIMPACTA",
+          "observed_price": 6899,
+          "currency": "EUR",
+          "previous_price": 6899,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "json_ld",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r28",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/ld-systems-icoa-pro-12a-club-pa-set-16057",
+          "final_url": "https://www.hotsound-store.com/ld-systems-icoa-pro-12a-club-pa-set-16057",
+          "identity": {
+            "name": "LD Systems ICOA PRO 12A Club PA Set",
+            "sku": "AHLDICOA12PROCLUB",
+            "brand": "LD Systems",
+            "prices": [
+              {
+                "cents": 659900,
+                "source": "json_ld",
+                "raw": "6599"
+              }
+            ]
+          },
+          "sku": "AHLDICOA12PROCLUB",
+          "observed_price": 6599,
+          "currency": "EUR",
+          "previous_price": 6599,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "json_ld",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r30",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/dap-frigga-stereo-aktives-stereo-saeulen-pa-system-schwarz-14921",
+          "final_url": "https://www.hotsound-store.com/dap-frigga-stereo-aktives-stereo-saeulen-pa-system-schwarz-14921",
+          "identity": {
+            "name": "DAP Frigga Stereo - Aktives Stereo Säulen-PA-System schwarz",
+            "sku": "HSSETFRIGGASTEREOSW",
+            "brand": "DAP",
+            "prices": [
+              {
+                "cents": 229000,
+                "source": "json_ld",
+                "raw": "2290"
+              }
+            ]
+          },
+          "sku": "HSSETFRIGGASTEREOSW",
+          "observed_price": 2290,
+          "currency": "EUR",
+          "previous_price": 2290,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "json_ld",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r31",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+          "final_url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+          "identity": {},
+          "sku": null,
+          "observed_price": 2698,
+          "currency": "EUR",
+          "previous_price": 2698,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "DAP Frigga weiß",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+              "final_url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+              "identity": {
+                "name": "DAP Frigga - Aktives Säulen-PA-System weiß",
+                "sku": "HID3881",
+                "brand": "DAP",
+                "prices": [
+                  {
+                    "cents": 134900,
+                    "source": "json_ld",
+                    "raw": "1349"
+                  }
+                ]
+              },
+              "sku": "HID3881",
+              "observed_price": 1349,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 134900,
+                  "source": "json_ld",
+                  "raw": "1349"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r32",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/dap-frigga-stereo-premium-set-aktives-stereo-saeulen-pa-system-schwarz-14923",
+          "final_url": "https://www.hotsound-store.com/dap-frigga-stereo-premium-set-aktives-stereo-saeulen-pa-system-schwarz-14923",
+          "identity": {
+            "name": "DAP Frigga Stereo Premium Set - Aktives Stereo Säulen-PA-System schwarz",
+            "sku": "HSSETFRIGGASTEREOSWCV",
+            "brand": "DAP",
+            "prices": [
+              {
+                "cents": 284800,
+                "source": "json_ld",
+                "raw": "2848"
+              }
+            ]
+          },
+          "sku": "HSSETFRIGGASTEREOSWCV",
+          "observed_price": 2848,
+          "currency": "EUR",
+          "previous_price": 2848,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "json_ld",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r33",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+          "final_url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+          "identity": {},
+          "sku": null,
+          "observed_price": 3166,
+          "currency": "EUR",
+          "previous_price": 3166,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "DAP Frigga weiß",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+              "final_url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+              "identity": {
+                "name": "DAP Frigga - Aktives Säulen-PA-System weiß",
+                "sku": "HID3881",
+                "brand": "DAP",
+                "prices": [
+                  {
+                    "cents": 134900,
+                    "source": "json_ld",
+                    "raw": "1349"
+                  }
+                ]
+              },
+              "sku": "HID3881",
+              "observed_price": 1349,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 134900,
+                  "source": "json_ld",
+                  "raw": "1349"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "DAP Bag für Frigga Tops",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/dap-bag-fuer-frigga-tops-13260",
+              "final_url": "https://www.hotsound-store.com/dap-bag-fuer-frigga-tops-13260",
+              "identity": {
+                "name": "DAP Bag für Frigga Tops",
+                "sku": "HID3879",
+                "brand": "DAP",
+                "prices": [
+                  {
+                    "cents": 12900,
+                    "source": "json_ld",
+                    "raw": "129"
+                  }
+                ]
+              },
+              "sku": "HID3879",
+              "observed_price": 129,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 12900,
+                  "source": "json_ld",
+                  "raw": "129"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "DAP Transport Cover für Frigga Sub",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/dap-transport-cover-fuer-frigga-sub-13259",
+              "final_url": "https://www.hotsound-store.com/dap-transport-cover-fuer-frigga-sub-13259",
+              "identity": {
+                "name": "DAP Transport Cover für Frigga Sub",
+                "sku": "HID3878",
+                "brand": "DAP",
+                "prices": [
+                  {
+                    "cents": 10500,
+                    "source": "json_ld",
+                    "raw": "105"
+                  }
+                ]
+              },
+              "sku": "HID3878",
+              "observed_price": 105,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 10500,
+                  "source": "json_ld",
+                  "raw": "105"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r34",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-schwarz-13257",
+          "final_url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-schwarz-13257",
+          "identity": {},
+          "sku": null,
+          "observed_price": 1379,
+          "currency": "EUR",
+          "previous_price": 1379,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "DAP Frigga schwarz",
+              "quantity": 1,
+              "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-schwarz-13257",
+              "final_url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-schwarz-13257",
+              "identity": {
+                "name": "DAP Frigga - Aktives Säulen-PA-System schwarz",
+                "sku": "HID3880",
+                "brand": "DAP",
+                "prices": [
+                  {
+                    "cents": 114500,
+                    "source": "json_ld",
+                    "raw": "1145"
+                  }
+                ]
+              },
+              "sku": "HID3880",
+              "observed_price": 1145,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 114500,
+                  "source": "json_ld",
+                  "raw": "1145"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "DAP Bag für Frigga Tops",
+              "quantity": 1,
+              "url": "https://www.hotsound-store.com/dap-bag-fuer-frigga-tops-13260",
+              "final_url": "https://www.hotsound-store.com/dap-bag-fuer-frigga-tops-13260",
+              "identity": {
+                "name": "DAP Bag für Frigga Tops",
+                "sku": "HID3879",
+                "brand": "DAP",
+                "prices": [
+                  {
+                    "cents": 12900,
+                    "source": "json_ld",
+                    "raw": "129"
+                  }
+                ]
+              },
+              "sku": "HID3879",
+              "observed_price": 129,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 12900,
+                  "source": "json_ld",
+                  "raw": "129"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "DAP Transport Cover für Frigga Sub",
+              "quantity": 1,
+              "url": "https://www.hotsound-store.com/dap-transport-cover-fuer-frigga-sub-13259",
+              "final_url": "https://www.hotsound-store.com/dap-transport-cover-fuer-frigga-sub-13259",
+              "identity": {
+                "name": "DAP Transport Cover für Frigga Sub",
+                "sku": "HID3878",
+                "brand": "DAP",
+                "prices": [
+                  {
+                    "cents": 10500,
+                    "source": "json_ld",
+                    "raw": "105"
+                  }
+                ]
+              },
+              "sku": "HID3878",
+              "observed_price": 105,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 10500,
+                  "source": "json_ld",
+                  "raw": "105"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r35",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+          "final_url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+          "identity": {},
+          "sku": null,
+          "observed_price": 1583,
+          "currency": "EUR",
+          "previous_price": 1583,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "DAP Frigga weiß",
+              "quantity": 1,
+              "url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+              "final_url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+              "identity": {
+                "name": "DAP Frigga - Aktives Säulen-PA-System weiß",
+                "sku": "HID3881",
+                "brand": "DAP",
+                "prices": [
+                  {
+                    "cents": 134900,
+                    "source": "json_ld",
+                    "raw": "1349"
+                  }
+                ]
+              },
+              "sku": "HID3881",
+              "observed_price": 1349,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 134900,
+                  "source": "json_ld",
+                  "raw": "1349"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "DAP Bag für Frigga Tops",
+              "quantity": 1,
+              "url": "https://www.hotsound-store.com/dap-bag-fuer-frigga-tops-13260",
+              "final_url": "https://www.hotsound-store.com/dap-bag-fuer-frigga-tops-13260",
+              "identity": {
+                "name": "DAP Bag für Frigga Tops",
+                "sku": "HID3879",
+                "brand": "DAP",
+                "prices": [
+                  {
+                    "cents": 12900,
+                    "source": "json_ld",
+                    "raw": "129"
+                  }
+                ]
+              },
+              "sku": "HID3879",
+              "observed_price": 129,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 12900,
+                  "source": "json_ld",
+                  "raw": "129"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "DAP Transport Cover für Frigga Sub",
+              "quantity": 1,
+              "url": "https://www.hotsound-store.com/dap-transport-cover-fuer-frigga-sub-13259",
+              "final_url": "https://www.hotsound-store.com/dap-transport-cover-fuer-frigga-sub-13259",
+              "identity": {
+                "name": "DAP Transport Cover für Frigga Sub",
+                "sku": "HID3878",
+                "brand": "DAP",
+                "prices": [
+                  {
+                    "cents": 10500,
+                    "source": "json_ld",
+                    "raw": "105"
+                  }
+                ]
+              },
+              "sku": "HID3878",
+              "observed_price": 105,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 10500,
+                  "source": "json_ld",
+                  "raw": "105"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r36",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/wharfedale-pro-delta-x218b-tough-tone-passiv-pa-subwoofer-4873",
+          "final_url": "https://www.hotsound-store.com/wharfedale-pro-delta-x218b-tough-tone-passiv-pa-subwoofer-4873",
+          "identity": {},
+          "sku": null,
+          "observed_price": 1698,
+          "currency": "EUR",
+          "previous_price": 1698,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "Wharfedale Pro Delta X218B",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/wharfedale-pro-delta-x218b-tough-tone-passiv-pa-subwoofer-4873",
+              "final_url": "https://www.hotsound-store.com/wharfedale-pro-delta-x218b-tough-tone-passiv-pa-subwoofer-4873",
+              "identity": {
+                "name": "Wharfedale Pro Delta X218B Tough-Tone - passiv PA Subwoofer",
+                "sku": "IADDELTAX218B",
+                "brand": "Wharfedale Pro",
+                "prices": [
+                  {
+                    "cents": 84900,
+                    "source": "json_ld",
+                    "raw": "849"
+                  }
+                ]
+              },
+              "sku": "IADDELTAX218B",
+              "observed_price": 849,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 84900,
+                  "source": "json_ld",
+                  "raw": "849"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r37",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
+          "final_url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
+          "identity": {},
+          "sku": null,
+          "observed_price": 1796,
+          "currency": "EUR",
+          "previous_price": 1796,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "Wharfedale Pro Delta F18B",
+              "quantity": 2,
+              "url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
+              "final_url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
+              "identity": {
+                "name": "Wharfedale Pro Delta F18B - horngeladener 18\" Subwoofer passiv",
+                "sku": "IADDELTAF18B",
+                "brand": "Wharfedale Pro",
+                "prices": [
+                  {
+                    "cents": 89800,
+                    "source": "json_ld",
+                    "raw": "898"
+                  }
+                ]
+              },
+              "sku": "IADDELTAF18B",
+              "observed_price": 898,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 89800,
+                  "source": "json_ld",
+                  "raw": "898"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r38",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
+          "final_url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
+          "identity": {},
+          "sku": null,
+          "observed_price": 3592,
+          "currency": "EUR",
+          "previous_price": 3592,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "Wharfedale Pro Delta F18B",
+              "quantity": 4,
+              "url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
+              "final_url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
+              "identity": {
+                "name": "Wharfedale Pro Delta F18B - horngeladener 18\" Subwoofer passiv",
+                "sku": "IADDELTAF18B",
+                "brand": "Wharfedale Pro",
+                "prices": [
+                  {
+                    "cents": 89800,
+                    "source": "json_ld",
+                    "raw": "898"
+                  }
+                ]
+              },
+              "sku": "IADDELTAF18B",
+              "observed_price": 898,
+              "currency": "EUR",
+              "price_source": "json_ld",
+              "price_candidates": [
+                {
+                  "cents": 89800,
+                  "source": "json_ld",
+                  "raw": "898"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r39",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/wharfedale-pro-wla-210xp-line-array-set-set-1-19041",
+          "final_url": "https://www.hotsound-store.com/wharfedale-pro-wla-210xp-line-array-set-set-1-19041",
+          "identity": {
+            "name": "Wharfedale Pro WLA-210XP Line Array Set Set 1",
+            "sku": "HSSETWLA210XPSET1",
+            "brand": "Wharfedale Pro",
+            "prices": [
+              {
+                "cents": 1169000,
+                "source": "json_ld",
+                "raw": "11690"
+              }
+            ]
+          },
+          "sku": "HSSETWLA210XPSET1",
+          "observed_price": 11690,
+          "currency": "EUR",
+          "previous_price": 11690,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "json_ld",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r40",
+          "shop": "Hot Sound",
+          "url": "https://www.hotsound-store.com/wharfedale-pro-wla-210xp-line-array-set-amped-set-1-19042",
+          "final_url": "https://www.hotsound-store.com/wharfedale-pro-wla-210xp-line-array-set-amped-set-1-19042",
+          "identity": {
+            "name": "Wharfedale Pro WLA-210XP Line Array Set Amped Set 1",
+            "sku": "HSSETWLA210XPSETAMPED1",
+            "brand": "Wharfedale Pro",
+            "prices": [
+              {
+                "cents": 1529000,
+                "source": "json_ld",
+                "raw": "15290"
+              }
+            ]
+          },
+          "sku": "HSSETWLA210XPSETAMPED1",
+          "observed_price": 15290,
+          "currency": "EUR",
+          "previous_price": 15290,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "json_ld",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "shop": "Thomann",
+      "artifact_observed_at": "2026-11-17T14:07:07.103Z",
+      "source_scope": "browser_full_shadow",
+      "source_writes": false,
+      "summary": {
+        "total": 29,
+        "eligible": 25,
+        "manual_review": 0,
+        "preserve_only": 4
+      },
+      "decision_lists": {
+        "eligible": [
+          "r1",
+          "r5",
+          "r6",
+          "r7",
+          "r8",
+          "r9",
+          "r10",
+          "r11",
+          "r13",
+          "r14",
+          "r15",
+          "r16",
+          "r17",
+          "r18",
+          "r19",
+          "r20",
+          "r21",
+          "r22",
+          "r23",
+          "r24",
+          "r25",
+          "r26",
+          "r27",
+          "r28",
+          "r29"
+        ],
+        "manual_review": [],
+        "preserve_only": [
+          "r2",
+          "r3",
+          "r4",
+          "r12"
+        ]
+      },
+      "rows": [
+        {
+          "reference": "r1",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_stereo_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_11_g3_stereo_bundle.htm",
+          "identity": {
+            "name": "LD Systems Maui 11 G3 Stereo Bundle",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 1839,
+          "currency": "EUR",
+          "previous_price": 1839,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r2",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_11_g3_bundle.htm",
+          "identity": {},
+          "sku": null,
+          "observed_price": null,
+          "currency": "EUR",
+          "previous_price": 2058,
+          "delta": null,
+          "delta_pct": null,
+          "price_source": null,
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "not_found",
+          "identity_valid": false,
+          "verified": false,
+          "challenge_detected": false,
+          "ambiguity_detected": true,
+          "manual_review_required": false,
+          "proposed_decision": "preserve_only",
+          "reasons": [
+            "shadow_not_found",
+            "identity_not_verified",
+            "invalid_observed_price",
+            "missing_price_source",
+            "price_evidence_ambiguous_or_missing"
+          ]
+        },
+        {
+          "reference": "r3",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm",
+          "identity": {},
+          "sku": null,
+          "observed_price": null,
+          "currency": "EUR",
+          "previous_price": 1409,
+          "delta": null,
+          "delta_pct": null,
+          "price_source": null,
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "not_found",
+          "identity_valid": false,
+          "verified": false,
+          "challenge_detected": false,
+          "ambiguity_detected": true,
+          "manual_review_required": false,
+          "proposed_decision": "preserve_only",
+          "reasons": [
+            "shadow_not_found",
+            "identity_not_verified",
+            "invalid_observed_price",
+            "missing_price_source",
+            "price_evidence_ambiguous_or_missing"
+          ]
+        },
+        {
+          "reference": "r4",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_bundle.htm",
+          "identity": {},
+          "sku": null,
+          "observed_price": null,
+          "currency": "EUR",
+          "previous_price": 2818,
+          "delta": null,
+          "delta_pct": null,
+          "price_source": null,
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "not_found",
+          "identity_valid": false,
+          "verified": false,
+          "challenge_detected": false,
+          "ambiguity_detected": true,
+          "manual_review_required": false,
+          "proposed_decision": "preserve_only",
+          "reasons": [
+            "shadow_not_found",
+            "identity_not_verified",
+            "invalid_observed_price",
+            "missing_price_source",
+            "price_evidence_ambiguous_or_missing"
+          ]
+        },
+        {
+          "reference": "r5",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
+          "identity": {},
+          "sku": null,
+          "observed_price": 2578,
+          "currency": "EUR",
+          "previous_price": 2578,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems Maui 28 G3",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
+              "identity": {
+                "name": "LD Systems Maui 28 G3",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 1289,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 128900,
+                  "source": "thomann_product_root",
+                  "raw": "1.289 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r6",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_white_stereo_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_white_stereo_bundle.htm",
+          "identity": {
+            "name": "LD Systems Maui 28 G3 White Stereo Bundle",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 2669,
+          "currency": "EUR",
+          "previous_price": 2669,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r7",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_mix_syslink_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_mix_syslink_bundle.htm",
+          "identity": {
+            "name": "LD Systems Maui 28 G3 MIX SysLink Bundle",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 3079,
+          "currency": "EUR",
+          "previous_price": 3159,
+          "delta": -80,
+          "delta_pct": -2.5324469768914213,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r8",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+          "identity": {},
+          "sku": null,
+          "observed_price": 4358,
+          "currency": "EUR",
+          "previous_price": 4358,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems Maui 44 G2",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+              "identity": {
+                "name": "LD Systems Maui 44 G2",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 2179,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 217900,
+                  "source": "thomann_product_root",
+                  "raw": "2.179 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r9",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+          "identity": {},
+          "sku": null,
+          "observed_price": 4936,
+          "currency": "EUR",
+          "previous_price": 4936,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems Maui 44 G2",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+              "identity": {
+                "name": "LD Systems Maui 44 G2",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 2179,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 217900,
+                  "source": "thomann_product_root",
+                  "raw": "2.179 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems MAUI 44 G2 SUB BAG",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/ld_systems_maui_44_g2_sub_bag.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_maui_44_g2_sub_bag.htm",
+              "identity": {
+                "name": "LD Systems Maui 44 G2 Sub Bag",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 65,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 6500,
+                  "source": "thomann_product_root",
+                  "raw": "65 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems MAUI 44 G2 SAT BAG",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/ld_systems_maui_44_g2_sat_bag.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_maui_44_g2_sat_bag.htm",
+              "identity": {
+                "name": "LD Systems Maui 44 G2 Sat Bag",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 99,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 9900,
+                  "source": "thomann_product_root",
+                  "raw": "99 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems Wheelboard f. Maui 44 G2",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/ld_systems_wheelboard_f._maui_44_g2.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_wheelboard_f._maui_44_g2.htm",
+              "identity": {
+                "name": "LD Systems Wheelboard f. Maui 44 G2",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 125,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 12500,
+                  "source": "thomann_product_root",
+                  "raw": "125 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r10",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_power_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_11_g3_power_bundle.htm",
+          "identity": {
+            "name": "LD Systems Maui 11 G3 Power Bundle",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 3309,
+          "currency": "EUR",
+          "previous_price": 3309,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r11",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_power_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_power_bundle.htm",
+          "identity": {
+            "name": "LD Systems Maui 28 G3 Power Bundle",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 4419,
+          "currency": "EUR",
+          "previous_price": 4419,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r12",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_44_g2_power_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_44_g2_power_bundle.htm",
+          "identity": {},
+          "sku": null,
+          "observed_price": null,
+          "currency": "EUR",
+          "previous_price": 7269,
+          "delta": null,
+          "delta_pct": null,
+          "price_source": null,
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "not_found",
+          "identity_valid": false,
+          "verified": false,
+          "challenge_detected": false,
+          "ambiguity_detected": true,
+          "manual_review_required": false,
+          "proposed_decision": "preserve_only",
+          "reasons": [
+            "shadow_not_found",
+            "identity_not_verified",
+            "invalid_observed_price",
+            "missing_price_source",
+            "price_evidence_ambiguous_or_missing"
+          ]
+        },
+        {
+          "reference": "r13",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_11_g2_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_11_g2_bundle.htm",
+          "identity": {
+            "name": "LD Systems Maui 11 G2 Bundle",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 749,
+          "currency": "EUR",
+          "previous_price": 749,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r14",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_maui_28_g2_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g2_bundle.htm",
+          "identity": {
+            "name": "LD Systems Maui 28 G2 Bundle",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 899,
+          "currency": "EUR",
+          "previous_price": 999,
+          "delta": -100,
+          "delta_pct": -10.01001001001001,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r15",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_dave_12_g4x_stand_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_dave_12_g4x_stand_bundle.htm",
+          "identity": {
+            "name": "LD Systems Dave 12 G4X Stand Bundle",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 1019,
+          "currency": "EUR",
+          "previous_price": 1069,
+          "delta": -50,
+          "delta_pct": -4.677268475210477,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r16",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_dave_15_g4x_stand_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_dave_15_g4x_stand_bundle.htm",
+          "identity": {
+            "name": "LD Systems Dave 15 G4X Stand Bundle",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 1275,
+          "currency": "EUR",
+          "previous_price": 1275,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r17",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_dave_18_g4x_stand_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_dave_18_g4x_stand_bundle.htm",
+          "identity": {
+            "name": "LD Systems Dave 18 G4X Stand Bundle",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 1609,
+          "currency": "EUR",
+          "previous_price": 1609,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r18",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_dave_10_g4x_install_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_dave_10_g4x_install_bundle.htm",
+          "identity": {
+            "name": "LD Systems Dave 10 G4X Install Bundle",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 748,
+          "currency": "EUR",
+          "previous_price": 748,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r19",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_stinger_10_sub15_power_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_stinger_10_sub15_power_bundle.htm",
+          "identity": {
+            "name": "LD Systems Stinger 10/Sub15 Power Bundle",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 3305,
+          "currency": "EUR",
+          "previous_price": 3305,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r20",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_stinger_12_sub18_power_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_stinger_12_sub18_power_bundle.htm",
+          "identity": {
+            "name": "LD Systems Stinger 12/Sub18 Power Bundle",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 3919,
+          "currency": "EUR",
+          "previous_price": 3959,
+          "delta": -40,
+          "delta_pct": -1.0103561505430665,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r21",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_stinger_high_power_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_stinger_high_power_bundle.htm",
+          "identity": {
+            "name": "LD Systems Stinger High Power Bundle",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 6569,
+          "currency": "EUR",
+          "previous_price": 6669,
+          "delta": -100,
+          "delta_pct": -1.49947518368571,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r22",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_stinger_8_sub15_basic_bundle.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_stinger_8_sub15_basic_bundle.htm",
+          "identity": {
+            "name": "LD Systems Stinger 8/Sub15 Basic Bundle",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 2109,
+          "currency": "EUR",
+          "previous_price": 2099,
+          "delta": 10,
+          "delta_pct": 0.47641734159123394,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r23",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+          "identity": {},
+          "sku": null,
+          "observed_price": 1643.8,
+          "currency": "EUR",
+          "previous_price": 1753.8,
+          "delta": -110,
+          "delta_pct": -6.272094879689817,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems ICOA 12 A BT",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+              "identity": {
+                "name": "LD Systems ICOA 12 A BT",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 429,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 42900,
+                  "source": "thomann_product_root",
+                  "raw": "429 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems ICOA SUB 15 A",
+              "quantity": 1,
+              "url": "https://www.thomann.de/de/ld_systems_icoa_sub_15_a.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_icoa_sub_15_a.htm",
+              "identity": {
+                "name": "LD Systems ICOA SUB 15 A",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 619,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 61900,
+                  "source": "thomann_product_root",
+                  "raw": "619 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "Gravity SS 5211 B Set 1 Speaker Stand",
+              "quantity": 1,
+              "url": "https://www.thomann.de/de/gravity_ss_5211_b_set_1_speaker_stand.htm",
+              "final_url": "https://www.thomann.de/de/gravity_ss_5211_b_set_1_speaker_stand.htm",
+              "identity": {
+                "name": "Gravity SS 5211 B Set 1 Speaker Stand",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 129,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 12900,
+                  "source": "thomann_product_root",
+                  "raw": "129 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "Sommer Stage 22 SGHN 6 m",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/sommer_cable_stage_22_sghn_bk_60m.htm",
+              "final_url": "https://www.thomann.de/de/sommer_cable_stage_22_sghn_bk_60m.htm",
+              "identity": {
+                "name": "Sommer Cable Stage 22 SGHN BK 6,0m",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 18.9,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 1890,
+                  "source": "thomann_product_root",
+                  "raw": "18,90 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r24",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+          "identity": {},
+          "sku": null,
+          "observed_price": 2637,
+          "currency": "EUR",
+          "previous_price": 2637,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems ICOA 12 A BT",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+              "identity": {
+                "name": "LD Systems ICOA 12 A BT",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 429,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 42900,
+                  "source": "thomann_product_root",
+                  "raw": "429 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems ICOA SUB 18 A",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/ld_systems_icoa_sub_18_a.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_icoa_sub_18_a.htm",
+              "identity": {
+                "name": "LD Systems ICOA SUB 18 A",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 845,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 84500,
+                  "source": "thomann_product_root",
+                  "raw": "845 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "Gravity SP 2332 B",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/gravity_sp_2332_b_speaker_stand.htm",
+              "final_url": "https://www.thomann.de/de/gravity_sp_2332_b_speaker_stand.htm",
+              "identity": {
+                "name": "Gravity SP 2332 B Speaker Stand",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 22,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 2200,
+                  "source": "thomann_product_root",
+                  "raw": "22 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "Sommer Stage 22 SG0Q 3 m",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm",
+              "final_url": "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm",
+              "identity": {
+                "name": "Sommer Cable Stage 22 SG0Q 3m",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 22.5,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 2250,
+                  "source": "thomann_product_root",
+                  "raw": "22,50 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r25",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+          "identity": {},
+          "sku": null,
+          "observed_price": 2717,
+          "currency": "EUR",
+          "previous_price": 2717,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems ICOA 15 A BT",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+              "identity": {
+                "name": "LD Systems ICOA 15 A BT",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 469,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 46900,
+                  "source": "thomann_product_root",
+                  "raw": "469 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems ICOA SUB 18 A",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/ld_systems_icoa_sub_18_a.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_icoa_sub_18_a.htm",
+              "identity": {
+                "name": "LD Systems ICOA SUB 18 A",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 845,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 84500,
+                  "source": "thomann_product_root",
+                  "raw": "845 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "Gravity SP 2332 B",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/gravity_sp_2332_b_speaker_stand.htm",
+              "final_url": "https://www.thomann.de/de/gravity_sp_2332_b_speaker_stand.htm",
+              "identity": {
+                "name": "Gravity SP 2332 B Speaker Stand",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 22,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 2200,
+                  "source": "thomann_product_root",
+                  "raw": "22 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "Sommer Stage 22 SG0Q 3 m",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm",
+              "final_url": "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm",
+              "identity": {
+                "name": "Sommer Cable Stage 22 SG0Q 3m",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 22.5,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 2250,
+                  "source": "thomann_product_root",
+                  "raw": "22,50 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r26",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+          "identity": {},
+          "sku": null,
+          "observed_price": 4408,
+          "currency": "EUR",
+          "previous_price": 4408,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems ICOA 15 A BT",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+              "identity": {
+                "name": "LD Systems ICOA 15 A BT",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 469,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 46900,
+                  "source": "thomann_product_root",
+                  "raw": "469 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems ICOA SUB 18 A",
+              "quantity": 4,
+              "url": "https://www.thomann.de/de/ld_systems_icoa_sub_18_a.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_icoa_sub_18_a.htm",
+              "identity": {
+                "name": "LD Systems ICOA SUB 18 A",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 845,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 84500,
+                  "source": "thomann_product_root",
+                  "raw": "845 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "Sommer Stage 22 SG0Q 3 m",
+              "quantity": 4,
+              "url": "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm",
+              "final_url": "https://www.thomann.de/de/sommer_cable_stage_22_sg0q_3m.htm",
+              "identity": {
+                "name": "Sommer Cable Stage 22 SG0Q 3m",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 22.5,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 2250,
+                  "source": "thomann_product_root",
+                  "raw": "22,50 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r27",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_pro_12_a.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_pro_12_a.htm",
+          "identity": {},
+          "sku": null,
+          "observed_price": 4949,
+          "currency": "EUR",
+          "previous_price": 4949,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "component_calc",
+          "pricing_kind": "component_cart",
+          "components": [
+            {
+              "name": "LD Systems ICOA Pro 12 A",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/ld_systems_icoa_pro_12_a.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_icoa_pro_12_a.htm",
+              "identity": {
+                "name": "LD Systems ICOA Pro 12 A",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 1089,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 108900,
+                  "source": "thomann_product_root",
+                  "raw": "1.089 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems ICOA SUB Pro 21 A",
+              "quantity": 1,
+              "url": "https://www.thomann.de/de/ld_systems_icoa_sub_pro_21_a.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_icoa_sub_pro_21_a.htm",
+              "identity": {
+                "name": "LD Systems ICOA SUB Pro 21 A",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 2190,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 219000,
+                  "source": "thomann_product_root",
+                  "raw": "2.190 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems ICOA 12 Cover",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/ld_systems_icoa_12_cover.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_icoa_12_cover.htm",
+              "identity": {
+                "name": "LD Systems ICOA 12 Cover",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 66,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 6600,
+                  "source": "thomann_product_root",
+                  "raw": "66 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems ICOA PRO SUB 21 Cover",
+              "quantity": 1,
+              "url": "https://www.thomann.de/de/ld_systems_icoa_pro_sub_21_cover.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_icoa_pro_sub_21_cover.htm",
+              "identity": {
+                "name": "LD Systems ICOA PRO SUB 21 Cover",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 89,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 8900,
+                  "source": "thomann_product_root",
+                  "raw": "89 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "LD Systems ICOA PRO SUB 21 Casterboard",
+              "quantity": 1,
+              "url": "https://www.thomann.de/de/ld_systems_icoa_pro_sub_21_casterboard.htm",
+              "final_url": "https://www.thomann.de/de/ld_systems_icoa_pro_sub_21_casterboard.htm",
+              "identity": {
+                "name": "LD Systems ICOA PRO SUB 21 Casterboard",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 196,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 19600,
+                  "source": "thomann_product_root",
+                  "raw": "196 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "Gravity SS 5211 B Set 1 Speaker Stand",
+              "quantity": 1,
+              "url": "https://www.thomann.de/de/gravity_ss_5211_b_set_1_speaker_stand.htm",
+              "final_url": "https://www.thomann.de/de/gravity_ss_5211_b_set_1_speaker_stand.htm",
+              "identity": {
+                "name": "Gravity SS 5211 B Set 1 Speaker Stand",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 129,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 12900,
+                  "source": "thomann_product_root",
+                  "raw": "129 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            },
+            {
+              "name": "Sommer Stage 22 SGHN 5 m",
+              "quantity": 2,
+              "url": "https://www.thomann.de/de/sommer_cable_stage_22_sghn_bk_50m.htm",
+              "final_url": "https://www.thomann.de/de/sommer_cable_stage_22_sghn_bk_50m.htm",
+              "identity": {
+                "name": "Sommer Cable Stage 22 SGHN BK 5,0m",
+                "sku": ""
+              },
+              "sku": null,
+              "observed_price": 17.5,
+              "currency": "EUR",
+              "price_source": "thomann_product_root",
+              "price_candidates": [
+                {
+                  "cents": 1750,
+                  "source": "thomann_product_root",
+                  "raw": "17,50 €"
+                }
+              ],
+              "decision": "refreshable",
+              "identity_valid": true,
+              "challenge_detected": false,
+              "http_status": 200,
+              "verified": true,
+              "evidence_valid": true
+            }
+          ],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r28",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_pro_12a_21a_power_set.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_pro_12a_21a_power_set.htm",
+          "identity": {
+            "name": "LD Systems ICOA Pro 12A/21A Power Set",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 7345,
+          "currency": "EUR",
+          "previous_price": 7345,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        },
+        {
+          "reference": "r29",
+          "shop": "Thomann",
+          "url": "https://www.thomann.de/de/ld_systems_icoa_pro_15a_21a_power_set.htm",
+          "final_url": "https://www.thomann.de/de/ld_systems_icoa_pro_15a_21a_power_set.htm",
+          "identity": {
+            "name": "LD Systems ICOA Pro 15A/21A Power Set",
+            "sku": ""
+          },
+          "sku": null,
+          "observed_price": 7759,
+          "currency": "EUR",
+          "previous_price": 7759,
+          "delta": 0,
+          "delta_pct": 0,
+          "price_source": "thomann_product_root",
+          "pricing_kind": "direct_price",
+          "components": [],
+          "shadow_decision": "refreshable",
+          "identity_valid": true,
+          "verified": true,
+          "challenge_detected": false,
+          "ambiguity_detected": false,
+          "manual_review_required": false,
+          "proposed_decision": "eligible",
+          "reasons": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+import { spawn } from 'node:child_process';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { smokeChromium } from '../desktop/services/browser-runtime.mjs';
+const appRoot = path.resolve(process.argv[2] || 'dist/mac-arm64/Musikhaus-Mueller-Price-Updater.app');
+const executable = path.join(appRoot, 'Contents', 'MacOS', 'Musikhaus-Mueller-Price-Updater');
+await fs.access(executable);
+const resourcesPath = path.join(appRoot, 'Contents', 'Resources');
+const { chromium } = await import('playwright');
+const runtime = await smokeChromium({ chromium, packaged: true, resourcesPath, platform: 'darwin', arch: 'arm64' });
+const child = spawn(executable, [], { env: { ...process.env, DESKTOP_SMOKE_EXIT: '1', DESKTOP_SUPABASE_URL: 'https://example.supabase.co', DESKTOP_SUPABASE_ANON_KEY: 'public-smoke-key' }, stdio: ['ignore', 'pipe', 'pipe'] });
+let output = '';
+child.stdout.on('data', value => { output += value; }); child.stderr.on('data', value => { output += value; });
+const code = await new Promise(resolve => child.once('exit', resolve));
+if (code !== 0 || !output.includes('packaged_smoke')) throw new Error('Packaged Electron smoke failed');
+console.log(JSON.stringify({ packaged_app: 'ok', browser: runtime.executablePath }));

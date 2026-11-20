@@ -1,7 +1,11 @@
 node_modules/
+desktop/playwright-browsers/*
+!desktop/playwright-browsers/.gitkeep
 dist/
 .env
 .env.*
+desktop/public-config.json
+supabase/.temp/
 !.env.example
 .dev.vars
 .wrangler/

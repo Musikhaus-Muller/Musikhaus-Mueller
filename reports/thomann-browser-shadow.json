@@ -1,0 +1,242 @@
+{
+  "shop": "thomann",
+  "scope": "browser_canary",
+  "writes": false,
+  "observed_at": "2026-11-15T21:47:28.884Z",
+  "rows": [
+    {
+      "reference": "r1",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_stereo_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_11_g3_stereo_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 11 G3 Stereo Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Maui 11 G3 Stereo Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 183900,
+          "source": "thomann_product_root",
+          "raw": "1.839 €"
+        }
+      ],
+      "observed_price": 1839,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_source": "thomann_product_root",
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "1.839 €\n        \n        \n            -16%\n            \n                                    UVP: 2.179,80 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\"",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "refreshable",
+      "unit_price": 1839,
+      "multiplier": 1,
+      "previous_price": 1839,
+      "delta": 0,
+      "delta_pct": 0,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r6",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_white_stereo_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_white_stereo_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 28 G3 White Stereo Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Maui 28 G3 White Stereo Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 266900,
+          "source": "thomann_product_root",
+          "raw": "2.669 €"
+        }
+      ],
+      "observed_price": 2669,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_source": "thomann_product_root",
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "2.669 €\n        \n        \n            -14%\n            \n                                    UVP: 3.119,80 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Kurzfristig lieferbar (2–5 Tage)\n                            \n            \n                    \n                Kurzfristig lieferbar (2–5 Tage)\n                Dieses Produkt wurde bestellt und trifft in den nächsten Tagen bei uns ein.\n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "refreshable",
+      "unit_price": 2669,
+      "multiplier": 1,
+      "previous_price": 2669,
+      "delta": 0,
+      "delta_pct": 0,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r7",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_28_g3_mix_syslink_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_mix_syslink_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 28 G3 MIX SysLink Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Maui 28 G3 MIX SysLink Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 307900,
+          "source": "thomann_product_root",
+          "raw": "3.079 €"
+        }
+      ],
+      "observed_price": 3079,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_source": "thomann_product_root",
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "3.079 €\n        \n        \n            -26%\n            \n                                    UVP: 4.139,80 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\"",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "refreshable",
+      "unit_price": 3079,
+      "multiplier": 1,
+      "previous_price": 3159,
+      "delta": -80,
+      "delta_pct": -2.5324469768914213,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r10",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_power_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_11_g3_power_bundle.htm",
+      "http_status": 200,
+      "page_title": "LD Systems Maui 11 G3 Power Bundle – Musikhaus Thomann",
+      "product_identity": {
+        "name": "LD Systems Maui 11 G3 Power Bundle",
+        "sku": ""
+      },
+      "price_candidates": [
+        {
+          "cents": 330900,
+          "source": "thomann_product_root",
+          "raw": "3.309 €"
+        }
+      ],
+      "observed_price": 3309,
+      "identity_valid": true,
+      "challenge_detected": false,
+      "price_source": "thomann_product_root",
+      "price_diagnostics": {
+        "selector": ".fx-content-product__sidebar.price-and-availability .price__primary",
+        "container_text": "3.309 €\n        \n        \n            -18%\n            \n                                    UVP: 4.057,80 €\n                            \n            \n                \n            \n            info\n        \n\n        \n        \n                \n            UVP\n            Der unverbindlicher Verkaufspreis (UVP) ist der Preis, den der Hersteller als Verkaufspreis an den Kunden empfiehlt.\n        \n        \n        \n    \n\n                        \n            \n\n            \n    \n                            Alle Preise inkl. MwSt.\n                            \n\n    \n    \n    \n                    \n                Sofort lieferbar\n                            \n            \n                    \n                Sofort lieferbar\n                Dieses Produkt ist auf Lager und kann sofort verschickt werden. \n                                                    Informationen zum Versand\n                            \n            \n\n    \n\ntho.bootstrapModule('prod.gtmTracking', [\".buy-form-quantity-prices\"",
+        "ancestry": [
+          ".fx-content-product__sidebar.price-and-availability",
+          ".product-price-box",
+          ".fx-product-orderable"
+        ],
+        "rejected": [
+          "related product roots",
+          "accessory roots",
+          "30-Tage-Bestpreis",
+          "UVP",
+          "financing"
+        ]
+      },
+      "decision": "refreshable",
+      "unit_price": 3309,
+      "multiplier": 1,
+      "previous_price": 3309,
+      "delta": 0,
+      "delta_pct": 0,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r2",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_11_g3_bundle.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_11_g3_bundle.htm",
+      "http_status": 404,
+      "page_title": "LD Systems Maui 11 G3 Bundle – Musikhaus Thomann",
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "not_found",
+      "previous_price": 2058,
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    },
+    {
+      "reference": "r5",
+      "shop": "Thomann",
+      "url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
+      "final_url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
+      "previous_price": 2578,
+      "product_identity": {},
+      "price_candidates": [],
+      "observed_price": null,
+      "identity_valid": false,
+      "challenge_detected": false,
+      "decision": "incomplete_recipe",
+      "error": "collectionDisabled offer has no explicit componentDetails",
+      "delta": null,
+      "delta_pct": null,
+      "manual_review_required": false
+    }
+  ],
+  "summary": {
+    "tested": 6,
+    "rendered": 4,
+    "exact_identities": 4,
+    "prices_recovered": 4,
+    "unchanged": 3,
+    "changed": 1,
+    "manual_review_required": 0,
+    "blocked": 0,
+    "not_found": 1,
+    "writes": false,
+    "incomplete_recipe": 1,
+    "coverage_pct": 66.66666666666666,
+    "mode": "headed"
+  }
+}

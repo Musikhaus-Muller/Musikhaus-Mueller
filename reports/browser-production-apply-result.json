@@ -1,0 +1,672 @@
+{
+  "writes": true,
+  "started_at": "2026-11-18T01:53:48.684Z",
+  "finished_at": "2026-11-18T01:53:48.696Z",
+  "source_write_plan": "reports/browser-production-write-plan.json",
+  "source_preflight": "reports/browser-production-preflight.json",
+  "plan_sha256": "1739cd9593f2a700d2d31661300c97b89f248986df7925d989798484a30eed49",
+  "preflight_sha256": "27262366b1319be326602e17ffa838ba185b0bbf624fd37e2870c577435b7a68",
+  "totals": {
+    "planned": 0,
+    "ready": 52,
+    "rejected": 0,
+    "skipped": 4,
+    "inserted": 52,
+    "already_applied": 0,
+    "failed": 0
+  },
+  "rows": [
+    {
+      "reference": "r1",
+      "shop": "Hot Sound",
+      "offer_id": "807f31a3-ead8-4533-bbe6-f41095eed12d",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "3e6221e1-e6c5-4349-9be3-690854e50bc9"
+    },
+    {
+      "reference": "r2",
+      "shop": "Hot Sound",
+      "offer_id": "4da69de2-fde7-439f-b63d-1cdf4a4272b9",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "066313f0-3f61-42b6-8955-2f215b395c7a"
+    },
+    {
+      "reference": "r4",
+      "shop": "Hot Sound",
+      "offer_id": "0411c137-fa1c-4261-aa62-06bf4e4dbc26",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "d52793eb-c8b1-4dd0-8e65-6603e6e3b7f5"
+    },
+    {
+      "reference": "r5",
+      "shop": "Hot Sound",
+      "offer_id": "ee9fbe6b-2daa-4e3e-8fbe-3a7d40d50bea",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "399892da-77a2-4097-a907-4c365a104e30"
+    },
+    {
+      "reference": "r6",
+      "shop": "Hot Sound",
+      "offer_id": "a047eeaa-bcb0-44c6-9aae-d9e2728172a4",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "8926d5f6-cac4-4dc4-ac7c-844de4b0a169"
+    },
+    {
+      "reference": "r7",
+      "shop": "Hot Sound",
+      "offer_id": "813993d6-5673-4ab3-92c8-3d404f47060c",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "66168e5a-d0a9-4174-994b-f5130b34417c"
+    },
+    {
+      "reference": "r8",
+      "shop": "Hot Sound",
+      "offer_id": "d1008b3d-3ff8-4f80-9cd6-3486297163ed",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "e60a1911-de5b-4d12-8a9f-6a5cbe2ebcf3"
+    },
+    {
+      "reference": "r9",
+      "shop": "Hot Sound",
+      "offer_id": "c01e6949-05f3-47c2-85b7-f04742f8655b",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "d9236b61-434a-4f88-ba1a-a7fdeeb17dab"
+    },
+    {
+      "reference": "r10",
+      "shop": "Hot Sound",
+      "offer_id": "2ce530d4-2e13-4c2d-af5b-f0bb17056c97",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "e81692db-36db-4aa3-b2e0-959fbcc17302"
+    },
+    {
+      "reference": "r11",
+      "shop": "Hot Sound",
+      "offer_id": "bf8a545d-960d-4a92-964e-a5889df99471",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "f4848180-4dce-4f01-8619-edff2ee756f8"
+    },
+    {
+      "reference": "r13",
+      "shop": "Hot Sound",
+      "offer_id": "f6ba806f-6f11-4d57-87aa-b4bc25321210",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "4eb3f5d4-8455-42be-95b5-8680d8f7b4ba"
+    },
+    {
+      "reference": "r14",
+      "shop": "Hot Sound",
+      "offer_id": "cbd198f4-71f9-4a57-9ca2-382281b2b7ed",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "8e67b262-8360-465b-ac64-b7e9d1c29774"
+    },
+    {
+      "reference": "r19",
+      "shop": "Hot Sound",
+      "offer_id": "77bfff3d-fe0e-458b-a57f-dc7550108a2a",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "d5b5a7a6-75b2-4a8f-a377-65d6edfa8494"
+    },
+    {
+      "reference": "r20",
+      "shop": "Hot Sound",
+      "offer_id": "36995a7d-345e-4c78-8740-683f4e31106f",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "faa86502-7895-4558-a26f-4ec3f756a878"
+    },
+    {
+      "reference": "r21",
+      "shop": "Hot Sound",
+      "offer_id": "7c243e3d-68f0-4a46-8e41-0ab38567fc2d",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "fdf56c2b-e829-4da2-a811-d4413466cd17"
+    },
+    {
+      "reference": "r28",
+      "shop": "Hot Sound",
+      "offer_id": "655bd2b6-49f0-4aec-a04d-fa11f4ce2463",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "1dbdc101-7a7f-472a-b875-cf6a17da86d2"
+    },
+    {
+      "reference": "r30",
+      "shop": "Hot Sound",
+      "offer_id": "6fe6140b-0d70-430e-ba4b-5293f9fd3199",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "06545660-9e92-49fa-80a1-c2e6513d9ee0"
+    },
+    {
+      "reference": "r31",
+      "shop": "Hot Sound",
+      "offer_id": "a429843a-6828-4d7f-a16b-0a606df07425",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "64423e40-86d9-43a0-8df7-813016724faf"
+    },
+    {
+      "reference": "r32",
+      "shop": "Hot Sound",
+      "offer_id": "3a51da31-a6a9-43bd-b198-3bfb2b6d34ee",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "732e78a8-747e-4084-b8ba-6a633a37c6c8"
+    },
+    {
+      "reference": "r33",
+      "shop": "Hot Sound",
+      "offer_id": "739ae1bd-6d98-47c0-a301-18d958548c13",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "33313ff9-9d3a-4a66-9f2d-3f4bf1370821"
+    },
+    {
+      "reference": "r34",
+      "shop": "Hot Sound",
+      "offer_id": "8c1e6119-e0eb-4a6f-840b-3f56eb0fab4e",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "2bcadcc4-5db2-45ae-8bec-a49e6ff5c0d0"
+    },
+    {
+      "reference": "r35",
+      "shop": "Hot Sound",
+      "offer_id": "28e83679-a19b-44bb-ac5d-fd1c6ab98c84",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "8889886f-bac2-44d9-b54c-0594ed85787b"
+    },
+    {
+      "reference": "r36",
+      "shop": "Hot Sound",
+      "offer_id": "c7c80d6a-12ae-4fdb-9a74-f43a2377fd2a",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "1486d5fe-4e5f-4079-b508-f6ba4dd3772a"
+    },
+    {
+      "reference": "r37",
+      "shop": "Hot Sound",
+      "offer_id": "62ad42b0-c9af-4aba-aeac-2bb2a1ce4508",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "3e6a6424-7e19-425b-ae95-ce1a22ca8032"
+    },
+    {
+      "reference": "r38",
+      "shop": "Hot Sound",
+      "offer_id": "0da1aa25-3735-4209-9119-f2c9fde3f37d",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "8624ada4-2775-478f-b4bf-022489423b85"
+    },
+    {
+      "reference": "r39",
+      "shop": "Hot Sound",
+      "offer_id": "bb62ce87-f452-444e-baa4-48e3191933c2",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "b21d1995-668c-4525-add0-f7496299662f"
+    },
+    {
+      "reference": "r40",
+      "shop": "Hot Sound",
+      "offer_id": "345cf46c-52bd-4fa1-a169-e3fe9e55e742",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "ddd5484a-f9c1-46b6-b044-724b27ad1132"
+    },
+    {
+      "reference": "r1",
+      "shop": "Thomann",
+      "offer_id": "5cdd19f1-a3c5-4ff2-82be-32d9e03207ab",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "50d8252c-80d9-4bcc-ae29-0bec5265e458"
+    },
+    {
+      "reference": "r2",
+      "shop": "Thomann",
+      "offer_id": null,
+      "result": "skipped",
+      "reason": "plan_not_planned"
+    },
+    {
+      "reference": "r3",
+      "shop": "Thomann",
+      "offer_id": null,
+      "result": "skipped",
+      "reason": "plan_not_planned"
+    },
+    {
+      "reference": "r4",
+      "shop": "Thomann",
+      "offer_id": null,
+      "result": "skipped",
+      "reason": "plan_not_planned"
+    },
+    {
+      "reference": "r5",
+      "shop": "Thomann",
+      "offer_id": "63724b61-ebe8-490c-acd7-3053f445d541",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "ff88ec29-0b8c-43b3-8eb7-e3b214b8f3bc"
+    },
+    {
+      "reference": "r6",
+      "shop": "Thomann",
+      "offer_id": "040b34b2-2a33-443c-82cd-c84c6e9d7caa",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "85ce5dab-387e-4ee8-8b77-df2c766c6a75"
+    },
+    {
+      "reference": "r7",
+      "shop": "Thomann",
+      "offer_id": "950257ad-0c50-4bdb-b5b3-f42efc23b13d",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "cfc73fb9-cb5c-441d-92fd-2d6a7c4b080f"
+    },
+    {
+      "reference": "r8",
+      "shop": "Thomann",
+      "offer_id": "117d5226-bad8-4221-acc1-31986fb0d913",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "9037ea34-7f30-4c1d-8c45-75cb370ba381"
+    },
+    {
+      "reference": "r9",
+      "shop": "Thomann",
+      "offer_id": "d8d0d018-e122-4eca-b5db-82861de9c327",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "bae75302-3eed-452b-b501-bda6c59f5b4c"
+    },
+    {
+      "reference": "r10",
+      "shop": "Thomann",
+      "offer_id": "aafc07a1-f948-451f-84ab-3636ad662bdb",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "fc589c75-128c-4c95-abbd-9654288a5b32"
+    },
+    {
+      "reference": "r11",
+      "shop": "Thomann",
+      "offer_id": "71241e4c-b5be-4fc5-b96f-d2426b55d185",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "8cd90813-dd95-44b3-8f3e-5654c2f1817e"
+    },
+    {
+      "reference": "r12",
+      "shop": "Thomann",
+      "offer_id": null,
+      "result": "skipped",
+      "reason": "plan_not_planned"
+    },
+    {
+      "reference": "r13",
+      "shop": "Thomann",
+      "offer_id": "6087efda-f69c-450a-939c-ab4f1caa47ff",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "00b8c892-10bb-48ce-ab41-a7be37a9d56d"
+    },
+    {
+      "reference": "r14",
+      "shop": "Thomann",
+      "offer_id": "0ed34844-9010-47e9-b69d-634cdffaba19",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "31d38b76-54e0-4985-b39c-378fa7566e9c"
+    },
+    {
+      "reference": "r15",
+      "shop": "Thomann",
+      "offer_id": "213f38c0-c4ea-4222-8c47-9b3a34578585",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "48762753-87d4-4a85-b79a-a9d1140ce03d"
+    },
+    {
+      "reference": "r16",
+      "shop": "Thomann",
+      "offer_id": "e8d0d18d-7186-4553-925b-fa6c9ad3b367",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "7178cfd1-37c3-4ac5-8057-6cc6a0e6c257"
+    },
+    {
+      "reference": "r17",
+      "shop": "Thomann",
+      "offer_id": "25a8cf5c-d0a4-4989-8dc4-b4389b9e24ed",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "90eb9fc5-4725-4935-ab61-7925bb6805d4"
+    },
+    {
+      "reference": "r18",
+      "shop": "Thomann",
+      "offer_id": "8163049c-b413-4779-8ffb-38198b80e5d8",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "0c5ff11c-f981-4acb-b0f8-21bc3a7af705"
+    },
+    {
+      "reference": "r19",
+      "shop": "Thomann",
+      "offer_id": "a6498e71-ba75-4067-8e6e-90dd74a2cd40",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "88836929-d765-40fe-a0f5-4c7669d3c449"
+    },
+    {
+      "reference": "r20",
+      "shop": "Thomann",
+      "offer_id": "aace695d-070b-4db5-b797-b2d64154a5ce",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "480ff52e-b832-41f5-b1e1-c0248f92b884"
+    },
+    {
+      "reference": "r21",
+      "shop": "Thomann",
+      "offer_id": "4ee61cb6-2a05-44f0-88dc-6ea837b73a75",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "4e00438d-4e7c-48b9-aaca-c4db0154141f"
+    },
+    {
+      "reference": "r22",
+      "shop": "Thomann",
+      "offer_id": "f0d1037b-c87f-4740-bb70-00ece02abdfb",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "f6861c79-11c7-4dae-910f-a7dd4f1610ed"
+    },
+    {
+      "reference": "r23",
+      "shop": "Thomann",
+      "offer_id": "bc9c894e-a967-41f5-b8f0-7c7d94e3936b",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "1ae84a6f-d43b-4779-b200-f506b9b80f6b"
+    },
+    {
+      "reference": "r24",
+      "shop": "Thomann",
+      "offer_id": "cad529cd-e39b-4cf1-b719-b177b388f200",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "73a81381-48de-47c2-8f23-f56411d951f5"
+    },
+    {
+      "reference": "r25",
+      "shop": "Thomann",
+      "offer_id": "a90b5fc7-e604-4dce-9419-4c645c663ab4",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "bf22841d-5748-4a7a-85f4-a822897a2a92"
+    },
+    {
+      "reference": "r26",
+      "shop": "Thomann",
+      "offer_id": "9ae8b5c8-d517-409e-9065-6da3fff9b5ee",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "2c7d7972-c975-45be-8642-d81f5a829c36"
+    },
+    {
+      "reference": "r27",
+      "shop": "Thomann",
+      "offer_id": "849542eb-84db-4b3c-b38b-fb2d96423fe0",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "563d1d2c-2f54-4432-b259-d5fbba15a410"
+    },
+    {
+      "reference": "r28",
+      "shop": "Thomann",
+      "offer_id": "00c67d2a-b5dc-465a-a9c4-323295a7cde8",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "2e8fe9b5-e718-4c63-bca3-1afde09e40b6"
+    },
+    {
+      "reference": "r29",
+      "shop": "Thomann",
+      "offer_id": "1f870637-4e39-41b6-8536-e8cfb82db8ad",
+      "result": "inserted",
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "reason": null,
+      "observation_id": "5283e3fc-45fe-4173-8875-5490653f8c84"
+    }
+  ]
+}

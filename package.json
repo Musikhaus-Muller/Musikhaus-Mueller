@@ -1,6 +1,9 @@
 {
   "name": "pa-bundle-comparador",
   "version": "1.0.0",
+  "description": "Musikhaus Müller desktop price updater",
+  "author": "Musikhaus Müller",
+  "main": "desktop/main.mjs",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,9 +13,26 @@
     "parity:supabase": "node scripts/check-supabase-parity.mjs",
     "discover:prolighting": "node collector/discover.mjs --shop=prolighting",
     "review:discovery": "node collector/review-discovery.mjs --shop=prolighting",
-    "diagnose:musicstore": "node scripts/musicstore-catalog-diagnostic.mjs"
+    "diagnose:musicstore": "node scripts/musicstore-catalog-diagnostic.mjs",
+    "desktop:dev": "electron desktop/main.mjs",
+    "desktop:test": "node --test tests/desktop-*.test.mjs",
+    "desktop:install-browser": "node scripts/install-desktop-chromium.mjs",
+    "desktop:smoke-browser": "node scripts/desktop-browser-smoke.mjs",
+    "desktop:build:win": "node scripts/build-desktop.mjs --platform=win32 --arch=x64",
+    "desktop:pack:mac": "node scripts/build-desktop.mjs --platform=darwin --pack-only",
+    "desktop:build:mac": "node scripts/build-desktop.mjs --platform=darwin",
+    "desktop:build:mac:x64": "node scripts/build-desktop.mjs --platform=darwin --arch=x64",
+    "desktop:build": "npm run desktop:build:win"
   },
   "engines": {
     "node": ">=22"
+  },
+  "devDependencies": {
+    "electron": "^45.3.4",
+    "electron-builder": "^26.18.0",
+    "playwright": "^1.64.1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.0"
   }
 }

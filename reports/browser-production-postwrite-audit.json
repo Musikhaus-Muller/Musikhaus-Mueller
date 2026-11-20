@@ -1,0 +1,900 @@
+{
+  "writes": false,
+  "generated_at": "2026-11-18T09:40:17.028Z",
+  "source_write_plan": "reports/browser-production-write-plan.json",
+  "source_preflight": "reports/browser-production-preflight.json",
+  "source_apply_result": "reports/browser-production-apply-result.json",
+  "plan_sha256": "1739cd9593f2a700d2d31661300c97b89f248986df7925d989798484a30eed49",
+  "preflight_sha256": "27262366b1319be326602e17ffa838ba185b0bbf624fd37e2870c577435b7a68",
+  "expected_applied": 52,
+  "observations_found": 52,
+  "observations_valid": 52,
+  "current_price_matches": 52,
+  "duplicates": 0,
+  "missing": 0,
+  "invalid": 0,
+  "preserve_only_untouched": 4,
+  "failures": [],
+  "rows": [
+    {
+      "reference": "r1",
+      "shop": "Hot Sound",
+      "offer_id": "807f31a3-ead8-4533-bbe6-f41095eed12d",
+      "observation_id": "3e6221e1-e6c5-4349-9be3-690854e50bc9",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+      "evidence_sha256": "cd273f79e828e1b9eda76a3e34c6b2ecaf272ce7d660ac578c0679b3d76aedf4"
+    },
+    {
+      "reference": "r2",
+      "shop": "Hot Sound",
+      "offer_id": "4da69de2-fde7-439f-b63d-1cdf4a4272b9",
+      "observation_id": "066313f0-3f61-42b6-8955-2f215b395c7a",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-set-2-schwarz-11714",
+      "evidence_sha256": "e2612e6e05efdb6c87a95174c668857cb670bb82e28c4d86b49c876ffb7e5d6f"
+    },
+    {
+      "reference": "r4",
+      "shop": "Hot Sound",
+      "offer_id": "0411c137-fa1c-4261-aa62-06bf4e4dbc26",
+      "observation_id": "d52793eb-c8b1-4dd0-8e65-6603e6e3b7f5",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-set-2-schwarz-11711",
+      "evidence_sha256": "246c1e67624da0d7bd68e8b68365030909f9fe834263360f2428d25db97ecf5f"
+    },
+    {
+      "reference": "r5",
+      "shop": "Hot Sound",
+      "offer_id": "ee9fbe6b-2daa-4e3e-8fbe-3a7d40d50bea",
+      "observation_id": "399892da-77a2-4097-a907-4c365a104e30",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+      "evidence_sha256": "d5a66cd053a3c86dd1aa97dbcdca3d26a63413011d57b83f792f5d174959df2b"
+    },
+    {
+      "reference": "r6",
+      "shop": "Hot Sound",
+      "offer_id": "a047eeaa-bcb0-44c6-9aae-d9e2728172a4",
+      "observation_id": "8926d5f6-cac4-4dc4-ac7c-844de4b0a169",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-w-weiss-11672",
+      "evidence_sha256": "e76dc89ef1ea06a01fa361b0bf7d79e7a1ddd4e165fe6fc759d698baccef605e"
+    },
+    {
+      "reference": "r7",
+      "shop": "Hot Sound",
+      "offer_id": "813993d6-5673-4ab3-92c8-3d404f47060c",
+      "observation_id": "66168e5a-d0a9-4174-994b-f5130b34417c",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-mix-schwarz-13382",
+      "evidence_sha256": "870f6fe0ab9284269e1de27b0d016ba2f0607aa3034c8d9b5b74800d383f60cf"
+    },
+    {
+      "reference": "r8",
+      "shop": "Hot Sound",
+      "offer_id": "d1008b3d-3ff8-4f80-9cd6-3486297163ed",
+      "observation_id": "e60a1911-de5b-4d12-8a9f-6a5cbe2ebcf3",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
+      "evidence_sha256": "3b3607710d619bc642620055198f923247fc7b4b29d851807f213646493d6177"
+    },
+    {
+      "reference": "r9",
+      "shop": "Hot Sound",
+      "offer_id": "c01e6949-05f3-47c2-85b7-f04742f8655b",
+      "observation_id": "d9236b61-434a-4f88-ba1a-a7fdeeb17dab",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/ld-systems-maui-44-g2-set2-12232",
+      "evidence_sha256": "94e08b3f34ad922d5cf7406a12235ce28b7369a090f228601374ddea865ea18f"
+    },
+    {
+      "reference": "r10",
+      "shop": "Hot Sound",
+      "offer_id": "2ce530d4-2e13-4c2d-af5b-f0bb17056c97",
+      "observation_id": "e81692db-36db-4aa3-b2e0-959fbcc17302",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/ld-systems-maui-11-g3-11673",
+      "evidence_sha256": "9391fbaf1fa817404434eb6c82d6b12aebf5524a2969f4d6250301997f84be24"
+    },
+    {
+      "reference": "r11",
+      "shop": "Hot Sound",
+      "offer_id": "bf8a545d-960d-4a92-964e-a5889df99471",
+      "observation_id": "f4848180-4dce-4f01-8619-edff2ee756f8",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/ld-systems-maui-28-g3-11671",
+      "evidence_sha256": "7cc6dd699e59cadf1c8bba38fdd684fa765f27f9c73615308757485d30fad073"
+    },
+    {
+      "reference": "r13",
+      "shop": "Hot Sound",
+      "offer_id": "f6ba806f-6f11-4d57-87aa-b4bc25321210",
+      "observation_id": "4eb3f5d4-8455-42be-95b5-8680d8f7b4ba",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/ld-systems-maui-11-g2-316",
+      "evidence_sha256": "cf64061683f19f567a9718be3ed7649987bd03560bcce06025958ba215f7d313"
+    },
+    {
+      "reference": "r14",
+      "shop": "Hot Sound",
+      "offer_id": "cbd198f4-71f9-4a57-9ca2-382281b2b7ed",
+      "observation_id": "8e67b262-8360-465b-ac64-b7e9d1c29774",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/ld-systems-maui-28-g2-319",
+      "evidence_sha256": "2d035605bf128235ef034b1416c95f1e9a3c271b0ec3189907256ec9941780f2"
+    },
+    {
+      "reference": "r19",
+      "shop": "Hot Sound",
+      "offer_id": "77bfff3d-fe0e-458b-a57f-dc7550108a2a",
+      "observation_id": "d5b5a7a6-75b2-4a8f-a377-65d6edfa8494",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/ld-systems-stinger-g3-event-set-a-aktivsystem-9635",
+      "evidence_sha256": "e5bd651094e3b9014074c9c8db43f1279e36f699eaab6c3c890bc4dc6a7f25e0"
+    },
+    {
+      "reference": "r20",
+      "shop": "Hot Sound",
+      "offer_id": "36995a7d-345e-4c78-8740-683f4e31106f",
+      "observation_id": "faa86502-7895-4558-a26f-4ec3f756a878",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/ld-systems-stinger-g3-power-set-a-aktivsystem-9639",
+      "evidence_sha256": "2027e329d4a7308197da0b592bb00badf3da9f5a99180a3348bd7d0930c244e7"
+    },
+    {
+      "reference": "r21",
+      "shop": "Hot Sound",
+      "offer_id": "7c243e3d-68f0-4a46-8e41-0ab38567fc2d",
+      "observation_id": "fdf56c2b-e829-4da2-a811-d4413466cd17",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/ld-systems-stinger-g3-impact-set-a-aktivsystem-9637",
+      "evidence_sha256": "f3a9ecdb0bd5f5a34aefa4e186144b2ae8e0e772a1124b0e1ed889af6bda14d0"
+    },
+    {
+      "reference": "r28",
+      "shop": "Hot Sound",
+      "offer_id": "655bd2b6-49f0-4aec-a04d-fa11f4ce2463",
+      "observation_id": "1dbdc101-7a7f-472a-b875-cf6a17da86d2",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/ld-systems-icoa-pro-12a-club-pa-set-16057",
+      "evidence_sha256": "35f6a5a2a50740f3f33116afaea4270671079b26297e97a18272ccc765db02cd"
+    },
+    {
+      "reference": "r30",
+      "shop": "Hot Sound",
+      "offer_id": "6fe6140b-0d70-430e-ba4b-5293f9fd3199",
+      "observation_id": "06545660-9e92-49fa-80a1-c2e6513d9ee0",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/dap-frigga-stereo-aktives-stereo-saeulen-pa-system-schwarz-14921",
+      "evidence_sha256": "1f063ab00e3e1203f4c33ee4c2bb6d073c237726c6f7941570ce147ce202ff5f"
+    },
+    {
+      "reference": "r31",
+      "shop": "Hot Sound",
+      "offer_id": "a429843a-6828-4d7f-a16b-0a606df07425",
+      "observation_id": "64423e40-86d9-43a0-8df7-813016724faf",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+      "evidence_sha256": "aafd170ca6f36e8959f9a870cd805b16c119b357ab153a0d021d85d63d41eeef"
+    },
+    {
+      "reference": "r32",
+      "shop": "Hot Sound",
+      "offer_id": "3a51da31-a6a9-43bd-b198-3bfb2b6d34ee",
+      "observation_id": "732e78a8-747e-4084-b8ba-6a633a37c6c8",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/dap-frigga-stereo-premium-set-aktives-stereo-saeulen-pa-system-schwarz-14923",
+      "evidence_sha256": "4e22b401bbdab28258ad076e1c63668c16a2d11b6abeb6cff0e92f56c153f9f5"
+    },
+    {
+      "reference": "r33",
+      "shop": "Hot Sound",
+      "offer_id": "739ae1bd-6d98-47c0-a301-18d958548c13",
+      "observation_id": "33313ff9-9d3a-4a66-9f2d-3f4bf1370821",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+      "evidence_sha256": "f13ab1e7bbbc65bad1b501e84617247ab573510467502317bf42baaa27a43e7d"
+    },
+    {
+      "reference": "r34",
+      "shop": "Hot Sound",
+      "offer_id": "8c1e6119-e0eb-4a6f-840b-3f56eb0fab4e",
+      "observation_id": "2bcadcc4-5db2-45ae-8bec-a49e6ff5c0d0",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-schwarz-13257",
+      "evidence_sha256": "c8ec25b5a1182e2eb3867f488c8408b40d165eeb882c2d9ed419bb4dfd455d9b"
+    },
+    {
+      "reference": "r35",
+      "shop": "Hot Sound",
+      "offer_id": "28e83679-a19b-44bb-ac5d-fd1c6ab98c84",
+      "observation_id": "8889886f-bac2-44d9-b54c-0594ed85787b",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/dap-frigga-aktives-saeulen-pa-system-weiss-13258",
+      "evidence_sha256": "3bba5f4d79e217dc52b6d85914b3c7865bc0b2ff5cb86be356236a18ca4e90bd"
+    },
+    {
+      "reference": "r36",
+      "shop": "Hot Sound",
+      "offer_id": "c7c80d6a-12ae-4fdb-9a74-f43a2377fd2a",
+      "observation_id": "1486d5fe-4e5f-4079-b508-f6ba4dd3772a",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/wharfedale-pro-delta-x218b-tough-tone-passiv-pa-subwoofer-4873",
+      "evidence_sha256": "f19ebed8691ed8ec8fb733b5adef291134a16f4ce0fae436fce9a5e6c78913f4"
+    },
+    {
+      "reference": "r37",
+      "shop": "Hot Sound",
+      "offer_id": "62ad42b0-c9af-4aba-aeac-2bb2a1ce4508",
+      "observation_id": "3e6a6424-7e19-425b-ae95-ce1a22ca8032",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
+      "evidence_sha256": "c4c91692394aad1e27c2be64e1425a005034321de013a8b37edc6a1d56302fd3"
+    },
+    {
+      "reference": "r38",
+      "shop": "Hot Sound",
+      "offer_id": "0da1aa25-3735-4209-9119-f2c9fde3f37d",
+      "observation_id": "8624ada4-2775-478f-b4bf-022489423b85",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/wharfedale-pro-delta-f18b-horngeladener-18-subwoofer-passiv-14063",
+      "evidence_sha256": "df249431d7d83c372e49908a7f6e30e5e3cbe0177d8f67568510a43447695176"
+    },
+    {
+      "reference": "r39",
+      "shop": "Hot Sound",
+      "offer_id": "bb62ce87-f452-444e-baa4-48e3191933c2",
+      "observation_id": "b21d1995-668c-4525-add0-f7496299662f",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/wharfedale-pro-wla-210xp-line-array-set-set-1-19041",
+      "evidence_sha256": "cf04022d024ac88a7f63b2d0631a9b46ea402248a6b22c9a943a622acc9933db"
+    },
+    {
+      "reference": "r40",
+      "shop": "Hot Sound",
+      "offer_id": "345cf46c-52bd-4fa1-a169-e3fe9e55e742",
+      "observation_id": "ddd5484a-f9c1-46b6-b044-724b27ad1132",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T13:09:16.204Z",
+      "source_url": "https://www.hotsound-store.com/wharfedale-pro-wla-210xp-line-array-set-amped-set-1-19042",
+      "evidence_sha256": "7bafb1ed2d51bc371ba1022c0ac6b2a84dacdc1777c6c68a267119fbca3e5c6d"
+    },
+    {
+      "reference": "r1",
+      "shop": "Thomann",
+      "offer_id": "5cdd19f1-a3c5-4ff2-82be-32d9e03207ab",
+      "observation_id": "50d8252c-80d9-4bcc-ae29-0bec5265e458",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_maui_11_g3_stereo_bundle.htm",
+      "evidence_sha256": "23af8ad34bf3e55bd72be5f77884404554f76c46c308af0606d064bae6800d25"
+    },
+    {
+      "reference": "r5",
+      "shop": "Thomann",
+      "offer_id": "63724b61-ebe8-490c-acd7-3053f445d541",
+      "observation_id": "ff88ec29-0b8c-43b3-8eb7-e3b214b8f3bc",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_maui_28_g3.htm",
+      "evidence_sha256": "49dbf391523f8e8265b7ad52fab0d5c74a6bd2299f49435c27d228be260f27ff"
+    },
+    {
+      "reference": "r6",
+      "shop": "Thomann",
+      "offer_id": "040b34b2-2a33-443c-82cd-c84c6e9d7caa",
+      "observation_id": "85ce5dab-387e-4ee8-8b77-df2c766c6a75",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_white_stereo_bundle.htm",
+      "evidence_sha256": "d57b9221171f88c253467c138eadafd55477eddab6fd12c195e430a98769db51"
+    },
+    {
+      "reference": "r7",
+      "shop": "Thomann",
+      "offer_id": "950257ad-0c50-4bdb-b5b3-f42efc23b13d",
+      "observation_id": "cfc73fb9-cb5c-441d-92fd-2d6a7c4b080f",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_mix_syslink_bundle.htm",
+      "evidence_sha256": "b3da05ad36c86b4e6ba469d4b71fcec04e9725c3ca0d3cad650bdd89f45c3324"
+    },
+    {
+      "reference": "r8",
+      "shop": "Thomann",
+      "offer_id": "117d5226-bad8-4221-acc1-31986fb0d913",
+      "observation_id": "9037ea34-7f30-4c1d-8c45-75cb370ba381",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+      "evidence_sha256": "8ddde87e4ff34a025fdc0f84c14d39233d3a5bd2b0c4ca674ea00a6ae0a7d6a9"
+    },
+    {
+      "reference": "r9",
+      "shop": "Thomann",
+      "offer_id": "d8d0d018-e122-4eca-b5db-82861de9c327",
+      "observation_id": "bae75302-3eed-452b-b501-bda6c59f5b4c",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_maui_44_g2.htm",
+      "evidence_sha256": "2d45bd2c8984f011048bb478fe4ab13c247d195aa58139ec3e8280ab5fd95b2f"
+    },
+    {
+      "reference": "r10",
+      "shop": "Thomann",
+      "offer_id": "aafc07a1-f948-451f-84ab-3636ad662bdb",
+      "observation_id": "fc589c75-128c-4c95-abbd-9654288a5b32",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_maui_11_g3_power_bundle.htm",
+      "evidence_sha256": "98a60e676685f837aefc9f7fb47195c5c2b1b040c85531a7727783c06293267c"
+    },
+    {
+      "reference": "r11",
+      "shop": "Thomann",
+      "offer_id": "71241e4c-b5be-4fc5-b96f-d2426b55d185",
+      "observation_id": "8cd90813-dd95-44b3-8f3e-5654c2f1817e",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_maui_28_g3_power_bundle.htm",
+      "evidence_sha256": "33814d9c7035ce5cb5c5793ec1dffedbfdae9d698a066025bc25ba8dafc79272"
+    },
+    {
+      "reference": "r13",
+      "shop": "Thomann",
+      "offer_id": "6087efda-f69c-450a-939c-ab4f1caa47ff",
+      "observation_id": "00b8c892-10bb-48ce-ab41-a7be37a9d56d",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_maui_11_g2_bundle.htm",
+      "evidence_sha256": "f92da20c6145d1bae5485a5d3bdd179c272f97601caf96304d62c609948f6562"
+    },
+    {
+      "reference": "r14",
+      "shop": "Thomann",
+      "offer_id": "0ed34844-9010-47e9-b69d-634cdffaba19",
+      "observation_id": "31d38b76-54e0-4985-b39c-378fa7566e9c",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_maui_28_g2_bundle.htm",
+      "evidence_sha256": "47ab86ac17848051c916f7b5d39d4b9c5eb0f622c550367dc3efbca3ba2355a7"
+    },
+    {
+      "reference": "r15",
+      "shop": "Thomann",
+      "offer_id": "213f38c0-c4ea-4222-8c47-9b3a34578585",
+      "observation_id": "48762753-87d4-4a85-b79a-a9d1140ce03d",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_dave_12_g4x_stand_bundle.htm",
+      "evidence_sha256": "a7dc45e818584559730830686ba6bf522426192734b838b21b96c4850264efd2"
+    },
+    {
+      "reference": "r16",
+      "shop": "Thomann",
+      "offer_id": "e8d0d18d-7186-4553-925b-fa6c9ad3b367",
+      "observation_id": "7178cfd1-37c3-4ac5-8057-6cc6a0e6c257",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_dave_15_g4x_stand_bundle.htm",
+      "evidence_sha256": "e4f6e942d46ac19e60b0cb7dce35e185a250eaf1840676c827818cd92084cada"
+    },
+    {
+      "reference": "r17",
+      "shop": "Thomann",
+      "offer_id": "25a8cf5c-d0a4-4989-8dc4-b4389b9e24ed",
+      "observation_id": "90eb9fc5-4725-4935-ab61-7925bb6805d4",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_dave_18_g4x_stand_bundle.htm",
+      "evidence_sha256": "fd2d5b3fa007eaa0777a32b2229a3d30fa2c47a0c9e83e569b43d0c984c5970e"
+    },
+    {
+      "reference": "r18",
+      "shop": "Thomann",
+      "offer_id": "8163049c-b413-4779-8ffb-38198b80e5d8",
+      "observation_id": "0c5ff11c-f981-4acb-b0f8-21bc3a7af705",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_dave_10_g4x_install_bundle.htm",
+      "evidence_sha256": "75aaef8e43a4189bed7e2b54900edc9de927ad386956e6388d687e5f85568a49"
+    },
+    {
+      "reference": "r19",
+      "shop": "Thomann",
+      "offer_id": "a6498e71-ba75-4067-8e6e-90dd74a2cd40",
+      "observation_id": "88836929-d765-40fe-a0f5-4c7669d3c449",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_stinger_10_sub15_power_bundle.htm",
+      "evidence_sha256": "fc91ae9e245068726be47597613931cdfa1532ce736a42c0e90310e5f01da60f"
+    },
+    {
+      "reference": "r20",
+      "shop": "Thomann",
+      "offer_id": "aace695d-070b-4db5-b797-b2d64154a5ce",
+      "observation_id": "480ff52e-b832-41f5-b1e1-c0248f92b884",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_stinger_12_sub18_power_bundle.htm",
+      "evidence_sha256": "84d33436ca5d651ffb42b7a48f844cfb6286e95fc4834c4d2ef8b6a2c01e4a66"
+    },
+    {
+      "reference": "r21",
+      "shop": "Thomann",
+      "offer_id": "4ee61cb6-2a05-44f0-88dc-6ea837b73a75",
+      "observation_id": "4e00438d-4e7c-48b9-aaca-c4db0154141f",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_stinger_high_power_bundle.htm",
+      "evidence_sha256": "013b32fa9d8833f3508d4cad558557777dca399890149c6ac2f18584cba56eee"
+    },
+    {
+      "reference": "r22",
+      "shop": "Thomann",
+      "offer_id": "f0d1037b-c87f-4740-bb70-00ece02abdfb",
+      "observation_id": "f6861c79-11c7-4dae-910f-a7dd4f1610ed",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_stinger_8_sub15_basic_bundle.htm",
+      "evidence_sha256": "797d54576eed44f504b690a2b31e4edb5b7b06a4268b02347de38e4beb47d514"
+    },
+    {
+      "reference": "r23",
+      "shop": "Thomann",
+      "offer_id": "bc9c894e-a967-41f5-b8f0-7c7d94e3936b",
+      "observation_id": "1ae84a6f-d43b-4779-b200-f506b9b80f6b",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+      "evidence_sha256": "435a6b31a129bf88a80cbcac9e7f044266a9b632bfaf8c99dd2971ded561cc80"
+    },
+    {
+      "reference": "r24",
+      "shop": "Thomann",
+      "offer_id": "cad529cd-e39b-4cf1-b719-b177b388f200",
+      "observation_id": "73a81381-48de-47c2-8f23-f56411d951f5",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_icoa_12_a_bt.htm",
+      "evidence_sha256": "54d2f8a01ce029d98e86a7fdd5d6e594e7767b6078543d53c6016050a246e447"
+    },
+    {
+      "reference": "r25",
+      "shop": "Thomann",
+      "offer_id": "a90b5fc7-e604-4dce-9419-4c645c663ab4",
+      "observation_id": "bf22841d-5748-4a7a-85f4-a822897a2a92",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+      "evidence_sha256": "9e14a471585c9a28b0bc7ad189f2b540e8921cf2cd518715402d31a3b85a8153"
+    },
+    {
+      "reference": "r26",
+      "shop": "Thomann",
+      "offer_id": "9ae8b5c8-d517-409e-9065-6da3fff9b5ee",
+      "observation_id": "2c7d7972-c975-45be-8642-d81f5a829c36",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_icoa_15_a_bt.htm",
+      "evidence_sha256": "b6a447760900f3af3fa0b31e173d48ebaa0bac568d193827e632845c1c75c389"
+    },
+    {
+      "reference": "r27",
+      "shop": "Thomann",
+      "offer_id": "849542eb-84db-4b3c-b38b-fb2d96423fe0",
+      "observation_id": "563d1d2c-2f54-4432-b259-d5fbba15a410",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "component_calc",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_icoa_pro_12_a.htm",
+      "evidence_sha256": "d9e49b12bfaae8f7cb56aa3b21bb2fbee210aac4c66bfcfd6d491cdafb5102f8"
+    },
+    {
+      "reference": "r28",
+      "shop": "Thomann",
+      "offer_id": "00c67d2a-b5dc-465a-a9c4-323295a7cde8",
+      "observation_id": "2e8fe9b5-e718-4c63-bca3-1afde09e40b6",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_icoa_pro_12a_21a_power_set.htm",
+      "evidence_sha256": "4bdbdb5d6aaebdecff2a45b9a19406556f16ee75639c1ea36ff0090f65a28037"
+    },
+    {
+      "reference": "r29",
+      "shop": "Thomann",
+      "offer_id": "1f870637-4e39-41b6-8536-e8cfb82db8ad",
+      "observation_id": "5283e3fc-45fe-4173-8875-5490653f8c84",
+      "result": "valid",
+      "validation": {
+        "valid": true,
+        "failures": []
+      },
+      "current_price_match": true,
+      "source_method": "browser",
+      "observed_at": "2026-11-17T14:07:07.103Z",
+      "source_url": "https://www.thomann.de/de/ld_systems_icoa_pro_15a_21a_power_set.htm",
+      "evidence_sha256": "319565961aa127ccfca6c753c310e1a039e34740dbbd3409963c220a05635736"
+    }
+  ],
+  "preserve_only_rows": [
+    {
+      "reference": "r2",
+      "shop": "Thomann",
+      "offer_id": "085b6baf-e050-4eee-8a4a-bf865cf64c41",
+      "result": "untouched",
+      "new_apply_browser_observations": 0,
+      "preserved_price": 2058,
+      "last_verified_at": "2026-11-03T12:00:00+00:00",
+      "reason": null
+    },
+    {
+      "reference": "r3",
+      "shop": "Thomann",
+      "offer_id": "9df37a42-14dc-42b8-bd30-38fd6f6ce4f0",
+      "result": "untouched",
+      "new_apply_browser_observations": 0,
+      "preserved_price": 1409,
+      "last_verified_at": "2026-11-04T19:30:00+00:00",
+      "reason": null
+    },
+    {
+      "reference": "r4",
+      "shop": "Thomann",
+      "offer_id": "29998db6-4716-4c63-8302-bf99aae9e52e",
+      "result": "untouched",
+      "new_apply_browser_observations": 0,
+      "preserved_price": 2818,
+      "last_verified_at": "2026-11-04T19:30:00+00:00",
+      "reason": null
+    },
+    {
+      "reference": "r12",
+      "shop": "Thomann",
+      "offer_id": "0cb0a09e-4b41-412e-9e7c-9c085dcb83a2",
+      "result": "untouched",
+      "new_apply_browser_observations": 0,
+      "preserved_price": 7269,
+      "last_verified_at": "2026-11-03T21:47:19+00:00",
+      "reason": null
+    }
+  ],
+  "expected_preserve_only": [
+    "r2",
+    "r3",
+    "r4",
+    "r12"
+  ]
+}
