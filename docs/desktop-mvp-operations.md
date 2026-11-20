@@ -36,11 +36,11 @@ supabase functions deploy desktop-price-update --project-ref <project-ref>
 supabase secrets set SUPABASE_SERVICE_ROLE_KEY=<service-role-key> --project-ref <project-ref>
 ```
 
-The service-role key remains only in Edge Function secrets. It must never be passed to Electron, placed in `desktop/public-config.json`, committed, or logged.
+The service-role key remains only in Edge Function secrets and is used only for read-only preflight queries because the authenticated desktop RLS scope does not expose all configuration/shop/offer relations. It must never be passed to Electron, placed in `desktop/public-config.json`, committed, or logged.
 
 ## Controlled first client test
 
-Leave **Modo prueba** enabled (the default). It runs Hot Sound, Thomann, pre-writer, production plan and secure preflight, but returns before the backend apply/audit stages and writes no prices. Confirm the UI says: `Modo prueba — no se modificaron precios`.
+The pilot exposes only **Modo prueba**. It runs Hot Sound, Thomann, pre-writer, production plan and secure preflight, then stops. There is no backend apply/audit stage and it writes no prices. Confirm the UI says: `Modo prueba — no se modificaron precios`.
 
 ## Native builds
 

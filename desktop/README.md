@@ -13,13 +13,13 @@ DESKTOP_SUPABASE_ANON_KEY=…
 
 Never provide a service-role or secret key to Electron. Authorization is based on the authenticated user's `app_metadata.role`, currently restricted to `root` and `admin`. The existing schema has no application profile/role table; this is therefore an explicit deployment prerequisite for the Supabase Auth administrator.
 
-## Secure write path
+## Secure pilot preflight
 
-`supabase/functions/desktop-price-update` is versioned but not deployed by this branch. It verifies the Bearer JWT and `app_metadata.role`, accepts only Hot Sound/Thomann browser-shadow observations with strict verified evidence, performs its own active-offer preflight, and only inserts `price_observations`. It has no generic SQL, offer-update, or delete endpoint. The service role remains an Edge Function environment secret.
+`supabase/functions/desktop-price-update` is a preflight-only pilot endpoint. It verifies the Bearer JWT and `app_metadata.role`, accepts only a closed Hot Sound/Thomann read-only plan, and resolves active configuration/shop/offer IDs. It has no apply, audit, insert, update, delete, or RPC route. The service-role key remains server-side because the preflight reads tables not exposed through the authenticated desktop RLS scope.
 
 ## Local pipeline
 
-The main process runs only fixed local commands: the existing Hot Sound and Thomann full browser shadows, pre-writer plan and production plan. It then delegates preflight, insert and audit to the restricted Edge Function. Music Store is intentionally absent. Anomaly/preserve-only outcomes remain non-writable because only `planned` rows reach the backend.
+The main process runs only fixed local commands: the existing Hot Sound and Thomann full browser shadows, pre-writer plan and production plan. It delegates only preflight to the restricted Edge Function, then stops. Music Store is intentionally absent.
 
 ## Chromium and portable packaging
 

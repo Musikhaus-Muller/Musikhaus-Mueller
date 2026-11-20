@@ -3,16 +3,16 @@ import assert from 'node:assert/strict';
 import { createUpdateState } from '../desktop/services/update-state.mjs';
 import { runPriceUpdate } from '../desktop/services/price-update-runner.mjs';
 
-test('desktop pipeline serializes shops, writes only eligible plan via backend, and completes', async () => {
+test('desktop pipeline serializes shops, runs secure preflight, and always stops before writes', async () => {
   const phases = [], state = createUpdateState(value => phases.push(value.phase)); state.ready();
   const result = await runPriceUpdate({ state,
     runShadow: async shop => ({ shop }),
     buildPlan: async () => ({ writePlan: { totals: { planned: 2 } }, writePlanBytes: Buffer.from('plan') }),
-    backend: { preflight: async () => ({ totals: { resolved: 2 }, rows: [], bytes: Buffer.from('preflight') }), apply: async () => ({ totals: { inserted: 2 } }) },
-    audit: async () => ({ updated: 2, preserved: 4, manual_review: 0, failures: 0 })
+    backend: { preflight: async () => ({ totals: { resolved: 2 }, rows: [], bytes: Buffer.from('preflight') }) }
   });
-  assert.equal(result.updated, 2);
-  assert.deepEqual(phases.slice(1), ['collecting_hotsound', 'collecting_thomann', 'building_plan', 'preflight', 'writing', 'auditing', 'completed']);
+  assert.equal(result.dry_run, true);
+  assert.equal(result.updated, 0);
+  assert.deepEqual(phases.slice(1), ['collecting_hotsound', 'collecting_thomann', 'building_plan', 'preflight', 'completed']);
 });
 
 test('desktop pipeline rejects concurrent execution and aborts on structural preflight failure', async () => {
@@ -29,18 +29,14 @@ test('desktop pipeline rejects concurrent execution and aborts on structural pre
   assert.equal(fresh.get().phase, 'failed');
 });
 
-test('desktop dry-run completes after secure preflight without invoking backend apply or audit', async () => {
+test('desktop dry-run has no apply or audit dependency after secure preflight', async () => {
   const state = createUpdateState(); state.ready();
-  let applyCalls = 0, auditCalls = 0;
-  const result = await runPriceUpdate({ state, dryRun: true,
+  const result = await runPriceUpdate({ state,
     runShadow: async () => ({}),
     buildPlan: async () => ({ writePlan: { totals: { planned: 2, skipped: 4 } }, writePlanBytes: Buffer.from('plan') }),
-    backend: { preflight: async () => ({ totals: { resolved: 2 }, bytes: Buffer.from('preflight') }), apply: async () => { applyCalls += 1; } },
-    audit: async () => { auditCalls += 1; }
+    backend: { preflight: async () => ({ totals: { resolved: 2 }, bytes: Buffer.from('preflight') }) }
   });
   assert.equal(result.dry_run, true);
   assert.equal(result.updated, 0);
   assert.equal(result.preserved, 4);
-  assert.equal(applyCalls, 0);
-  assert.equal(auditCalls, 0);
 });

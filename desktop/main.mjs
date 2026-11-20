@@ -53,12 +53,12 @@ if (process.env.DESKTOP_SMOKE_EXIT === '1') {
 ipcMain.handle('auth:login', async (_event, { email, password }) => { state.move('authenticating'); const user = await auth.signIn(email, password); state.ready(); await log({ phase: 'login', outcome: 'ok' }); return user; });
 ipcMain.handle('auth:logout', async () => { await auth.signOut(); state.ready(); return true; });
 ipcMain.handle('updater:state', () => state.get());
-ipcMain.handle('updater:start', async (_event, { dryRun = true } = {}) => {
+ipcMain.handle('updater:start', async () => {
   if (!await auth.currentUser()) throw new Error('Please sign in with an authorized account');
   if (state.get().running) throw new Error('An update is already running');
-  const confirmation = await dialog.showMessageBox(mainWindow, { type: 'question', buttons: ['Cancel', dryRun ? 'Run dry-run' : 'Update prices'], defaultId: 0, message: dryRun ? 'Run a test update without changing prices?' : 'Start the price update now?' });
+  const confirmation = await dialog.showMessageBox(mainWindow, { type: 'question', buttons: ['Cancel', 'Run dry-run'], defaultId: 0, message: 'Run a test update without changing prices?' });
   if (confirmation.response !== 1) return { cancelled: true };
-  const result = await runPriceUpdate({ state, ...pipeline, dryRun });
+  const result = await runPriceUpdate({ state, ...pipeline });
   await log({ phase: 'completed', outcome: 'ok', updated: result.updated, preserved: result.preserved });
   return result;
 });

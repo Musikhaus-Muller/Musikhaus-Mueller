@@ -32,17 +32,7 @@ export function createLocalPipeline({ root, auth, browserRuntime = null }) {
         const { data, error } = await auth.invoke('desktop-price-update', { action: 'preflight', write_plan: writePlan });
         if (error || !data?.preflight) throw new Error('Secure preflight was rejected');
         return { ...data.preflight, bytes: Buffer.from(JSON.stringify(data.preflight)) };
-      },
-      async apply(payload) {
-        const { data, error } = await auth.invoke('desktop-price-update', { action: 'apply', write_plan: payload.writePlan, preflight: payload.preflight, plan_sha256: payload.planSha256, preflight_sha256: payload.preflightSha256 });
-        if (error || !data?.result) throw new Error('Secure price write was rejected');
-        return data.result;
       }
-    },
-    async audit(payload) {
-      const { data, error } = await auth.invoke('desktop-price-update', { action: 'audit', write_plan: payload.writePlan, preflight: payload.preflight, apply_result: payload.applied });
-      if (error || !data?.summary) throw new Error('Post-write audit failed');
-      return data.summary;
     }
   };
 }
